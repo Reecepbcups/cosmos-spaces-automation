@@ -1,0 +1,6 @@
+tweepy # for tweets and stuff
+
+twspace-dl # https://github.com/HoloArchivists/twspace-dl
+ffmpeg
+ffmpegio
+moviepy

@@ -114,6 +114,6 @@ def remove_0_volume_from_file(filename):
 
 
 if __name__ == "__main__":
-    # filename = download_space(RECORDED_SPACE)
+    filename = download_space(RECORDED_SPACE)
     # filename may be ""
-    remove_0_volume_from_file("file.m4a")
+    # remove_0_volume_from_file("file.m4a")

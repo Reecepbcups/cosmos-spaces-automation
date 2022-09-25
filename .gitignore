@@ -1,1 +1,3 @@
-downloads/
+# downloads/ # future, but we have scrips there rn
+*.mkv
+*.m4a

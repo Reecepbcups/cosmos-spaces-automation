@@ -40,12 +40,49 @@ mention_id = 1
 
 import re, requests
 
-def has_space_ended(space_id: str) -> dict:
-    # TODO: future get_spaces from big accounts. Every day tweet about upcoming spaces?
 
+def get_following_ids():
+    '''
+    Get the bots following list 
+    '''
+    # accounts which we will auto archive projects for every X time
+    # TODO: cache this
+    # return [user.id for user in client.get_users_following(id=bot_id).data]
+    return [1384732309123829761] # angel protocol
+
+def get_spaces(creator_id: int):
+    # https://developer.twitter.com/apitools/api?endpoint=%2F2%2Fspaces%2Fby%2Fcreator_ids&method=get
+    response = requests.get(f'https://api.twitter.com/2/spaces/by/creator_ids?user_ids={creator_id}&expansions=creator_id,host_ids,invited_user_ids,speaker_ids,topic_ids', headers=headers)
+    r_json = response.json()
+    return r_json
+
+def get_spaces_info(space_id: int):
     # https://developer.twitter.com/apitools/api?endpoint=%2F2%2Fspaces%2F%7Bid%7D&method=get
     response = requests.get(f'https://api.twitter.com/2/spaces/{space_id}?space.fields=created_at,creator_id,ended_at,host_ids,id,participant_count,speaker_ids,started_at,state,title&expansions=creator_id,host_ids,invited_user_ids,speaker_ids,topic_ids', headers=headers)
     r_json = response.json()
+    return r_json
+
+
+# ids = get_following_ids()
+# print(ids)
+# exit()
+
+for twitter_id in [1384732309123829761]: # angel prortocol
+    for space in get_spaces(twitter_id)['data']:
+        # {'id': '1BdGYyadBMZGX', 'host_ids': ['1384732309123829761'], 'state': 'scheduled', 'creator_id': '1384732309123829761'}
+        # print(space)
+
+        # {'creator_id': '1384732309123829761', 'title': 'Angel Protocol 2.0 launches! Come & hear the team explain more.', 'id': '1BdGYyadBMZGX', 'participant_count': 0, 'host_ids': ['1384732309123829761'], 'state': 'scheduled', 'created_at': '2022-09-22T13:41:26.000Z'}
+        data = get_spaces_info(space['id'])['data']
+        print(data)
+        
+
+exit()
+
+
+def has_space_ended(space_id: str) -> dict:
+    # TODO: future get_spaces from big accounts. Every day tweet about upcoming spaces?
+    r_json = get_spaces_info(space_id)
 
     # print(dict(r_json['data']).keys()) 
     # exit()
@@ -59,6 +96,7 @@ def has_space_ended(space_id: str) -> dict:
         "ended_at": "",
         "title": r_json['data']['title'],        
         "creator_id": r_json['data']['creator_id'],
+        # get creators PFP url for the image
         "speaker_ids": [],
     }
 
@@ -80,6 +118,7 @@ def has_space_ended(space_id: str) -> dict:
         host_names[host_id] = {
             "name": user_name.name,
             "username": user_name.username,
+            "profile_image_url": user_name.profile_image_url,
         }
 
     speaker_names = {}
@@ -88,6 +127,7 @@ def has_space_ended(space_id: str) -> dict:
         speaker_names[speaker] = {
             "name": user_name.name,
             "username": user_name.username,
+            "profile_image_url": user_name.profile_image_url,
         }
 
     data['host_ids'] = host_names
@@ -97,11 +137,11 @@ def has_space_ended(space_id: str) -> dict:
 
 
 
-data1 = has_space_ended("1lDxLndQAQyGm")
+# data1 = has_space_ended("1lDxLndQAQyGm")
 # print(data1) # if yes, we can download. If not, we need to continue waiting.
 # data2 = has_space_ended("1BdGYyadBMZGX")
 # data2 = has_space_ended("1ynKOaQpggqJR") # live now
-print(data1)
+# print(data1)
 exit()
 
 exit()

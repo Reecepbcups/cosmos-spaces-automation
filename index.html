@@ -25,12 +25,15 @@
                     if( val.match(/\.(mp3|wav|ogg)$/) ) { 
                         // $("body").append( "<p>" + val + "</p>" );
 
+                        // TODO: try catch / show default     
                         const elements = val.split("__splitter__");
                         const Who = decodeURI(elements[0].replace(/_/g, " "));
                         const title = decodeURI(elements[1].replace(/_/g, " "));                        
 
                         $("body").append( "<h4>" + Who + "</h4><h5> " + title + "</h5>" );
-                        $("body").append( "<audio controls><source src='./final/" + val + "'></audio>" );
+                        // button to open file in new tab
+                        $("body").append( "<button onclick=\"window.open('./final/" + val + "')\">Open</button>" );
+                        // $("body").append( "<audio controls><source src='./final/" + val + "'></audio>" );                   
                     } 
                 });
             }

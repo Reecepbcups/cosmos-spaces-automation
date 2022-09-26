@@ -42,24 +42,6 @@ import re, requests
 
 def has_space_ended(space_id: str) -> dict:
     # TODO: future get_spaces from big accounts. Every day tweet about upcoming spaces?
-    # TODO: This is not returning the right data, Such as when it starts if scheduled.
-    # d = client.get_space(id=space_id).data
-    # created_at = d.created_at
-    # ended_at = d.ended_at
-    # hosts_ids = d.host_ids
-    # invited_user_ids = d.invited_user_ids
-    # participant_count = d.participant_count
-    # scheduled_start = d.scheduled_start
-    # speaker_ids = d.speaker_ids
-    # started_at = d.started_at
-    # state = d.state
-    # title = d.title
-    # topic_ids = d.topic_ids
-    # updated_at = d.updated_at    
-    # print(f"{created_at=} {ended_at=} {hosts_ids=} {invited_user_ids=} {participant_count=} {scheduled_start=} {speaker_ids=} {started_at=} {state=} {title=} {topic_ids=} {updated_at=}")
-    # return {
-    #     "state": state,
-    # }
 
     # https://developer.twitter.com/apitools/api?endpoint=%2F2%2Fspaces%2F%7Bid%7D&method=get
     response = requests.get(f'https://api.twitter.com/2/spaces/{space_id}?space.fields=created_at,creator_id,ended_at,host_ids,id,participant_count,speaker_ids,started_at,state,title&expansions=creator_id,host_ids,invited_user_ids,speaker_ids,topic_ids', headers=headers)
@@ -85,6 +67,9 @@ def has_space_ended(space_id: str) -> dict:
         data['started_at'] = r_json['data']['started_at']
         data['ended_at'] = r_json['data']['ended_at']
         data['speaker_ids'] = r_json['data']['speaker_ids']
+    elif data['state'] == "live":
+        # TODO: we need to wait for the space to end, then get the data
+        pass
 
     host_names = {} # match their id to their name
     # loop through host_ids
@@ -105,35 +90,10 @@ def has_space_ended(space_id: str) -> dict:
             "username": user_name.username,
         }
 
-
-    # print(user_names)
-
     data['host_ids'] = host_names
     data['speaker_ids'] = speaker_names
-    print(data)
-
-
-    
-    # if data['state'] != "scheduled": # or ended?
-    #     participant_count = r_json['data']['participant_count']
-    #     started_at = r_json['data']['started_at']
-    #     speaker_ids = r_json['data']['speaker_ids']
-    #     creator_id = r_json['data']['creator_id']
-    #     topic_ids = r_json['data']['topic_ids']
-
-    # print(f"{participant_count=} {state=} {created_at=} {host_ids=} ")#{started_at=} {speaker_ids=} {creator_id=} {topic_ids=}")
-
-    exit()   
-
-    all_users = {}
-    for user in r_json['includes']['users']:
-        all_users[user['id']] = user['username']
-
-    # print(r_json['includes']['topics'])
-    # created_at = response.json()['data']['created_at']
-    # creator_id = response.json()['data']['creator_id']
-    # participant_count = response.json()['data']['participant_count']
-    # hosts_ids = response.json()['includes']['users'][0]['id']
+    # print(data)
+    return data
 
 
 
@@ -141,7 +101,7 @@ data1 = has_space_ended("1lDxLndQAQyGm")
 # print(data1) # if yes, we can download. If not, we need to continue waiting.
 # data2 = has_space_ended("1BdGYyadBMZGX")
 # data2 = has_space_ended("1ynKOaQpggqJR") # live now
-# print(data2)
+print(data1)
 exit()
 
 exit()

@@ -6,49 +6,85 @@ Then reply back to the user.
 Then add to a google calandar via the API
 '''
 
+# tweepy docs: https://docs.tweepy.org/en/stable/api.html#API
+
 import os, time
+import re, requests, json
 
 import tweepy
 from dotenv import load_dotenv
 load_dotenv()
 
+# Twitter client keys
 API_KEY = os.getenv('API_KEY')
 API_KEY_SECRET = os.getenv('API_KEY_SECRET')
 ACCESS_TOKEN = os.getenv('ACCESS_TOKEN')
 ACCESS_TOKEN_SECRET = os.getenv('ACCESS_TOKEN_SECRET')
-
 BEARER_TOKEN = os.getenv('BEARER_TOKEN')
-headers = {
-    'Authorization': f"Bearer {BEARER_TOKEN}",
-}
-
+# Twitter v2 API
 auth = tweepy.OAuthHandler(API_KEY, API_KEY_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth) # wait_on_rate_limit=True
 client = tweepy.Client(bearer_token=BEARER_TOKEN, consumer_key=API_KEY, consumer_secret=API_KEY_SECRET, access_token=ACCESS_TOKEN, access_token_secret=ACCESS_TOKEN_SECRET)
 
-# tweepy docs: https://docs.tweepy.org/en/stable/api.html#API
+# Folders
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+JSON_DATA_FOLDER = os.path.join(CURRENT_DIR, 'json_data')
+os.makedirs(JSON_DATA_FOLDER, exist_ok=True)
 
-# get this bots id from client
-# bot_id = client.get_user(username='web3archives').data.id
+# Headers
+headers = {
+    'Authorization': f"Bearer {BEARER_TOKEN}",
+}
+
 
 bot_id = int(client.get_me().data.id)
-print(f"bot_id: {bot_id}")
+# print(f"bot_id: {bot_id}")
 mention_id = 1
 
-# words = ["cosmos"]
+# Helper
+def get_epoch_time_seconds():
+    return int(time.time())
 
-import re, requests
+# JSON_CACHE
+def get_json(filename: str):
+    u_filename = os.path.join(JSON_DATA_FOLDER, filename)
+    if not os.path.exists(u_filename):
+        return {}
+    with open(u_filename, 'r') as f:
+        return json.load(f)
+
+def save_json(filename: str, data: dict):
+    u_filename = os.path.join(JSON_DATA_FOLDER, filename)
+    with open(u_filename, 'w') as f:
+        json.dump(data, f, indent=4)
 
 
+# FOLLOWERS
+FOLLOWING_CACHE_TIME=60*60 # seconds * minutes
 def get_following_ids():
     '''
-    Get the bots following list 
+    Get the bots following list with a cache over time
+
+    {'cache_until_time': 1664220440, 'user_ids': [467972727, 1384732309123829761, 1487313404004118528, 2712978728], 'was_cached': False}
     '''
-    # accounts which we will auto archive projects for every X time
-    # TODO: cache this
-    # return [user.id for user in client.get_users_following(id=bot_id).data]
-    return [1384732309123829761] # angel protocol
+    def save_following_to_file() -> dict:
+        following = {
+            "cache_until_time": get_epoch_time_seconds()+FOLLOWING_CACHE_TIME,            
+            "user_ids_data": {user.id: {"name": user.name, "username": user.username} for user in client.get_users_following(id=bot_id).data},
+            "was_cached": True,
+        }
+        save_json("following.json", following)
+        return following
+
+    following = get_json("following.json")
+    if len(following) > 0 and following["cache_until_time"] > get_epoch_time_seconds():
+        return following
+    
+    following = save_following_to_file()
+    following['was_cached'] = False
+    return following    
+
 
 def get_spaces(creator_id: int):
     # https://developer.twitter.com/apitools/api?endpoint=%2F2%2Fspaces%2Fby%2Fcreator_ids&method=get
@@ -56,36 +92,71 @@ def get_spaces(creator_id: int):
     r_json = response.json()
     return r_json
 
-def get_spaces_info(space_id: int):
-    # https://developer.twitter.com/apitools/api?endpoint=%2F2%2Fspaces%2F%7Bid%7D&method=get
-    response = requests.get(f'https://api.twitter.com/2/spaces/{space_id}?space.fields=created_at,creator_id,ended_at,host_ids,id,participant_count,speaker_ids,started_at,state,title&expansions=creator_id,host_ids,invited_user_ids,speaker_ids,topic_ids', headers=headers)
-    r_json = response.json()
-    return r_json
+USER_CACHE_TIME=60*60*12 # 12 hour cache
+def get_user_cache(twitter_id: str):
+    user_file_name = "user_data.json"
+    twitter_id = str(twitter_id)
 
-
-# ids = get_following_ids()
-# print(ids)
-# exit()
-
-for twitter_id in [1384732309123829761]: # angel prortocol
-    for space in get_spaces(twitter_id)['data']:
-        # {'id': '1BdGYyadBMZGX', 'host_ids': ['1384732309123829761'], 'state': 'scheduled', 'creator_id': '1384732309123829761'}
-        # print(space)
-
-        # {'creator_id': '1384732309123829761', 'title': 'Angel Protocol 2.0 launches! Come & hear the team explain more.', 'id': '1BdGYyadBMZGX', 'participant_count': 0, 'host_ids': ['1384732309123829761'], 'state': 'scheduled', 'created_at': '2022-09-22T13:41:26.000Z'}
-        data = get_spaces_info(space['id'])['data']
-        print(data)
+    # gets cached version of a username if we follow them.
+    # TODO: if not, we should get user & save them to file.
+    following_ids = dict(get_following_ids()['user_ids_data']).keys()
+    print(following_ids)
+    # exit()
+    if twitter_id in following_ids:
+        print(f"Got from following cache {twitter_id}")
+        return get_following_ids()['user_ids_data'][twitter_id]['username']
+    
+    # nested function
+    def save_user_data_to_file() -> dict:
+        prev_user_data = get_json(user_file_name)
+        data = {"users": {}}
+        if len(prev_user_data) > 0:
+            data = prev_user_data
         
+        user = client.get_user(id=bot_id).data
+        # user_id = user.id
 
+        user_dict = { # TODO: append user_data to a list / dict of users
+            "cache_until_time": get_epoch_time_seconds()+USER_CACHE_TIME,            
+            "user_id": int(twitter_id),
+            "name": user.name,
+            "username": user.username,
+            "was_cached": True,
+        }
+
+        data['users'][twitter_id] = user_dict
+
+        save_json(user_file_name, data)
+        return user_dict
+
+    user_data = get_json(user_file_name)
+    if len(user_data) > 0 and twitter_id in user_data['users'].keys() and user_data['users'][twitter_id]["cache_until_time"] > get_epoch_time_seconds():
+        return user_data['users'][twitter_id]
+    
+    user_data = save_user_data_to_file()
+    user_data['was_cached'] = False
+    return user_data
+
+
+user = get_user_cache(467972727)
+print(user)
+# user2 = get_user_cache(467972727)
+# print(user2)
+# other3 = get_user_cache(1463413073973178371)
+# print(other3)
 exit()
 
 
-def has_space_ended(space_id: str) -> dict:
-    # TODO: future get_spaces from big accounts. Every day tweet about upcoming spaces?
-    r_json = get_spaces_info(space_id)
+def get_space_info(space_id: int | list):
+    # TODO: Allow list to be sent in to process multiple at once (loop over, return dict)
+    # https://developer.twitter.com/apitools/api?endpoint=%2F2%2Fspaces%2F%7Bid%7D&method=get
 
-    # print(dict(r_json['data']).keys()) 
-    # exit()
+    # if isinstance(space_id, list):
+    #     space_id = ','.join([str(i) for i in space_id])
+    # Then return {id: data, id: data, ...}
+
+    response = requests.get(f'https://api.twitter.com/2/spaces/{space_id}?space.fields=created_at,creator_id,ended_at,host_ids,id,participant_count,speaker_ids,started_at,state,title&expansions=creator_id,host_ids,invited_user_ids,speaker_ids,topic_ids', headers=headers)
+    r_json = response.json()
 
     data = {
         "state": r_json['data']['state'],
@@ -96,7 +167,7 @@ def has_space_ended(space_id: str) -> dict:
         "ended_at": "",
         "title": r_json['data']['title'],        
         "creator_id": r_json['data']['creator_id'],
-        # get creators PFP url for the image
+        # get creators PFP url for the image here, cache it for 1 day time as well
         "speaker_ids": [],
     }
 
@@ -136,9 +207,50 @@ def has_space_ended(space_id: str) -> dict:
     return data
 
 
+# ids = get_following_ids()
+# print(ids)
+# exit()
 
-# data1 = has_space_ended("1lDxLndQAQyGm")
-# print(data1) # if yes, we can download. If not, we need to continue waiting.
+
+
+
+def get_spaces_to_record_from_accounts_following():
+    following_ids = dict(get_following_ids()['user_ids_data']).keys()
+    # following_ids = [1384732309123829761, 467972727] # 1384732309123829761=angel prortocol, 467972727=Robo
+
+    for twitter_id in following_ids: 
+        spaces = get_spaces(twitter_id)
+        # their_username = following_ids[twitter_id]['username'] # also has 'name'
+        their_username = get_username(twitter_id)
+
+        if 'data' not in spaces:
+            print(f"Error: {twitter_id}: {spaces}")
+            continue
+
+        for space in spaces['data']:
+            data = get_space_info(space['id'])#['data']
+            # {'state': 'scheduled', 'id': '1dRKZMBlojgxB', 'host_ids': ['467972727'], 'participant_count': 0, 'title': '🦝 Historic Moment 🦝 First NFT hodler distribution LIVE ON AIR 👀🚀🔥', 'creator_id': '467972727', 'created_at': '2022-09-26T17:20:52.000Z'}
+            # print(data)
+            # exit()
+
+            if data['state'] == 'scheduled':
+                print(f"Space {data['id']} hosted by @{their_username} is scheduled soon: {data['title']}")
+                continue
+            elif data['state'] == 'live':
+                # print(f"Space {data['id']} hosted by @{their_uesrname} is live: {data['title']}")
+                continue
+            elif data['state'] == 'ended':
+                print(f"[!] Space {data['id']} hosted by @{their_username} has ended: {data['title']}")            
+                print(f"    https://twitter.com/i/spaces/{data['id']}, if this is able to be recorded (which ended means it is I think?) then we download here & process")
+                # TODO: Download
+                continue
+        
+
+# exit()
+
+
+data1 = get_space_info("1lDxLndQAQyGm")
+print('data1', data1, "\n") # if yes, we can download. If not, we need to continue waiting.
 # data2 = has_space_ended("1BdGYyadBMZGX")
 # data2 = has_space_ended("1ynKOaQpggqJR") # live now
 # print(data1)

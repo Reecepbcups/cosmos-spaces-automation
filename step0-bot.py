@@ -18,6 +18,9 @@ ACCESS_TOKEN = os.getenv('ACCESS_TOKEN')
 ACCESS_TOKEN_SECRET = os.getenv('ACCESS_TOKEN_SECRET')
 
 BEARER_TOKEN = os.getenv('BEARER_TOKEN')
+headers = {
+    'Authorization': f"Bearer {BEARER_TOKEN}",
+}
 
 auth = tweepy.OAuthHandler(API_KEY, API_KEY_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
@@ -37,18 +40,109 @@ mention_id = 1
 
 import re, requests
 
-def get_space_info(space_id: str):
+def has_space_ended(space_id: str) -> dict:
     # TODO: future get_spaces from big accounts. Every day tweet about upcoming spaces?
-    d = client.get_space(id=space_id)
-    if d.data.state == "ended":
-        # we need to download
-        pass
+    # TODO: This is not returning the right data, Such as when it starts if scheduled.
+    # d = client.get_space(id=space_id).data
+    # created_at = d.created_at
+    # ended_at = d.ended_at
+    # hosts_ids = d.host_ids
+    # invited_user_ids = d.invited_user_ids
+    # participant_count = d.participant_count
+    # scheduled_start = d.scheduled_start
+    # speaker_ids = d.speaker_ids
+    # started_at = d.started_at
+    # state = d.state
+    # title = d.title
+    # topic_ids = d.topic_ids
+    # updated_at = d.updated_at    
+    # print(f"{created_at=} {ended_at=} {hosts_ids=} {invited_user_ids=} {participant_count=} {scheduled_start=} {speaker_ids=} {started_at=} {state=} {title=} {topic_ids=} {updated_at=}")
+    # return {
+    #     "state": state,
+    # }
 
-data1 = get_space_info("1lDxLndQAQyGm")
-# print(data1.data.state)
+    # https://developer.twitter.com/apitools/api?endpoint=%2F2%2Fspaces%2F%7Bid%7D&method=get
+    response = requests.get(f'https://api.twitter.com/2/spaces/{space_id}?space.fields=created_at,creator_id,ended_at,host_ids,id,participant_count,speaker_ids,started_at,state,title&expansions=creator_id,host_ids,invited_user_ids,speaker_ids,topic_ids', headers=headers)
+    r_json = response.json()
 
-data2 = client.get_space(id="1BdGYyadBMZGX")
-print(data2.data)
+    # print(dict(r_json['data']).keys()) 
+    # exit()
+
+    data = {
+        "state": r_json['data']['state'],
+        "created_at": r_json['data']['created_at'],
+        "host_ids": r_json['data']['host_ids'],
+        "participant_count": 0,
+        "started_at": "",
+        "ended_at": "",
+        "title": r_json['data']['title'],        
+        "creator_id": r_json['data']['creator_id'],
+        "speaker_ids": [],
+    }
+
+    if data['state'] == "ended":
+        data['participant_count'] = r_json['data']['participant_count']
+        data['started_at'] = r_json['data']['started_at']
+        data['ended_at'] = r_json['data']['ended_at']
+        data['speaker_ids'] = r_json['data']['speaker_ids']
+
+    host_names = {} # match their id to their name
+    # loop through host_ids
+    for host_id in data['host_ids']:
+        # get user name
+        user_name = client.get_user(id=host_id).data
+        # add to user_names
+        host_names[host_id] = {
+            "name": user_name.name,
+            "username": user_name.username,
+        }
+
+    speaker_names = {}
+    for speaker in data['speaker_ids']:
+        user_name = client.get_user(id=speaker).data
+        speaker_names[speaker] = {
+            "name": user_name.name,
+            "username": user_name.username,
+        }
+
+
+    # print(user_names)
+
+    data['host_ids'] = host_names
+    data['speaker_ids'] = speaker_names
+    print(data)
+
+
+    
+    # if data['state'] != "scheduled": # or ended?
+    #     participant_count = r_json['data']['participant_count']
+    #     started_at = r_json['data']['started_at']
+    #     speaker_ids = r_json['data']['speaker_ids']
+    #     creator_id = r_json['data']['creator_id']
+    #     topic_ids = r_json['data']['topic_ids']
+
+    # print(f"{participant_count=} {state=} {created_at=} {host_ids=} ")#{started_at=} {speaker_ids=} {creator_id=} {topic_ids=}")
+
+    exit()   
+
+    all_users = {}
+    for user in r_json['includes']['users']:
+        all_users[user['id']] = user['username']
+
+    # print(r_json['includes']['topics'])
+    # created_at = response.json()['data']['created_at']
+    # creator_id = response.json()['data']['creator_id']
+    # participant_count = response.json()['data']['participant_count']
+    # hosts_ids = response.json()['includes']['users'][0]['id']
+
+
+
+data1 = has_space_ended("1lDxLndQAQyGm")
+# print(data1) # if yes, we can download. If not, we need to continue waiting.
+# data2 = has_space_ended("1BdGYyadBMZGX")
+# data2 = has_space_ended("1ynKOaQpggqJR") # live now
+# print(data2)
+exit()
 
 exit()
 while True:     # TODO: This works below for when a reply happens & it has a valid link.

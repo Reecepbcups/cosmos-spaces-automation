@@ -58,6 +58,8 @@ mv "$new_filename" $OUTPUT_FOLDER
 # remove all files in $FOLDER
 cd ..
 if [ "$(ls -A $CURRENT_DIR/$FOLDER)" ]; then
-    # rm -rf $CURRENT_DIR/$FOLDER # TODO:
-    # printf "Removed old files from -> $FOLDER"
+    rm -rf $CURRENT_DIR/$FOLDER
+    # remove $1
+    rm $1
+    printf "Removed old files from -> $FOLDER"
 fi

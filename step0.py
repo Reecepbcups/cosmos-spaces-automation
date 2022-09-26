@@ -7,8 +7,9 @@ Twitter bot which uses tweepy to get who has mentioned it in a thread with a par
 '''
 
 import os, sys, shutil, ffmpegio, twspace_dl
-import moviepy.editor as mpy
-from moviepy.editor import *
+# import moviepy.editor as mpy
+# from moviepy.editor import *
+import re
 
 
 # https://terraspaces.org/schedule/
@@ -22,6 +23,7 @@ RECORDED_SPACE="https://twitter.com/i/spaces/1lDxLndQAQyGm"
 CURRENT_DIR = os.path.dirname(os.path.realpath(__file__))
 DOWNLOADS_DIR = os.path.join(CURRENT_DIR, "downloads")
 os.makedirs(DOWNLOADS_DIR, exist_ok=True)
+os.chdir(CURRENT_DIR)
 
 # run run.sh in the downloads dir
 
@@ -38,27 +40,23 @@ def download_space(rec_space_url: str) -> str:
     space = twspace_dl.TwspaceDL(space_obj, filename_fmt)
     # space.download()
         
-    filename = space.filename + ".m4a"
-    file = os.path.join(CURRENT_DIR, filename)
-    
+    filename = f"{space.filename}.m4a"
+    new_filename = filename.replace(" ", "_")
 
-    if not os.path.exists(os.path.join(DOWNLOADS_DIR, filename)):
-        space.download()
-        shutil.move(file, DOWNLOADS_DIR)
-        return filename
+    # check if new_filename is in the downloads folder
+    if os.path.exists(os.path.join(DOWNLOADS_DIR, new_filename)):
+        print(f"File {new_filename} already exists in downloads folder.")
+    else:
+        space.download()        
+        # move from curent dir to downloads dir & rename to new_filename
+        shutil.move(os.path.join(CURRENT_DIR, f"{space.filename}.m4a"), os.path.join(DOWNLOADS_DIR, new_filename))
     
-    print(f"File {filename} already downloaded.")
-    return ""
-
-# check if filename_fmt is already in downloads folder or current dir
-# if not, then download it
-# 
+    # return re.escape(new_filename)
+    return new_filename
 
 
 import numpy as np
 from time import sleep
-
-ALLOWED_0_VOLUME_THRESHOLD_FRAMES= 48_000/2 # 0.5 seconds?
 
 def remove_0_volume_from_file(filename):
     file = os.path.join(DOWNLOADS_DIR, filename)
@@ -67,53 +65,16 @@ def remove_0_volume_from_file(filename):
         return
 
 
-    # load the filename as an audio file
-    audio = AudioFileClip(file)
-
-    print("Audio file loaded.", audio)
-
-    # loop through moviepy.audio.io.AudioFileClip.AudioFileClip
-
-    # get the audio array
-    audio_array = audio.to_soundarray()
-
-    # get the volume of the audio array
-    audio_volume = audio_array[:,0]
-
-    print("Audio volume:", audio_volume)
-
-    # loop through audio_volume & print if it finds a non 0 value
-
-    # create a new AudioFileClip to save the new audio to
-    new_audio = AudioFileClip(file)
-    new_array = new_audio.to_soundarray()
-    
-
-    next_0_allowed = 0
-    for i in range(len(audio_volume)):
-        if audio_volume[i] > 0.03:
-            # print("Non 0 volume at index", i)
-            new_array[i] = audio_array[i]
-            next_0_allowed = i + ALLOWED_0_VOLUME_THRESHOLD_FRAMES
-        elif i < next_0_allowed:
-            new_array[i] = 0
-            continue # we allow some 0 volume frames within reason
-
-    # save new_array sound array to file
-    new_audio = AudioFileClip(new_array, fps=48000)
-    # write to file
-    new_audio.write_audiofile(os.path.join(DOWNLOADS_DIR, "new_" + filename))
-
-            
-
-    # save audio array to file
-    # new_audio.write_audiofile("test.wav", fps=new_audio.fps)
+    # run a bash file    
+    os.chdir(DOWNLOADS_DIR)
+    os.system(f"bash ffmpeg_run.sh '{filename}'")
+    os.system(f"bash ffmpeg_merge.sh '{filename}'")
 
             
     
 
 
 if __name__ == "__main__":
-    filename = download_space(RECORDED_SPACE)
-    # filename may be ""
-    # remove_0_volume_from_file("file.m4a")
+    filename = download_space(RECORDED_SPACE) # if downloaded, still returns that filename
+
+    remove_0_volume_from_file(filename)

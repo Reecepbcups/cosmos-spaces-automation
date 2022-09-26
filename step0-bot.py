@@ -94,58 +94,70 @@ def get_spaces(creator_id: int):
 
 USER_CACHE_TIME=60*60*12 # 12 hour cache
 def get_user_cache(twitter_id: str):
+    '''
+    A cache query which gets a user, their name, and username for twitter.
+    Each return the same format so it is super easy to only store 1 instance for each
+    '''
+
+    # TODO: add pfp image to save for both?
+
     user_file_name = "user_data.json"
     twitter_id = str(twitter_id)
 
-    # gets cached version of a username if we follow them.
-    # TODO: if not, we should get user & save them to file.
-    following_ids = dict(get_following_ids()['user_ids_data']).keys()
-    print(following_ids)
-    # exit()
-    if twitter_id in following_ids:
-        print(f"Got from following cache {twitter_id}")
-        return get_following_ids()['user_ids_data'][twitter_id]['username']
+    following_data = get_following_ids()    
+    if twitter_id in dict(following_data['user_ids_data']).keys():
+        # print(f"Got from following cache {twitter_id}")        
+        return {
+            "cache_until_time": following_data['cache_until_time'],            
+            "user_id": int(twitter_id),
+            "name": following_data['user_ids_data'][twitter_id]['name'],
+            "username": following_data['user_ids_data'][twitter_id]['username'],
+            "is_followed": True,
+            "was_cached": True,
+        }
     
-    # nested function
+    # nested save function
     def save_user_data_to_file() -> dict:
         prev_user_data = get_json(user_file_name)
         data = {"users": {}}
         if len(prev_user_data) > 0:
             data = prev_user_data
         
-        user = client.get_user(id=bot_id).data
-        # user_id = user.id
+        user = client.get_user(id=bot_id).data        
 
-        user_dict = { # TODO: append user_data to a list / dict of users
+        # update the users data
+        data['users'][twitter_id] = {
             "cache_until_time": get_epoch_time_seconds()+USER_CACHE_TIME,            
             "user_id": int(twitter_id),
             "name": user.name,
-            "username": user.username,
+            "username": user.username,        
+            "is_followed": False,
             "was_cached": True,
         }
 
-        data['users'][twitter_id] = user_dict
-
         save_json(user_file_name, data)
-        return user_dict
+        return data['users'][twitter_id]
 
     user_data = get_json(user_file_name)
-    if len(user_data) > 0 and twitter_id in user_data['users'].keys() and user_data['users'][twitter_id]["cache_until_time"] > get_epoch_time_seconds():
+    if len(user_data) > 0 and twitter_id in dict(user_data['users']).keys() and user_data['users'][twitter_id]["cache_until_time"] > get_epoch_time_seconds():
         return user_data['users'][twitter_id]
     
     user_data = save_user_data_to_file()
     user_data['was_cached'] = False
     return user_data
-
-
-user = get_user_cache(467972727)
-print(user)
+# user = get_user_cache(467972727)
+# print(user)
 # user2 = get_user_cache(467972727)
 # print(user2)
 # other3 = get_user_cache(1463413073973178371)
 # print(other3)
-exit()
+# exit()
 
+
+def get_user():
+    # TODO: client.get user endpoint doesn't return pfps, so need to call that directly here
+    # then replace all instances of `client.get_user(id`
+    pass
 
 def get_space_info(space_id: int | list):
     # TODO: Allow list to be sent in to process multiple at once (loop over, return dict)
@@ -184,31 +196,32 @@ def get_space_info(space_id: int | list):
     # loop through host_ids
     for host_id in data['host_ids']:
         # get user name
-        user_name = client.get_user(id=host_id).data
+        user = client.get_user(id=host_id).data
         # add to user_names
         host_names[host_id] = {
-            "name": user_name.name,
-            "username": user_name.username,
-            "profile_image_url": user_name.profile_image_url,
+            "name": user.name,
+            "username": user.username,
+            "profile_image_url": user.profile_image_url,
         }
 
     speaker_names = {}
     for speaker in data['speaker_ids']:
-        user_name = client.get_user(id=speaker).data
+        user = client.get_user(id=speaker).data
+        input(client.get_user(id=speaker))
         speaker_names[speaker] = {
-            "name": user_name.name,
-            "username": user_name.username,
-            "profile_image_url": user_name.profile_image_url,
+            "name": user.name,
+            "username": user.username,
+            "profile_image_url": user.profile_image_url,
         }
 
     data['host_ids'] = host_names
     data['speaker_ids'] = speaker_names
     # print(data)
     return data
-
-
 # ids = get_following_ids()
-# print(ids)
+# ids_and_names = dict(ids['user_ids_data'])
+# just_ids = ids_and_names.keys()
+# print(ids_and_names)
 # exit()
 
 
@@ -221,7 +234,8 @@ def get_spaces_to_record_from_accounts_following():
     for twitter_id in following_ids: 
         spaces = get_spaces(twitter_id)
         # their_username = following_ids[twitter_id]['username'] # also has 'name'
-        their_username = get_username(twitter_id)
+        user = get_user_cache(twitter_id)
+        their_username = user['username']
 
         if 'data' not in spaces:
             print(f"Error: {twitter_id}: {spaces}")

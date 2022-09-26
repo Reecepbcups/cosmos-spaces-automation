@@ -44,19 +44,20 @@ i=$((i + 1))
 done
 
 echo "Merging output clips into one video"
-ffmpeg -hide_banner -f concat -i $merge -c copy -fflags +genpts merged.mkv 2>&1 | xargs -I{} echo -en "\r\e[0K{}"
-
 orig_filename="$(cat orig_filename.txt)"
-new_filename="${orig_filename}-silence_removed.mkv"
-mv merged.mkv "$new_filename"
-echo
-echo "Final video saved to $new_filename"
+# new_filename="${orig_filename}-silence_removed.mkv"
+# split orig_filename at the .mkv
+orig_filename="${orig_filename%.*}"
+new_filename="${orig_filename}.mkv"
 
+ffmpeg -hide_banner -f concat -i $merge -c copy -fflags +genpts $new_filename 2>&1 | xargs -I{} echo -en "\r\e[0K{}"
+
+echo -e "\nFinal video saved to $new_filename"
 mv "$new_filename" $OUTPUT_FOLDER
 
 # remove all files in $FOLDER
-# cd ..
-# if [ "$(ls -A $CURRENT_DIR/$FOLDER)" ]; then
-#     rm -rf $CURRENT_DIR/$FOLDER
-#     printf "Removed old maker files"
-# fi
+cd ..
+if [ "$(ls -A $CURRENT_DIR/$FOLDER)" ]; then
+    # rm -rf $CURRENT_DIR/$FOLDER # TODO:
+    # printf "Removed old files from -> $FOLDER"
+fi

@@ -5,6 +5,8 @@
 # requires: ffmpeg-seconds_to_hhmmss
 # 
 # run ffmpeg-mergevideos after running this script to combine clips into one video
+# Then you run the merge script. 
+# TODO: merge these in the future
 
 # if $1 is not set, exit
 if [ -z "$1" ]; then
@@ -31,7 +33,7 @@ ease='0.3'
 noise_thres="-35dB"
  
 # amount of silence to allow before clipping video
-silence_dur='1.0' # TODO: lower this? 0.3/ 0.5?
+silence_dur='0.5' # TODO: what should this be? higher = more choppy.
  
 unset pad_segments
 logfile="ffmpeg.log"

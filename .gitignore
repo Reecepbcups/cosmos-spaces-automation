@@ -1,3 +1,4 @@
-# downloads/ # future, but we have scrips there rn
+downloads/**/*.txt
+downloads/**/*.log
 *.mkv
 *.m4a

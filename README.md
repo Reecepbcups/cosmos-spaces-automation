@@ -21,3 +21,8 @@ Create a bot that can
 - On upload, auto tweet the title, hashtags, and speakers @s
   + Link to website to view the video / audio file.
   (May require me to make a react website UGH)
+
+
+## FUTURE:
+- ability to auto download some spaces from given users
+  (Ex: Akash, CosmosSpaces). Check every few hours if they have any? If so download.

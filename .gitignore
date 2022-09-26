@@ -3,3 +3,4 @@ downloads/**/*.log
 *.mkv
 *.m4a
 *.mp3
+.env

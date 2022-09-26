@@ -49,17 +49,23 @@ orig_filename="$(cat orig_filename.txt)"
 # split orig_filename at the .mkv
 orig_filename="${orig_filename%.*}"
 new_filename="${orig_filename}.mkv"
+audio_only_filename="${orig_filename}.mp3"
 
+# ffmpeg -hide_banner -f concat -i $merge -c copy -fflags +genpts $new_filename 2>&1 | xargs -I{} echo -en "\r\e[0K{}"
 ffmpeg -hide_banner -f concat -i $merge -c copy -fflags +genpts $new_filename 2>&1 | xargs -I{} echo -en "\r\e[0K{}"
+ffmpeg -i $new_filename -q:a 0 -map a $audio_only_filename
 
-echo -e "\nFinal video saved to $new_filename"
-mv "$new_filename" $OUTPUT_FOLDER
+echo -e "\nFinal audio saved to $audio_only_filename"
+mv "$audio_only_filename" $OUTPUT_FOLDER
 
 # remove all files in $FOLDER
 cd ..
 if [ "$(ls -A $CURRENT_DIR/$FOLDER)" ]; then
     rm -rf $CURRENT_DIR/$FOLDER
     # remove $1
-    rm $1
+    # rm $1
     printf "Removed old files from -> $FOLDER"
 fi
+
+# ffmpeg -i Y-Foundry_DAO_\(𝐘\)___at_Cosmoverse_\&_Token_2049__splitter__YFD_Community_Round_2.mkv -acodec pcm_s16le -ac 2 audio.wav
+# 

@@ -4,15 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
 <body>
 
-    <h1>test</h1>
+    <h1>Test Spaces:</h1>
 
-    <video>
-        <source src="Y-Foundry_DAO_(𝐘)___at_Cosmoverse_&_Token_2049__splitter__YFD_Community_Round_2.mkv" type="video/mp4">
-    </video>
+    <!-- Future: Sort based on month & year decending -->
+
+    <script>        
+
+
+        // get files in the final folder
+        $.ajax({
+            url: "./final",
+            success: function (data) {
+                $(data).find("a").attr("href", function (i, val) {
+                    if( val.match(/\.(mp3|wav|ogg)$/) ) { 
+                        // $("body").append( "<p>" + val + "</p>" );
+
+                        const elements = val.split("__splitter__");
+                        const Who = decodeURI(elements[0].replace(/_/g, " "));
+                        const title = decodeURI(elements[1].replace(/_/g, " "));                        
+
+                        $("body").append( "<h4>" + Who + "</h4><h5> " + title + "</h5>" );
+                        $("body").append( "<audio controls><source src='./final/" + val + "'></audio>" );
+                    } 
+                });
+            }
+        });
+
+        // $.getJSON('./final', data => {
+        //     console.log(data); //["doc1.jpg", "doc2.jpg", "doc3.jpg"] 
+        //     alert(data);
+
+
+        //     // make an audio element with the source to that data
+        //     // and append it to the body
+
+        //     data.forEach(item => {
+        //         const audio = document.createElement('audio');
+        //         audio.title = item;
+        //         audio.src = `./final/${item}`;
+        //         document.body.appendChild(audio);
+        //     })
+        // });        
+    </script>
+
+
     
+    <!-- <audio controls>        
+        <source src="./final/Y-Foundry_DAO_(𝐘)___at_Cosmoverse_&_Token_2049__splitter__YFD_Community_Round_2.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio> -->
+
+
 </body>
 </html>

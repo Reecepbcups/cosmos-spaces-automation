@@ -24,7 +24,7 @@ BEARER_TOKEN = os.getenv('BEARER_TOKEN')
 # Twitter v2 API
 auth = tweepy.OAuthHandler(API_KEY, API_KEY_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
-api = tweepy.API(auth) # wait_on_rate_limit=True
+api = tweepy.API(auth, wait_on_rate_limit=True)
 client = tweepy.Client(bearer_token=BEARER_TOKEN, consumer_key=API_KEY, consumer_secret=API_KEY_SECRET, access_token=ACCESS_TOKEN, access_token_secret=ACCESS_TOKEN_SECRET)
 
 # Folders
@@ -71,9 +71,10 @@ def get_following_ids():
     def save_following_to_file() -> dict:
         following = {
             "cache_until_time": get_epoch_time_seconds()+FOLLOWING_CACHE_TIME,            
-            "user_ids_data": {user.id: {"name": user.name, "username": user.username} for user in client.get_users_following(id=bot_id).data},
+            "user_ids_data": {user.id: {"name": user.name, "username": user.username, "profile_image_url": get_user_cache(user.id)['profile_image_url']} for user in client.get_users_following(id=bot_id).data},
             "was_cached": True,
         }
+        # following['profile_image_url'] = _
         save_json("following.json", following)
         return following
 
@@ -92,14 +93,29 @@ def get_spaces(creator_id: int):
     r_json = response.json()
     return r_json
 
+
+def _get_user_pfp(twitter_id: int) -> str:
+    # called from get_user_cache
+    # https://developer.twitter.com/apitools/api?endpoint=/2/users&method=get
+    time.sleep(0.5)
+    params = {'user.fields': 'profile_image_url',}
+    response = requests.get(f'https://api.twitter.com/2/users?ids={twitter_id}', params=params, headers=headers)
+    r_json = response.json()
+
+    if 'data' in r_json:
+        if 'profile_image_url' in r_json['data'][0]:
+            return r_json['data'][0]['profile_image_url']
+    return ''
+# print(_get_user_pfp(1463413073973178371))
+# exit()
+
+
 USER_CACHE_TIME=60*60*12 # 12 hour cache
 def get_user_cache(twitter_id: str):
     '''
     A cache query which gets a user, their name, and username for twitter.
     Each return the same format so it is super easy to only store 1 instance for each
     '''
-
-    # TODO: add pfp image to save for both?
 
     user_file_name = "user_data.json"
     twitter_id = str(twitter_id)
@@ -112,6 +128,7 @@ def get_user_cache(twitter_id: str):
             "user_id": int(twitter_id),
             "name": following_data['user_ids_data'][twitter_id]['name'],
             "username": following_data['user_ids_data'][twitter_id]['username'],
+            "profile_image_url": _get_user_pfp(twitter_id),
             "is_followed": True,
             "was_cached": True,
         }
@@ -130,7 +147,8 @@ def get_user_cache(twitter_id: str):
             "cache_until_time": get_epoch_time_seconds()+USER_CACHE_TIME,            
             "user_id": int(twitter_id),
             "name": user.name,
-            "username": user.username,        
+            "username": user.username,
+            "profile_image_url": _get_user_pfp(twitter_id),    
             "is_followed": False,
             "was_cached": True,
         }
@@ -152,12 +170,6 @@ def get_user_cache(twitter_id: str):
 # other3 = get_user_cache(1463413073973178371)
 # print(other3)
 # exit()
-
-
-def get_user():
-    # TODO: client.get user endpoint doesn't return pfps, so need to call that directly here
-    # then replace all instances of `client.get_user(id`
-    pass
 
 def get_space_info(space_id: int | list):
     # TODO: Allow list to be sent in to process multiple at once (loop over, return dict)
@@ -196,27 +208,29 @@ def get_space_info(space_id: int | list):
     # loop through host_ids
     for host_id in data['host_ids']:
         # get user name
-        user = client.get_user(id=host_id).data
+        # user = client.get_user(id=host_id).data
+        user = get_user_cache(host_id)
         # add to user_names
         host_names[host_id] = {
-            "name": user.name,
-            "username": user.username,
-            "profile_image_url": user.profile_image_url,
+            "name": user['name'],
+            "username": user['username'],
+            "profile_image_url": user.get('profile_image_url', ''),
         }
 
     speaker_names = {}
     for speaker in data['speaker_ids']:
-        user = client.get_user(id=speaker).data
-        input(client.get_user(id=speaker))
+        # user = client.get_user(id=speaker).data
+        user = get_user_cache(speaker)
+        # input(client.get_user(id=speaker))
         speaker_names[speaker] = {
-            "name": user.name,
-            "username": user.username,
-            "profile_image_url": user.profile_image_url,
+            "name": user['name'],
+            "username": user['username'],
+            "profile_image_url": user.get('profile_image_url', ''),
         }
 
     data['host_ids'] = host_names
     data['speaker_ids'] = speaker_names
-    # print(data)
+    input(data)
     return data
 # ids = get_following_ids()
 # ids_and_names = dict(ids['user_ids_data'])
@@ -263,11 +277,16 @@ def get_spaces_to_record_from_accounts_following():
 # exit()
 
 
-data1 = get_space_info("1lDxLndQAQyGm")
-print('data1', data1, "\n") # if yes, we can download. If not, we need to continue waiting.
-# data2 = has_space_ended("1BdGYyadBMZGX")
-# data2 = has_space_ended("1ynKOaQpggqJR") # live now
+# data1 = get_space_info("1lDxLndQAQyGm")
+# print('data1', data1, "\n") # if yes, we can download. If not, we need to continue waiting.
+# data2 = get_space_info("1BdGYyadBMZGX")
+# data2 = get_space_info("1ynKOaQpggqJR") # live now
 # print(data1)
+
+# ended no recording
+data2 = get_space_info("1lPKqBrqNoeGb")
+print('data2', data2, "\n")
+
 exit()
 
 exit()

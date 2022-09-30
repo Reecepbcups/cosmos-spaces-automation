@@ -36,8 +36,6 @@ os.makedirs(JSON_DATA_FOLDER, exist_ok=True)
 headers = {
     'Authorization': f"Bearer {BEARER_TOKEN}",
 }
-
-
 bot_id = int(client.get_me().data.id)
 # print(f"bot_id: {bot_id}")
 mention_id = 1
@@ -87,25 +85,34 @@ def get_following_ids():
     return following    
 
 
-def get_spaces(creator_id: int):
+def get_spaces(creator_ids: list[int | str]):
+    ids = ','.join([str(i) for i in creator_ids])
     # https://developer.twitter.com/apitools/api?endpoint=%2F2%2Fspaces%2Fby%2Fcreator_ids&method=get
-    response = requests.get(f'https://api.twitter.com/2/spaces/by/creator_ids?user_ids={creator_id}&expansions=creator_id,host_ids,invited_user_ids,speaker_ids,topic_ids', headers=headers)
+    # response = requests.get(f'https://api.twitter.com/2/spaces/by/creator_ids?user_ids={ids}&expansions=creator_id,host_ids,invited_user_ids,speaker_ids,topic_ids', headers=headers)
+    response = requests.get(f'https://api.twitter.com/2/spaces/by/creator_ids?user_ids={ids}&space.fields=created_at,creator_id,ended_at,host_ids,id,participant_count,scheduled_start,speaker_ids,started_at,state,title&expansions=creator_id,host_ids,speaker_ids&user.fields=created_at,description,location,name,pinned_tweet_id,profile_image_url,public_metrics', headers=headers)
     r_json = response.json()
+
+    print(r_json)
+    exit()
     return r_json
+# get_spaces([467972727])
 
 
-def _get_user_pfp(twitter_id: int) -> str:
+def _get_user_pfps(twitter_ids: list[int | str]) -> list: # is it a list?
     # called from get_user_cache
     # https://developer.twitter.com/apitools/api?endpoint=/2/users&method=get
-    time.sleep(0.5)
+    # 
+    
+    ids = ','.join([str(i) for i in twitter_ids])
+         
     params = {'user.fields': 'profile_image_url',}
-    response = requests.get(f'https://api.twitter.com/2/users?ids={twitter_id}', params=params, headers=headers)
+    response = requests.get(f'https://api.twitter.com/2/users?ids={ids}', params=params, headers=headers)
     r_json = response.json()
 
     if 'data' in r_json:
         if 'profile_image_url' in r_json['data'][0]:
-            return r_json['data'][0]['profile_image_url']
-    return ''
+            return r_json['data']
+    return []
 # print(_get_user_pfp(1463413073973178371))
 # exit()
 
@@ -171,7 +178,7 @@ def get_user_cache(twitter_id: str):
 # print(other3)
 # exit()
 
-def get_space_info(space_id: int | list):
+def get_space_info(space_ids: int | list): # do this when getting spaces already?
     # TODO: Allow list to be sent in to process multiple at once (loop over, return dict)
     # https://developer.twitter.com/apitools/api?endpoint=%2F2%2Fspaces%2F%7Bid%7D&method=get
 
@@ -179,8 +186,12 @@ def get_space_info(space_id: int | list):
     #     space_id = ','.join([str(i) for i in space_id])
     # Then return {id: data, id: data, ...}
 
-    response = requests.get(f'https://api.twitter.com/2/spaces/{space_id}?space.fields=created_at,creator_id,ended_at,host_ids,id,participant_count,speaker_ids,started_at,state,title&expansions=creator_id,host_ids,invited_user_ids,speaker_ids,topic_ids', headers=headers)
+    ids = ','.join([str(i) for i in space_ids])
+
+    response = requests.get(f'https://api.twitter.com/2/spaces/{ids}?space.fields=created_at,creator_id,ended_at,host_ids,id,participant_count,speaker_ids,started_at,state,title&expansions=creator_id,host_ids,invited_user_ids,speaker_ids,topic_ids', headers=headers)
     r_json = response.json()
+
+    # TODO: Loop through
 
     data = {
         "state": r_json['data']['state'],
@@ -238,7 +249,8 @@ def get_space_info(space_id: int | list):
 # print(ids_and_names)
 # exit()
 
-
+print(get_following_ids())
+exit()
 
 
 def get_spaces_to_record_from_accounts_following():

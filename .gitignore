@@ -4,3 +4,4 @@ downloads/**/*.log
 *.m4a
 *.mp3
 .env
+json_data/

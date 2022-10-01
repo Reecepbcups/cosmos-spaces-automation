@@ -11,6 +11,7 @@ Then add to a google calandar via the API
 # TODO: Google API for an auto calandar
 
 import os, time
+from pkgutil import get_data
 import re, requests, json, datetime
 
 import tweepy
@@ -38,8 +39,8 @@ os.makedirs(JSON_DATA_FOLDER, exist_ok=True)
 headers = {
     'Authorization': f"Bearer {BEARER_TOKEN}",
 }
-bot_id = int(client.get_me().data.id)
-# print(f"bot_id: {bot_id}")
+bot_id = str(client.get_me().data.id)
+print(f"bot_id: {bot_id}")
 
 # Helper
 def get_epoch_time_seconds():
@@ -70,42 +71,41 @@ def get_following_ids() -> dict[str]:
     {'cache_until_time': 1664578665, 'user_ids_list': ['1355366118119108612', '467972727', '1384732309123829761', '1487313404004118528', '2712978728'], 'was_cached': True}   
     '''
     #
-    # FILENAME = 'following_ids.json'
-    # FOLLOWING_CACHE_TIME=60*60 # seconds * minutes
-    # users_following = client.get_users_following(id=bot_id).data
-    #
-    # # nested save if the user_ids_list
-    # def save_following_to_file() -> dict:
-    #     following = {
-    #         "cache_until_time": get_epoch_time_seconds()+FOLLOWING_CACHE_TIME,            
-    #         # "user_ids_data": {user.id: {"name": user.name, "username": user.username, "profile_image_url": pfps[user_id]} for user in users_following},
-    #         "user_ids_list": [str(user.id) for user in users_following],
-    #         "was_cached": True,
-    #     }
-    #     # following['profile_image_url'] = _
-    #     save_json(FILENAME, following)
-    #     return following
-    #
-    # following = get_json(FILENAME)
-    # if len(following) > 0 and following["cache_until_time"] > get_epoch_time_seconds():
-    #     return following
-    #
-    # following = save_following_to_file()
-    # following['was_cached'] = False
-    # # print(following)
-    # return following
-    return {'cache_until_time': 1664578665, 'user_ids_list': ['1355366118119108612', '467972727', '1384732309123829761', '1487313404004118528', '2712978728'], 'was_cached': True}   
+    FILENAME = 'following_ids.json'
+    FOLLOWING_CACHE_TIME=60*60 # seconds * minutes
+    users_following = client.get_users_following(id=bot_id).data
+    
+    # nested save if the user_ids_list
+    def save_following_to_file() -> dict:
+        following = {
+            "cache_until_time": get_epoch_time_seconds()+FOLLOWING_CACHE_TIME,            
+            # "user_ids_data": {user.id: {"name": user.name, "username": user.username, "profile_image_url": pfps[user_id]} for user in users_following},
+            "user_ids_list": [str(user.id) for user in users_following],
+            "was_cached": True,
+        }
+        # following['profile_image_url'] = _
+        save_json(FILENAME, following)
+        return following
+    
+    following = get_json(FILENAME)
+    if len(following) > 0 and following["cache_until_time"] > get_epoch_time_seconds():
+        return following
+    
+    following = save_following_to_file()
+    following['was_cached'] = False
+    # print(following)
+    return following
+    # return {'cache_until_time': 1664578665, 'user_ids_list': ['1355366118119108612', '467972727', '1384732309123829761', '1487313404004118528', '2712978728'], 'was_cached': True}   
 
 
 
 # Spaces Information
 def get_spaces(creator_ids: list[int | str]): # TODO: cache?
-    # ids = ','.join([str(i) for i in creator_ids])
     # # https://developer.twitter.com/apitools/api?endpoint=%2F2%2Fspaces%2Fby%2Fcreator_ids&method=get
-    # # response = requests.get(f'https://api.twitter.com/2/spaces/by/creator_ids?user_ids={ids}&expansions=creator_id,host_ids,invited_user_ids,speaker_ids,topic_ids', headers=headers)
-    # r_json = requests.get(f'https://api.twitter.com/2/spaces/by/creator_ids?user_ids={ids}&space.fields=created_at,creator_id,ended_at,host_ids,id,participant_count,scheduled_start,speaker_ids,started_at,state,title&expansions=creator_id,host_ids,speaker_ids&user.fields=created_at,description,location,name,pinned_tweet_id,profile_image_url,public_metrics', headers=headers).json()
-    # return r_json
-    return {'data': [{'speaker_ids': ['1510374842171891713', '1035898014', '1079651667908407297', '475981679', '1398290390374027271'], 'host_ids': ['1355366118119108612', '1398290390374027271', '1079651667908407297'], 'started_at': '2022-09-30T19:56:45.000Z', 'participant_count': 20, 'state': 'live', 'created_at': '2022-09-30T19:56:42.000Z', 'id': '1gqxvyLPMAWJB', 'creator_id': '1355366118119108612', 'title': 'Speed Dating Space'}, {'host_ids': ['467972727'], 'scheduled_start': '2022-10-01T14:00:33.000Z', 'participant_count': 0, 'state': 'scheduled', 'created_at': '2022-09-26T17:20:52.000Z', 'id': '1dRKZMBlojgxB', 'creator_id': '467972727', 'title': '🦝 Historic Moment 🦝 First NFT hodler distribution LIVE ON AIR 👀🚀🔥'}], 'includes': {'users': [{'public_metrics': {'followers_count': 68694, 'following_count': 1607, 'tweet_count': 29051, 'listed_count': 517}, 'created_at': '2021-01-30T04:05:18.000Z', 'id': '1355366118119108612', 'name': 'Cephii', 'description': 'of the Cosmos', 'username': 'Cephii1', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1575263040257277953/g_9j8_-S_normal.jpg'}, {'public_metrics': {'followers_count': 14791, 'following_count': 2671, 'tweet_count': 9351, 'listed_count': 123}, 'created_at': '2021-05-28T14:49:51.000Z', 'id': '1398290390374027271', 'name': 'Coach Bruce Wrangler 🚬', 'location': 'Beyond Being and Non-Being', 'description': 'Messiah', 'username': 'asparagoid', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1556909050763280385/VHqMbsoL_normal.jpg'}, {'public_metrics': {'followers_count': 1139, 'following_count': 252, 'tweet_count': 7848, 'listed_count': 1}, 'created_at': '2018-12-31T08:13:11.000Z', 'id': '1079651667908407297', 'name': 'addi🕊', 'location': 'nyc', 'pinned_tweet_id': '1537987712401014788', 'description': 'anne sexton apologist', 'username': 'stupidegirl123', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1550982409788825600/HyBcXbAL_normal.jpg'}, {'public_metrics': {'followers_count': 404, 'following_count': 53, 'tweet_count': 13, 'listed_count': 1}, 'created_at': '2022-04-02T21:53:28.000Z', 'id': '1510374842171891713', 'name': '0xEars (👂,👂)', 'location': 'web3 🌐', 'pinned_tweet_id': '1567225381500977155', 'description': 'Prolific. Programming, philosophy, history, internet, startups, web3. Jamming with founders changing the world.', 'username': '0x_Ears', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1572706955201810433/wdrewbnx_normal.jpg'}, {'public_metrics': {'followers_count': 6527, 'following_count': 512, 'tweet_count': 91824, 'listed_count': 59}, 'created_at': '2012-12-26T00:14:44.000Z', 'id': '1035898014', 'name': 'AZ', 'pinned_tweet_id': '1332854649783771145', 'description': 'designer. and more. Thanks for your patience when requesting a reading! patreon: https://t.co/kDwJo9unl8 email: azadeh.rz27@gmail.com', 'username': 'azcontour', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1574830346876719120/5q0TU3d4_normal.jpg'}, {'public_metrics': {'followers_count': 511, 'following_count': 1935, 'tweet_count': 8181, 'listed_count': 10}, 'created_at': '2012-01-27T16:59:09.000Z', 'id': '475981679', 'name': 'Yiz', 'location': 'Planet Earth', 'pinned_tweet_id': '1574720664728125441', 'description': 'King Daddy Dog', 'username': 'yizthedog', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1574719098180739072/2J_taKlK_normal.jpg'}, {'public_metrics': {'followers_count': 5548, 'following_count': 3189, 'tweet_count': 32462, 'listed_count': 68}, 'created_at': '2012-01-19T01:39:22.000Z', 'id': '467972727', 'name': '🦝RACeyser Söze🦝Mayor of RACville', 'location': 'RAC Rank #Fiddy', 'pinned_tweet_id': '1574451490940686337', 'description': '@RacoonSupply Brand Ambassador 🦝\nCommunity - Artificial Intelligence - Gaming 🤝', 'username': 'RoboVerseWeb3', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1573362088122421248/glmMTMXh_normal.jpg'}]}, 'meta': {'result_count': 2}}
+    ids = ','.join([str(i) for i in creator_ids])
+    r_json = requests.get(f'https://api.twitter.com/2/spaces/by/creator_ids?user_ids={ids}&space.fields=created_at,creator_id,ended_at,host_ids,id,participant_count,scheduled_start,speaker_ids,started_at,state,title&expansions=creator_id,host_ids,speaker_ids&user.fields=created_at,description,location,name,pinned_tweet_id,profile_image_url,public_metrics', headers=headers).json()    
+    return r_json
+    # return {'data': [{'speaker_ids': ['1510374842171891713', '1035898014', '1079651667908407297', '475981679', '1398290390374027271'], 'host_ids': ['1355366118119108612', '1398290390374027271', '1079651667908407297'], 'started_at': '2022-09-30T19:56:45.000Z', 'participant_count': 20, 'state': 'live', 'created_at': '2022-09-30T19:56:42.000Z', 'id': '1gqxvyLPMAWJB', 'creator_id': '1355366118119108612', 'title': 'Speed Dating Space'}, {'host_ids': ['467972727'], 'scheduled_start': '2022-10-01T14:00:33.000Z', 'participant_count': 0, 'state': 'scheduled', 'created_at': '2022-09-26T17:20:52.000Z', 'id': '1dRKZMBlojgxB', 'creator_id': '467972727', 'title': '🦝 Historic Moment 🦝 First NFT hodler distribution LIVE ON AIR 👀🚀🔥'}], 'includes': {'users': [{'public_metrics': {'followers_count': 68694, 'following_count': 1607, 'tweet_count': 29051, 'listed_count': 517}, 'created_at': '2021-01-30T04:05:18.000Z', 'id': '1355366118119108612', 'name': 'Cephii', 'description': 'of the Cosmos', 'username': 'Cephii1', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1575263040257277953/g_9j8_-S_normal.jpg'}, {'public_metrics': {'followers_count': 14791, 'following_count': 2671, 'tweet_count': 9351, 'listed_count': 123}, 'created_at': '2021-05-28T14:49:51.000Z', 'id': '1398290390374027271', 'name': 'Coach Bruce Wrangler 🚬', 'location': 'Beyond Being and Non-Being', 'description': 'Messiah', 'username': 'asparagoid', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1556909050763280385/VHqMbsoL_normal.jpg'}, {'public_metrics': {'followers_count': 1139, 'following_count': 252, 'tweet_count': 7848, 'listed_count': 1}, 'created_at': '2018-12-31T08:13:11.000Z', 'id': '1079651667908407297', 'name': 'addi🕊', 'location': 'nyc', 'pinned_tweet_id': '1537987712401014788', 'description': 'anne sexton apologist', 'username': 'stupidegirl123', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1550982409788825600/HyBcXbAL_normal.jpg'}, {'public_metrics': {'followers_count': 404, 'following_count': 53, 'tweet_count': 13, 'listed_count': 1}, 'created_at': '2022-04-02T21:53:28.000Z', 'id': '1510374842171891713', 'name': '0xEars (👂,👂)', 'location': 'web3 🌐', 'pinned_tweet_id': '1567225381500977155', 'description': 'Prolific. Programming, philosophy, history, internet, startups, web3. Jamming with founders changing the world.', 'username': '0x_Ears', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1572706955201810433/wdrewbnx_normal.jpg'}, {'public_metrics': {'followers_count': 6527, 'following_count': 512, 'tweet_count': 91824, 'listed_count': 59}, 'created_at': '2012-12-26T00:14:44.000Z', 'id': '1035898014', 'name': 'AZ', 'pinned_tweet_id': '1332854649783771145', 'description': 'designer. and more. Thanks for your patience when requesting a reading! patreon: https://t.co/kDwJo9unl8 email: azadeh.rz27@gmail.com', 'username': 'azcontour', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1574830346876719120/5q0TU3d4_normal.jpg'}, {'public_metrics': {'followers_count': 511, 'following_count': 1935, 'tweet_count': 8181, 'listed_count': 10}, 'created_at': '2012-01-27T16:59:09.000Z', 'id': '475981679', 'name': 'Yiz', 'location': 'Planet Earth', 'pinned_tweet_id': '1574720664728125441', 'description': 'King Daddy Dog', 'username': 'yizthedog', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1574719098180739072/2J_taKlK_normal.jpg'}, {'public_metrics': {'followers_count': 5548, 'following_count': 3189, 'tweet_count': 32462, 'listed_count': 68}, 'created_at': '2012-01-19T01:39:22.000Z', 'id': '467972727', 'name': '🦝RACeyser Söze🦝Mayor of RACville', 'location': 'RAC Rank #Fiddy', 'pinned_tweet_id': '1574451490940686337', 'description': '@RacoonSupply Brand Ambassador 🦝\nCommunity - Artificial Intelligence - Gaming 🤝', 'username': 'RoboVerseWeb3', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1573362088122421248/glmMTMXh_normal.jpg'}]}, 'meta': {'result_count': 2}}
 
 def get_space_by_id(space_id: str | int): # 300 per 15 min window. Does not have multispace query support :(
     FILENAME = "space_data.json"    
@@ -136,13 +136,6 @@ def get_valid_spaces_ids(space_ids: list[int | str]) -> list[dict]:
     space_ids = ','.join([str(space_id) for space_id in space_ids])
     response = requests.get(f'https://api.twitter.com/2/spaces?ids={space_ids}&space.fields=state', headers=headers).json()
     return response['data'] # invalid spaces are in the 'errors' key
-
-valid = get_valid_spaces_ids(['1gqxvyLPMAWJB','1dRKZMBlojgxB','1dRKZMBlojbad'])
-print(valid)
-get_data = {str(space['id']): get_space_by_id(space['id']) for space in valid}
-
-print(get_data)
-exit()
 
 
 # TODO: call this with both the following_ids & the user_ids from a given spaces
@@ -225,39 +218,26 @@ def _download_ended_space(data):
     print(f"We would download ended space here if we have not already begun downloading... {data['id']}")
     pass
 
-def do_processing_on_spaces(spaces_ids: list[str]):
+def do_processing_on_spaces(creator_ids: list):
     # step 1.5 -> get a list of ids for other specific spaces users want to have an update from. We need to cache these and only run 1 time per 15 minutes?
     # stage 2: get spaces from following users
 
     # TODO: get_queued_spaces_ids() function
     # spaces = get_spaces(following['user_ids_list'])
-    spaces = get_spaces(spaces_ids)
+    spaces = get_spaces(creator_ids) # We can't do this since spaces != creator ids. Unless we just cache all of a given users spaces from the IDS?
 
-    # print(spaces)
-
+    if 'data' not in spaces:
+        print(f"ERROR: do_processing_on_spaces: {spaces}")
+        return    
 
     # Stage 2.5, get all users in all given spaces. Query all their data & cache it.
     user_ids_to_query = [] # for tagging, pfps, etc
-
     for space in spaces['data']:
-        # {
-        # 'speaker_ids': ['1510374842171891713', '1035898014', '1079651667908407297', '475981679', '1398290390374027271'], 
-        # 'host_ids': ['1355366118119108612', '1398290390374027271', '1079651667908407297'], 
-        # 'started_at': '2022-09-30T19:56:45.000Z', 
-        # 'participant_count': 20, 
-        # 'state': 'live', 
-        # 'created_at': '2022-09-30T19:56:42.000Z', 
-        # 'id': '1gqxvyLPMAWJB', 
-        # 'creator_id': '1355366118119108612', 
-        # 'title': 'Speed Dating Space'
-        # }    
         user_set = set(space['host_ids'] + [space['creator_id']])
         if 'speaker_ids' in space.keys():
-            user_set = user_set.union(set(space['speaker_ids']))
-        
+            user_set = user_set.union(set(space['speaker_ids']))    
         user_ids_to_query.extend(user_set)
-        # print(space)
-
+    get_users_info_cache(user_ids_to_query) # now we query all those IDS so it is cached
 
     # stage 4, print out each spaces data including the users corrrect & cached information
     for space in spaces['data']:
@@ -271,8 +251,7 @@ def do_processing_on_spaces(spaces_ids: list[str]):
         # 'id': '1gqxvyLPMAWJB', 
         # 'creator_id': '1355366118119108612', 
         # 'title': 'Speed Dating Space'
-        # }   
-
+        # }
         data = {
             'title': space.get('title', 'No Title'),
             'id': space.get('id', ""),
@@ -286,6 +265,9 @@ def do_processing_on_spaces(spaces_ids: list[str]):
             # scheduled
             'scheduled_start': space.get("scheduled_start", "unknown"), 
         }
+
+        if str(space['creator_id']) == "1355366118119108612":
+            print(space)
 
         if len(data['id']) == 0:
             print("Skipping space because it has no id.")
@@ -309,7 +291,7 @@ def do_processing_on_spaces(spaces_ids: list[str]):
             continue
 
 
-def get_almost_valid_space_links(tweet_text: str) -> list:
+def get_almost_valid_space_links_author_ids(tweet_text: str) -> list:
     '''
     Gets any twitter space links THOUGH they may not be valid.
     So check when getting space information if it returns and data, if not = invalid.
@@ -327,42 +309,143 @@ def get_almost_valid_space_links(tweet_text: str) -> list:
         if '://t.co/' in url: # get twitters redirect url if it is that.
             r = requests.get(url)
             url = r.url
-        if url.startswith("https://twitter.com/i/spaces/"):                
+        if url.startswith("https://twitter.com/i/spaces/"): 
+            last_value = url.split("/")[-1]
+            if len(last_value) != len("1gqxvyLPMAWJB"): # some random valid code, 13 length
+                continue               
             valid_spaces_urls[url] = None
 
     return list(valid_spaces_urls.keys())    
+
+
+def _get_parent_id_text(tweet_ids: list[str|int]):
+    params = {
+        'tweet.fields': 'text',
+        'expansions': 'author_id',
+        'media.fields': 'url',
+    }
+    tweet_ids = ','.join([str(tweet_id) for tweet_id in tweet_ids])
+    response = requests.get(f'https://api.twitter.com/2/tweets?ids={tweet_ids}', params=params, headers=headers).json()
+
+    authors_to_get_spaces_from = []
+    for data in response['data']:
+
+        # ensure the author is not the bot_id
+        if str(data['author_id']) == bot_id:
+            continue
+
         
 
+        author_ids = get_almost_valid_space_links_author_ids(data['text'])
+        for url in data['urls']:            
+            author_ids.extend(get_almost_valid_space_links_author_ids(url['display_url']))
 
+        # author_ids = set(author_ids)
+        authors_to_get_spaces_from.extend(author_ids)
 
+        # valid_urls.extend(get_almost_valid_space_links(text))
 
-def get_mentions(): # Can we instead subscribe to the mentions stream?, queue up. Then async every X minutes to save to queue for valid tweets / mentions with spaces in them
+    authors_to_get_spaces_from = set(authors_to_get_spaces_from)
+    print(authors_to_get_spaces_from)
+    return authors_to_get_spaces_from
+
+# _get_parent_id_text(["1574245087541956609"])
+# exit()
+
+def get_mentions_creator_ids() -> list[str]: # Can we instead subscribe to the mentions stream?, queue up. Then async every X minutes to save to queue for valid tweets / mentions with spaces in them
+    '''
+    Gets latest mentions, returns a list of unique creator IDS (So we can just download all their public spaces atm)
+
+    If twitter was better, we could query multiple spaces by id & just do on a per requests basis. But twitter is twitter so yea.
+    '''
+    # https://developer.twitter.com/apitools/api?endpoint=%2F2%2Fusers%2F%7Bid%7D%2Fmentions&method=get
     FILENAME = "last_mention_id.json"    
     mention_id = get_json(FILENAME).get("id", 1)
+    max_results = 100
+    may_be_valid_urls = []
 
-    # mentions = api.mentions_timeline(since_id=mention_id, count=100)    
-    # for data in mentions:
-    #     mention_id = data.id
-    #     print(f"{mention_id}: {data.author.name} ({data.author.screen_name}) - {data.text} - {data.in_reply_to_status_id_str}")        
-    #     #TODO:  This would be data.text
-    #     get_almost_valid_space_links("Here is as test https://google.com & https://twitter.com/i/spaces/ but https://twitter.com/i/spaces/code is what we want. Valid: https://twitter.com/i/spaces/1gqxvyLPMAWJB")    
+    # https://developer.twitter.com/en/docs/twitter-api/v1/tweets/timelines/api-reference/get-statuses-mentions_timeline
+    mentions = api.mentions_timeline(since_id=mention_id, count=max_results) # we can only do the last 300 mentions per 15 minutes.
 
-    # These would be queued up into a file & then run every X minutes
-    almost_valid = get_almost_valid_space_links("Here is as test https://google.com & https://twitter.com/i/spaces/ but https://twitter.com/i/spaces/code is what we want. Valid: https://twitter.com/i/spaces/1gqxvyLPMAWJB")
+    # response = requests.get(f'https://api.twitter.com/2/users/{bot_id}/mentions?since_id={mention_id}&max_results={max_results}&tweet.fields=text&expansions=author_id,entities.mentions.username,in_reply_to_user_id,referenced_tweets.id,referenced_tweets.id.author_id&media.fields=url&user.fields=username', headers=headers).json()
+
+    # mentions = [_json={'created_at': 'Sat Oct 01 01:20:28 +0000 2022', 'id': 1576019179446349824, 'id_str': '1576019179446349824', 'text': '@IBC_Archive test https://t.co/UfnNT5wnae', 'truncated': False, 'entities': {'hashtags': [], 'symbols': [], 'user_mentions': [{'screen_name': 'IBC_Archive', 'name': 'The Interchain Spaces Archive', 'id': 965693474753466371, 'id_str': '965693474753466371', 'indices': [0, 12]}], 'urls': [{'url': 'https://t.co/UfnNT5wnae', 'expanded_url': 'https://twitter.com/i/spaces/1gqxvyLPMAWJB', 'display_url': 'twitter.com/i/spaces/1gqxv…', 'indices': [18, 41]}]}, 'source': '<a href="https://mobile.twitter.com" rel="nofollow">Twitter Web App</a>', 'in_reply_to_status_id': 1574245087541956609, 'in_reply_to_status_id_str': '1574245087541956609', 'in_reply_to_user_id': 965693474753466371, 'in_reply_to_user_id_str': '965693474753466371', 'in_reply_to_screen_name': 'IBC_Archive', 'user': {'id': 2712978728, 'id_str': '2712978728', 'name': 'Reece Williams', 'screen_name': 'Reecepbcups_', 'location': '', 'description': 'Cosmos SDK, CosmWasm, Sys Admin • @CosmosGovNotifs • @IBC_Archive', 'url': 'https://t.co/LhyrO72s31', 'entities': {'url': {'urls': [{'url': 'https://t.co/LhyrO72s31', 'expanded_url': 'https://www.reece.sh', 'display_url': 'reece.sh', 'indices': [0, 23]}]}, 'description': {'urls': []}}, 'protected': False, 'followers_count': 786, 'friends_count': 74, 'listed_count': 19, 'created_at': 'Wed Aug 06 21:22:23 +0000 2014', 'favourites_count': 37573, 'utc_offset': None, 'time_zone': None, 'geo_enabled': False, 'verified': False, 'statuses_count': 323, 'lang': None, 'contributors_enabled': False, 'is_translator': False, 'is_translation_enabled': False, 'profile_background_color': 'C0DEED', 'profile_background_image_url': 'http://abs.twimg.com/images/themes/theme1/bg.png', 'profile_background_image_url_https': 'https://abs.twimg.com/images/themes/theme1/bg.png', 'profile_background_tile': False, 'profile_image_url': 'http://pbs.twimg.com/profile_images/1574779134739357697/Kxv7nmks_normal.jpg', 'profile_image_url_https': 'https://pbs.twimg.com/profile_images/1574779134739357697/Kxv7nmks_normal.jpg', 'profile_banner_url': 'https://pbs.twimg.com/profile_banners/2712978728/1661457213', 'profile_link_color': '1DA1F2', 'profile_sidebar_border_color': 'C0DEED', 'profile_sidebar_fill_color': 'DDEEF6', 'profile_text_color': '333333', 'profile_use_background_image': True, 'has_extended_profile': False, 'default_profile': True, 'default_profile_image': False, 'following': True, 'follow_request_sent': False, 'notifications': False, 'translator_type': 'none', 'withheld_in_countries': []}, 'geo': None, 'coordinates': None, 'place': None, 'contributors': None, 'is_quote_status': False, 'retweet_count': 0, 'favorite_count': 0, 'favorited': False, 'retweeted': False, 'possibly_sensitive': False, 'lang': 'en'}, created_at=datetime.datetime(2022, 10, 1, 1, 20, 28, tzinfo=datetime.timezone.utc), id=1576019179446349824, id_str='1576019179446349824', text='@IBC_Archive test https://t.co/UfnNT5wnae', truncated=False, entities={'hashtags': [], 'symbols': [], 'user_mentions': [{'screen_name': 'IBC_Archive', 'name': 'The Interchain Spaces Archive', 'id': 965693474753466371, 'id_str': '965693474753466371', 'indices': [0, 12]}], 'urls': [{'url': 'https://t.co/UfnNT5wnae', 'expanded_url': 'https://twitter.com/i/spaces/1gqxvyLPMAWJB', 'display_url': 'twitter.com/i/spaces/1gqxv…', 'indices': [18, 41]}]}, source='Twitter Web App', source_url='https://mobile.twitter.com', in_reply_to_status_id=1574245087541956609, in_reply_to_status_id_str='1574245087541956609', in_reply_to_user_id=965693474753466371, in_reply_to_user_id_str='965693474753466371', in_reply_to_screen_name='IBC_Archive', author=User(_api=<tweepy.api.API object at 0x7f1ad0761ff0>, _json={'id': 2712978728, 'id_str': '2712978728', 'name': 'Reece Williams', 'screen_name': 'Reecepbcups_', 'location': '', 'description': 'Cosmos SDK, CosmWasm, Sys Admin • @CosmosGovNotifs • @IBC_Archive', 'url': 'https://t.co/LhyrO72s31', 'entities': {'url': {'urls': [{'url': 'https://t.co/LhyrO72s31', 'expanded_url': 'https://www.reece.sh', 'display_url': 'reece.sh', 'indices': [0, 23]}]}, 'description': {'urls': []}}, 'protected': False, 'followers_count': 786, 'friends_count': 74, 'listed_count': 19, 'created_at': 'Wed Aug 06 21:22:23 +0000 2014', 'favourites_count': 37573, 'utc_offset': None, 'time_zone': None, 'geo_enabled': False, 'verified': False, 'statuses_count': 323, 'lang': None, 'contributors_enabled': False, 'is_translator': False, 'is_translation_enabled': False, 'profile_background_color': 'C0DEED', 'profile_background_image_url': 'http://abs.twimg.com/images/themes/theme1/bg.png', 'profile_background_image_url_https': 'https://abs.twimg.com/images/themes/theme1/bg.png', 'profile_background_tile': False, 'profile_image_url': 'http://pbs.twimg.com/profile_images/1574779134739357697/Kxv7nmks_normal.jpg', 'profile_image_url_https': 'https://pbs.twimg.com/profile_images/1574779134739357697/Kxv7nmks_normal.jpg', 'profile_banner_url': 'https://pbs.twimg.com/profile_banners/2712978728/1661457213', 'profile_link_color': '1DA1F2', 'profile_sidebar_border_color': 'C0DEED', 'profile_sidebar_fill_color': 'DDEEF6', 'profile_text_color': '333333', 'profile_use_background_image': True, 'has_extended_profile': False, 'default_profile': True, 'default_profile_image': False, 'following': True, 'follow_request_sent': False, 'notifications': False, 'translator_type': 'none', 'withheld_in_countries': []}, id=2712978728, id_str='2712978728', name='Reece Williams', screen_name='Reecepbcups_', location='', description='Cosmos SDK, CosmWasm, Sys Admin • @CosmosGovNotifs • @IBC_Archive', url='https://t.co/LhyrO72s31', entities={'url': {'urls': [{'url': 'https://t.co/LhyrO72s31', 'expanded_url': 'https://www.reece.sh', 'display_url': 'reece.sh', 'indices': [0, 23]}]}, 'description': {'urls': []}}, protected=False, followers_count=786, friends_count=74, listed_count=19, created_at=datetime.datetime(2014, 8, 6, 21, 22, 23, tzinfo=datetime.timezone.utc), favourites_count=37573, utc_offset=None, time_zone=None, geo_enabled=False, verified=False, statuses_count=323, lang=None, contributors_enabled=False, is_translator=False, is_translation_enabled=False, profile_background_color='C0DEED', profile_background_image_url='http://abs.twimg.com/images/themes/theme1/bg.png', profile_background_image_url_https='https://abs.twimg.com/images/themes/theme1/bg.png', profile_background_tile=False, profile_image_url='http://pbs.twimg.com/profile_images/1574779134739357697/Kxv7nmks_normal.jpg', profile_image_url_https='https://pbs.twimg.com/profile_images/1574779134739357697/Kxv7nmks_normal.jpg', profile_banner_url='https://pbs.twimg.com/profile_banners/2712978728/1661457213', profile_link_color='1DA1F2', profile_sidebar_border_color='C0DEED', profile_sidebar_fill_color='DDEEF6', profile_text_color='333333', profile_use_background_image=True, has_extended_profile=False, default_profile=True, default_profile_image=False, following=True, follow_request_sent=False, notifications=False, translator_type='none', withheld_in_countries=[]), user=User(_api=<tweepy.api.API object at 0x7f1ad0761ff0>, _json={'id': 2712978728, 'id_str': '2712978728', 'name': 'Reece Williams', 'screen_name': 'Reecepbcups_', 'location': '', 'description': 'Cosmos SDK, CosmWasm, Sys Admin • @CosmosGovNotifs • @IBC_Archive', 'url': 'https://t.co/LhyrO72s31', 'entities': {'url': {'urls': [{'url': 'https://t.co/LhyrO72s31', 'expanded_url': 'https://www.reece.sh', 'display_url': 'reece.sh', 'indices': [0, 23]}]}, 'description': {'urls': []}}, 'protected': False, 'followers_count': 786, 'friends_count': 74, 'listed_count': 19, 'created_at': 'Wed Aug 06 21:22:23 +0000 2014', 'favourites_count': 37573, 'utc_offset': None, 'time_zone': None, 'geo_enabled': False, 'verified': False, 'statuses_count': 323, 'lang': None, 'contributors_enabled': False, 'is_translator': False, 'is_translation_enabled': False, 'profile_background_color': 'C0DEED', 'profile_background_image_url': 'http://abs.twimg.com/images/themes/theme1/bg.png', 'profile_background_image_url_https': 'https://abs.twimg.com/images/themes/theme1/bg.png', 'profile_background_tile': False, 'profile_image_url': 'http://pbs.twimg.com/profile_images/1574779134739357697/Kxv7nmks_normal.jpg', 'profile_image_url_https': 'https://pbs.twimg.com/profile_images/1574779134739357697/Kxv7nmks_normal.jpg', 'profile_banner_url': 'https://pbs.twimg.com/profile_banners/2712978728/1661457213', 'profile_link_color': '1DA1F2', 'profile_sidebar_border_color': 'C0DEED', 'profile_sidebar_fill_color': 'DDEEF6', 'profile_text_color': '333333', 'profile_use_background_image': True, 'has_extended_profile': False, 'default_profile': True, 'default_profile_image': False, 'following': True, 'follow_request_sent': False, 'notifications': False, 'translator_type': 'none', 'withheld_in_countries': []}, id=2712978728, id_str='2712978728', name='Reece Williams', screen_name='Reecepbcups_', location='', description='Cosmos SDK, CosmWasm, Sys Admin • @CosmosGovNotifs • @IBC_Archive', url='https://t.co/LhyrO72s31', entities={'url': {'urls': [{'url': 'https://t.co/LhyrO72s31', 'expanded_url': 'https://www.reece.sh', 'display_url': 'reece.sh', 'indices': [0, 23]}]}, 'description': {'urls': []}}, protected=False, followers_count=786, friends_count=74, listed_count=19, created_at=datetime.datetime(2014, 8, 6, 21, 22, 23, tzinfo=datetime.timezone.utc), favourites_count=37573, utc_offset=None, time_zone=None, geo_enabled=False, verified=False, statuses_count=323, lang=None, contributors_enabled=False, is_translator=False, is_translation_enabled=False, profile_background_color='C0DEED', profile_background_image_url='http://abs.twimg.com/images/themes/theme1/bg.png', 
+    # profile_background_image_url_https='https://abs.twimg.com/images/themes/theme1/bg.png', profile_background_tile=False, profile_image_url='http://pbs.twimg.com/profile_images/1574779134739357697/Kxv7nmks_normal.jpg', profile_image_url_https='https://pbs.twimg.com/profile_images/1574779134739357697/Kxv7nmks_normal.jpg', profile_banner_url='https://pbs.twimg.com/profile_banners/2712978728/1661457213', profile_link_color='1DA1F2', profile_sidebar_border_color='C0DEED', profile_sidebar_fill_color='DDEEF6', profile_text_color='333333', profile_use_background_image=True, has_extended_profile=False, default_profile=True, default_profile_image=False, following=True, follow_request_sent=False, notifications=False, translator_type='none', withheld_in_countries=[]), geo=None, coordinates=None, place=None, contributors=None, is_quote_status=False, retweet_count=0, favorite_count=0, favorited=False, retweeted=False, possibly_sensitive=False, lang='en')]
+
+
+    # TODO: Here we need to get the tweet being replied too. If it has a valid twitter spaces link, then we can get the links author & download it
+
+    for mention in mentions['user_mentions']:
+
+        for url in mentions['urls']:
+            print(url) # [{'url': 'https://t.co/UfnNT5Nqce', 'expanded_url': 'https://twitter.com/i/spaces/1gqxvyLPMAWJB', 'display_url': 'twitter.com/i/spaces/1gqxv…', 'indices': [18, 41]}]}
+        print(mention['text'])
+
+        parent_author_reply = mention.get("in_reply_to_user_id_str", "")
+
+        print(parent_author_reply)
+
+        # _get_parent_id_text(["1574245087541956609"])
+
+    print(mentions)
+    exit()     
+    exit()
+
+    if len(mentions) == 0:
+        print("No new mentions.")
+        return []
+
+
+    for data in mentions:
+        mention_id = data.id
+
+        # print(data)
+        exit()
+
+        print(f"{mention_id}: {data.author.name} ({data.author.screen_name}) - {data.text} - {data.in_reply_to_status_id_str}")                
+        # get_almost_valid_space_links("Here is as test https://google.com & https://twitter.com/i/spaces/ but https://twitter.com/i/spaces/code is what we want. Valid: https://twitter.com/i/spaces/1gqxvyLPMAWJB")            
+        may_be_valid_urls.extend(get_almost_valid_space_links(data.text))
+
+        # if data.text is not valid, maybe try if the parent tweet is
+
+    # may_be_valid_urls.extend(get_almost_valid_space_links("https://twitter.com/i/spaces/1gqxvyLPMAWJB"))
+
+    print(f"Found {len(may_be_valid_urls)} valid space urls which this run. {get_epoch_time_seconds()}")
+
+    codes = [url.split("/")[-1] for url in may_be_valid_urls] # ['1gqxvyLPMAWJB','1dRKZMBlojgxB','1dRKZMBlojbad']
+    valid = get_valid_spaces_ids(codes) # 
+
+    # {'1gqxvyLPMAWJB': {'speaker_ids': ['1250264099432390656', '1510374842171891713', '1423928795292217348', '173685891', '860130734899703808', '412859500', '1035898014', '1079651667908407297', '883935240397496320', '1496583884510793729', '1179061177977950209', '475981679', '1548409526881161216', '3044749138', '820137493714456577', '1398290390374027271', '410380902', '920043584895815686', '1214578787112902656', '251887060', '1438663554303991814', '1497798366054563840'], 'state': 'ended', 'host_ids': ['1355366118119108612', '1398290390374027271', '410380902'], 'participant_count': 239, 'title': 'How to seduce women in web3', 'ended_at': '2022-10-01T00:12:38.000Z', 'id': '1gqxvyLPMAWJB', 'created_at': '2022-09-30T19:56:42.000Z', 'creator_id': '1355366118119108612', 'started_at': '2022-09-30T19:56:45.000Z', 'timestamp': 1664583953, 'was_cached': True}}
+    space_to_creator_id = {str(space['id']).replace("?s=20", ""): get_space_by_id(space['id'])['creator_id'] for space in valid} # {'1gqxvyLPMAWJB': '1355366118119108612'}   
+    # This way we can just save all of that given users spaces if they have others as normal :D
 
     # save mention_id to a cached file for the next run
     save_json(FILENAME, {"id": mention_id})
-
-get_mentions()
-
-if __name__ == '__main__':
-    following = get_following_ids()
-    following_ids = following['user_ids_list']    
-
-    # get_queued_users_ids()
-    do_processing_on_spaces(following_ids)
+    creator_ids = list(space_to_creator_id.values())
+    return creator_ids
 
 
+# if __name__ == '__main__':
+#     following = get_following_ids()
+#     following_ids = following['user_ids_list']
+
+#     mention_creator_ids = list(get_mentions_creator_ids()) # ! IMPORTANT, THIS ONLY HAS 1 HARDCODED SPACE. This space still says live BUT it is 4 hours long. maybe twitter still processing?
+
+#     # get_queued_users_ids()
+#     do_processing_on_spaces(set(following_ids + mention_creator_ids))
+
+# use a scheduler to run every 15 seconds
+def to_do():
+    print(get_mentions_creator_ids())
+
+# import schedule
+# schedule.every(15).seconds.do(to_do)
+
+while True:
+    print("Starting...")
+    # time.sleep(15)
+    input("press enter to get mentions")
+    to_do()
 
 
 # while True:     # TODO: This works below for when a reply happens & it has a valid link.
@@ -370,21 +453,7 @@ if __name__ == '__main__':
 #     mentions = api.mentions_timeline(since_id=mention_id)
 #     for data in mentions:
 #         mention_id = data.id
-#         print(f"{mention_id}: {data.author.name} ({data.author.screen_name}) - {data.text} - {data.in_reply_to_status_id_str}")        
-
-#         # get valid urls from the text
-#         urls = re.findall(r'(https?://\S+)', data.text)
-#         valid_spaces_urls = {}
-#         for url in urls:
-#             print(f"  - {url}")
-#             if '://t.co/' in url:
-#                 # get twitters redirect url
-#                 r = requests.get(url)
-#                 url = r.url
-#             if url.startswith("https://twitter.com/i/spaces/"):                
-#                 valid_spaces_urls[url] = None
-
-        
+#         print(f"{mention_id}: {data.author.name} ({data.author.screen_name}) - {data.text} - {data.in_reply_to_status_id_str}")
 
 #         if len(valid_spaces_urls) == 0:
 #             print("  - no valid spaces urls found")

@@ -5,3 +5,6 @@ downloads/**/*.log
 *.mp3
 .env
 json_data/
+# Google Cloud Credentials (Calandar API)
+credentials.json
+token.json

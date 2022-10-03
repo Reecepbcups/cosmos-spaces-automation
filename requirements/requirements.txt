@@ -5,3 +5,12 @@ twspace-dl # https://github.com/HoloArchivists/twspace-dl
 python-dotenv
 
 requests # for url redirects
+
+# https://pypi.org/project/python-google-calendar-api/
+# Setup: https://www.youtube.com/watch?v=vUOtS6zU40A&t=629s&ab_channel=InternetMadeCoder
+python-google-calendar-api
+
+# From docs: https://developers.google.com/calendar/api/quickstart/python
+google-api-python-client 
+google-auth-httplib2 
+google-auth-oauthlib

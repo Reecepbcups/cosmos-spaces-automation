@@ -106,7 +106,7 @@ following = get_following_ids()
 
 
 # stage 3
-users = get_users_info_cache(user_ids_to_query) # todo: change cache time to be every time we update the get_spaces? (since there may be new hosts/speakers)
+# users = get_users_info_cache(user_ids_to_query) # todo: change cache time to be every time we update the get_spaces? (since there may be new hosts/speakers)
 # print(users)
 
 

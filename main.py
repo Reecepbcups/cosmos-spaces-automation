@@ -20,7 +20,7 @@ auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth, wait_on_rate_limit=True)
 client = tweepy.Client(bearer_token=BEARER_TOKEN, consumer_key=API_KEY, consumer_secret=API_KEY_SECRET, access_token=ACCESS_TOKEN, access_token_secret=ACCESS_TOKEN_SECRET)
 # Init Bot class
-bot = Bot(api, client)
+bot = Bot(api, client, BEARER_TOKEN)
 bot.get_following_ids()
 
 
@@ -33,8 +33,14 @@ bot.get_following_ids()
 print("Starting...")
 while True:
     # time.sleep(15)
-    bot.update_queued_creator_mentions()
-    input("press enter to get mentions")
+
+    # print(bot.update_queued_creator_mentions())
+    # input("press enter to get mentions")
+
+    # now with the bot, loads load queued download list, see if they have any spaces. If so, download them
+    bot.download_queued_creators()
+
+    pass
 
 
 # if __name__ == '__main__':

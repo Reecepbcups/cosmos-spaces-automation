@@ -30,7 +30,7 @@ class Processing:
         space_obj = twspace_dl.Twspace.from_space_url(rec_space_url)
         space = twspace_dl.TwspaceDL(space_obj, self.filename_fmt)
         # space.download()        
-        filename = f"{space.filename}.m4a"
+        filename = f"{space.filename}.m4a".encode("ascii", "ignore").decode()
         new_filename = filename.replace(" ", "_")
 
         # check if new_filename is in the downloads folder

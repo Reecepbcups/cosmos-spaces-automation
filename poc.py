@@ -128,26 +128,26 @@ def download_and_tweet_space(space_id: str, space_data: dict):
     # gets user from cache or fresh query if not already in cache        
     creator = bot.get_user(space_data['creator_id']) # {'username': 'RoboVerseWeb3', 'verified': False, 'profile_image_url': 'https://pbs.twimg.com/profile_images/1581352014902341633/R_Lc-bF9.jpg', 'description': '@RacoonSupply Brand Shitposter🦝\nCommunity - Artificial Intelligence - Gaming 🤝', 'id': '467972727', 'pinned_tweet_id': '1578666987546619904', 'public_metrics': {'followers_count': 5560, 'following_count': 3222, 'tweet_count': 33228, 'listed_count': 72}
     if 'username' in creator:
-        creator_username = f" from @{creator['username']}"
+        creator_username = f"- @{creator['username']}"
         pfp_img = creator['profile_image_url']
     else:
         creator_username = ""
         pfp_img = ""
 
     title = space_data['title']
-    participants = space_data['participant_count']     
+    # participants = space_data['participant_count']     
 
     audio = MP3(new_file_location)         
 
     file_path = new_file_location.split('/')[-1]
 
-    output = f"{title}{creator_username}\nViews: {participants} ({round(audio.info.length/60, 2)} minutes)\nLink: http://95.217.113.126/{file_path}\nReal: http://www.cosmosibc.space/{file_path}"             
+    output = f"'{title}'\n{creator_username}\n[+] {round(audio.info.length/60, 2)} minutes\n\nLink: https://www.cosmosibc.space/{file_path}"             
     if len(output) > 280:
-        f"{title}{creator_username} - https://ibcarchive.space/{file_path}"
+        f"{title}{creator_username} - https://www.cosmosibc.space/{file_path}"
 
     client.create_tweet(text=output)
     # remove it from cache
-    # remove_downloaded_space_from_cache(space_id) # TODO: renable this
+    remove_downloaded_space_from_cache(space_id) # TODO: renable this
 
     # except ValueError as e:
     #     print(f"ValueError: {space_id} -> {e}")
@@ -175,14 +175,24 @@ while True:
     # RECORDED_SPACE="https://twitter.com/i/spaces/1jMJgLNpAbOxL" # scheduled, what happens?
     # live: https://twitter.com/i/spaces/1zqKVPvrdqVJB?s=20
 
+    start = time.time()
     if spaces_to_download == None:
         print("No spaces to download")        
     else:
         for space_id, space_data in spaces_to_download.items():    
             download_and_tweet_space(space_id, space_data)
+    end = time.time()
 
-    print("Sleeping for 15 minutes before continuing")
-    time.sleep(15*30)
+    print(f"Finished downloading spaces in {round(end-start, 2)} seconds")
+    minutes = (end-start)/60
+
+    MINUTES_WAIT = 25
+    if minutes > MINUTES_WAIT:
+        print(f"Downloaded spaces in {round(minutes, 2)} minutes, continuing")
+        continue
+    else:
+        print(f"Downloaded spaces in {round(minutes, 2)} minutes, sleeping for {round(MINUTES_WAIT-minutes, 2)} minutes")
+        time.sleep((MINUTES_WAIT-minutes)*60)
 
 
 

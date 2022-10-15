@@ -1,9 +1,8 @@
 ### Install
 ```
 sudo pacman -Syu
-sudo pacman -S vlc docker libtiff
+sudo pacman -S vlc docker libtiff libfdk-aac bc
 sudo pacman -S ffmpeg
-sudo pacman -S extra/qt6-multimedia-ffmpeg community/vivaldi-ffmpeg-codecs community/ffnvcodec-headers8.1 community/ffms2 community/vivaldi-ffmpeg-codecs community/opera-ffmpeg-codecs community/ffms2
 python3 -m pip install -r requirements/requirments.txt --upgrade
 
 ffmpeg -version

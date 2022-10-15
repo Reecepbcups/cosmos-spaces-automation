@@ -135,8 +135,7 @@ def main():
     def multi_run_wrapper(args):
         return download_and_tweet_space(*args)
 
-    def download_and_tweet_space(space_id: str, space_data: dict):
-        p = Processing()
+    def download_and_tweet_space(p: Processing, space_id: str, space_data: dict):        
         try:
             # loop through spaces, do in a multiprocessing pool?
             filename = p.download_space(space_id) # if downloaded, still returns that filename           
@@ -178,8 +177,9 @@ def main():
 
     to_download = []
     pool = mp.Pool(mp.cpu_count())  
+    p = Processing()
     for space_id, space_data in spaces_to_download.items():    
-        to_download.append((space_id, space_data))
+        to_download.append((p, space_id, space_data))
 
     pool.map(multi_run_wrapper, to_download)
 

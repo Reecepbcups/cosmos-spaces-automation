@@ -66,7 +66,7 @@ class Spaces:
         response = requests.get(f'https://api.twitter.com/2/spaces?ids={space_ids}&space.fields=state', headers=self.headers).json()
         return response['data'] # invalid spaces are in the 'errors' key
 
-    def _download_ended_space(data):
+    def _download_ended_space(data): # step 1.py
         # data is from do_processing_on_spaces()
         print(f"We would download ended space here if we have not already begun downloading... {data['id']}")
         pass
@@ -77,7 +77,7 @@ class Spaces:
 
         # TODO: get_queued_spaces_ids() function
         # spaces = get_spaces(following['user_ids_list'])
-        spaces = self.get_spaces(creator_ids) # We can't do this since spaces != creator ids. Unless we just cache all of a given users spaces from the IDS?
+        spaces = self.bot.get_spaces(creator_ids) # We can't do this since spaces != creator ids. Unless we just cache all of a given users spaces from the IDS?
 
         if 'data' not in spaces:
             print(f"ERROR: do_processing_on_spaces: {spaces}")

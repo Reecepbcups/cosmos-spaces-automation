@@ -4,6 +4,7 @@ import re, requests, json, datetime
 
 import tweepy
 from dotenv import load_dotenv
+from src.spaces import Spaces
 
 from src.bot import Bot
 load_dotenv()
@@ -23,7 +24,7 @@ client = tweepy.Client(bearer_token=BEARER_TOKEN, consumer_key=API_KEY, consumer
 bot = Bot(api, client, BEARER_TOKEN)
 bot.get_following_ids()
 
-
+spaces = Spaces(BEARER_TOKEN, bot)
 
     
 
@@ -38,8 +39,20 @@ while True:
     # input("press enter to get mentions")
 
     # now with the bot, loads load queued download list, see if they have any spaces. If so, download them
-    bot.download_queued_creators()
+    # bot.download_queued_creators()
+    following = list(bot.get_following_ids()['user_ids_list'])
+    # input(following)
 
+
+    # spaces = bot.get_spaces(following)
+    # print(spaces)
+
+    # SPACE_ID = "1RDxlaXyNZMKL"
+    # s = spaces.get_space_by_id(SPACE_ID)
+    # print(s)
+    spaces.do_processing_on_spaces(following)
+
+    input("-> enter")    
     pass
 
 

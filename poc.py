@@ -53,7 +53,7 @@ def cache_scheduled_or_live_spaces(ids: list[str | int]) -> list[str]: # cache t
         headers=headers
     ).json()    
 
-    if 'data' not in r_json:
+    if 'data' not in r_json:        
         print(f"cache_scheduled_or_live_spaces Error (probably no spaces), {r_json}")
         return []
     
@@ -112,85 +112,85 @@ def remove_downloaded_space_from_cache(space_id: str, debug: bool = True) -> boo
 # user = client.get_user(username="EvilPlanInc") # robo:467972727, mario:1319287761048723458, evilplan: 1138690476612046848
 # input(user.data.id)
 
-def main():
-    # ids = [1319287761048723458, 1138690476612046848] 
-    ids = bot.get_following_ids()['user_ids_list']
-    spaces = cache_scheduled_or_live_spaces(ids)
-    if len(spaces) == 0:
-        print("No spaces to download")
-        return
+# def main():
+# ids = [1319287761048723458, 1138690476612046848] 
+ids = bot.get_following_ids()['user_ids_list']
+spaces = cache_scheduled_or_live_spaces(ids)
+# if len(spaces) == 0:
+#     print("No spaces to download")
+#     return
 
-    bot.get_users_info_cache([]) # where [] would be from mentioned users. user_data.json
+bot.get_users_info_cache([]) # where [] would be from mentioned users. user_data.json
 
-    # # then every X minutes, we try to download the queue
-    # spaces_to_download = bot.get_ended_spaces_to_download_from_queue() # returns spaces ids to download
-    spaces_to_download = get_spaces_from_cache_to_download(bot)
-    # input(spaces_to_download)
-    # RECORDED_SPACE="https://twitter.com/i/spaces/1mrxmkXNwmkGy?s=20" # stride.zone
-    # RECORDED_SPACE="https://twitter.com/i/spaces/1RDxlaXyNZMKL" # robo long
-    # RECORDED_SPACE="https://twitter.com/i/spaces/1jMJgLNpAbOxL" # scheduled, what happens?
-    # live: https://twitter.com/i/spaces/1zqKVPvrdqVJB?s=20
-    
-    if spaces_to_download == None:
-        print("No spaces to download")
-        return
+# # then every X minutes, we try to download the queue
+# spaces_to_download = bot.get_ended_spaces_to_download_from_queue() # returns spaces ids to download
+spaces_to_download = get_spaces_from_cache_to_download(bot)
+# input(spaces_to_download)
+# RECORDED_SPACE="https://twitter.com/i/spaces/1mrxmkXNwmkGy?s=20" # stride.zone
+# RECORDED_SPACE="https://twitter.com/i/spaces/1RDxlaXyNZMKL" # robo long
+# RECORDED_SPACE="https://twitter.com/i/spaces/1jMJgLNpAbOxL" # scheduled, what happens?
+# live: https://twitter.com/i/spaces/1zqKVPvrdqVJB?s=20
 
-    def multi_run_wrapper(args):
-        return download_and_tweet_space(*args)
+if spaces_to_download == None:
+    print("No spaces to download")
+    # erxit(0) 
 
-    def download_and_tweet_space(p: Processing, space_id: str, space_data: dict):        
-        try:
-            # loop through spaces, do in a multiprocessing pool?
-            filename = p.download_space(space_id) # if downloaded, still returns that filename           
-            if len(filename) == 0:
-                print(f"Error downloading {space_id}, likely invalid.")
-                return
-            new_file_location = p.remove_0_volume_from_file(filename)       
-            
-            # gets user from cache or fresh query if not already in cache        
-            creator = bot.get_user(space_data['creator_id']) # {'username': 'RoboVerseWeb3', 'verified': False, 'profile_image_url': 'https://pbs.twimg.com/profile_images/1581352014902341633/R_Lc-bF9.jpg', 'description': '@RacoonSupply Brand Shitposter🦝\nCommunity - Artificial Intelligence - Gaming 🤝', 'id': '467972727', 'pinned_tweet_id': '1578666987546619904', 'public_metrics': {'followers_count': 5560, 'following_count': 3222, 'tweet_count': 33228, 'listed_count': 72}
-            if 'username' in creator:
-                creator_username = f" from @{creator['username']}"
-                pfp_img = creator['profile_image_url']
-            else:
-                creator_username = ""
-                pfp_img = ""
+def download_and_tweet_space(space_id: str, space_data: dict):   
+    p = Processing()     
+    try:
+        # loop through spaces, do in a multiprocessing pool?
+        filename = p.download_space(space_id) # if downloaded, still returns that filename           
+        if len(filename) == 0:
+            print(f"Error downloading {space_id}, likely invalid.")
+            return
+        new_file_location = p.remove_0_volume_from_file(filename)       
+        
+        # gets user from cache or fresh query if not already in cache        
+        creator = bot.get_user(space_data['creator_id']) # {'username': 'RoboVerseWeb3', 'verified': False, 'profile_image_url': 'https://pbs.twimg.com/profile_images/1581352014902341633/R_Lc-bF9.jpg', 'description': '@RacoonSupply Brand Shitposter🦝\nCommunity - Artificial Intelligence - Gaming 🤝', 'id': '467972727', 'pinned_tweet_id': '1578666987546619904', 'public_metrics': {'followers_count': 5560, 'following_count': 3222, 'tweet_count': 33228, 'listed_count': 72}
+        if 'username' in creator:
+            creator_username = f" from @{creator['username']}"
+            pfp_img = creator['profile_image_url']
+        else:
+            creator_username = ""
+            pfp_img = ""
 
-            title = space_data['title']
-            participants = space_data['participant_count']     
+        title = space_data['title']
+        participants = space_data['participant_count']     
 
-            audio = MP3(new_file_location)         
+        audio = MP3(new_file_location)         
 
-            file_path = new_file_location.split('/')[-1]
+        file_path = new_file_location.split('/')[-1]
 
-            output = f"{title}{creator_username} views: {participants} ({round(audio.info.length/60, 2)} minutes) - https://ibcarchive.space/{file_path}"             
-            if len(output) > 280:
-                f"TEST: {title}{creator_username} - https://ibcarchive.space/{file_path}"
+        output = f"{title}{creator_username} views: {participants} ({round(audio.info.length/60, 2)} minutes) - https://ibcarchive.space/{file_path}"             
+        if len(output) > 280:
+            f"TEST: {title}{creator_username} - https://ibcarchive.space/{file_path}"
 
 
-            # client.create_tweet(text=output)
-            # remove it from cache
-            # remove_downloaded_space_from_cache(space_id) # TODO: renable this
+        # client.create_tweet(text=output)
+        # remove it from cache
+        # remove_downloaded_space_from_cache(space_id) # TODO: renable this
 
-        except ValueError as e:
-            print(f"ValueError: {space_id} -> {e}")
+    except ValueError as e:
+        print(f"ValueError: {space_id} -> {e}")
 
-        except Exception as e:
-            print(f"Exception: {space_id} -> {e}")
+    except Exception as e:
+        print(f"Exception: {space_id} -> {e}")
 
-    to_download = []
-    pool = mp.Pool(mp.cpu_count())  
-    p = Processing()
-    for space_id, space_data in spaces_to_download.items():    
-        to_download.append((p, space_id, space_data))
+def multi_run_wrapper(args):
+    return download_and_tweet_space(*args)
 
-    pool.map(multi_run_wrapper, to_download)
+to_download = []
+pool = mp.Pool(mp.cpu_count())      
+for space_id, space_data in spaces_to_download.items():    
+    to_download.append((space_id, space_data))
+
+pool.map(multi_run_wrapper, to_download)
 
 
 
-if __name__ == '__main__':
-    while True:
-        print("Running main function in poc.py!")
-        main()
-        print(f"Waiting 5 minutes...")
-        time.sleep(60*5) # every 5 minutes
+# if __name__ == '__main__':
+#     while True:
+#         print("Running main function in poc.py!")
+#         # main()
+#         print(f"Waiting 5 minutes...")
+#         time.sleep(60*5) # every 5 minutes

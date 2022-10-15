@@ -59,7 +59,7 @@ class Bot:
 
     # Gets a user from the cache if it is there.
     # If not, returns {}
-    def get_user(twitter_id: str | int) -> dict:
+    def get_user(self, twitter_id: str | int) -> dict:
         # ONLY READ FROM CACHE, from get_users_info_cache
         data = get_json("user_data.json")
         if len(data) == 0: return {}
@@ -87,7 +87,7 @@ class Bot:
             f'https://api.twitter.com/2/users?ids={ids}&user.fields=created_at,description,id,name,profile_image_url,public_metrics,username,verified&expansions=pinned_tweet_id', 
             headers=self.headers
         ).json()  
-        print(r_json)
+        # print(r_json)
         # exit()
         # r_json = {'data': [{'profile_image_url': 'https://pbs.twimg.com/profile_images/1550982409788825600/HyBcXbAL_normal.jpg', 'description': 'anne sexton apologist', 'verified': False, 'pinned_tweet_id': '1537987712401014788', 'username': 'stupidegirl123', 'public_metrics': {'followers_count': 1138, 'following_count': 252, 'tweet_count': 7849, 'listed_count': 1}, 'name': 'addi🕊', 'id': '1079651667908407297', 'created_at': '2018-12-31T08:13:11.000Z'}, {'profile_image_url': 'https://pbs.twimg.com/profile_images/1574779134739357697/Kxv7nmks_normal.jpg', 'description': 'Cosmos SDK, CosmWasm, Sys Admin • @CosmosGovNotifs • @IBC_Archive', 'verified': False, 'username': 'Reecepbcups_', 'public_metrics': {'followers_count': 786, 'following_count': 74, 'tweet_count': 322, 'listed_count': 19}, 'name': 'Reece Williams', 'id': '2712978728', 'created_at': '2014-08-06T21:22:23.000Z'}, {'profile_image_url': 'https://pbs.twimg.com/profile_images/1573362088122421248/glmMTMXh_normal.jpg', 'description': '@RacoonSupply Brand Ambassador 🦝\nCommunity - Artificial Intelligence - Gaming 🤝', 'verified': False, 'pinned_tweet_id': '1574451490940686337', 'username': 'RoboVerseWeb3', 'public_metrics': {'followers_count': 5548, 'following_count': 3189, 'tweet_count': 32462, 'listed_count': 68}, 'name': '🦝RACeyser Söze🦝Mayor of RACville', 'id': '467972727', 'created_at': '2012-01-19T01:39:22.000Z'}, {'profile_image_url': 'https://pbs.twimg.com/profile_images/1385343617225560068/Z0nRwp37_normal.jpg', 'description': "Angel Protocol leverages Web3 for global social impact, aligning donors, investors, charitable NGO's & impact DAOs around shared incentives; win and help win.", 'verified': False, 'username': 'AngelProtocol', 'public_metrics': {'followers_count': 27264, 'following_count': 241, 'tweet_count': 2406, 'listed_count': 443}, 'name': 'Angel Protocol 😇', 'id': '1384732309123829761', 'created_at': '2021-04-21T04:56:06.000Z'}, {'profile_image_url': 'https://pbs.twimg.com/profile_images/1575263040257277953/g_9j8_-S_normal.jpg', 'description': 'of the Cosmos', 'verified': False, 'username': 'Cephii1', 'public_metrics': {'followers_count': 68694, 'following_count': 1607, 'tweet_count': 29051, 'listed_count': 517}, 'name': 'Cephii', 'id': '1355366118119108612', 'created_at': '2021-01-30T04:05:18.000Z'}, {'profile_image_url': 'https://pbs.twimg.com/profile_images/1574830346876719120/5q0TU3d4_normal.jpg', 'description': 'designer. and more. Thanks for your patience when requesting a reading! patreon: https://t.co/kDwJo9unl8 email: azadeh.rz27@gmail.com', 'verified': False, 'pinned_tweet_id': '1332854649783771145', 'username': 'azcontour', 'public_metrics': {'followers_count': 6527, 'following_count': 512, 'tweet_count': 91824, 'listed_count': 59}, 'name': 'AZ', 'id': '1035898014', 'created_at': '2012-12-26T00:14:44.000Z'}, {'profile_image_url': 'https://pbs.twimg.com/profile_images/1572706955201810433/wdrewbnx_normal.jpg', 'description': 'Prolific. Programming, philosophy, history, internet, startups, web3. Jamming with founders changing the world.', 'verified': False, 'pinned_tweet_id': '1567225381500977155', 'username': '0x_Ears', 'public_metrics': {'followers_count': 404, 'following_count': 53, 'tweet_count': 13, 'listed_count': 1}, 'name': '0xEars (👂,👂)', 'id': '1510374842171891713', 'created_at': '2022-04-02T21:53:28.000Z'}, {'profile_image_url': 'https://pbs.twimg.com/profile_images/1574719098180739072/2J_taKlK_normal.jpg', 'description': 'King Daddy Dog', 'verified': False, 'pinned_tweet_id': '1574720664728125441', 'username': 'yizthedog', 'public_metrics': {'followers_count': 511, 'following_count': 1937, 'tweet_count': 8181, 'listed_count': 10}, 'name': 'Yiz', 'id': '475981679', 'created_at': '2012-01-27T16:59:09.000Z'}, {'profile_image_url': 'https://pbs.twimg.com/profile_images/1556909050763280385/VHqMbsoL_normal.jpg', 'description': 'Messiah', 'verified': False, 'username': 'asparagoid', 'public_metrics': {'followers_count': 14792, 'following_count': 2671, 'tweet_count': 9351, 'listed_count': 123}, 'name': 'Coach Bruce Wrangler 🚬', 'id': '1398290390374027271', 'created_at': '2021-05-28T14:49:51.000Z'}, {'profile_image_url': 'https://pbs.twimg.com/profile_images/1557787683098869760/gPwiVf3L_normal.jpg', 'description': 'Community | Support | Alpha. Please DM us to schedule a space 🎙 For Validator Links, Discord, Telegram, Email, click on the linktree. @cs_validator ☮️💜⚛️', 'verified': False, 'pinned_tweet_id': '1566506290586607616', 'username': 'Cosmos_Spaces', 'public_metrics': {'followers_count': 7759, 'following_count': 729, 'tweet_count': 2575, 'listed_count': 120}, 'name': 'Cosmos Spaces 🎙Cosmosverse 26-28 🇨🇴', 'id': '1487313404004118528', 'created_at': '2022-01-29T06:35:59.000Z'}], 'includes': {'tweets': [{'edit_history_tweet_ids': ['1574451490940686337'], 'id': '1574451490940686337', 'text': 'Almost exactly 6 months to the day since the mint out Spaces, myself and @Rarma_ are hooking up with Mr RAC @RacoonSupply once again to bring you unfettered and unfiltered access to what is easily shaping up to be THE premier project on @JunoNetwork\nhttps://t.co/VD4pEHIV2N'}, {'edit_history_tweet_ids': ['1332854649783771145'], 'id': '1332854649783771145', 'text': '🐉SERVICES🐉'}, {'edit_history_tweet_ids': ['1567225381500977155'], 'id': '1567225381500977155', 'text': 'I will do it https://t.co/ueuIUNu8Jg'}, {'edit_history_tweet_ids': ['1574720664728125441'], 'id': '1574720664728125441', 'text': 'I’m a dog https://t.co/v8z0lI6DU9'}, {'edit_history_tweet_ids': ['1566506290586607616'], 'id': '1566506290586607616', 'text': 'Auto-compound with Cosmos Spaces ⚛️ ☮️ ⚛️ through REStake below ⬇️ \n\nOsmosis(28%):\n\nhttps://t.co/QIXBgDHf0s\n\nJuno(84%):\n\nhttps://t.co/j6nSFhjW9i\n\n$Atom (22%):\n\nhttps://t.co/s6wO9wB2tM\n\n$EVMOS (1383%):\n\nhttps://t.co/77CUkrMAEC'}]}, 'errors': [{'value': '1537987712401014788', 'detail': 'Could not find tweet with pinned_tweet_id: [1537987712401014788].', 'title': 'Not Found Error', 'resource_type': 'tweet', 'parameter': 'pinned_tweet_id', 'resource_id': '1537987712401014788', 'type': 'https://api.twitter.com/2/problems/resource-not-found'}]}
 
@@ -207,67 +207,24 @@ class Bot:
         return users_to_queue
 
 
-    # use a schedular for this
-    def update_queued_spaces_to_download_later(self, space_data) -> dict[dict]:
-        '''
-        '''
-        FILENAME = 'queued_space_list.json'    
-        # creators_to_check_later = self.get_mentions_creator_ids()
-        # creators_to_check_later = ['1', '2', '3']
-        queue = get_json(FILENAME)
-        if queue == {}:
-            queue = {"queued_space_list": {}}
+    def get_space_by_id(self, space_id: str | int): # 300 per 15 min window. Does not have multispace query support :(
+        # FILENAME = "space_data.json"    
+        space_id = str(space_id)
+        # Same fields and such as the 'def get_spaces(creator_ids: list[int | str])' function.
+        
+        # data = get_json(FILENAME)
+        # if space_id in data.keys():        
+        #     return data[space_id]
 
-        queue['queued_space_list'][space_data['id']] = space_data        
+        response = requests.get(
+            f'https://api.twitter.com/2/spaces/{space_id}?&space.fields=created_at,creator_id,ended_at,host_ids,id,participant_count,scheduled_start,speaker_ids,started_at,state,title&expansions=creator_id,host_ids,speaker_ids&user.fields=created_at,description,location,name,pinned_tweet_id,profile_image_url,public_metrics', 
+            headers=self.headers,
+        ).json()    
 
-        save_json(FILENAME, queue)
-        return queue['queued_space_list']
+        # response['data']['timestamp'] = get_epoch_time_seconds()
+        # response['data']['was_cached'] = True # save as true
+        # data[space_id] = response['data']
+        # save_json(FILENAME, data)
 
-    # todo: go through, check if ids are still liveor scheduled, if not, download & process (means they are ended)
-    def download_ended_spaces(self):
-        '''
-        Loops through FILENAME = 'queued_space_list.json' & tries to see if it is no longer scheduled / live. If this is the case, we can download & save
-        '''
-        FILENAME = 'queued_space_list.json' 
-        queue = get_json(FILENAME)
-        if queue == {} or "queued_space_list" not in queue:
-            print("No spaces to download")
-            return
-
-        for space_id, space_data in queue['queued_space_list'].items():
-            print(space_id, space_data)            
-
-    # def get_spaces(self, creator_ids: list[int | str]): # TODO: cache? check poc.py for updated code
-    #     # # https://developer.twitter.com/apitools/api?endpoint=%2F2%2Fspaces%2Fby%2Fcreator_ids&method=get
-    #     ids = ','.join([str(i) for i in creator_ids])        
-    #     r_json = requests.get(
-    #         f'https://api.twitter.com/2/spaces/by/creator_ids?user_ids={ids}&space.fields=created_at,creator_id,ended_at,host_ids,id,participant_count,scheduled_start,speaker_ids,started_at,state,title&expansions=creator_id,host_ids,speaker_ids&user.fields=created_at,description,location,name,pinned_tweet_id,profile_image_url,public_metrics', 
-    #         headers=self.headers
-    #     ).json()    
-    #     return r_json
-    #     # return {'data': [{'speaker_ids': ['1510374842171891713', '1035898014', '1079651667908407297', '475981679', '1398290390374027271'], 'host_ids': ['1355366118119108612', '1398290390374027271', '1079651667908407297'], 'started_at': '2022-09-30T19:56:45.000Z', 'participant_count': 20, 'state': 'live', 'created_at': '2022-09-30T19:56:42.000Z', 'id': '1gqxvyLPMAWJB', 'creator_id': '1355366118119108612', 'title': 'Speed Dating Space'}, {'host_ids': ['467972727'], 'scheduled_start': '2022-10-01T14:00:33.000Z', 'participant_count': 0, 'state': 'scheduled', 'created_at': '2022-09-26T17:20:52.000Z', 'id': '1dRKZMBlojgxB', 'creator_id': '467972727', 'title': '🦝 Historic Moment 🦝 First NFT hodler distribution LIVE ON AIR 👀🚀🔥'}], 'includes': {'users': [{'public_metrics': {'followers_count': 68694, 'following_count': 1607, 'tweet_count': 29051, 'listed_count': 517}, 'created_at': '2021-01-30T04:05:18.000Z', 'id': '1355366118119108612', 'name': 'Cephii', 'description': 'of the Cosmos', 'username': 'Cephii1', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1575263040257277953/g_9j8_-S_normal.jpg'}, {'public_metrics': {'followers_count': 14791, 'following_count': 2671, 'tweet_count': 9351, 'listed_count': 123}, 'created_at': '2021-05-28T14:49:51.000Z', 'id': '1398290390374027271', 'name': 'Coach Bruce Wrangler 🚬', 'location': 'Beyond Being and Non-Being', 'description': 'Messiah', 'username': 'asparagoid', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1556909050763280385/VHqMbsoL_normal.jpg'}, {'public_metrics': {'followers_count': 1139, 'following_count': 252, 'tweet_count': 7848, 'listed_count': 1}, 'created_at': '2018-12-31T08:13:11.000Z', 'id': '1079651667908407297', 'name': 'addi🕊', 'location': 'nyc', 'pinned_tweet_id': '1537987712401014788', 'description': 'anne sexton apologist', 'username': 'stupidegirl123', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1550982409788825600/HyBcXbAL_normal.jpg'}, {'public_metrics': {'followers_count': 404, 'following_count': 53, 'tweet_count': 13, 'listed_count': 1}, 'created_at': '2022-04-02T21:53:28.000Z', 'id': '1510374842171891713', 'name': '0xEars (👂,👂)', 'location': 'web3 🌐', 'pinned_tweet_id': '1567225381500977155', 'description': 'Prolific. Programming, philosophy, history, internet, startups, web3. Jamming with founders changing the world.', 'username': '0x_Ears', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1572706955201810433/wdrewbnx_normal.jpg'}, {'public_metrics': {'followers_count': 6527, 'following_count': 512, 'tweet_count': 91824, 'listed_count': 59}, 'created_at': '2012-12-26T00:14:44.000Z', 'id': '1035898014', 'name': 'AZ', 'pinned_tweet_id': '1332854649783771145', 'description': 'designer. and more. Thanks for your patience when requesting a reading! patreon: https://t.co/kDwJo9unl8 email: azadeh.rz27@gmail.com', 'username': 'azcontour', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1574830346876719120/5q0TU3d4_normal.jpg'}, {'public_metrics': {'followers_count': 511, 'following_count': 1935, 'tweet_count': 8181, 'listed_count': 10}, 'created_at': '2012-01-27T16:59:09.000Z', 'id': '475981679', 'name': 'Yiz', 'location': 'Planet Earth', 'pinned_tweet_id': '1574720664728125441', 'description': 'King Daddy Dog', 'username': 'yizthedog', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1574719098180739072/2J_taKlK_normal.jpg'}, {'public_metrics': {'followers_count': 5548, 'following_count': 3189, 'tweet_count': 32462, 'listed_count': 68}, 'created_at': '2012-01-19T01:39:22.000Z', 'id': '467972727', 'name': '🦝RACeyser Söze🦝Mayor of RACville', 'location': 'RAC Rank #Fiddy', 'pinned_tweet_id': '1574451490940686337', 'description': '@RacoonSupply Brand Ambassador 🦝\nCommunity - Artificial Intelligence - Gaming 🤝', 'username': 'RoboVerseWeb3', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1573362088122421248/glmMTMXh_normal.jpg'}]}, 'meta': {'result_count': 2}}
-
-    # def download_queued_creators(self) -> None:
-    #     FILENAME = 'queued_download_list.json'
-    #     queue = get_json(FILENAME)
-    #     if queue == {}:
-    #         print("No queued spaces...")
-    #         return
-
-    #     if "queued_download_list" not in queue:
-    #         print(f"queued_download_list not in queue {queue}")
-    #         return
-
-    #     data = self.get_spaces(queue['queued_download_list'])
-    #     print(data)
-
-
-
-# Functions we need:
-'''
-- get_following_ids
-- get_user
-- _get_parent_id_text (get text of parent tweet of a reply)
-
-- get_mentions_creator_ids
-'''
+        # response['data']['was_cached'] = False
+        return response['data']

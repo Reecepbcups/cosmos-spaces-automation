@@ -14,3 +14,5 @@ python-google-calendar-api
 google-api-python-client 
 google-auth-httplib2 
 google-auth-oauthlib
+
+mutagen # mp3 audio meta stuff

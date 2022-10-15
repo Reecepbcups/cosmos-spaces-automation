@@ -31,27 +31,7 @@ class Spaces:
     # Spaces Information
     
 
-    def get_space_by_id(self, space_id: str | int): # 300 per 15 min window. Does not have multispace query support :(
-        FILENAME = "space_data.json"    
-        space_id = str(space_id)
-        # Same fields and such as the 'def get_spaces(creator_ids: list[int | str])' function.
-        
-        data = get_json(FILENAME)
-        if space_id in data.keys():        
-            return data[space_id]
 
-        response = requests.get(
-            f'https://api.twitter.com/2/spaces/{space_id}?&space.fields=created_at,creator_id,ended_at,host_ids,id,participant_count,scheduled_start,speaker_ids,started_at,state,title&expansions=creator_id,host_ids,speaker_ids&user.fields=created_at,description,location,name,pinned_tweet_id,profile_image_url,public_metrics', 
-            headers=self.headers,
-        ).json()    
-
-        response['data']['timestamp'] = get_epoch_time_seconds()
-        response['data']['was_cached'] = True # save as true
-        data[space_id] = response['data']
-        save_json(FILENAME, data)
-
-        response['data']['was_cached'] = False
-        return response['data']
 
     def is_space_url_valid(self, url: str):
         pass # regex check here or something? removes need for api query

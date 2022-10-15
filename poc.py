@@ -6,6 +6,8 @@ import os, time
 from pkgutil import get_data
 import re, requests, json, datetime
 
+from src.download_processing import Processing
+
 import tweepy
 from dotenv import load_dotenv
 from src.spaces import Spaces
@@ -37,35 +39,113 @@ headers = {
     'Authorization': f"Bearer {BEARER_TOKEN}",
 }
 
+from src.storage import get_json, save_json
 
-#  TODO: run every 10 minutes
-def get_scheduled_or_live_spaces(creator_ids: list[int | str]): # cache the space ids for download later
+#  TODO: run every 5-10 minutes?
+def cache_scheduled_or_live_spaces(ids: list[str | int]) -> None: # cache the space ids for download later
     # # https://developer.twitter.com/apitools/api?endpoint=%2F2%2Fspaces%2Fby%2Fcreator_ids&method=get
-    ids = ','.join([str(i) for i in creator_ids])        
+    ids = ','.join([str(i) for i in ids])        
     r_json = requests.get(
         f'https://api.twitter.com/2/spaces/by/creator_ids?user_ids={ids}&space.fields=created_at,creator_id,ended_at,host_ids,id,participant_count,scheduled_start,speaker_ids,started_at,state,title&expansions=creator_id,host_ids,speaker_ids&user.fields=created_at,description,location,name,pinned_tweet_id,profile_image_url,public_metrics', 
         headers=headers
     ).json()    
 
-    for space in r_json['data']:
-        # save space to json file for later
-        bot.update_queued_spaces_to_download_later(space)
+    if 'data' not in r_json:
+        print(f"Error, {r_json}")
+        return    
+    
+    for space_data in r_json['data']:        
+        # update_queued_spaces_to_download_later(space)    # save space to json file for later
+        FILENAME = 'queued_space_list.json'    
+        queue = get_json(FILENAME)
+        if queue == {}:
+            queue = {"queued_space_list": {}}
+        queue['queued_space_list'][space_data['id']] = space_data        
+        save_json(FILENAME, queue)
+        return queue['queued_space_list']
 
-    return r_json
+def get_spaces_from_cache_to_download(bot: Bot) -> dict:
+    FILENAME = 'queued_space_list.json' 
+    queue = get_json(FILENAME)
+    if queue == {} or "queued_space_list" not in queue:
+        print("No spaces to download")
+        return
 
+    spaces_to_download = {}
+    for space_id, space_data in queue['queued_space_list'].items():        
+        space = bot.get_space_by_id(space_id=space_id)
+        state = space['state']
+        if state in ['scheduled', 'live']:
+            print(f"Space {space_id} is still {state}. Not downloading")
+            continue
+        else:
+            print(f"time to download {space_id} as it has ended (not live or scheduled)")            
+            spaces_to_download[space_id] = space_data
 
-    # return {'data': [{'speaker_ids': ['1510374842171891713', '1035898014', '1079651667908407297', '475981679', '1398290390374027271'], 'host_ids': ['1355366118119108612', '1398290390374027271', '1079651667908407297'], 'started_at': '2022-09-30T19:56:45.000Z', 'participant_count': 20, 'state': 'live', 'created_at': '2022-09-30T19:56:42.000Z', 'id': '1gqxvyLPMAWJB', 'creator_id': '1355366118119108612', 'title': 'Speed Dating Space'}, {'host_ids': ['467972727'], 'scheduled_start': '2022-10-01T14:00:33.000Z', 'participant_count': 0, 'state': 'scheduled', 'created_at': '2022-09-26T17:20:52.000Z', 'id': '1dRKZMBlojgxB', 'creator_id': '467972727', 'title': '🦝 Historic Moment 🦝 First NFT hodler distribution LIVE ON AIR 👀🚀🔥'}], 'includes': {'users': [{'public_metrics': {'followers_count': 68694, 'following_count': 1607, 'tweet_count': 29051, 'listed_count': 517}, 'created_at': '2021-01-30T04:05:18.000Z', 'id': '1355366118119108612', 'name': 'Cephii', 'description': 'of the Cosmos', 'username': 'Cephii1', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1575263040257277953/g_9j8_-S_normal.jpg'}, {'public_metrics': {'followers_count': 14791, 'following_count': 2671, 'tweet_count': 9351, 'listed_count': 123}, 'created_at': '2021-05-28T14:49:51.000Z', 'id': '1398290390374027271', 'name': 'Coach Bruce Wrangler 🚬', 'location': 'Beyond Being and Non-Being', 'description': 'Messiah', 'username': 'asparagoid', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1556909050763280385/VHqMbsoL_normal.jpg'}, {'public_metrics': {'followers_count': 1139, 'following_count': 252, 'tweet_count': 7848, 'listed_count': 1}, 'created_at': '2018-12-31T08:13:11.000Z', 'id': '1079651667908407297', 'name': 'addi🕊', 'location': 'nyc', 'pinned_tweet_id': '1537987712401014788', 'description': 'anne sexton apologist', 'username': 'stupidegirl123', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1550982409788825600/HyBcXbAL_normal.jpg'}, {'public_metrics': {'followers_count': 404, 'following_count': 53, 'tweet_count': 13, 'listed_count': 1}, 'created_at': '2022-04-02T21:53:28.000Z', 'id': '1510374842171891713', 'name': '0xEars (👂,👂)', 'location': 'web3 🌐', 'pinned_tweet_id': '1567225381500977155', 'description': 'Prolific. Programming, philosophy, history, internet, startups, web3. Jamming with founders changing the world.', 'username': '0x_Ears', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1572706955201810433/wdrewbnx_normal.jpg'}, {'public_metrics': {'followers_count': 6527, 'following_count': 512, 'tweet_count': 91824, 'listed_count': 59}, 'created_at': '2012-12-26T00:14:44.000Z', 'id': '1035898014', 'name': 'AZ', 'pinned_tweet_id': '1332854649783771145', 'description': 'designer. and more. Thanks for your patience when requesting a reading! patreon: https://t.co/kDwJo9unl8 email: azadeh.rz27@gmail.com', 'username': 'azcontour', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1574830346876719120/5q0TU3d4_normal.jpg'}, {'public_metrics': {'followers_count': 511, 'following_count': 1935, 'tweet_count': 8181, 'listed_count': 10}, 'created_at': '2012-01-27T16:59:09.000Z', 'id': '475981679', 'name': 'Yiz', 'location': 'Planet Earth', 'pinned_tweet_id': '1574720664728125441', 'description': 'King Daddy Dog', 'username': 'yizthedog', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1574719098180739072/2J_taKlK_normal.jpg'}, {'public_metrics': {'followers_count': 5548, 'following_count': 3189, 'tweet_count': 32462, 'listed_count': 68}, 'created_at': '2012-01-19T01:39:22.000Z', 'id': '467972727', 'name': '🦝RACeyser Söze🦝Mayor of RACville', 'location': 'RAC Rank #Fiddy', 'pinned_tweet_id': '1574451490940686337', 'description': '@RacoonSupply Brand Ambassador 🦝\nCommunity - Artificial Intelligence - Gaming 🤝', 'username': 'RoboVerseWeb3', 'profile_image_url': 'https://pbs.twimg.com/profile_images/1573362088122421248/glmMTMXh_normal.jpg'}]}, 'meta': {'result_count': 2}}
+    return spaces_to_download
 
+def remote_downloaded_space_from_cache(space_id: str) -> bool:
+    FILENAME = 'queued_space_list.json' 
+    queue = get_json(FILENAME)
+    if queue == {} or "queued_space_list" not in queue:
+        print("No spaces found in the cache to delete")
+        return
+    
+    if space_id in queue['queued_space_list']:
+        del queue['queued_space_list'][space_id]
+        save_json(FILENAME, queue)
+        print(f"Removed {space_id} from cache as it has been downloaded")
+        return True
+    else:
+        print(f"Space {space_id} not found in cache")
+        return False
 
 
 # user = client.get_user(username="EvilPlanInc") # robo:467972727, mario:1319287761048723458, evilplan: 1138690476612046848
 # input(user.data.id)
-ids_who_have_scheduled = [1319287761048723458, 1138690476612046848]
-get_scheduled_or_live_spaces(ids_who_have_scheduled)
+
+# ids = [1319287761048723458, 1138690476612046848] 
+ids = bot.get_following_ids()['user_ids_list']
+cache_scheduled_or_live_spaces(ids)
+
+user_info = bot.get_users_info_cache([]) # where [] would be from mentioned users. user_data.json
+# input(user_info)
+# exit()
 
 
-# then every X minutes, we try to download the queue
-bot.download_ended_spaces()
+# # then every X minutes, we try to download the queue
+# spaces_to_download = bot.get_ended_spaces_to_download_from_queue() # returns spaces ids to download
+spaces_to_download = get_spaces_from_cache_to_download(bot)
+# input(spaces_to_download)
+# RECORDED_SPACE="https://twitter.com/i/spaces/1mrxmkXNwmkGy?s=20" # stride.zone
+# RECORDED_SPACE="https://twitter.com/i/spaces/1RDxlaXyNZMKL" # robo long
+# RECORDED_SPACE="https://twitter.com/i/spaces/1jMJgLNpAbOxL" # scheduled, what happens?
+
+for space_id, space_data in spaces_to_download.items():    
+    p = Processing()
+    try:
+        # loop through spaces, do in a multiprocessing pool?
+        filename = p.download_space(space_id) # if downloaded, still returns that filename
+        new_file_location = p.remove_0_volume_from_file(filename)       
+        # tweet here
+                
+        creator = bot.get_user(space_data['creator_id']) # {'username': 'RoboVerseWeb3', 'verified': False, 'profile_image_url': 'https://pbs.twimg.com/profile_images/1581352014902341633/R_Lc-bF9.jpg', 'description': '@RacoonSupply Brand Shitposter🦝\nCommunity - Artificial Intelligence - Gaming 🤝', 'id': '467972727', 'pinned_tweet_id': '1578666987546619904', 'public_metrics': {'followers_count': 5560, 'following_count': 3222, 'tweet_count': 33228, 'listed_count': 72}
+        creator_username = creator['username']
+        pfp_img = creator['profile_image_url']
+
+        title = space_data['title']
+        participants = space_data['participant_count']        
+        
+        print(f"\nTWEET: {space_id}, {title}, from @{creator_username}. Participants: {participants}")
+
+        # remove it from cache
+        # remote_downloaded_space_from_cache(space_id)
+
+    except ValueError as e:
+        print(f"ValueError: {space_id} -> {e}")
+    except Exception as e:
+        print(f"Exception: {space_id} -> {e}")
+
 
 
 # ss = get_spaces(following)

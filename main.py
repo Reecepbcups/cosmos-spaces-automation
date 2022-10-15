@@ -40,7 +40,7 @@ while True:
 
     # now with the bot, loads load queued download list, see if they have any spaces. If so, download them
     # bot.download_queued_creators()
-    following = list(bot.get_following_ids()['user_ids_list'])
+    # following = list(bot.get_following_ids()['user_ids_list'])
     # input(following)
 
 
@@ -50,9 +50,13 @@ while True:
     # SPACE_ID = "1RDxlaXyNZMKL"
     # s = spaces.get_space_by_id(SPACE_ID)
     # print(s)
-    spaces.do_processing_on_spaces(following)
+    # spaces.do_processing_on_spaces(following)
 
-    input("-> enter")    
+    # input("-> enter")
+
+    bot.update_queued_spaces_to_download_later()
+    bot.download_ended_spaces()
+
     pass
 
 

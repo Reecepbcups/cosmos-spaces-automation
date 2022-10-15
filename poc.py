@@ -45,7 +45,7 @@ headers = {
 from src.storage import get_json, save_json
 
 #  TODO: run every 5-10 minutes?
-def cache_scheduled_or_live_spaces(ids: list[str | int]) -> None: # cache the space ids for download later
+def cache_scheduled_or_live_spaces(ids: list[str | int]) -> list[str]: # cache the space ids for download later
     # # https://developer.twitter.com/apitools/api?endpoint=%2F2%2Fspaces%2Fby%2Fcreator_ids&method=get
     ids = ','.join([str(i) for i in ids])        
     r_json = requests.get(
@@ -54,18 +54,18 @@ def cache_scheduled_or_live_spaces(ids: list[str | int]) -> None: # cache the sp
     ).json()    
 
     if 'data' not in r_json:
-        print(f"Error, {r_json}")
-        return    
+        print(f"cache_scheduled_or_live_spaces Error (probably no spaces), {r_json}")
+        return []
     
+    FILENAME = 'queued_space_list.json'    
     for space_data in r_json['data']:        
         # update_queued_spaces_to_download_later(space)    # save space to json file for later
-        FILENAME = 'queued_space_list.json'    
         queue = get_json(FILENAME)
         if queue == {}:
             queue = {"queued_space_list": {}}
         queue['queued_space_list'][space_data['id']] = space_data        
         save_json(FILENAME, queue)
-        return queue['queued_space_list']
+    return queue['queued_space_list'].keys()
 
 def get_spaces_from_cache_to_download(bot: Bot) -> dict:
     FILENAME = 'queued_space_list.json' 
@@ -115,7 +115,10 @@ def remove_downloaded_space_from_cache(space_id: str, debug: bool = True) -> boo
 def main():
     # ids = [1319287761048723458, 1138690476612046848] 
     ids = bot.get_following_ids()['user_ids_list']
-    cache_scheduled_or_live_spaces(ids)
+    spaces = cache_scheduled_or_live_spaces(ids)
+    if len(spaces) == 0:
+        print("No spaces to download")
+        return
 
     bot.get_users_info_cache([]) # where [] would be from mentioned users. user_data.json
 

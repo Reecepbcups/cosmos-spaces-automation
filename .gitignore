@@ -8,4 +8,4 @@ json_data/
 # Google Cloud Credentials (Calandar API)
 credentials.json
 token.json
-__pycache__
+**/__pycache__

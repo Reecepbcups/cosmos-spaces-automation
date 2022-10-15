@@ -77,12 +77,12 @@ if __name__ == "__main__":
     # RECORDED_SPACE="https://twitter.com/i/spaces/1RDxlaXyNZMKL" # robo long
     # RECORDED_SPACE="https://twitter.com/i/spaces/1jMJgLNpAbOxL" # scheduled, what happens?
 
-    try:
-        # loop through spaces, do in a multiprocessing pool?
-        filename = p.download_space(RECORDED_SPACE) # if downloaded, still returns that filename
-        p.remove_0_volume_from_file(filename)        
-
-    except ValueError as e:
-        print(f"ValueError: {RECORDED_SPACE} -> {e}")
-    except Exception as e:
-        print(f"Exception: {RECORDED_SPACE} -> {e}")
+    # try:
+    # loop through spaces, do in a multiprocessing pool?
+    filename = p.download_space(RECORDED_SPACE) # if downloaded, still returns that filename
+    # filename = "Stride_Community_Call_-_October.m4a"
+    p.remove_0_volume_from_file(filename)        
+    # except ValueError as e:
+    #     print(f"ValueError: {RECORDED_SPACE} -> {e}")
+    # except Exception as e:
+    #     print(f"Exception: {RECORDED_SPACE} -> {e}")

@@ -79,7 +79,7 @@ def get_spaces_from_cache_to_download(bot: Bot) -> dict:
         # print(space_id, space_data)        
         space = bot.get_space_by_id(space_id=space_id)
         if space is None:
-            remote_downloaded_space_from_cache(space_id, debug=False)
+            remove_downloaded_space_from_cache(space_id, debug=False)
             continue
 
         state = space['state']
@@ -92,7 +92,7 @@ def get_spaces_from_cache_to_download(bot: Bot) -> dict:
 
     return spaces_to_download
 
-def remote_downloaded_space_from_cache(space_id: str, debug: bool = True) -> bool:
+def remove_downloaded_space_from_cache(space_id: str, debug: bool = True) -> bool:
     FILENAME = 'queued_space_list.json' 
     queue = get_json(FILENAME)
     if queue == {} or "queued_space_list" not in queue:
@@ -126,7 +126,11 @@ def main():
     # RECORDED_SPACE="https://twitter.com/i/spaces/1mrxmkXNwmkGy?s=20" # stride.zone
     # RECORDED_SPACE="https://twitter.com/i/spaces/1RDxlaXyNZMKL" # robo long
     # RECORDED_SPACE="https://twitter.com/i/spaces/1jMJgLNpAbOxL" # scheduled, what happens?
-
+    # live: https://twitter.com/i/spaces/1zqKVPvrdqVJB?s=20
+    
+    if spaces_to_download == None:
+        print("No spaces to download")
+        return
 
     def multi_run_wrapper(args):
         return download_and_tweet_space(*args)
@@ -164,7 +168,7 @@ def main():
 
             # client.create_tweet(text=output)
             # remove it from cache
-            # remote_downloaded_space_from_cache(space_id) # TODO: renable this
+            # remove_downloaded_space_from_cache(space_id) # TODO: renable this
 
         except ValueError as e:
             print(f"ValueError: {space_id} -> {e}")
@@ -183,7 +187,7 @@ def main():
 
 if __name__ == '__main__':
     while True:
-        print("Running main!")
+        print("Running main function in poc.py!")
         main()
         print(f"Waiting 5 minutes...")
         time.sleep(60*5) # every 5 minutes

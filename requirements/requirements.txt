@@ -3,6 +3,7 @@ tweepy # for tweets and stuff
 twspace-dl # https://github.com/HoloArchivists/twspace-dl
 
 python-dotenv
+ffmpegio
 
 requests # for url redirects
 

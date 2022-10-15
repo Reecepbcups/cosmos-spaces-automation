@@ -1,6 +1,6 @@
 ### Install
 ```
-sudo pacman -S vlc docker
+sudo pacman -S vlc docker libtiff
 sudo pacman -S ffmpeg
 python3 -m pip install -r requirements/requirments.txt --upgrade
 

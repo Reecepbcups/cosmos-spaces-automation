@@ -73,7 +73,7 @@ class Processing:
 
 if __name__ == "__main__":
     p = Processing()
-    RECORDED_SPACE="https://twitter.com/i/spaces/1mrxmkXNwmkGy?s=20" # stride.zone
+    RECORDED_SPACE="https://twitter.com/i/spaces/1mrxmkXNwmkGy" # stride.zone
     # RECORDED_SPACE="https://twitter.com/i/spaces/1RDxlaXyNZMKL" # robo long
     # RECORDED_SPACE="https://twitter.com/i/spaces/1jMJgLNpAbOxL" # scheduled, what happens?
 

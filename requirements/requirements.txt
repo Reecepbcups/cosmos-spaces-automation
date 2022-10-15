@@ -4,6 +4,7 @@ twspace-dl # https://github.com/HoloArchivists/twspace-dl
 
 python-dotenv
 ffmpegio
+ffmpeg-python
 
 requests # for url redirects
 

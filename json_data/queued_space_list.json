@@ -1,0 +1,43 @@
+{
+    "queued_space_list": {
+        "1RDxlaXyNZMKL": {
+            "created_at": "2022-10-15T22:09:19.000Z",
+            "speaker_ids": [
+                "467972727"
+            ],
+            "id": "1RDxlaXyNZMKL",
+            "title": "Back to professional: RAC Charity Hosting Special \ud83d\udc40",
+            "host_ids": [
+                "467972727"
+            ],
+            "participant_count": 117,
+            "state": "live",
+            "started_at": "2022-10-15T22:09:21.000Z",
+            "creator_id": "467972727"
+        },
+        "1lPKqBQeLNlGb": {
+            "title": "Totally Uninformed Opinions on NFTs Web3 Gaming Tech Startups VC #TUO",
+            "id": "1lPKqBQeLNlGb",
+            "participant_count": 28,
+            "speaker_ids": [
+                "47643",
+                "23159277",
+                "1471022500456841221",
+                "1432495935167209475",
+                "14748563",
+                "1384663402811961344",
+                "1449492944830877698",
+                "1222790936679206913"
+            ],
+            "started_at": "2022-10-15T22:09:21.000Z",
+            "host_ids": [
+                "1138690476612046848",
+                "1471022500456841221",
+                "23159277"
+            ],
+            "created_at": "2022-10-15T22:09:19.000Z",
+            "state": "live",
+            "creator_id": "1138690476612046848"
+        }
+    }
+}

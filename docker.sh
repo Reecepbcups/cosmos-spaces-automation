@@ -1,4 +1,5 @@
 # ENSURE YOU RUN THIS IN THE 'cosmos-spaces-automation'
+systemctl start docker
 mkdir -p "final"
 docker run --name spaces \
     --restart always \

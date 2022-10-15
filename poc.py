@@ -17,6 +17,9 @@ from mutagen.mp3 import MP3
 
 from src.bot import Bot
 load_dotenv()
+if not os.path.exists('.env'):
+    print("Please create a .env file with your Twitter API keys. cp .env.example .env")
+    exit(1)
 
 # Twitter client keys
 API_KEY = os.getenv('API_KEY')
@@ -111,35 +114,7 @@ def remove_downloaded_space_from_cache(space_id: str, debug: bool = True) -> boo
 
 # user = client.get_user(username="EvilPlanInc") # robo:467972727, mario:1319287761048723458, evilplan: 1138690476612046848
 # input(user.data.id)
-
-# def main():
-# ids = [1319287761048723458, 1138690476612046848] 
-ids = bot.get_following_ids()['user_ids_list']
-spaces = cache_scheduled_or_live_spaces(ids)
-# if len(spaces) == 0:
-#     print("No spaces to download")
-#     return
-
-bot.get_users_info_cache([]) # where [] would be from mentioned users. user_data.json
-
-# # then every X minutes, we try to download the queue
-# spaces_to_download = bot.get_ended_spaces_to_download_from_queue() # returns spaces ids to download
-spaces_to_download = get_spaces_from_cache_to_download(bot)
-# input(spaces_to_download)
-# RECORDED_SPACE="https://twitter.com/i/spaces/1mrxmkXNwmkGy?s=20" # stride.zone
-# RECORDED_SPACE="https://twitter.com/i/spaces/1RDxlaXyNZMKL" # robo long
-# RECORDED_SPACE="https://twitter.com/i/spaces/1jMJgLNpAbOxL" # scheduled, what happens?
-# live: https://twitter.com/i/spaces/1zqKVPvrdqVJB?s=20
-
-if spaces_to_download == None:
-    print("No spaces to download")
-    # erxit(0) 
-
 def download_and_tweet_space(space_id: str, space_data: dict):   
-    if space_id == "1mrxmkXNwmkGy":
-        print("DEBUGGING CONTINUE FOIR {1mrxmkXNwmkGy}")
-        return
-
     p = Processing()     
     # try:
 
@@ -172,7 +147,7 @@ def download_and_tweet_space(space_id: str, space_data: dict):
 
     client.create_tweet(text=output)
     # remove it from cache
-    remove_downloaded_space_from_cache(space_id) # TODO: renable this
+    # remove_downloaded_space_from_cache(space_id) # TODO: renable this
 
     # except ValueError as e:
     #     print(f"ValueError: {space_id} -> {e}")
@@ -181,8 +156,31 @@ def download_and_tweet_space(space_id: str, space_data: dict):
     #     print(f"Exception: {space_id} -> {e}")
 
 while True:
-    for space_id, space_data in spaces_to_download.items():    
-        download_and_tweet_space(space_id, space_data)
+    # def main():
+    # ids = [1319287761048723458, 1138690476612046848] 
+    ids = bot.get_following_ids()['user_ids_list']
+    spaces = cache_scheduled_or_live_spaces(ids)
+    # if len(spaces) == 0:
+    #     print("No spaces to download")
+    #     return
+
+    bot.get_users_info_cache([]) # where [] would be from mentioned users. user_data.json
+
+    # # then every X minutes, we try to download the queue
+    # spaces_to_download = bot.get_ended_spaces_to_download_from_queue() # returns spaces ids to download
+    spaces_to_download = get_spaces_from_cache_to_download(bot)
+    # input(spaces_to_download)
+    # RECORDED_SPACE="https://twitter.com/i/spaces/1mrxmkXNwmkGy?s=20" # stride.zone
+    # RECORDED_SPACE="https://twitter.com/i/spaces/1RDxlaXyNZMKL" # robo long
+    # RECORDED_SPACE="https://twitter.com/i/spaces/1jMJgLNpAbOxL" # scheduled, what happens?
+    # live: https://twitter.com/i/spaces/1zqKVPvrdqVJB?s=20
+
+    if spaces_to_download == None:
+        print("No spaces to download")        
+    else:
+        for space_id, space_data in spaces_to_download.items():    
+            download_and_tweet_space(space_id, space_data)
+
     print("Sleeping for 15 minutes before continuing")
     time.sleep(15*30)
 

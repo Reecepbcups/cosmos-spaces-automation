@@ -155,8 +155,15 @@ def download_and_tweet_space(space_id: str, space_data: dict):
         title = space_data['title']
         participants = space_data['participant_count']     
 
-        audio = MP3(new_file_location)                      
-        print(f"\nTWEET: {title}{creator_username}. Participants: {participants}. Length: {round(audio.info.length/60, 2)} minutes.")
+        audio = MP3(new_file_location)         
+
+        file_path = new_file_location.split('/')[-1]
+
+        output = f"{title}{creator_username} views: {participants} ({round(audio.info.length/60, 2)} minutes) - https://ibcarchive.space/{file_path}"             
+        if len(output) > 280:
+            f"TEST: {title}{creator_username} - https://ibcarchive.space/{file_path}"
+        # input(f"\n\nPress enter to tweet out: \n{output}")
+        client.create_tweet(text=output)
 
         # remove it from cache
         # remote_downloaded_space_from_cache(space_id) # TODO: renable this

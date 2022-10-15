@@ -8,7 +8,8 @@ from time import sleep, time
 
 class Processing:
     def __init__(self):
-        self.filename_fmt = "%(creator_name)s__splitter__%(title)s" # so we split at the __splitter__ to get data
+        # self.filename_fmt = "%(creator_name)s__splitter__%(title)s" # so we split at the __splitter__ to get data
+        self.filename_fmt = "%(title)s" # so we split at the __splitter__ to get data
         self.CURRENT_DIR = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
         self.DOWNLOADS_DIR = os.path.join(self.CURRENT_DIR, "downloads")
         self.FINAL_DIR = os.path.join(self.CURRENT_DIR, "final")

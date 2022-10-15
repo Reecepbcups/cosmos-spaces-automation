@@ -17,31 +17,37 @@ class Processing:
 
     def download_space(self, rec_space_url: str) -> str:    
         # FUTURE: download metadata too (so we can get who is speaking, reactions, etc)
-
         if rec_space_url == None:
             print("No space URL provided.")
-            return
+            return ""
 
         rec_space_url = rec_space_url.replace("?s=20", "")
         if len(rec_space_url) == len("1RDxlaXyNZMKL"):
             rec_space_url = f"https://twitter.com/i/spaces/{rec_space_url}"
 
-        print(f"Downloading {rec_space_url}")
+        # print(f"Downloading {rec_space_url}")
         space_obj = twspace_dl.Twspace.from_space_url(rec_space_url)
         space = twspace_dl.TwspaceDL(space_obj, self.filename_fmt)
         # space.download()        
         filename = f"{space.filename}.m4a"
         new_filename = filename.replace(" ", "_")
+
         # check if new_filename is in the downloads folder
         if os.path.exists(os.path.join(self.DOWNLOADS_DIR, new_filename)):
             print(f"File {new_filename} already exists in downloads folder.")
         else:
+
+            # don't download if we already have the mp3 file converted
+            if os.path.exists(os.path.join(self.FINAL_DIR, f"{new_filename.replace('.m4a', '.mp3')}")):
+                print("This space has already been converted to shorter.")
+                return new_filename
+
             space.download()        
             # move from curent dir to downloads dir & rename to new_filename            
             shutil.move(os.path.join(self.CURRENT_DIR, f"{space.filename}.m4a"), os.path.join(self.DOWNLOADS_DIR, new_filename))
         
         # return re.escape(new_filename)
-        return new_filename
+        return new_filename # should we return the full path here? then edit remove_0_volume_from_file to take the full path
 
 
     def remove_0_volume_from_file(self, filename):

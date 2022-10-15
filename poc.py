@@ -136,55 +136,55 @@ if spaces_to_download == None:
     # erxit(0) 
 
 def download_and_tweet_space(space_id: str, space_data: dict):   
+    if space_id == "1mrxmkXNwmkGy":
+        print("DEBUGGING CONTINUE FOIR {1mrxmkXNwmkGy}")
+        return
+
     p = Processing()     
-    try:
-        # loop through spaces, do in a multiprocessing pool?
-        filename = p.download_space(space_id) # if downloaded, still returns that filename           
-        if len(filename) == 0:
-            print(f"Error downloading {space_id}, likely invalid.")
-            return
-        new_file_location = p.remove_0_volume_from_file(filename)       
-        
-        # gets user from cache or fresh query if not already in cache        
-        creator = bot.get_user(space_data['creator_id']) # {'username': 'RoboVerseWeb3', 'verified': False, 'profile_image_url': 'https://pbs.twimg.com/profile_images/1581352014902341633/R_Lc-bF9.jpg', 'description': '@RacoonSupply Brand Shitposter🦝\nCommunity - Artificial Intelligence - Gaming 🤝', 'id': '467972727', 'pinned_tweet_id': '1578666987546619904', 'public_metrics': {'followers_count': 5560, 'following_count': 3222, 'tweet_count': 33228, 'listed_count': 72}
-        if 'username' in creator:
-            creator_username = f" from @{creator['username']}"
-            pfp_img = creator['profile_image_url']
-        else:
-            creator_username = ""
-            pfp_img = ""
+    # try:
 
-        title = space_data['title']
-        participants = space_data['participant_count']     
+    # loop through spaces, do in a multiprocessing pool?
+    filename = p.download_space(space_id) # if downloaded, still returns that filename           
+    if len(filename) == 0:
+        print(f"Error downloading {space_id}, likely invalid.")
+        return
+    new_file_location = p.remove_0_volume_from_file(filename)       
+    
+    # gets user from cache or fresh query if not already in cache        
+    creator = bot.get_user(space_data['creator_id']) # {'username': 'RoboVerseWeb3', 'verified': False, 'profile_image_url': 'https://pbs.twimg.com/profile_images/1581352014902341633/R_Lc-bF9.jpg', 'description': '@RacoonSupply Brand Shitposter🦝\nCommunity - Artificial Intelligence - Gaming 🤝', 'id': '467972727', 'pinned_tweet_id': '1578666987546619904', 'public_metrics': {'followers_count': 5560, 'following_count': 3222, 'tweet_count': 33228, 'listed_count': 72}
+    if 'username' in creator:
+        creator_username = f" from @{creator['username']}"
+        pfp_img = creator['profile_image_url']
+    else:
+        creator_username = ""
+        pfp_img = ""
 
-        audio = MP3(new_file_location)         
+    title = space_data['title']
+    participants = space_data['participant_count']     
 
-        file_path = new_file_location.split('/')[-1]
+    audio = MP3(new_file_location)         
 
-        output = f"{title}{creator_username} views: {participants} ({round(audio.info.length/60, 2)} minutes) - https://ibcarchive.space/{file_path}"             
-        if len(output) > 280:
-            f"TEST: {title}{creator_username} - https://ibcarchive.space/{file_path}"
+    file_path = new_file_location.split('/')[-1]
 
+    output = f"{title}{creator_username}\nViews: {participants} ({round(audio.info.length/60, 2)} minutes)\nLink: http://95.217.113.126/{file_path}\nReal: http://www.cosmosibc.space/{file_path}"             
+    if len(output) > 280:
+        f"{title}{creator_username} - https://ibcarchive.space/{file_path}"
 
-        # client.create_tweet(text=output)
-        # remove it from cache
-        # remove_downloaded_space_from_cache(space_id) # TODO: renable this
+    client.create_tweet(text=output)
+    # remove it from cache
+    remove_downloaded_space_from_cache(space_id) # TODO: renable this
 
-    except ValueError as e:
-        print(f"ValueError: {space_id} -> {e}")
+    # except ValueError as e:
+    #     print(f"ValueError: {space_id} -> {e}")
 
-    except Exception as e:
-        print(f"Exception: {space_id} -> {e}")
+    # except Exception as e:
+    #     print(f"Exception: {space_id} -> {e}")
 
-def multi_run_wrapper(args):
-    return download_and_tweet_space(*args)
-
-to_download = []
-pool = mp.Pool(mp.cpu_count())      
-for space_id, space_data in spaces_to_download.items():    
-    to_download.append((space_id, space_data))
-
-pool.map(multi_run_wrapper, to_download)
+while True:
+    for space_id, space_data in spaces_to_download.items():    
+        download_and_tweet_space(space_id, space_data)
+    print("Sleeping for 15 minutes before continuing")
+    time.sleep(15*30)
 
 
 

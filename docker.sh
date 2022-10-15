@@ -4,5 +4,5 @@ docker run --name spaces \
     --restart always \
     -v $(pwd)/default.conf:/etc/nginx/conf.d/default.conf \
     -v $(pwd)/final/:/root/ \
-    -p 555:555 \
+    -p 80:80 \
     -d nginx

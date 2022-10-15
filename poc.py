@@ -7,10 +7,12 @@ from pkgutil import get_data
 import re, requests, json, datetime
 
 from src.download_processing import Processing
+import multiprocessing as mp
 
 import tweepy
 from dotenv import load_dotenv
 from src.spaces import Spaces
+from mutagen.mp3 import MP3
 
 from src.bot import Bot
 load_dotenv()
@@ -72,8 +74,13 @@ def get_spaces_from_cache_to_download(bot: Bot) -> dict:
         return
 
     spaces_to_download = {}
-    for space_id, space_data in queue['queued_space_list'].items():        
+    for space_id, space_data in queue['queued_space_list'].items():   
+        # print(space_id, space_data)        
         space = bot.get_space_by_id(space_id=space_id)
+        if space is None:
+            remote_downloaded_space_from_cache(space_id, debug=False)
+            continue
+
         state = space['state']
         if state in ['scheduled', 'live']:
             print(f"Space {space_id} is still {state}. Not downloading")
@@ -84,20 +91,20 @@ def get_spaces_from_cache_to_download(bot: Bot) -> dict:
 
     return spaces_to_download
 
-def remote_downloaded_space_from_cache(space_id: str) -> bool:
+def remote_downloaded_space_from_cache(space_id: str, debug: bool = True) -> bool:
     FILENAME = 'queued_space_list.json' 
     queue = get_json(FILENAME)
     if queue == {} or "queued_space_list" not in queue:
-        print("No spaces found in the cache to delete")
+        if debug: print("No spaces found in the cache to delete")
         return
     
     if space_id in queue['queued_space_list']:
         del queue['queued_space_list'][space_id]
         save_json(FILENAME, queue)
-        print(f"Removed {space_id} from cache as it has been downloaded & tweeted already.")
+        if debug: print(f"Removed {space_id} from cache as it has been downloaded & tweeted already.")
         return True
     else:
-        print(f"Space {space_id} not found in cache")
+        if debug:  print(f"Space {space_id} not found in cache")
         return False
 
 
@@ -121,33 +128,53 @@ spaces_to_download = get_spaces_from_cache_to_download(bot)
 # RECORDED_SPACE="https://twitter.com/i/spaces/1RDxlaXyNZMKL" # robo long
 # RECORDED_SPACE="https://twitter.com/i/spaces/1jMJgLNpAbOxL" # scheduled, what happens?
 
-from mutagen.mp3 import MP3
 
-for space_id, space_data in spaces_to_download.items():    
+
+def multi_run_wrapper(args):
+    return download_and_tweet_space(*args)
+
+def download_and_tweet_space(space_id: str, space_data: dict):
     p = Processing()
     try:
         # loop through spaces, do in a multiprocessing pool?
-        filename = p.download_space(space_id) # if downloaded, still returns that filename                    
+        filename = p.download_space(space_id) # if downloaded, still returns that filename           
+        if len(filename) == 0:
+            print(f"Error downloading {space_id}, likely invalid.")
+            return
         new_file_location = p.remove_0_volume_from_file(filename)       
         # tweet here
                 
         creator = bot.get_user(space_data['creator_id']) # {'username': 'RoboVerseWeb3', 'verified': False, 'profile_image_url': 'https://pbs.twimg.com/profile_images/1581352014902341633/R_Lc-bF9.jpg', 'description': '@RacoonSupply Brand Shitposter🦝\nCommunity - Artificial Intelligence - Gaming 🤝', 'id': '467972727', 'pinned_tweet_id': '1578666987546619904', 'public_metrics': {'followers_count': 5560, 'following_count': 3222, 'tweet_count': 33228, 'listed_count': 72}
-        creator_username = creator['username']
-        pfp_img = creator['profile_image_url']
+        if 'username' in creator:
+            creator_username = f" from @{creator['username']}"
+            pfp_img = creator['profile_image_url']
+        else:
+            creator_username = ""
+            pfp_img = ""
 
         title = space_data['title']
         participants = space_data['participant_count']     
 
         audio = MP3(new_file_location)                      
-        print(f"\nTWEET: {title}, from @{creator_username}. Participants: {participants}. Length: {round(audio.info.length/60, 2)} minutes")
+        print(f"\nTWEET: {title}{creator_username}. Participants: {participants}. Length: {round(audio.info.length/60, 2)} minutes.")
 
         # remove it from cache
-        remote_downloaded_space_from_cache(space_id)
+        # remote_downloaded_space_from_cache(space_id) # TODO: renable this
 
     except ValueError as e:
         print(f"ValueError: {space_id} -> {e}")
+
     except Exception as e:
         print(f"Exception: {space_id} -> {e}")
+
+to_download = []
+pool = mp.Pool(mp.cpu_count())  
+for space_id, space_data in spaces_to_download.items():    
+    to_download.append((space_id, space_data))
+
+pool.map(multi_run_wrapper, to_download)
+
+
 
 
 

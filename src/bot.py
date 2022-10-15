@@ -221,10 +221,14 @@ class Bot:
             headers=self.headers,
         ).json()    
 
+        if 'data' in response.keys():
+            return response['data']
+        else:
+            return None
         # response['data']['timestamp'] = get_epoch_time_seconds()
         # response['data']['was_cached'] = True # save as true
         # data[space_id] = response['data']
         # save_json(FILENAME, data)
 
         # response['data']['was_cached'] = False
-        return response['data']
+        # return response['data']

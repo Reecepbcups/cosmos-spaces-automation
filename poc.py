@@ -3,6 +3,7 @@
 
 
 import os, time
+from sched import scheduler
 from pkgutil import get_data
 import re, requests, json, datetime
 
@@ -111,108 +112,78 @@ def remote_downloaded_space_from_cache(space_id: str, debug: bool = True) -> boo
 # user = client.get_user(username="EvilPlanInc") # robo:467972727, mario:1319287761048723458, evilplan: 1138690476612046848
 # input(user.data.id)
 
-# ids = [1319287761048723458, 1138690476612046848] 
-ids = bot.get_following_ids()['user_ids_list']
-cache_scheduled_or_live_spaces(ids)
+def main():
+    # ids = [1319287761048723458, 1138690476612046848] 
+    ids = bot.get_following_ids()['user_ids_list']
+    cache_scheduled_or_live_spaces(ids)
 
-user_info = bot.get_users_info_cache([]) # where [] would be from mentioned users. user_data.json
-# input(user_info)
-# exit()
+    bot.get_users_info_cache([]) # where [] would be from mentioned users. user_data.json
 
-
-# # then every X minutes, we try to download the queue
-# spaces_to_download = bot.get_ended_spaces_to_download_from_queue() # returns spaces ids to download
-spaces_to_download = get_spaces_from_cache_to_download(bot)
-# input(spaces_to_download)
-# RECORDED_SPACE="https://twitter.com/i/spaces/1mrxmkXNwmkGy?s=20" # stride.zone
-# RECORDED_SPACE="https://twitter.com/i/spaces/1RDxlaXyNZMKL" # robo long
-# RECORDED_SPACE="https://twitter.com/i/spaces/1jMJgLNpAbOxL" # scheduled, what happens?
+    # # then every X minutes, we try to download the queue
+    # spaces_to_download = bot.get_ended_spaces_to_download_from_queue() # returns spaces ids to download
+    spaces_to_download = get_spaces_from_cache_to_download(bot)
+    # input(spaces_to_download)
+    # RECORDED_SPACE="https://twitter.com/i/spaces/1mrxmkXNwmkGy?s=20" # stride.zone
+    # RECORDED_SPACE="https://twitter.com/i/spaces/1RDxlaXyNZMKL" # robo long
+    # RECORDED_SPACE="https://twitter.com/i/spaces/1jMJgLNpAbOxL" # scheduled, what happens?
 
 
+    def multi_run_wrapper(args):
+        return download_and_tweet_space(*args)
 
-def multi_run_wrapper(args):
-    return download_and_tweet_space(*args)
+    def download_and_tweet_space(space_id: str, space_data: dict):
+        p = Processing()
+        try:
+            # loop through spaces, do in a multiprocessing pool?
+            filename = p.download_space(space_id) # if downloaded, still returns that filename           
+            if len(filename) == 0:
+                print(f"Error downloading {space_id}, likely invalid.")
+                return
+            new_file_location = p.remove_0_volume_from_file(filename)       
+            
+            # gets user from cache or fresh query if not already in cache        
+            creator = bot.get_user(space_data['creator_id']) # {'username': 'RoboVerseWeb3', 'verified': False, 'profile_image_url': 'https://pbs.twimg.com/profile_images/1581352014902341633/R_Lc-bF9.jpg', 'description': '@RacoonSupply Brand Shitposter🦝\nCommunity - Artificial Intelligence - Gaming 🤝', 'id': '467972727', 'pinned_tweet_id': '1578666987546619904', 'public_metrics': {'followers_count': 5560, 'following_count': 3222, 'tweet_count': 33228, 'listed_count': 72}
+            if 'username' in creator:
+                creator_username = f" from @{creator['username']}"
+                pfp_img = creator['profile_image_url']
+            else:
+                creator_username = ""
+                pfp_img = ""
 
-def download_and_tweet_space(space_id: str, space_data: dict):
-    p = Processing()
-    try:
-        # loop through spaces, do in a multiprocessing pool?
-        filename = p.download_space(space_id) # if downloaded, still returns that filename           
-        if len(filename) == 0:
-            print(f"Error downloading {space_id}, likely invalid.")
-            return
-        new_file_location = p.remove_0_volume_from_file(filename)       
-        # tweet here
-                
-        creator = bot.get_user(space_data['creator_id']) # {'username': 'RoboVerseWeb3', 'verified': False, 'profile_image_url': 'https://pbs.twimg.com/profile_images/1581352014902341633/R_Lc-bF9.jpg', 'description': '@RacoonSupply Brand Shitposter🦝\nCommunity - Artificial Intelligence - Gaming 🤝', 'id': '467972727', 'pinned_tweet_id': '1578666987546619904', 'public_metrics': {'followers_count': 5560, 'following_count': 3222, 'tweet_count': 33228, 'listed_count': 72}
-        if 'username' in creator:
-            creator_username = f" from @{creator['username']}"
-            pfp_img = creator['profile_image_url']
-        else:
-            creator_username = ""
-            pfp_img = ""
+            title = space_data['title']
+            participants = space_data['participant_count']     
 
-        title = space_data['title']
-        participants = space_data['participant_count']     
+            audio = MP3(new_file_location)         
 
-        audio = MP3(new_file_location)         
+            file_path = new_file_location.split('/')[-1]
 
-        file_path = new_file_location.split('/')[-1]
+            output = f"{title}{creator_username} views: {participants} ({round(audio.info.length/60, 2)} minutes) - https://ibcarchive.space/{file_path}"             
+            if len(output) > 280:
+                f"TEST: {title}{creator_username} - https://ibcarchive.space/{file_path}"
 
-        output = f"{title}{creator_username} views: {participants} ({round(audio.info.length/60, 2)} minutes) - https://ibcarchive.space/{file_path}"             
-        if len(output) > 280:
-            f"TEST: {title}{creator_username} - https://ibcarchive.space/{file_path}"
-        # input(f"\n\nPress enter to tweet out: \n{output}")
-        client.create_tweet(text=output)
 
-        # remove it from cache
-        # remote_downloaded_space_from_cache(space_id) # TODO: renable this
+            # client.create_tweet(text=output)
+            # remove it from cache
+            # remote_downloaded_space_from_cache(space_id) # TODO: renable this
 
-    except ValueError as e:
-        print(f"ValueError: {space_id} -> {e}")
+        except ValueError as e:
+            print(f"ValueError: {space_id} -> {e}")
 
-    except Exception as e:
-        print(f"Exception: {space_id} -> {e}")
+        except Exception as e:
+            print(f"Exception: {space_id} -> {e}")
 
-to_download = []
-pool = mp.Pool(mp.cpu_count())  
-for space_id, space_data in spaces_to_download.items():    
-    to_download.append((space_id, space_data))
+    to_download = []
+    pool = mp.Pool(mp.cpu_count())  
+    for space_id, space_data in spaces_to_download.items():    
+        to_download.append((space_id, space_data))
 
-pool.map(multi_run_wrapper, to_download)
+    pool.map(multi_run_wrapper, to_download)
 
 
 
-
-
-# ss = get_spaces(following)
-
-# ids: list[str] = "1519990048497754113,1355366118119108612,467972727".split(",")
-# response = requests.get(f'https://api.twitter.com/2/spaces/by/creator_ids?user_ids={ids}&space.fields=created_at,creator_id,ended_at,host_ids,id,invited_user_ids,is_ticketed,lang,participant_count,scheduled_start,speaker_ids,started_at,state,subscriber_count,title,topic_ids,updated_at&expansions=creator_id,host_ids,speaker_ids', headers=headers)
-# response = requests.get(f'https://api.twitter.com/2/spaces/by/creator_ids?user_ids=2712978728&expansions=creator_id,host_ids,speaker_ids', headers=headers)
-# response = response.json()
-
-# client.search_spaces()
-
-# user = client.get_user(username="stride_zone") # 467972727
-# user_id = user.data.id
-# username = user.data.username
-# # print(user_id)
-# input(f'{username}={user_id}\n')
-
-# s = client.get_spaces(user_ids=[1519990048497754113]) # up to 100 here. ids=spaces to get info about specific spaces.
-# print(s)
-
-# # get spaces by creator id
-# s = client.get_spaces(creator_ids=[1519990048497754113]) # up to 100 here. ids=spaces to get info about specific spaces.
-
-
-# s = client.search_spaces(query="cosmos", state="all", expansions="creator_id", max_results=100)
-# print(s)
-
-
-# print(response)
-
-
-# get mentions, get their parent tweet text.
-# if it's a space, add to queue
+if __name__ == '__main__':
+    while True:
+        print("Running main!")
+        main()
+        print(f"Waiting 5 minutes...")
+        time.sleep(60*5) # every 5 minutes

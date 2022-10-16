@@ -203,7 +203,7 @@ while True:
     print(f"Finished downloading spaces in {round(end-start, 2)} seconds")
     minutes = (end-start)/60
 
-    MINUTES_WAIT = 25
+    MINUTES_WAIT = 10
     if minutes > MINUTES_WAIT:
         print(f"Downloaded spaces in {round(minutes, 2)} minutes, continuing")
         continue

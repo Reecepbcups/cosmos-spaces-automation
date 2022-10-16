@@ -85,9 +85,22 @@ def get_spaces_from_cache_to_download(bot: Bot) -> dict:
             remove_downloaded_space_from_cache(space_id, debug=False)
             continue
 
+        current_time = datetime.datetime.now(datetime.timezone.utc)
+
         state = space['state']
-        if state in ['scheduled', 'live']:
-            print(f"Space {space_id} is still {state}. Not downloading")
+        if state == 'scheduled':
+            # input(space_data) # {'created_at': '2022-10-15T15:23:40.000Z', 'creator_id': '922670090834780162', 'participant_count': 0, 'title': 'Akash Weekly w/Greg Osuri ft. Anthony Rosa & Tor Blair', 'scheduled_start': '2022-10-19T15:00:00.000Z', 'state': 'scheduled', 'host_ids': ['922670090834780162'], 'id': '1yoKMZdEzZoGQ'}
+            scheduled_start = space_data['scheduled_start'] # '2022-10-19T15:00:00.000Z'            
+            start_time = datetime.datetime.strptime(scheduled_start, "%Y-%m-%dT%H:%M:%S.%fZ").astimezone(datetime.timezone.utc)
+
+            # get difference between current time and scheduled start time
+            time_diff = start_time - current_time
+            print(f"Space {space_id} is scheduled for {time_diff}, {space_data['title']}\tADD TO GOOGLE CALENDAR HERE")
+            continue
+
+        elif state == 'live':
+            # input(space_data) # {'title': 'Totally Uninformed Opinions on NFTs Web3 Gaming Tech Startups VC #TUO', 'id': '1lPKqBQeLNlGb', 'participant_count': 27, 'speaker_ids': ['84189927', '47643', '1550532439793074176', '1432495935167209475', '1361435468', '1046562319902240768', '1449492944830877698'], 'started_at': '2022-10-15T22:09:21.000Z', 'host_ids': ['1138690476612046848', '1449492944830877698'], 'created_at': '2022-10-15T22:09:19.000Z', 'state': 'live', 'creator_id': '1138690476612046848'}
+            print(f"Space {space_id} is still live. Not downloading")
             continue
         else:
             print(f"time to download {space_id} as it has ended (not live or scheduled)")            
@@ -179,8 +192,12 @@ while True:
     if spaces_to_download == None:
         print("No spaces to download")        
     else:
-        for space_id, space_data in spaces_to_download.items():    
-            download_and_tweet_space(space_id, space_data)
+        for space_id, space_data in spaces_to_download.items():   
+            try: # this may break because of the weird space crash errors with twitter eu
+                download_and_tweet_space(space_id, space_data)
+            except Exception as e:
+                print(f"Exception: {space_id} -> {e}")
+
     end = time.time()
 
     print(f"Finished downloading spaces in {round(end-start, 2)} seconds")

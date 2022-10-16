@@ -1,4 +1,7 @@
 # ENSURE YOU RUN THIS IN THE 'cosmos-spaces-automation'
+
+# Used for the https://twitter.com/IBC_Archive website: https://cosmosibc.space/
+
 systemctl start docker
 mkdir -p "final"
 docker run --name spaces \

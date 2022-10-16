@@ -88,6 +88,7 @@ def get_spaces_from_cache_to_download(bot: Bot) -> dict:
         current_time = datetime.datetime.now(datetime.timezone.utc)
 
         state = space['state']
+        url = f"https://twitter.com/i/spaces/{space_id}"
         if state == 'scheduled':
             # input(space_data) # {'created_at': '2022-10-15T15:23:40.000Z', 'creator_id': '922670090834780162', 'participant_count': 0, 'title': 'Akash Weekly w/Greg Osuri ft. Anthony Rosa & Tor Blair', 'scheduled_start': '2022-10-19T15:00:00.000Z', 'state': 'scheduled', 'host_ids': ['922670090834780162'], 'id': '1yoKMZdEzZoGQ'}
             scheduled_start = space_data['scheduled_start'] # '2022-10-19T15:00:00.000Z'            
@@ -95,12 +96,11 @@ def get_spaces_from_cache_to_download(bot: Bot) -> dict:
 
             # get difference between current time and scheduled start time
             time_diff = start_time - current_time
-            print(f"Space {space_id} is scheduled for {time_diff}, {space_data['title']}\tADD TO GOOGLE CALENDAR HERE")
+            print(f"Space {url} is scheduled for {time_diff}, {space_data['title']}")
             continue
-
         elif state == 'live':
             # input(space_data) # {'title': 'Totally Uninformed Opinions on NFTs Web3 Gaming Tech Startups VC #TUO', 'id': '1lPKqBQeLNlGb', 'participant_count': 27, 'speaker_ids': ['84189927', '47643', '1550532439793074176', '1432495935167209475', '1361435468', '1046562319902240768', '1449492944830877698'], 'started_at': '2022-10-15T22:09:21.000Z', 'host_ids': ['1138690476612046848', '1449492944830877698'], 'created_at': '2022-10-15T22:09:19.000Z', 'state': 'live', 'creator_id': '1138690476612046848'}
-            print(f"Space {space_id} is still live. Not downloading")
+            print(f"Space {url} is still live. Not downloading")
             continue
         else:
             print(f"time to download {space_id} as it has ended (not live or scheduled)")            
@@ -210,12 +210,3 @@ while True:
     else:
         print(f"Downloaded spaces in {round(minutes, 2)} minutes, sleeping for {round(MINUTES_WAIT-minutes, 2)} minutes")
         time.sleep((MINUTES_WAIT-minutes)*60)
-
-
-
-# if __name__ == '__main__':
-#     while True:
-#         print("Running main function in poc.py!")
-#         # main()
-#         print(f"Waiting 5 minutes...")
-#         time.sleep(60*5) # every 5 minutes

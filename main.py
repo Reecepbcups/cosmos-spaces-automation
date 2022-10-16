@@ -56,6 +56,8 @@ while True:
 
     bot.update_queued_spaces_to_download_later()
     bot.download_ended_spaces()
+    print("sleeping...")
+    time.sleep(30)
 
     pass
 

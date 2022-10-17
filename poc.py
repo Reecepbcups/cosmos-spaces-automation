@@ -96,7 +96,7 @@ def get_spaces_from_cache_to_download(bot: Bot) -> dict:
 
             # get difference between current time and scheduled start time
             time_diff = start_time - current_time
-            print(f"Space {url} is scheduled for {time_diff}, {space_data['title']}")
+            # print(f"Space {url} is scheduled for {time_diff}, {space_data['title']}")
             continue
         elif state == 'live':
             # input(space_data) # {'title': 'Totally Uninformed Opinions on NFTs Web3 Gaming Tech Startups VC #TUO', 'id': '1lPKqBQeLNlGb', 'participant_count': 27, 'speaker_ids': ['84189927', '47643', '1550532439793074176', '1432495935167209475', '1361435468', '1046562319902240768', '1449492944830877698'], 'started_at': '2022-10-15T22:09:21.000Z', 'host_ids': ['1138690476612046848', '1449492944830877698'], 'created_at': '2022-10-15T22:09:19.000Z', 'state': 'live', 'creator_id': '1138690476612046848'}
@@ -196,7 +196,16 @@ while True:
             try: # this may break because of the weird space crash errors with twitter eu
                 download_and_tweet_space(space_id, space_data)
             except Exception as e:
-                print(f"Exception: {space_id} -> {e}")
+                print(f"\nERROR HERE: {repr(e)}")
+
+                if "Space Ended" in repr(e):                  
+                    print(f"Space {space_id} was not recorded, removing from cache.")
+                    remove_downloaded_space_from_cache(space_id)
+                elif "Space should start at" in repr(e): # Spaces was canceled
+                    print(f"Space {space_id} was canceled, removing from cache.")
+                    remove_downloaded_space_from_cache(space_id)
+                else:                    
+                    print(f"poc.py Exception: {space_id} -> {e}")
 
     end = time.time()
 

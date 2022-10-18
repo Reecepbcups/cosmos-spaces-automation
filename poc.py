@@ -15,11 +15,15 @@ from dotenv import load_dotenv
 from src.spaces import Spaces
 from mutagen.mp3 import MP3
 
+import urllib.parse
+
 from src.bot import Bot
 load_dotenv()
 if not os.path.exists('.env'):
     print("Please create a .env file with your Twitter API keys. cp .env.example .env")
     exit(1)
+
+current_dir = os.path.dirname(os.path.realpath(__file__))
 
 # Twitter client keys
 API_KEY = os.getenv('API_KEY')
@@ -152,7 +156,8 @@ def download_and_tweet_space(space_id: str, space_data: dict):
 
     audio = MP3(new_file_location)         
 
-    file_path = new_file_location.split('/')[-1]
+    # encoded filepath so it points to the correct file
+    file_path = urllib.parse.quote(new_file_location.split('/')[-1])
 
     output = f"'{title}'\n{creator_username}\n[+] {round(audio.info.length/60, 2)} minutes\n\nLink: https://www.cosmosibc.space/{file_path}"             
     if len(output) > 280:
@@ -196,16 +201,20 @@ while True:
             try: # this may break because of the weird space crash errors with twitter eu
                 download_and_tweet_space(space_id, space_data)
             except Exception as e:
-                print(f"\nERROR HERE: {repr(e)}")
+                print(f"\nspaces_to_download ERROR HERE!")
 
-                if "Space Ended" in repr(e):                  
-                    print(f"Space {space_id} was not recorded, removing from cache.")
-                    remove_downloaded_space_from_cache(space_id)
-                elif "Space should start at" in repr(e): # Spaces was canceled
-                    print(f"Space {space_id} was canceled, removing from cache.")
-                    remove_downloaded_space_from_cache(space_id)
-                else:                    
-                    print(f"poc.py Exception: {space_id} -> {e}")
+                # if "Space Ended" in repr(e):                  
+                #     print(f"Space {space_id} was not recorded, removing from cache.")
+                #     remove_downloaded_space_from_cache(space_id)
+                # elif "Space should start at" in repr(e): # Spaces was canceled
+                #     print(f"Space {space_id} was canceled, removing from cache.")
+                #     remove_downloaded_space_from_cache(space_id)
+                # else:                    
+                #     print(f"poc.py Exception: {space_id} -> {e[0:50]}...")
+                #     # I assume we should just remove the space from the queue if something goes wrong
+                with open(os.path.join(current_dir, "error_log.txt"), "a") as f:
+                    f.write(f"{space_id} -> {e}\n")
+                remove_downloaded_space_from_cache(space_id)                    
 
     end = time.time()
 

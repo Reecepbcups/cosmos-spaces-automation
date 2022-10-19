@@ -173,7 +173,7 @@ def download_and_tweet_space(space_id: str, space_data: dict):
     speakers = "\n\nSpeakers: " + ", ".join(speakers_ats) if len(speakers_ats) > 0 else ""    
     # input(speakers)
 
-    output = f"'{title}'{creator_username} ({round(audio.info.length/60, 2)} minutes){speakers}\n\nLink: https://www.cosmosibc.space/{file_path}"             
+    output = f"'{title}' {creator_username} ({round(audio.info.length/60, 2)} minutes){speakers}\n\nLink: https://www.cosmosibc.space/{file_path}"             
     if len(output) > 280:
         # output = f"{title}{creator_username} - https://www.cosmosibc.space/{file_path}"
         output = f"'{title}'{creator_username} ({round(audio.info.length/60, 2)} minutes)\n\nLink: https://www.cosmosibc.space/{file_path}"    

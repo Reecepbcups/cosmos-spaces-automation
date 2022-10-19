@@ -110,7 +110,7 @@ def get_spaces_from_cache_to_download(bot: Bot) -> dict:
             print(f"Space {url} is still live. Not downloading")
             continue
         else:
-            print(f"time to download {space_id} as it has ended (not live or scheduled)")            
+            print(f"time to download {space_id} as it has ended (not live or scheduled) = {url}")   
             spaces_to_download[space_id] = space_data
 
     return spaces_to_download

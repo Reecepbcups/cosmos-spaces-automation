@@ -4,7 +4,10 @@ downloads/**/*.log
 *.m4a
 *.mp3
 .env
-json_data/
+**/tmp**/
+# json_data/
 # Google Cloud Credentials (Calandar API)
 credentials.json
 token.json
+**/__pycache__
+error_log.txt

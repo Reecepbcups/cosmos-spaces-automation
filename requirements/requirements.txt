@@ -3,6 +3,8 @@ tweepy # for tweets and stuff
 twspace-dl # https://github.com/HoloArchivists/twspace-dl
 
 python-dotenv
+ffmpegio
+ffmpeg-python
 
 requests # for url redirects
 
@@ -14,3 +16,5 @@ python-google-calendar-api
 google-api-python-client 
 google-auth-httplib2 
 google-auth-oauthlib
+
+mutagen # mp3 audio meta stuff

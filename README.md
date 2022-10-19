@@ -1,3 +1,14 @@
+### Install
+```
+sudo pacman -Syu
+sudo pacman -S vlc docker libtiff libfdk-aac bc
+sudo pacman -S ffmpeg
+python3 -m pip install -r requirements/requirments.txt --upgrade
+
+ffmpeg -version
+```
+
+
 ### GOAL:
 Create a bot that can
 - Allow anyone to add a space to queue (adds to calendar) via @bottag

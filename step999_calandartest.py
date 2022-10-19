@@ -24,6 +24,8 @@ SCOPES = ['https://www.googleapis.com/auth/calendar']
 
 CalendarID = getenv('CALENDAR_ID', "primary")
 
+# TODO: get a token.json which does not expire so quickly
+
 def load_credentials() -> Credentials:
     creds = None
     # The file token.json stores the user's access and refresh tokens, and is
@@ -36,8 +38,7 @@ def load_credentials() -> Credentials:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-            flow = InstalledAppFlow.from_client_secrets_file(
-                'credentials.json', SCOPES)
+            flow = InstalledAppFlow.from_client_secrets_file('credentials.json', SCOPES)
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
         with open('token.json', 'w') as token:
@@ -135,10 +136,10 @@ def add_event_to_calendar(title: str = "", description: str = "", spaces_url: st
 
 
 if __name__ == '__main__':
-    # main()
-    add_event_to_calendar(
-        title="My Spaces Title1", 
-        description="Run by XYZ about...", 
-        spaces_url="https://twitter.com",
-        start_time_iso_format=datetime.utcnow()+timedelta(minutes=30),        
-    )
+    main()
+    # add_event_to_calendar(
+    #     title="My Spaces Title1", 
+    #     description="Run by XYZ about...", 
+    #     spaces_url="https://twitter.com",
+    #     start_time_iso_format=datetime.utcnow()+timedelta(minutes=30),        
+    # )

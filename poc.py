@@ -69,8 +69,11 @@ def cache_scheduled_or_live_spaces(ids: list[str | int]) -> list[str]: # cache t
         # update_queued_spaces_to_download_later(space)    # save space to json file for later
         queue = get_json(FILENAME)
         if queue == {}:
-            queue = {"queued_space_list": {}}
-        queue['queued_space_list'][space_data['id']] = space_data        
+            queue = {"queued_space_list": {}}       
+
+        # Sorts the keys so they always are saved alphabetically
+        sorted_space_data = {k: v for k, v in sorted(space_data.items(), key=lambda item: item[0].lower())}            
+        queue['queued_space_list'][space_data['id']] = sorted_space_data    
         save_json(FILENAME, queue)
     return queue['queued_space_list'].keys()
 
@@ -167,10 +170,10 @@ def download_and_tweet_space(space_id: str, space_data: dict):
     # encoded filepath so it points to the correct file
     file_path = urllib.parse.quote(new_file_location.split('/')[-1])
 
-    speakers = "Speakers: " + ", ".join(speakers_ats) if len(speakers_ats) > 0 else ""    
+    speakers = "\n\nSpeakers: " + ", ".join(speakers_ats) if len(speakers_ats) > 0 else ""    
     # input(speakers)
 
-    output = f"'{title}'{creator_username} ({round(audio.info.length/60, 2)} minutes)\n\n{speakers}\n\nLink: https://www.cosmosibc.space/{file_path}"             
+    output = f"'{title}'{creator_username} ({round(audio.info.length/60, 2)} minutes){speakers}\n\nLink: https://www.cosmosibc.space/{file_path}"             
     if len(output) > 280:
         # output = f"{title}{creator_username} - https://www.cosmosibc.space/{file_path}"
         output = f"'{title}'{creator_username} ({round(audio.info.length/60, 2)} minutes)\n\nLink: https://www.cosmosibc.space/{file_path}"    
@@ -208,9 +211,12 @@ while True:
         for space_id, space_data in spaces_to_download.items():   
             try: # this may break because of the weird space crash errors with twitter eu
                 # get speakers from the space (json)
-                
-                speaker_ids = space_data['speaker_ids'] # "speaker_ids": [ "1223319210", "285771380", "2837818354" ],                
-                bot.get_users_info_cache(speaker_ids, include_following=True) # idk if False would remove those who we follow or not.
+
+                if 'speaker_ids' in space_data:                
+                    speaker_ids = space_data['speaker_ids'] # "speaker_ids": [ "1223319210", "285771380", "2837818354" ],                
+                    bot.get_users_info_cache(speaker_ids, include_following=True) # idk if False would remove those who we follow or not.
+                else:
+                    print(f"Space {space_id} has no speakers, skipping. Space Data: {space_data}")
                 # now we can bot.get_user(id) to get their username                
 
                 download_and_tweet_space(space_id, space_data)

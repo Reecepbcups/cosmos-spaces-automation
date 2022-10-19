@@ -1,418 +1,21 @@
 {
     "users": {
-        "922670090834780162": {
-            "public_metrics": {
-                "followers_count": 84614,
-                "following_count": 305,
-                "tweet_count": 4869,
-                "listed_count": 958
-            },
-            "username": "akashnet_",
-            "id": "922670090834780162",
-            "created_at": "2017-10-24T03:44:26.000Z",
-            "verified": true,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1575558636574834699/JVctgni7.png",
-            "description": "Infrastructure that powers Web3 | A decentralized peer-to-peer marketplace for cloud compute | $AKT",
-            "name": "Akash Network",
-            "following": true
-        },
-        "1519990048497754113": {
-            "public_metrics": {
-                "followers_count": 18410,
-                "following_count": 149,
-                "tweet_count": 583,
-                "listed_count": 230
-            },
-            "username": "stride_zone",
-            "id": "1519990048497754113",
-            "created_at": "2022-04-29T10:42:16.000Z",
-            "verified": false,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1538942713965445120/S9IIkgPS.png",
-            "description": "The Liquid Staking Zone\n\nTokens supported: $ATOM, $JUNO, $STARS ( $OSMO coming October 29th! )\n\nJoin us: https://t.co/hPe04OqCOa",
-            "name": "Stride",
-            "pinned_tweet_id": "1575493066487894016",
-            "following": true
-        },
-        "952897218352103425": {
-            "public_metrics": {
-                "followers_count": 15993,
-                "following_count": 301,
-                "tweet_count": 711,
-                "listed_count": 318
-            },
-            "username": "cosmossdk",
-            "id": "952897218352103425",
-            "created_at": "2018-01-15T13:36:15.000Z",
-            "verified": false,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1287816453706539009/SfVSxQWP.jpg",
-            "description": "Framework for building app-specific blockchains. https://t.co/q46x00xNcc",
-            "name": "Cosmos SDK",
-            "following": true
-        },
-        "1487313404004118528": {
-            "public_metrics": {
-                "followers_count": 7866,
-                "following_count": 745,
-                "tweet_count": 2673,
-                "listed_count": 122
-            },
-            "username": "Cosmos_Spaces",
-            "id": "1487313404004118528",
-            "created_at": "2022-01-29T06:35:59.000Z",
-            "verified": false,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1557787683098869760/gPwiVf3L.jpg",
-            "description": "Community | Support | Alpha. Please DM us to schedule a space \ud83c\udf99 For Validator Links, Discord, Telegram, Email, click on the linktree. @cs_validator \u262e\ufe0f\ud83d\udc9c\u269b\ufe0f",
-            "name": "Cosmos Spaces\ud83c\udf99\ufe0f",
-            "pinned_tweet_id": "1566506290586607616",
-            "following": true
-        },
-        "16620786": {
-            "public_metrics": {
-                "followers_count": 27158,
-                "following_count": 837,
-                "tweet_count": 13717,
-                "listed_count": 398
-            },
-            "username": "gregosuri",
-            "id": "16620786",
-            "created_at": "2008-10-06T21:33:30.000Z",
-            "verified": true,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1576721831888756736/zIIIxudP.jpg",
-            "description": "Founder @akashnet_ \u2699\ufe0f $AKT \u26a1\ufe0f I build things for people that build things \ud83d\ude4c For media inquiries: press@ovrclk.com",
-            "name": "Greg Osuri",
-            "pinned_tweet_id": "1569925759787212800",
-            "following": true
-        },
-        "1253090729137561600": {
-            "public_metrics": {
-                "followers_count": 47650,
-                "following_count": 0,
-                "tweet_count": 4015,
-                "listed_count": 453
-            },
-            "username": "StargazeZone",
-            "id": "1253090729137561600",
-            "created_at": "2020-04-22T22:38:17.000Z",
-            "verified": false,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1507391623914737669/U3fR7nxh.jpg",
-            "description": "A decentralized, community-owned app chain for NFTs. 100% carbon neutral. ZERO gas. Powered by CosmWasm and $STARS.",
-            "name": "Stargaze (\u2728,\ud83d\udd2d) | $STARS",
-            "pinned_tweet_id": "1582197018264379392",
-            "following": true
-        },
-        "1153962373683675136": {
-            "public_metrics": {
-                "followers_count": 24034,
-                "following_count": 960,
-                "tweet_count": 4283,
-                "listed_count": 434
-            },
-            "username": "OmniFlixNetwork",
-            "id": "1153962373683675136",
-            "created_at": "2019-07-24T09:37:24.000Z",
-            "verified": false,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1543100810560946176/H8SB8_9R.jpg",
-            "description": "interoperable p2p network for creators & sovereign communities (#DAOs or otherwise) to mint, manage, monetize & coordinate distribution activities around #NFTs",
-            "name": "OmniFlix Network \u269b\ufe0f",
-            "pinned_tweet_id": "1575267284293124097",
-            "following": true
-        },
-        "1314846469128585216": {
-            "verified": false,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1541303738434035717/mTUEGeKR.jpg",
-            "id": "1314846469128585216",
-            "public_metrics": {
-                "followers_count": 2954,
-                "following_count": 649,
-                "tweet_count": 7430,
-                "listed_count": 44
-            },
-            "name": "Don Cryptonium \ud83d\udc51",
-            "description": "Stargaze Emperor \ud83d\udc51 $stars Validator: $ATOM, $NOMIC, $JUNO, $STRD $STARS Crypto worst YouTube channel. Author of the book \u201cWhy you won\u2019t make it\u201d.",
-            "username": "DonCryptonium",
-            "created_at": "2020-10-10T08:33:39.000Z",
-            "following": true
-        },
-        "1355366118119108612": {
-            "public_metrics": {
-                "followers_count": 68898,
-                "following_count": 1666,
-                "tweet_count": 29758,
-                "listed_count": 519
-            },
-            "username": "Cephii1",
-            "id": "1355366118119108612",
-            "created_at": "2021-01-30T04:05:18.000Z",
-            "verified": false,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1579871615130734598/Z8vAM-Ls.jpg",
-            "description": "of the Cosmos",
-            "name": "Cephii",
-            "following": true
-        },
-        "2712978728": {
-            "public_metrics": {
-                "followers_count": 899,
-                "following_count": 84,
-                "tweet_count": 340,
-                "listed_count": 21
-            },
-            "username": "Reecepbcups_",
-            "id": "2712978728",
-            "created_at": "2014-08-06T21:22:23.000Z",
-            "verified": false,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1574779134739357697/Kxv7nmks.jpg",
-            "description": "Protocol Engineer \u2022 Juno Core-2 \u2022 @CosmosGovNotifs @IBC_Archive",
-            "name": "Reece Williams",
-            "following": true
-        },
-        "1357133940109103104": {
-            "public_metrics": {
-                "followers_count": 136975,
-                "following_count": 2,
-                "tweet_count": 617,
-                "listed_count": 1617
-            },
-            "username": "osmosiszone",
-            "id": "1357133940109103104",
-            "created_at": "2021-02-04T01:09:08.000Z",
-            "verified": false,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1504543889709015041/82CEWnSH.png",
-            "description": "The Interchain Dex\n\nFor support \u27a1\ufe0f https://t.co/mBuwxWbCF6",
-            "name": "Osmosis \ud83e\uddea",
-            "following": true
-        },
         "1019126440233615361": {
+            "created_at": "2018-07-17T07:47:32.000Z",
+            "description": "Interchain service provider in @Cosmos and home of $ATOM",
+            "following": true,
+            "id": "1019126440233615361",
+            "name": "Cosmos Hub \u269b\ufe0f",
+            "pinned_tweet_id": "1573727971558449154",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1348107683304337408/53heZyEL.jpg",
             "public_metrics": {
-                "followers_count": 36836,
+                "followers_count": 36872,
                 "following_count": 143,
-                "tweet_count": 579,
+                "tweet_count": 581,
                 "listed_count": 718
             },
             "username": "cosmoshub",
-            "id": "1019126440233615361",
-            "created_at": "2018-07-17T07:47:32.000Z",
-            "verified": false,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1348107683304337408/53heZyEL.jpg",
-            "description": "Interchain service provider in @Cosmos and home of $ATOM",
-            "name": "Cosmos Hub \u269b\ufe0f",
-            "pinned_tweet_id": "1573727971558449154",
-            "following": true
-        },
-        "1230007683463471104": {
-            "public_metrics": {
-                "followers_count": 21480,
-                "following_count": 254,
-                "tweet_count": 1329,
-                "listed_count": 472
-            },
-            "username": "CosmWasm",
-            "id": "1230007683463471104",
-            "created_at": "2020-02-19T05:56:46.000Z",
-            "verified": false,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1477926296747401219/HxWkIDqO.png",
-            "description": "Building anything you can imagine with multi-chain smart contracts #CosmWasm #Cosmos #blockchain #IBC",
-            "name": "CosmWasm",
-            "following": true
-        },
-        "19329501": {
-            "public_metrics": {
-                "followers_count": 3198,
-                "following_count": 1006,
-                "tweet_count": 21263,
-                "listed_count": 61
-            },
-            "username": "Rarma_",
-            "id": "19329501",
-            "created_at": "2009-01-22T06:53:53.000Z",
-            "verified": false,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1581270705454604289/Xp4Cm1S-.jpg",
-            "description": "https://t.co/hIrFoTrzXw",
-            "name": "Rarma",
-            "pinned_tweet_id": "1581259992396861441",
-            "following": true
-        },
-        "467972727": {
-            "public_metrics": {
-                "followers_count": 5556,
-                "following_count": 3222,
-                "tweet_count": 33451,
-                "listed_count": 72
-            },
-            "username": "RoboVerseWeb3",
-            "id": "467972727",
-            "created_at": "2012-01-19T01:39:22.000Z",
-            "verified": false,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1581352014902341633/R_Lc-bF9.jpg",
-            "description": "@RacoonSupply Brand Shitposter\ud83e\udd9d\nCommunity - Artificial Intelligence - Gaming \ud83e\udd1d",
-            "name": "\ud83e\udd9dRobo Shelby\ud83e\udd9dMayor of RACville",
-            "pinned_tweet_id": "1578666987546619904",
-            "following": true
-        },
-        "1452725784255336450": {
-            "public_metrics": {
-                "followers_count": 10015,
-                "following_count": 498,
-                "tweet_count": 1243,
-                "listed_count": 133
-            },
-            "username": "OsmoMinistryMkt",
-            "id": "1452725784255336450",
-            "created_at": "2021-10-25T19:56:58.000Z",
-            "verified": false,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1529586351565332482/I4-RyYjr.jpg",
-            "description": "Put Your Tokens To Work - https://t.co/yE4lBkFIBE",
-            "name": "Osmosis Ministry of Marketing \ud83e\uddea",
-            "pinned_tweet_id": "1529526339195346946",
-            "following": true
-        },
-        "967740061801504768": {
-            "public_metrics": {
-                "followers_count": 83012,
-                "following_count": 0,
-                "tweet_count": 1813,
-                "listed_count": 725
-            },
-            "username": "JunoNetwork",
-            "id": "967740061801504768",
-            "created_at": "2018-02-25T12:36:25.000Z",
-            "verified": false,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1463819969620234247/kGvPhnXc.jpg",
-            "description": "Application Layer for the Inter-chain era. \nSecure, scalable, permission-less. \nFueled & governed by $JUNO.",
-            "name": "Jun\u00f8",
-            "following": true
-        },
-        "1109983403078807554": {
-            "public_metrics": {
-                "followers_count": 3717,
-                "following_count": 2657,
-                "tweet_count": 9741,
-                "listed_count": 54
-            },
-            "username": "lilgainzz",
-            "id": "1109983403078807554",
-            "created_at": "2019-03-25T01:00:40.000Z",
-            "verified": false,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1581320617051258880/6oVKL6Z-.jpg",
-            "description": "Loyalty and respect goes both ways. if they don\u2019t return it, they don\u2019t deserve it. \ud83e\udd1d",
-            "name": "\u269b\ufe0f LiLGainzz | Cosmos Spaces\ud83c\udf99\ufe0f",
-            "pinned_tweet_id": "1565541687858012162",
-            "following": true
-        },
-        "15223775": {
-            "public_metrics": {
-                "followers_count": 474100,
-                "following_count": 393,
-                "tweet_count": 3668,
-                "listed_count": 4595
-            },
-            "username": "cosmos",
-            "id": "15223775",
-            "created_at": "2008-06-24T20:37:40.000Z",
-            "verified": false,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1572270323105660931/wfrYRGAC.jpg",
-            "description": "The open, scalable, and interconnected economy of the future. $ATOM",
-            "name": "Cosmos - Internet of Blockchains \u269b\ufe0f",
-            "following": true
-        },
-        "1361125758316335105": {
-            "public_metrics": {
-                "followers_count": 1869,
-                "following_count": 1990,
-                "tweet_count": 3283,
-                "listed_count": 46
-            },
-            "username": "TrickyCrypto2",
-            "id": "1361125758316335105",
-            "created_at": "2021-02-15T01:31:02.000Z",
-            "verified": false,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1540934748566016000/lPSWOcto.jpg",
-            "description": "Co-Founder @cosmos_spaces",
-            "name": "Tricky",
-            "following": true
-        },
-        "1485744238805622789": {
-            "public_metrics": {
-                "followers_count": 10734,
-                "following_count": 399,
-                "tweet_count": 2654,
-                "listed_count": 127
-            },
-            "username": "RacoonSupply",
-            "id": "1485744238805622789",
-            "created_at": "2022-01-24T22:40:12.000Z",
-            "verified": false,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1554838652383010817/vPcu5zqy.jpg",
-            "description": "Community - Artificial Intelligence - Gaming - Simplifying accessibility to AI in the Cosmos Ecosystem",
-            "name": "Rac\u00f8\u00f8n \ud83e\udd9d",
-            "pinned_tweet_id": "1581959900023820289",
-            "following": true
-        },
-        "1356454978320293888": {
-            "public_metrics": {
-                "followers_count": 679,
-                "following_count": 255,
-                "tweet_count": 1387,
-                "listed_count": 10
-            },
-            "username": "_erikio",
-            "id": "1356454978320293888",
-            "created_at": "2021-02-02T04:10:56.000Z",
-            "verified": false,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1578558118849568768/v3uG8Z4I.jpg",
-            "description": "@cosmos_spaces \ud83c\uddf8\ud83c\uddfb\ud83c\uddfa\ud83c\uddf8",
-            "name": "erik.io | Cosmos Spaces",
-            "pinned_tweet_id": "1578049950553874434",
-            "following": true
-        },
-        "1425610654900133891": {
-            "public_metrics": {
-                "followers_count": 17338,
-                "following_count": 237,
-                "tweet_count": 1102,
-                "listed_count": 316
-            },
-            "username": "coinhall_org",
-            "id": "1425610654900133891",
-            "created_at": "2021-08-12T00:11:17.000Z",
-            "verified": false,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1485983931392757763/CtgLlnbI.jpg",
-            "description": "Realtime Charts, Analytics, DEX Aggregator & Validator. https://t.co/RSd8EEeacs Kujira, Terra, Juno, Osmosis & Near. Ecosystem Guides: https://t.co/ZXmwxSlljM",
-            "name": "Coinhall \u269b\ufe0f\ud83d\udcc8 \ud83d\udd04",
-            "pinned_tweet_id": "1577653298596716544",
-            "following": true
-        },
-        "1503785102542790662": {
-            "public_metrics": {
-                "followers_count": 506,
-                "following_count": 184,
-                "tweet_count": 368,
-                "listed_count": 1
-            },
-            "username": "CosmosSpacesESP",
-            "id": "1503785102542790662",
-            "created_at": "2022-03-15T17:28:34.000Z",
-            "verified": false,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1513307253859880969/91BELmHz.jpg",
-            "description": "Cuenta oficial de Cosmos Spaces\ud83c\udf99 Espa\u00f1ol | @Cosmos_Spaces Ingl\u00e9s | Por favor haga clic en el enlace para sitios \u00fatiles | https://t.co/KhiYLzIqFK",
-            "name": "Cosmos Spaces\ud83c\udf99ESP",
-            "pinned_tweet_id": "1566589797422055431",
-            "following": true
-        },
-        "1347266698236227584": {
-            "public_metrics": {
-                "followers_count": 19819,
-                "following_count": 84,
-                "tweet_count": 1477,
-                "listed_count": 376
-            },
-            "username": "sommfinance",
-            "id": "1347266698236227584",
-            "created_at": "2021-01-07T19:40:13.000Z",
-            "verified": false,
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1515220591686692872/QPSVppoA.png",
-            "description": "Machine learning-based strategies that dynamically optimize your portfolio\nJoin our community at https://t.co/CekftFLsOH and https://t.co/1GIjPlz3pg",
-            "name": "Sommelier",
-            "following": true
+            "verified": false
         },
         "1091033024387563520": {
             "username": "CosmosGovNotifs",
@@ -430,6 +33,419 @@
             "id": "1091033024387563520",
             "following": false
         },
+        "1109983403078807554": {
+            "created_at": "2019-03-25T01:00:40.000Z",
+            "description": "Loyalty and respect goes both ways. if they don\u2019t return it, they don\u2019t deserve it. \ud83e\udd1d",
+            "following": true,
+            "id": "1109983403078807554",
+            "name": "\u269b\ufe0f LiLGainzz | Cosmos Spaces\ud83c\udf99\ufe0f",
+            "pinned_tweet_id": "1565541687858012162",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1581320617051258880/6oVKL6Z-.jpg",
+            "public_metrics": {
+                "followers_count": 3721,
+                "following_count": 2660,
+                "tweet_count": 9757,
+                "listed_count": 54
+            },
+            "username": "lilgainzz",
+            "verified": false
+        },
+        "1153962373683675136": {
+            "created_at": "2019-07-24T09:37:24.000Z",
+            "description": "interoperable p2p network for creators & sovereign communities (#DAOs or otherwise) to mint, manage, monetize & coordinate distribution activities around #NFTs",
+            "following": true,
+            "id": "1153962373683675136",
+            "name": "OmniFlix Network \u269b\ufe0f",
+            "pinned_tweet_id": "1575267284293124097",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1543100810560946176/H8SB8_9R.jpg",
+            "public_metrics": {
+                "followers_count": 24045,
+                "following_count": 960,
+                "tweet_count": 4287,
+                "listed_count": 434
+            },
+            "username": "OmniFlixNetwork",
+            "verified": false
+        },
+        "1230007683463471104": {
+            "created_at": "2020-02-19T05:56:46.000Z",
+            "description": "Building anything you can imagine with multi-chain smart contracts #CosmWasm #Cosmos #blockchain #IBC",
+            "following": true,
+            "id": "1230007683463471104",
+            "name": "CosmWasm",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1477926296747401219/HxWkIDqO.png",
+            "public_metrics": {
+                "followers_count": 21483,
+                "following_count": 254,
+                "tweet_count": 1329,
+                "listed_count": 472
+            },
+            "username": "CosmWasm",
+            "verified": false
+        },
+        "1253090729137561600": {
+            "created_at": "2020-04-22T22:38:17.000Z",
+            "description": "A decentralized, community-owned app chain for NFTs. 100% carbon neutral. ZERO gas. Powered by CosmWasm and $STARS.",
+            "following": true,
+            "id": "1253090729137561600",
+            "name": "Stargaze (\u2728,\ud83d\udd2d) | $STARS",
+            "pinned_tweet_id": "1582197018264379392",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1507391623914737669/U3fR7nxh.jpg",
+            "public_metrics": {
+                "followers_count": 47684,
+                "following_count": 0,
+                "tweet_count": 4039,
+                "listed_count": 456
+            },
+            "username": "StargazeZone",
+            "verified": false
+        },
+        "1314846469128585216": {
+            "verified": false,
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1541303738434035717/mTUEGeKR.jpg",
+            "id": "1314846469128585216",
+            "public_metrics": {
+                "followers_count": 2954,
+                "following_count": 649,
+                "tweet_count": 7430,
+                "listed_count": 44
+            },
+            "name": "Don Cryptonium \ud83d\udc51",
+            "description": "Stargaze Emperor \ud83d\udc51 $stars Validator: $ATOM, $NOMIC, $JUNO, $STRD $STARS Crypto worst YouTube channel. Author of the book \u201cWhy you won\u2019t make it\u201d.",
+            "username": "DonCryptonium",
+            "created_at": "2020-10-10T08:33:39.000Z",
+            "following": true
+        },
+        "1347266698236227584": {
+            "created_at": "2021-01-07T19:40:13.000Z",
+            "description": "Machine learning-based strategies that dynamically optimize your portfolio\nJoin our community at https://t.co/CekftFLsOH and https://t.co/1GIjPlz3pg",
+            "following": true,
+            "id": "1347266698236227584",
+            "name": "Sommelier",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1515220591686692872/QPSVppoA.png",
+            "public_metrics": {
+                "followers_count": 19923,
+                "following_count": 84,
+                "tweet_count": 1477,
+                "listed_count": 376
+            },
+            "username": "sommfinance",
+            "verified": false
+        },
+        "1355366118119108612": {
+            "created_at": "2021-01-30T04:05:18.000Z",
+            "description": "of the Cosmos",
+            "following": true,
+            "id": "1355366118119108612",
+            "name": "Cephii",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1579871615130734598/Z8vAM-Ls.jpg",
+            "public_metrics": {
+                "followers_count": 68905,
+                "following_count": 1667,
+                "tweet_count": 29780,
+                "listed_count": 518
+            },
+            "username": "Cephii1",
+            "verified": false
+        },
+        "1356454978320293888": {
+            "created_at": "2021-02-02T04:10:56.000Z",
+            "description": "@cosmos_spaces \ud83c\uddf8\ud83c\uddfb\ud83c\uddfa\ud83c\uddf8",
+            "following": true,
+            "id": "1356454978320293888",
+            "name": "erik.io | Cosmos Spaces",
+            "pinned_tweet_id": "1578049950553874434",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1578558118849568768/v3uG8Z4I.jpg",
+            "public_metrics": {
+                "followers_count": 680,
+                "following_count": 255,
+                "tweet_count": 1388,
+                "listed_count": 10
+            },
+            "username": "_erikio",
+            "verified": false
+        },
+        "1357133940109103104": {
+            "created_at": "2021-02-04T01:09:08.000Z",
+            "description": "The Interchain Dex\n\nFor support \u27a1\ufe0f https://t.co/mBuwxWbCF6",
+            "following": true,
+            "id": "1357133940109103104",
+            "name": "Osmosis \ud83e\uddea",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1504543889709015041/82CEWnSH.png",
+            "public_metrics": {
+                "followers_count": 137005,
+                "following_count": 2,
+                "tweet_count": 617,
+                "listed_count": 1618
+            },
+            "username": "osmosiszone",
+            "verified": false
+        },
+        "1361125758316335105": {
+            "created_at": "2021-02-15T01:31:02.000Z",
+            "description": "Co-Founder @cosmos_spaces",
+            "following": true,
+            "id": "1361125758316335105",
+            "name": "Tricky",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1540934748566016000/lPSWOcto.jpg",
+            "public_metrics": {
+                "followers_count": 1872,
+                "following_count": 1991,
+                "tweet_count": 3283,
+                "listed_count": 46
+            },
+            "username": "TrickyCrypto2",
+            "verified": false
+        },
+        "1425610654900133891": {
+            "created_at": "2021-08-12T00:11:17.000Z",
+            "description": "Realtime Charts, Analytics, DEX Aggregator & Validator. https://t.co/RSd8EEeacs Kujira, Terra, Juno, Osmosis & Near. Ecosystem Guides: https://t.co/ZXmwxSlljM",
+            "following": true,
+            "id": "1425610654900133891",
+            "name": "Coinhall \u269b\ufe0f\ud83d\udcc8 \ud83d\udd04",
+            "pinned_tweet_id": "1577653298596716544",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1485983931392757763/CtgLlnbI.jpg",
+            "public_metrics": {
+                "followers_count": 17361,
+                "following_count": 237,
+                "tweet_count": 1116,
+                "listed_count": 316
+            },
+            "username": "coinhall_org",
+            "verified": false
+        },
+        "1452725784255336450": {
+            "created_at": "2021-10-25T19:56:58.000Z",
+            "description": "Put Your Tokens To Work - https://t.co/yE4lBkFIBE",
+            "following": true,
+            "id": "1452725784255336450",
+            "name": "Osmosis Ministry of Marketing \ud83e\uddea",
+            "pinned_tweet_id": "1529526339195346946",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1529586351565332482/I4-RyYjr.jpg",
+            "public_metrics": {
+                "followers_count": 10007,
+                "following_count": 498,
+                "tweet_count": 1245,
+                "listed_count": 133
+            },
+            "username": "OsmoMinistryMkt",
+            "verified": false
+        },
+        "1485744238805622789": {
+            "created_at": "2022-01-24T22:40:12.000Z",
+            "description": "Community - Artificial Intelligence - Gaming - Simplifying accessibility to AI in the Cosmos Ecosystem",
+            "following": true,
+            "id": "1485744238805622789",
+            "name": "Rac\u00f8\u00f8n \ud83e\udd9d",
+            "pinned_tweet_id": "1581959900023820289",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1554838652383010817/vPcu5zqy.jpg",
+            "public_metrics": {
+                "followers_count": 10736,
+                "following_count": 399,
+                "tweet_count": 2654,
+                "listed_count": 127
+            },
+            "username": "RacoonSupply",
+            "verified": false
+        },
+        "1487313404004118528": {
+            "created_at": "2022-01-29T06:35:59.000Z",
+            "description": "Community | Support | Alpha. Please DM us to schedule a space \ud83c\udf99 For Validator Links, Discord, Telegram, Email, click on the linktree. @cs_validator \u262e\ufe0f\ud83d\udc9c\u269b\ufe0f",
+            "following": true,
+            "id": "1487313404004118528",
+            "name": "Cosmos Spaces\ud83c\udf99\ufe0f",
+            "pinned_tweet_id": "1566506290586607616",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1557787683098869760/gPwiVf3L.jpg",
+            "public_metrics": {
+                "followers_count": 7868,
+                "following_count": 745,
+                "tweet_count": 2678,
+                "listed_count": 122
+            },
+            "username": "Cosmos_Spaces",
+            "verified": false
+        },
+        "1501940141094412293": {
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1501948921341374474/gdAybo3-.jpg",
+            "username": "alaskanative14",
+            "id": "1501940141094412293",
+            "public_metrics": {
+                "followers_count": 39,
+                "following_count": 170,
+                "tweet_count": 36,
+                "listed_count": 1
+            },
+            "name": "Kevin",
+            "verified": false,
+            "created_at": "2022-03-10T15:18:36.000Z",
+            "description": "Don\u2019t take life to serious, till it\u2019s SERIOUS.",
+            "following": false
+        },
+        "1503785102542790662": {
+            "created_at": "2022-03-15T17:28:34.000Z",
+            "description": "Cuenta oficial de Cosmos Spaces\ud83c\udf99 Espa\u00f1ol | @Cosmos_Spaces Ingl\u00e9s | Por favor haga clic en el enlace para sitios \u00fatiles | https://t.co/KhiYLzIqFK",
+            "following": true,
+            "id": "1503785102542790662",
+            "name": "Cosmos Spaces\ud83c\udf99ESP",
+            "pinned_tweet_id": "1566589797422055431",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1513307253859880969/91BELmHz.jpg",
+            "public_metrics": {
+                "followers_count": 506,
+                "following_count": 184,
+                "tweet_count": 369,
+                "listed_count": 1
+            },
+            "username": "CosmosSpacesESP",
+            "verified": false
+        },
+        "1519990048497754113": {
+            "created_at": "2022-04-29T10:42:16.000Z",
+            "description": "The Liquid Staking Zone\n\nTokens supported: $ATOM, $JUNO, $STARS ( $OSMO coming October 29th! )\n\nJoin us: https://t.co/hPe04OqCOa",
+            "following": true,
+            "id": "1519990048497754113",
+            "name": "Stride",
+            "pinned_tweet_id": "1575493066487894016",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1538942713965445120/S9IIkgPS.png",
+            "public_metrics": {
+                "followers_count": 18477,
+                "following_count": 149,
+                "tweet_count": 585,
+                "listed_count": 230
+            },
+            "username": "stride_zone",
+            "verified": false
+        },
+        "15223775": {
+            "created_at": "2008-06-24T20:37:40.000Z",
+            "description": "The open, scalable, and interconnected economy of the future. $ATOM",
+            "following": true,
+            "id": "15223775",
+            "name": "Cosmos - Internet of Blockchains \u269b\ufe0f",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1572270323105660931/wfrYRGAC.jpg",
+            "public_metrics": {
+                "followers_count": 474255,
+                "following_count": 393,
+                "tweet_count": 3668,
+                "listed_count": 4594
+            },
+            "username": "cosmos",
+            "verified": false
+        },
+        "16620786": {
+            "created_at": "2008-10-06T21:33:30.000Z",
+            "description": "Founder @akashnet_ \u2699\ufe0f $AKT \u26a1\ufe0f I build things for people that build things \ud83d\ude4c For media inquiries: press@ovrclk.com",
+            "following": true,
+            "id": "16620786",
+            "name": "Greg Osuri",
+            "pinned_tweet_id": "1569925759787212800",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1576721831888756736/zIIIxudP.jpg",
+            "public_metrics": {
+                "followers_count": 27173,
+                "following_count": 837,
+                "tweet_count": 13719,
+                "listed_count": 399
+            },
+            "username": "gregosuri",
+            "verified": true
+        },
+        "19329501": {
+            "created_at": "2009-01-22T06:53:53.000Z",
+            "description": "https://t.co/hIrFoTrzXw",
+            "following": true,
+            "id": "19329501",
+            "name": "Rarma",
+            "pinned_tweet_id": "1581259992396861441",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1581270705454604289/Xp4Cm1S-.jpg",
+            "public_metrics": {
+                "followers_count": 3203,
+                "following_count": 1006,
+                "tweet_count": 21269,
+                "listed_count": 61
+            },
+            "username": "Rarma_",
+            "verified": false
+        },
+        "2712978728": {
+            "created_at": "2014-08-06T21:22:23.000Z",
+            "description": "Cosmos Protocol Engineer \u2022 Juno Core-2 \u2022 @CosmosGovNotifs @IBC_Archive",
+            "following": true,
+            "id": "2712978728",
+            "name": "Reece Williams",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1574779134739357697/Kxv7nmks.jpg",
+            "public_metrics": {
+                "followers_count": 899,
+                "following_count": 85,
+                "tweet_count": 341,
+                "listed_count": 21
+            },
+            "username": "Reecepbcups_",
+            "verified": false
+        },
+        "2837818354": {
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1582365082272473089/ICA1c17E.jpg",
+            "username": "antoine_chain",
+            "id": "2837818354",
+            "public_metrics": {
+                "followers_count": 499,
+                "following_count": 882,
+                "tweet_count": 2998,
+                "listed_count": 8
+            },
+            "name": "antoine\u269b\ufe0f | CosmosSpaces\ud83c\udf99",
+            "verified": false,
+            "created_at": "2014-10-20T01:29:59.000Z",
+            "description": "Hosting Spaces & Building community \ud83d\udd1d| #CosmosEcosystem \u269b DNA | Psychologist | Spontaneous Comedian \u262f\ufe0f | Hablo Espa\u00f1ol",
+            "following": false
+        },
+        "467972727": {
+            "created_at": "2012-01-19T01:39:22.000Z",
+            "description": "@RacoonSupply Brand Shitposter\ud83e\udd9d\nCommunity - Artificial Intelligence - Gaming \ud83e\udd1d",
+            "following": true,
+            "id": "467972727",
+            "name": "\ud83e\udd9dRobo Shelby\ud83e\udd9dMayor of RACville",
+            "pinned_tweet_id": "1578666987546619904",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1581352014902341633/R_Lc-bF9.jpg",
+            "public_metrics": {
+                "followers_count": 5557,
+                "following_count": 3230,
+                "tweet_count": 33479,
+                "listed_count": 72
+            },
+            "username": "RoboVerseWeb3",
+            "verified": false
+        },
+        "922670090834780162": {
+            "created_at": "2017-10-24T03:44:26.000Z",
+            "description": "Infrastructure that powers Web3 | A decentralized peer-to-peer marketplace for cloud compute | $AKT",
+            "following": true,
+            "id": "922670090834780162",
+            "name": "Akash Network",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1575558636574834699/JVctgni7.png",
+            "public_metrics": {
+                "followers_count": 84614,
+                "following_count": 305,
+                "tweet_count": 4882,
+                "listed_count": 958
+            },
+            "username": "akashnet_",
+            "verified": true
+        },
+        "952897218352103425": {
+            "created_at": "2018-01-15T13:36:15.000Z",
+            "description": "Framework for building app-specific blockchains. https://t.co/q46x00xNcc",
+            "following": true,
+            "id": "952897218352103425",
+            "name": "Cosmos SDK",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1287816453706539009/SfVSxQWP.jpg",
+            "public_metrics": {
+                "followers_count": 15994,
+                "following_count": 301,
+                "tweet_count": 711,
+                "listed_count": 318
+            },
+            "username": "cosmossdk",
+            "verified": false
+        },
         "965693474753466371": {
             "username": "IBC_Archive",
             "public_metrics": {
@@ -445,6 +461,22 @@
             "profile_image_url": "https://pbs.twimg.com/profile_images/1581429340704735239/GoTNCXa6.jpg",
             "id": "965693474753466371",
             "following": false
+        },
+        "967740061801504768": {
+            "created_at": "2018-02-25T12:36:25.000Z",
+            "description": "Application Layer for the Inter-chain era. \nSecure, scalable, permission-less. \nFueled & governed by $JUNO.",
+            "following": true,
+            "id": "967740061801504768",
+            "name": "Jun\u00f8",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1463819969620234247/kGvPhnXc.jpg",
+            "public_metrics": {
+                "followers_count": 83038,
+                "following_count": 0,
+                "tweet_count": 1814,
+                "listed_count": 725
+            },
+            "username": "JunoNetwork",
+            "verified": false
         }
     },
     "cache_until_time": 1665921621,

@@ -101,9 +101,13 @@ class Bot:
             data = {"users": {}, "cache_until_time": get_epoch_time_seconds()+USER_CACHE_TIME, "was_cached": True}
             if len(prev_user_data) > 0:
                 data = prev_user_data
+                        
+            for id, user in user_data.items():                   
+                sorted_user = {k: user[k] for k in sorted(user)}         
+                data['users'][str(id)] = sorted_user
 
-            for id, user in user_data.items():            
-                data['users'][str(id)] = user
+            # sort data['users'] by id ascending
+            data['users'] = {k: data['users'][k] for k in sorted(data['users'])}
 
             save_json(FILENAME, data)
             return data

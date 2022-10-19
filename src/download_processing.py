@@ -9,7 +9,8 @@ from time import sleep, time
 class Processing:
     def __init__(self):
         # self.filename_fmt = "%(creator_name)s__splitter__%(title)s" # so we split at the __splitter__ to get data
-        self.filename_fmt = "%(title)s" # so we split at the __splitter__ to get data
+        self.filename_fmt = "%(title)s" # so we split at the __splitter__ to get data                
+
         self.CURRENT_DIR = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
         self.DOWNLOADS_DIR = os.path.join(self.CURRENT_DIR, "downloads")
         self.FINAL_DIR = os.path.join(self.CURRENT_DIR, "final")
@@ -24,15 +25,17 @@ class Processing:
 
         rec_space_url = rec_space_url.replace("?s=20", "")
         if len(rec_space_url) == len("1RDxlaXyNZMKL"):
-            rec_space_url = f"https://twitter.com/i/spaces/{rec_space_url}"
+            rec_space_url = f"https://twitter.com/i/spaces/{rec_space_url}"                
 
         # print(f"Downloading {rec_space_url}")
-        space_obj = twspace_dl.Twspace.from_space_url(rec_space_url)
-        space = twspace_dl.TwspaceDL(space_obj, self.filename_fmt)
+        space_obj = twspace_dl.Twspace.from_space_url(rec_space_url)        
+        space = twspace_dl.TwspaceDL(space_obj, self.filename_fmt)        
+        # space = twspace_dl.TwspaceDL(space_obj, rec_space_url.split("/")[-1]) # where the .mp3 would be the spaces ID. So we need to save metadata for website   
         # space.download()        
         filename = f"{space.filename}.m4a".encode("ascii", "ignore").decode()
-        new_filename = filename.replace(" ", "_")
+        new_filename = filename.replace(" ", "_")        
 
+        # input(new_filename)
         # check if new_filename is in the downloads folder
         if os.path.exists(os.path.join(self.DOWNLOADS_DIR, new_filename)):
             print(f"File {new_filename} already exists in downloads folder.")

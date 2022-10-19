@@ -4,13 +4,21 @@
             "created_at": "2022-10-15T15:23:40.000Z",
             "creator_id": "922670090834780162",
             "host_ids": [
-                "922670090834780162"
+                "922670090834780162",
+                "1536860528743792640"
             ],
             "id": "1yoKMZdEzZoGQ",
-            "participant_count": 0,
+            "participant_count": 72,
             "scheduled_start": "2022-10-19T15:00:00.000Z",
-            "state": "scheduled",
-            "title": "Akash Weekly w/Greg Osuri ft. Anthony Rosa & Tor Blair"
+            "speaker_ids": [
+                "3305325070",
+                "16620786",
+                "1534340818353459202",
+                "1536860528743792640"
+            ],
+            "started_at": "2022-10-19T14:50:42.000Z",
+            "state": "live",
+            "title": "Akash Weekly w/Greg Osuri ft. Anthony Rosa & Tor Bair"
         },
         "1djGXljXeoPGZ": {
             "created_at": "2022-10-12T02:23:00.000Z",

@@ -71,7 +71,7 @@ class Bot:
             return {}
 
     # TODO: call this with both the following_ids & the user_ids from a given spaces
-    def get_users_info_cache(self, twitter_ids: list[int|str]) -> dict:
+    def get_users_info_cache(self, twitter_ids: list[int|str], include_following: bool = True) -> dict:
         # called from get_user_cache
         # https://developer.twitter.com/apitools/api?endpoint=/2/users&method=get
         # 
@@ -79,7 +79,12 @@ class Bot:
 
         FILENAME = "user_data.json" 
         USER_CACHE_TIME = 60*60*12 # 12 hour cache
-        following_ids = self.get_following_ids()['user_ids_list'] # is cached
+
+        if include_following: # sometimes we want to ONLY get new users, not past users. So we just add these in right? or does it overwrite
+            following_ids = self.get_following_ids()['user_ids_list'] # is cached
+        else:
+            following_ids = []
+
         ids = ','.join([str(i) for i in set(twitter_ids + following_ids)]) 
         following = self.get_following_ids()   # move this as a func arg?
         
@@ -109,7 +114,6 @@ class Bot:
             return user_data
         
 
-        # if 'data' in r_json:  
         r_json = r_json.get('data', {})
         if r_json == {}: 
             print(f"ERROR: get_users_info_cache: {r_json}")

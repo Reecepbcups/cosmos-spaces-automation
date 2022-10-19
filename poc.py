@@ -133,7 +133,6 @@ def remove_downloaded_space_from_cache(space_id: str, debug: bool = True) -> boo
 # input(user.data.id)
 def download_and_tweet_space(space_id: str, space_data: dict):   
     p = Processing()     
-    # try:
 
     # loop through spaces, do in a multiprocessing pool?
     filename = p.download_space(space_id) # if downloaded, still returns that filename           
@@ -154,24 +153,33 @@ def download_and_tweet_space(space_id: str, space_data: dict):
     title = space_data['title']
     # participants = space_data['participant_count']     
 
-    audio = MP3(new_file_location)         
+    audio = MP3(new_file_location)
+
+    speakers_ats = []
+    if 'speaker_ids' in space_data:
+        speakers = space_data['speaker_ids']
+        for speaker_id in speakers:
+            if speaker_id == space_data['creator_id']: continue
+            speaker = bot.get_user(speaker_id) # these were cached before hand, or is {}
+            if 'username' in speaker:
+                speakers_ats.append(f"@{speaker['username']}") 
 
     # encoded filepath so it points to the correct file
     file_path = urllib.parse.quote(new_file_location.split('/')[-1])
 
-    output = f"'{title}'\n{creator_username}\n[+] {round(audio.info.length/60, 2)} minutes\n\nLink: https://www.cosmosibc.space/{file_path}"             
+    speakers = "Speakers: " + ", ".join(speakers_ats) if len(speakers_ats) > 0 else ""    
+    # input(speakers)
+
+    output = f"'{title}'{creator_username} ({round(audio.info.length/60, 2)} minutes)\n\n{speakers}\n\nLink: https://www.cosmosibc.space/{file_path}"             
     if len(output) > 280:
-        f"{title}{creator_username} - https://www.cosmosibc.space/{file_path}"
+        # output = f"{title}{creator_username} - https://www.cosmosibc.space/{file_path}"
+        output = f"'{title}'{creator_username} ({round(audio.info.length/60, 2)} minutes)\n\nLink: https://www.cosmosibc.space/{file_path}"    
 
-    client.create_tweet(text=output)
+    # TWEET IT    
+    client.create_tweet(text=output) # future, reply to tweet with speakers, requires api.update_status? not sure why it does not work
+
     # remove it from cache
-    remove_downloaded_space_from_cache(space_id) # TODO: renable this
-
-    # except ValueError as e:
-    #     print(f"ValueError: {space_id} -> {e}")
-
-    # except Exception as e:
-    #     print(f"Exception: {space_id} -> {e}")
+    remove_downloaded_space_from_cache(space_id)
 
 while True:
     # def main():
@@ -199,6 +207,12 @@ while True:
     else:
         for space_id, space_data in spaces_to_download.items():   
             try: # this may break because of the weird space crash errors with twitter eu
+                # get speakers from the space (json)
+                
+                speaker_ids = space_data['speaker_ids'] # "speaker_ids": [ "1223319210", "285771380", "2837818354" ],                
+                bot.get_users_info_cache(speaker_ids, include_following=True) # idk if False would remove those who we follow or not.
+                # now we can bot.get_user(id) to get their username                
+
                 download_and_tweet_space(space_id, space_data)
             except Exception as e:
                 print(f"\nspaces_to_download ERROR HERE!")
@@ -218,7 +232,7 @@ while True:
 
     end = time.time()
 
-    print(f"Finished downloading spaces in {round(end-start, 2)} seconds")
+    print(f"Finished spaces check in {round(end-start, 2)} seconds")
     minutes = (end-start)/60
 
     MINUTES_WAIT = 10

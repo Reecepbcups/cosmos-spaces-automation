@@ -10,3 +10,4 @@ downloads/**/*.log
 credentials.json
 token.json
 **/__pycache__
+error_log.txt

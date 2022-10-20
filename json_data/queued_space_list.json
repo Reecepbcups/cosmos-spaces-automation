@@ -95,25 +95,6 @@
             "scheduled_start": "2022-10-21T22:00:00.000Z",
             "state": "scheduled",
             "title": "@Agoric Q&A with @DeanTribble | Hosted by: @Cosmos_Spaces "
-        },
-        "1BdGYyzNjgZGX": {
-            "created_at": "2022-10-20T12:01:00.000Z",
-            "creator_id": "467972727",
-            "host_ids": [
-                "467972727"
-            ],
-            "id": "1BdGYyzNjgZGX",
-            "participant_count": 15,
-            "speaker_ids": [
-                "1380022958182256640",
-                "1223319210",
-                "4746375182",
-                "1390484720643944451",
-                "1365285273396015113"
-            ],
-            "started_at": "2022-10-20T12:01:01.000Z",
-            "state": "live",
-            "title": "Quick shoebox opine on the drama"
         }
     }
 }

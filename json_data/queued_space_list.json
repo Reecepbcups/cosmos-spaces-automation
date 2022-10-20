@@ -72,33 +72,51 @@
             "state": "scheduled",
             "title": "Que es @Archway y su enfoque en recompensar DEVs por sus Dapps"
         },
-        "1OwGWwZpDVRGQ": {
-            "created_at": "2022-10-19T20:08:12.000Z",
-            "creator_id": "943411094499946497",
+        "1zqJVPZzZdDKB": {
+            "created_at": "2022-10-20T04:48:18.000Z",
+            "creator_id": "1153962373683675136",
             "host_ids": [
-                "943411094499946497"
+                "1153962373683675136"
             ],
-            "id": "1OwGWwZpDVRGQ",
+            "id": "1zqJVPZzZdDKB",
             "participant_count": 0,
-            "scheduled_start": "2022-10-20T13:00:22.000Z",
+            "scheduled_start": "2022-10-21T14:00:00.000Z",
             "state": "scheduled",
-            "title": "Stake Easy - Loop Finance AMA - Boosted farming with dual incentives"
+            "title": "#InTheStudio ep 23 - Niddogrades\ud83d\udc7e | Validator Drop NFTs \ud83c\udf96\ufe0f| Creators \ud83d\udd8c\ufe0f"
         },
-        "1ypJddaPbPjJW": {
-            "created_at": "2022-10-20T02:50:39.000Z",
-            "creator_id": "1355366118119108612",
+        "1gqGvymBogAKB": {
+            "created_at": "2022-10-20T10:53:35.000Z",
+            "creator_id": "1109983403078807554",
             "host_ids": [
-                "1355366118119108612",
-                "1398290390374027271"
+                "1109983403078807554"
             ],
-            "id": "1ypJddaPbPjJW",
-            "participant_count": 11,
+            "id": "1gqGvymBogAKB",
+            "participant_count": 0,
+            "scheduled_start": "2022-10-21T22:00:00.000Z",
+            "state": "scheduled",
+            "title": "@Agoric Q&A with @DeanTribble | Hosted by: @Cosmos_Spaces "
+        },
+        "1BdGYyzNjgZGX": {
+            "created_at": "2022-10-20T12:01:00.000Z",
+            "creator_id": "467972727",
+            "host_ids": [
+                "467972727"
+            ],
+            "id": "1BdGYyzNjgZGX",
+            "participant_count": 18,
             "speaker_ids": [
-                "1398290390374027271"
+                "735929619644289024",
+                "1467886768049381376",
+                "1380022958182256640",
+                "1223319210",
+                "1530775973448122371",
+                "2837818354",
+                "285771380",
+                "1439079732784553985"
             ],
-            "started_at": "2022-10-20T02:50:42.000Z",
+            "started_at": "2022-10-20T12:01:01.000Z",
             "state": "live",
-            "title": "JOIN THE HUNT FOR DO KWON? $luna $lunc"
+            "title": "Quick shoebox opine on the drama"
         }
     }
 }

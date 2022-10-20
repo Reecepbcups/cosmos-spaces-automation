@@ -27,6 +27,7 @@ if not os.path.exists('.env'):
 DISABLE_TWEETING_FOR_TESTING = False
 
 current_dir = os.path.dirname(os.path.realpath(__file__))
+json_data_dir = os.path.join(current_dir, "json_data")    
 
 # Twitter client keys
 API_KEY = os.getenv('API_KEY')
@@ -95,7 +96,7 @@ def get_spaces_from_cache_to_download(bot: Bot) -> dict:
 
         current_time = datetime.datetime.now(datetime.timezone.utc)
 
-        state = space['state']
+        state = space['state'] # would this return none if is ended but recorded?
         url = f"https://twitter.com/i/spaces/{space_id}"
         if state == 'scheduled':
             # input(space_data) # {'created_at': '2022-10-15T15:23:40.000Z', 'creator_id': '922670090834780162', 'participant_count': 0, 'title': 'Akash Weekly w/Greg Osuri ft. Anthony Rosa & Tor Blair', 'scheduled_start': '2022-10-19T15:00:00.000Z', 'state': 'scheduled', 'host_ids': ['922670090834780162'], 'id': '1yoKMZdEzZoGQ'}
@@ -115,6 +116,23 @@ def get_spaces_from_cache_to_download(bot: Bot) -> dict:
             spaces_to_download[space_id] = space_data
 
     return spaces_to_download
+
+def remove_manual_space_from_list(space_id: str | int):
+    # open json_data_dir, manual_spaces.json
+    with open(os.path.join(json_data_dir, "manual_spaces.json"), "r") as f:
+        manual_spaces = json.load(f)
+    if 'manual' not in manual_spaces:
+        print("No manual spaces to remove")
+        return
+
+    if str(space_id) in manual_spaces['manual']:
+        for _id in manual_spaces['manual']:
+            if _id == str(space_id):
+                manual_spaces['manual'].remove(_id)
+                break
+        with open(os.path.join(json_data_dir, "manual_spaces.json"), "w") as f:
+            json.dump(manual_spaces, f, indent=4)
+        print(f"Removed {space_id} from manual_spaces.json")
 
 def remove_downloaded_space_from_cache(space_id: str, debug: bool = True) -> bool:
     FILENAME = 'queued_space_list.json' 
@@ -183,13 +201,17 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
     file_path = urllib.parse.quote(file_info['url'])    
     if file_path[0] == "/":  # since we already do that in the link section below
         file_path = file_path[1:]
-    
-    speakers = "\n\nSpeakers: " + ", ".join(speakers_ats) if len(speakers_ats) > 0 else ""    
 
-    # TODO: print participant count
-    output = f"'{title}' {creator_username} ({round(audio.info.length/60, 2)} minutes){speakers}\n\nLink: https://www.cosmosibc.space/{file_path}"             
-    if len(output) > 280:        
-        output = f"'{title}'{creator_username} ({round(audio.info.length/60, 2)} minutes)\n\nLink: https://www.cosmosibc.space/{file_path}"    
+    participants = space_data['participant_count']
+    
+    speakers = "\n\n🎤 " + ", ".join(speakers_ats) if len(speakers_ats) > 0 else ""    
+    
+    output = f"'{title}' {creator_username}\n({round(audio.info.length/60, 2)}min). Views: {participants}.{speakers}\n\n"
+    pre_link_len = len(output)
+    output += f"🎧 https://www.cosmosibc.space/{file_path}"
+    post_link_len = len("a"*28) # 28 is the length of the link in twitters eyes. 23 bc space + headphones
+    if (post_link_len+pre_link_len) > 280:        
+        output = f"'{title}' {creator_username}\n({round(audio.info.length/60, 2)}min). Views: {participants}\n\nLink: https://www.cosmosibc.space/{file_path}"    
 
     # TWEET IT
     if DISABLE_TWEETING_FOR_TESTING == True:
@@ -199,6 +221,7 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
     else:
         client.create_tweet(text=output) # future, reply to tweet with speakers, requires api.update_status? not sure why it does not work    
         remove_downloaded_space_from_cache(space_id)
+        remove_manual_space_from_list(space_id) # removes manual space if it is in there too after successful download
 
 while True:
 
@@ -231,10 +254,27 @@ while True:
     if spaces_to_download == None:
         print("No spaces to download")        
     else:
-        for space_id, space_data in spaces_to_download.items():   
-            try: # this may break because of the weird space crash errors with twitter eu
-                # get speakers from the space (json)
 
+        # manual spaces we want to downlolad & tweet
+        root_dir = os.path.dirname(os.path.realpath(__file__))
+        json_data_dir = os.path.join(root_dir, "json_data")   
+        manual_spaces = os.path.join(json_data_dir, "manual_spaces.json")
+        if not os.path.exists(manual_spaces):
+            with open(manual_spaces, "w") as f:
+                json.dump({"manual": []}, f)
+
+        with open(manual_spaces, "r") as f:
+            manual_spaces_list = json.load(f)
+
+        if 'manual' in manual_spaces_list:
+            for space_id in list(manual_spaces_list['manual']):
+                space_data = bot.get_space_by_id(space_id=space_id)
+                print(f"manual space: {space_id} found!")  
+                spaces_to_download[space_id] = space_data                
+
+        # Automatic
+        for space_id, space_data in spaces_to_download.items():   
+            try:            
                 # TODO: pre run through these & query all speakedrs & hosts etc at the same time? in group of 100 right?
                 if 'speaker_ids' in space_data:             
                     speaker_ids = list(space_data['speaker_ids']) # "speaker_ids": [ "1223319210", "285771380", "2837818354" ],
@@ -251,6 +291,8 @@ while True:
                 download_and_tweet_space(space_id, space_data, space_data['creator_id'])
             except Exception as e:
                 print(f"\nspaces_to_download ERROR HERE!")
+
+                remove_manual_space_from_list(space_id) # removes manual spaces from the custom json list
 
                 # todo: ensure this works as intended.
                 if "Space Ended" in repr(e):                  

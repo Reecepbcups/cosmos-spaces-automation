@@ -9,10 +9,10 @@
             "pinned_tweet_id": "1581045849030656000",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1531897777143353347/8zbE3Vl2.jpg",
             "public_metrics": {
-                "followers_count": 18805,
+                "followers_count": 18826,
                 "following_count": 1,
                 "tweet_count": 632,
-                "listed_count": 352
+                "listed_count": 353
             },
             "username": "interchain_io",
             "verified": false
@@ -26,12 +26,45 @@
             "pinned_tweet_id": "1573727971558449154",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1348107683304337408/53heZyEL.jpg",
             "public_metrics": {
-                "followers_count": 36898,
+                "followers_count": 36926,
                 "following_count": 143,
-                "tweet_count": 581,
-                "listed_count": 718
+                "tweet_count": 582,
+                "listed_count": 719
             },
             "username": "cosmoshub",
+            "verified": false
+        },
+        "1079779414110556162": {
+            "created_at": "2018-12-31T16:40:48.000Z",
+            "description": "Always aim for the moon \ud83c\udf1d, even if you miss, you'll land among the stars \ud83c\udf0c",
+            "following": false,
+            "id": "1079779414110556162",
+            "name": "Amir \ud83e\uddea",
+            "pinned_tweet_id": "1570532003040350213",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1564070896289062913/edrdjxiG.jpg",
+            "public_metrics": {
+                "followers_count": 557,
+                "following_count": 1531,
+                "tweet_count": 5438,
+                "listed_count": 23
+            },
+            "username": "AmirAbdel3",
+            "verified": false
+        },
+        "1088745803819040770": {
+            "created_at": "2019-01-25T10:30:02.000Z",
+            "description": "DeFi Infrastructure Layer for @Cosmos\n\n$CMDX",
+            "following": false,
+            "id": "1088745803819040770",
+            "name": "Comdex - Democratizing Finance",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1478590027428888577/vNDkoMvK.jpg",
+            "public_metrics": {
+                "followers_count": 29500,
+                "following_count": 132,
+                "tweet_count": 1903,
+                "listed_count": 410
+            },
+            "username": "ComdexOfficial",
             "verified": false
         },
         "1091033024387563520": {
@@ -59,12 +92,44 @@
             "pinned_tweet_id": "1565541687858012162",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1581320617051258880/6oVKL6Z-.jpg",
             "public_metrics": {
-                "followers_count": 3721,
-                "following_count": 2665,
-                "tweet_count": 9772,
+                "followers_count": 3727,
+                "following_count": 2667,
+                "tweet_count": 9777,
                 "listed_count": 55
             },
             "username": "lilgainzz",
+            "verified": false
+        },
+        "1133948504420671489": {
+            "created_at": "2019-05-30T04:09:26.000Z",
+            "description": "The guy behind @ComdexOfficial, @Harbor_Protocol, @cSwap_Dex, @Commodo_Finance ' Growth & Marketing | Thoughts & Opinions are mine, not my employer's!",
+            "following": false,
+            "id": "1133948504420671489",
+            "name": "Rhythm | Comdex",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1567755824633884672/nbISITnU.jpg",
+            "public_metrics": {
+                "followers_count": 970,
+                "following_count": 752,
+                "tweet_count": 485,
+                "listed_count": 13
+            },
+            "username": "cyphorX",
+            "verified": false
+        },
+        "1144639172268810240": {
+            "created_at": "2019-06-28T16:10:19.000Z",
+            "description": "Blockchain Noob",
+            "following": false,
+            "id": "1144639172268810240",
+            "name": "Rohit Rajsurya Prasad",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1215550993078730754/STimHR1C.jpg",
+            "public_metrics": {
+                "followers_count": 61,
+                "following_count": 218,
+                "tweet_count": 166,
+                "listed_count": 2
+            },
+            "username": "PrasadRajsurya",
             "verified": false
         },
         "1153962373683675136": {
@@ -76,9 +141,9 @@
             "pinned_tweet_id": "1575267284293124097",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1543100810560946176/H8SB8_9R.jpg",
             "public_metrics": {
-                "followers_count": 24042,
+                "followers_count": 24056,
                 "following_count": 960,
-                "tweet_count": 4291,
+                "tweet_count": 4295,
                 "listed_count": 434
             },
             "username": "OmniFlixNetwork",
@@ -117,6 +182,23 @@
             "username": "0xJerbear",
             "verified": false
         },
+        "1216424592211755008": {
+            "created_at": "2020-01-12T18:20:15.000Z",
+            "description": "Building @ComdexOfficial @Composite_Money @Commodo_Finance $CMDX $CMST $HARBOR Economics. Finance. Technology.",
+            "following": false,
+            "id": "1216424592211755008",
+            "name": "Siddarth Patil in NYC",
+            "pinned_tweet_id": "1455541557742948353",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1493293873077968897/SU2NGH3-.jpg",
+            "public_metrics": {
+                "followers_count": 2712,
+                "following_count": 1910,
+                "tweet_count": 796,
+                "listed_count": 37
+            },
+            "username": "SidP95",
+            "verified": false
+        },
         "1230007683463471104": {
             "created_at": "2020-02-19T05:56:46.000Z",
             "description": "Building anything you can imagine with multi-chain smart contracts #CosmWasm #Cosmos #blockchain #IBC",
@@ -125,10 +207,10 @@
             "name": "CosmWasm",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1477926296747401219/HxWkIDqO.png",
             "public_metrics": {
-                "followers_count": 21479,
+                "followers_count": 21492,
                 "following_count": 254,
-                "tweet_count": 1330,
-                "listed_count": 472
+                "tweet_count": 1331,
+                "listed_count": 473
             },
             "username": "CosmWasm",
             "verified": false
@@ -159,10 +241,10 @@
             "pinned_tweet_id": "1582880309166559232",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1507391623914737669/U3fR7nxh.jpg",
             "public_metrics": {
-                "followers_count": 47674,
+                "followers_count": 47753,
                 "following_count": 0,
-                "tweet_count": 4046,
-                "listed_count": 455
+                "tweet_count": 4056,
+                "listed_count": 458
             },
             "username": "StargazeZone",
             "verified": false
@@ -216,17 +298,35 @@
             "username": "axelarcore",
             "verified": false
         },
+        "1330572283589451778": {
+            "created_at": "2020-11-22T18:02:23.000Z",
+            "description": "\ud83c\udf99 Host | Award Winning Web3 Community Manager + Brand Marketing | @HunnysNFT OG  @GrumpyCantina | .b 3 n 1 s | Deadfellaz #5446 |",
+            "following": false,
+            "id": "1330572283589451778",
+            "name": "\ud83c\udf4cBanAnakin\ud83c\udf4c",
+            "pinned_tweet_id": "1577390213172629504",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1582632487150239744/dyGK7fGF.jpg",
+            "public_metrics": {
+                "followers_count": 1163,
+                "following_count": 607,
+                "tweet_count": 7512,
+                "listed_count": 10
+            },
+            "username": "ChampRockwell",
+            "verified": false
+        },
         "1347266698236227584": {
             "created_at": "2021-01-07T19:40:13.000Z",
             "description": "Machine learning-based strategies that dynamically optimize your portfolio\nJoin our community at https://t.co/CekftFLsOH and https://t.co/1GIjPlz3pg",
             "following": true,
             "id": "1347266698236227584",
             "name": "Sommelier",
+            "pinned_tweet_id": "1575876438892642304",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1515220591686692872/QPSVppoA.png",
             "public_metrics": {
-                "followers_count": 20019,
+                "followers_count": 20138,
                 "following_count": 87,
-                "tweet_count": 1480,
+                "tweet_count": 1483,
                 "listed_count": 377
             },
             "username": "sommfinance",
@@ -240,9 +340,9 @@
             "name": "Cephii",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1579871615130734598/Z8vAM-Ls.jpg",
             "public_metrics": {
-                "followers_count": 68907,
-                "following_count": 1668,
-                "tweet_count": 29806,
+                "followers_count": 68918,
+                "following_count": 1669,
+                "tweet_count": 29824,
                 "listed_count": 518
             },
             "username": "Cephii1",
@@ -255,9 +355,9 @@
             "id": "1356454978320293888",
             "name": "erik.io | Cosmos Spaces",
             "pinned_tweet_id": "1578049950553874434",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1578558118849568768/v3uG8Z4I.jpg",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1582972328203403264/YGOVEogB.jpg",
             "public_metrics": {
-                "followers_count": 679,
+                "followers_count": 680,
                 "following_count": 255,
                 "tweet_count": 1389,
                 "listed_count": 10
@@ -273,10 +373,10 @@
             "name": "Osmosis \ud83e\uddea",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1504543889709015041/82CEWnSH.png",
             "public_metrics": {
-                "followers_count": 137036,
+                "followers_count": 137069,
                 "following_count": 2,
                 "tweet_count": 619,
-                "listed_count": 1620
+                "listed_count": 1619
             },
             "username": "osmosiszone",
             "verified": false
@@ -291,8 +391,8 @@
             "public_metrics": {
                 "followers_count": 1872,
                 "following_count": 1992,
-                "tweet_count": 3286,
-                "listed_count": 46
+                "tweet_count": 3287,
+                "listed_count": 47
             },
             "username": "TrickyCrypto2",
             "verified": false
@@ -306,12 +406,28 @@
             "pinned_tweet_id": "1577653298596716544",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1485983931392757763/CtgLlnbI.jpg",
             "public_metrics": {
-                "followers_count": 17402,
+                "followers_count": 17420,
                 "following_count": 237,
-                "tweet_count": 1120,
-                "listed_count": 318
+                "tweet_count": 1125,
+                "listed_count": 319
             },
             "username": "coinhall_org",
+            "verified": false
+        },
+        "1434391035866669061": {
+            "created_at": "2021-09-05T05:41:51.000Z",
+            "description": "NFT Marketplace Liaison & Senior community moderator @ Loop Finance. *All tweets are my own and do not reflect LOOP Finance\u2019s views*",
+            "following": false,
+            "id": "1434391035866669061",
+            "name": "AJ LOOP",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1579971367826595840/whTROKNA.jpg",
+            "public_metrics": {
+                "followers_count": 167,
+                "following_count": 358,
+                "tweet_count": 963,
+                "listed_count": 3
+            },
+            "username": "BertyCrypto",
             "verified": false
         },
         "143608636": {
@@ -357,12 +473,46 @@
             "pinned_tweet_id": "1529526339195346946",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1529586351565332482/I4-RyYjr.jpg",
             "public_metrics": {
-                "followers_count": 9981,
+                "followers_count": 10012,
                 "following_count": 503,
                 "tweet_count": 1247,
                 "listed_count": 133
             },
             "username": "OsmoMinistryMkt",
+            "verified": false
+        },
+        "1459524859050876928": {
+            "created_at": "2021-11-13T14:15:03.000Z",
+            "description": "Staking derivatives for maximum capital efficiency. \n\nhttps://t.co/l3nci98U9Z\n\nImportant links: https://t.co/pKw8KLAxfC\n\nProduct by @arufaresearch",
+            "following": false,
+            "id": "1459524859050876928",
+            "name": "StakeEasy",
+            "pinned_tweet_id": "1573223874455797760",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1562741282866221056/17J3pwYL.jpg",
+            "public_metrics": {
+                "followers_count": 7152,
+                "following_count": 31,
+                "tweet_count": 495,
+                "listed_count": 80
+            },
+            "username": "StakeEasy",
+            "verified": false
+        },
+        "1459622047189979138": {
+            "created_at": "2021-11-13T20:40:14.000Z",
+            "description": "Part of the #LUNC community. working to support and rebuild #LUNC. TO GIVE CRYPTO AS A WHOLE A BETTER FUTURE!! NFA EVER! community discord https://t.co/KPCtInigjw",
+            "following": false,
+            "id": "1459622047189979138",
+            "name": "DemonMonkey777",
+            "pinned_tweet_id": "1579983291926867969",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1581305028270243840/4BePoism.jpg",
+            "public_metrics": {
+                "followers_count": 4956,
+                "following_count": 665,
+                "tweet_count": 2497,
+                "listed_count": 16
+            },
+            "username": "DemonMonkey777",
             "verified": false
         },
         "1463182499698266114": {
@@ -407,9 +557,9 @@
             "pinned_tweet_id": "1581959900023820289",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1554838652383010817/vPcu5zqy.jpg",
             "public_metrics": {
-                "followers_count": 10727,
+                "followers_count": 10734,
                 "following_count": 399,
-                "tweet_count": 2660,
+                "tweet_count": 2662,
                 "listed_count": 127
             },
             "username": "RacoonSupply",
@@ -424,10 +574,10 @@
             "pinned_tweet_id": "1566506290586607616",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1557787683098869760/gPwiVf3L.jpg",
             "public_metrics": {
-                "followers_count": 7877,
+                "followers_count": 7887,
                 "following_count": 747,
-                "tweet_count": 2678,
-                "listed_count": 123
+                "tweet_count": 2681,
+                "listed_count": 122
             },
             "username": "Cosmos_Spaces",
             "verified": false
@@ -465,6 +615,23 @@
             "username": "CosmosSpacesESP",
             "verified": false
         },
+        "1511189718242889733": {
+            "created_at": "2022-04-05T03:51:44.000Z",
+            "description": "Venture Associate @joinrepublic \ud83c\udf0e| Partnerships @dcentralcon | Strategy @hero_nft_ | @osmosisnfts | HODLing @pudgypenguins",
+            "following": false,
+            "id": "1511189718242889733",
+            "name": "Jordan \ud83e\udee1",
+            "pinned_tweet_id": "1580346005614391296",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1511191088173916163/bBwk0oii.jpg",
+            "public_metrics": {
+                "followers_count": 933,
+                "following_count": 808,
+                "tweet_count": 1137,
+                "listed_count": 5
+            },
+            "username": "0xjordy",
+            "verified": false
+        },
         "1519990048497754113": {
             "created_at": "2022-04-29T10:42:16.000Z",
             "description": "The Liquid Staking Zone\n\nTokens supported: $ATOM, $JUNO, $STARS ( $OSMO coming October 29th! )\n\nJoin us: https://t.co/hPe04OqCOa",
@@ -474,10 +641,10 @@
             "pinned_tweet_id": "1575493066487894016",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1538942713965445120/S9IIkgPS.png",
             "public_metrics": {
-                "followers_count": 18526,
+                "followers_count": 18574,
                 "following_count": 150,
                 "tweet_count": 587,
-                "listed_count": 232
+                "listed_count": 233
             },
             "username": "stride_zone",
             "verified": false
@@ -490,9 +657,9 @@
             "name": "Cosmos - Internet of Blockchains \u269b\ufe0f",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1572270323105660931/wfrYRGAC.jpg",
             "public_metrics": {
-                "followers_count": 474348,
+                "followers_count": 474454,
                 "following_count": 393,
-                "tweet_count": 3668,
+                "tweet_count": 3669,
                 "listed_count": 4594
             },
             "username": "cosmos",
@@ -531,6 +698,70 @@
             "username": "NadiaBajuelo",
             "verified": false
         },
+        "1554301147875246082": {
+            "created_at": "2022-08-02T03:00:50.000Z",
+            "description": "BD Lead | Kujira",
+            "following": false,
+            "id": "1554301147875246082",
+            "name": "Dan Tanaka",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1554301200513859584/AbrqBFth.jpg",
+            "public_metrics": {
+                "followers_count": 43,
+                "following_count": 18,
+                "tweet_count": 11,
+                "listed_count": 1
+            },
+            "username": "dantanakakujira",
+            "verified": false
+        },
+        "1555263140304080896": {
+            "created_at": "2022-08-04T18:43:34.000Z",
+            "description": "\ud835\udd55\ud835\udd56\ud835\udd57\ud835\udd5a, \ud835\udd5e\ud835\udd56\ud835\udd5e\ud835\udd56 \ud835\udd65\ud835\udd60\ud835\udd5c\ud835\udd56\ud835\udd5f \ud835\udd54\ud835\udd60\ud835\udd5d\ud835\udd5d\ud835\udd56\ud835\udd54\ud835\udd65\ud835\udd60\ud835\udd63 \ud83e\ude99\ud835\udd59\ud835\udd69\ud835\udd63. gonna \ud835\udd63\ud835\udd66\ud835\udd58 out . \ud83d\udc7e music artist \u26d3\ud83c\udf19\u2728 Web 3.0",
+            "following": false,
+            "id": "1555263140304080896",
+            "name": "\u064b \u064b\ud83d\udd2a\u2744\ufe0f",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1582981523124502529/coj2rvsY.jpg",
+            "public_metrics": {
+                "followers_count": 1055,
+                "following_count": 853,
+                "tweet_count": 1608,
+                "listed_count": 2
+            },
+            "username": "nicky_xplicit",
+            "verified": false
+        },
+        "1573838593759461376": {
+            "created_at": "2022-09-25T00:55:50.000Z",
+            "description": "#NFT & #Crypto #web3 #music promoter, I do RANDOM NFT AUCTION. If you find yourself in one Your Lucky! wanna Show Case your Project, YT, website, App. follow me",
+            "following": false,
+            "id": "1573838593759461376",
+            "name": "Z",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1573838868037574662/FQy28ksF.jpg",
+            "public_metrics": {
+                "followers_count": 564,
+                "following_count": 553,
+                "tweet_count": 172,
+                "listed_count": 2
+            },
+            "username": "Jman350z",
+            "verified": false
+        },
+        "1578168471141376001": {
+            "created_at": "2022-10-06T23:41:36.000Z",
+            "description": "\"I'm cute, I'm punk rock\" -me | esoteric finance | sales terrorism | memetic warfare",
+            "following": false,
+            "id": "1578168471141376001",
+            "name": "VoidEyes",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1578168729422397442/1xbCS2JE.jpg",
+            "public_metrics": {
+                "followers_count": 142,
+                "following_count": 295,
+                "tweet_count": 71,
+                "listed_count": 1
+            },
+            "username": "VoidEyesEquinox",
+            "verified": false
+        },
         "16620786": {
             "created_at": "2008-10-06T21:33:30.000Z",
             "description": "Founder @akashnet_ \u2699\ufe0f $AKT \u26a1\ufe0f I build things for people that build things \ud83d\ude4c For media inquiries: press@ovrclk.com",
@@ -540,9 +771,9 @@
             "pinned_tweet_id": "1579489403202072576",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1576721831888756736/zIIIxudP.jpg",
             "public_metrics": {
-                "followers_count": 27185,
+                "followers_count": 27189,
                 "following_count": 837,
-                "tweet_count": 13727,
+                "tweet_count": 13728,
                 "listed_count": 400
             },
             "username": "gregosuri",
@@ -557,9 +788,9 @@
             "pinned_tweet_id": "1581259992396861441",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1581270705454604289/Xp4Cm1S-.jpg",
             "public_metrics": {
-                "followers_count": 3207,
-                "following_count": 1005,
-                "tweet_count": 21269,
+                "followers_count": 3208,
+                "following_count": 1006,
+                "tweet_count": 21271,
                 "listed_count": 61
             },
             "username": "Rarma_",
@@ -575,11 +806,27 @@
             "profile_image_url": "https://pbs.twimg.com/profile_images/1582436710109028358/94Z-554P.jpg",
             "public_metrics": {
                 "followers_count": 685,
-                "following_count": 106,
-                "tweet_count": 5294,
+                "following_count": 105,
+                "tweet_count": 5304,
                 "listed_count": 3
             },
             "username": "Chugga_Boom",
+            "verified": false
+        },
+        "204582734": {
+            "created_at": "2010-10-19T01:01:35.000Z",
+            "description": "Northern knuckle dragger, high wild meat protein diet. Low IQ degenerpate gambler.",
+            "following": false,
+            "id": "204582734",
+            "name": "Milo",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1581647690424885249/WrQMtYYs.jpg",
+            "public_metrics": {
+                "followers_count": 94,
+                "following_count": 1136,
+                "tweet_count": 228,
+                "listed_count": 4
+            },
+            "username": "MiloIncorP",
             "verified": false
         },
         "2270487410": {
@@ -607,7 +854,7 @@
             "name": "Reece Williams",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1574779134739357697/Kxv7nmks.jpg",
             "public_metrics": {
-                "followers_count": 898,
+                "followers_count": 899,
                 "following_count": 85,
                 "tweet_count": 341,
                 "listed_count": 21
@@ -631,6 +878,22 @@
             "description": "Hosting Spaces & Building community \ud83d\udd1d| #CosmosEcosystem \u269b DNA | Psychologist | Spontaneous Comedian \u262f\ufe0f | Hablo Espa\u00f1ol",
             "following": false
         },
+        "28690329": {
+            "created_at": "2009-04-03T23:53:19.000Z",
+            "description": "My real account turned into my crypto account.",
+            "following": false,
+            "id": "28690329",
+            "name": "Ryan",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1556265490770690048/iPr9mEJU.jpg",
+            "public_metrics": {
+                "followers_count": 209,
+                "following_count": 2036,
+                "tweet_count": 691,
+                "listed_count": 9
+            },
+            "username": "Ryan93324531",
+            "verified": false
+        },
         "2997855104": {
             "created_at": "2015-01-27T04:59:51.000Z",
             "description": "BD @Axelarcore",
@@ -645,6 +908,22 @@
                 "listed_count": 13
             },
             "username": "_Kaner_",
+            "verified": false
+        },
+        "308814134": {
+            "created_at": "2011-06-01T01:43:37.000Z",
+            "description": "https://t.co/lF7ix5cwUb",
+            "following": false,
+            "id": "308814134",
+            "name": "Simon R. | Loop Finance Co-Founder",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1308934760589176832/1k0YBrvU.jpg",
+            "public_metrics": {
+                "followers_count": 245,
+                "following_count": 63,
+                "tweet_count": 75,
+                "listed_count": 6
+            },
+            "username": "simmorahme",
             "verified": false
         },
         "3305325070": {
@@ -664,6 +943,23 @@
             "username": "SecretNetwork",
             "verified": true
         },
+        "410380902": {
+            "created_at": "2011-11-12T01:11:10.000Z",
+            "description": "On the never-ending quest for crypto-life balance. Not financial advice. *cryptoismyjam.eth*",
+            "following": false,
+            "id": "410380902",
+            "name": "Jade",
+            "pinned_tweet_id": "1580728766812196864",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1582962363623526400/auj8QwRs.jpg",
+            "public_metrics": {
+                "followers_count": 5067,
+                "following_count": 1577,
+                "tweet_count": 6372,
+                "listed_count": 75
+            },
+            "username": "cryptoismyjam",
+            "verified": false
+        },
         "467972727": {
             "created_at": "2012-01-19T01:39:22.000Z",
             "description": "@RacoonSupply Brand Shitposter\ud83e\udd9d\nCommunity - Artificial Intelligence - Gaming \ud83e\udd1d",
@@ -674,8 +970,8 @@
             "profile_image_url": "https://pbs.twimg.com/profile_images/1581352014902341633/R_Lc-bF9.jpg",
             "public_metrics": {
                 "followers_count": 5552,
-                "following_count": 3229,
-                "tweet_count": 33546,
+                "following_count": 3231,
+                "tweet_count": 33582,
                 "listed_count": 72
             },
             "username": "RoboVerseWeb3",
@@ -713,6 +1009,23 @@
             "username": "svabhishek",
             "verified": false
         },
+        "883935240397496320": {
+            "created_at": "2017-07-09T06:25:58.000Z",
+            "description": "the master of buying the top and selling the bottom. mr. chief exit liquidity. | @rekt_wolf - community rektooor*views are my own and don\u2019t represent rekt gang*",
+            "following": false,
+            "id": "883935240397496320",
+            "name": "vee \u24c7 (-69.420%)",
+            "pinned_tweet_id": "1582215803914833920",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1578884326707585029/GLXmVNgH.jpg",
+            "public_metrics": {
+                "followers_count": 802,
+                "following_count": 550,
+                "tweet_count": 2160,
+                "listed_count": 7
+            },
+            "username": "rektvee",
+            "verified": false
+        },
         "922670090834780162": {
             "created_at": "2017-10-24T03:44:26.000Z",
             "description": "Infrastructure that powers Web3 | A decentralized peer-to-peer marketplace for cloud compute | $AKT",
@@ -721,7 +1034,7 @@
             "name": "Akash Network",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1575558636574834699/JVctgni7.png",
             "public_metrics": {
-                "followers_count": 84657,
+                "followers_count": 84681,
                 "following_count": 305,
                 "tweet_count": 4887,
                 "listed_count": 957
@@ -738,9 +1051,9 @@
             "pinned_tweet_id": "1579958018350796800",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1572253388750069763/j-ewr8TF.jpg",
             "public_metrics": {
-                "followers_count": 65436,
+                "followers_count": 65442,
                 "following_count": 929,
-                "tweet_count": 11944,
+                "tweet_count": 11952,
                 "listed_count": 813
             },
             "username": "loop_finance",
@@ -754,7 +1067,7 @@
             "name": "Cosmos SDK",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1287816453706539009/SfVSxQWP.jpg",
             "public_metrics": {
-                "followers_count": 16001,
+                "followers_count": 16003,
                 "following_count": 301,
                 "tweet_count": 711,
                 "listed_count": 318
@@ -786,9 +1099,9 @@
             "name": "Jun\u00f8",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1463819969620234247/kGvPhnXc.jpg",
             "public_metrics": {
-                "followers_count": 83089,
+                "followers_count": 83121,
                 "following_count": 0,
-                "tweet_count": 1815,
+                "tweet_count": 1817,
                 "listed_count": 726
             },
             "username": "JunoNetwork",

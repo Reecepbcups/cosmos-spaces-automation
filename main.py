@@ -172,10 +172,7 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
         pfp_img = creator['profile_image_url']
     else:
         creator_username = ""
-        pfp_img = ""
-
-    title = space_data['title']
-    # participants = space_data['participant_count']     
+        pfp_img = ""      
 
     audio = MP3(file_info['new_file_path'])
 
@@ -202,18 +199,19 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
     if file_path[0] == "/":  # since we already do that in the link section below
         file_path = file_path[1:]
 
+    title = space_data['title']
     participants = space_data['participant_count']
-    
     speakers = "🎤 " + ", ".join(speakers_ats) if len(speakers_ats) > 0 else ""    
+    audio_time = f"{round(audio.info.length/60, 2)}min"
+        
+    base = f"{title} {creator_username}\n{audio_time} {participants}👀"
 
-    audio_time = f"({round(audio.info.length/60, 2)}min)"
-    
-    output = f"{title} {creator_username}\n{audio_time} {participants}👀\n\n{speakers}\n\n"
+    output = f"{base}\n\n{speakers}\n\n"
     pre_link_len = len(output)
     output += f"🎧 https://www.cosmosibc.space/{file_path}"
     post_link_len = len("a"*28) # 28 is the length of the link in twitters eyes. 23 bc space + headphones
-    if (post_link_len+pre_link_len) > 280:        
-        output = f"'{title}' {creator_username}\n{audio_time} {participants}👀\n\nLink: https://www.cosmosibc.space/{file_path}"    
+    if (post_link_len+pre_link_len) > 280:
+        output = f"{base}\n\nLink: https://www.cosmosibc.space/{file_path}"    
 
     # TWEET IT
     if DISABLE_TWEETING_FOR_TESTING == True:

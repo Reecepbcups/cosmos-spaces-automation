@@ -9,7 +9,7 @@
             "pinned_tweet_id": "1581045849030656000",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1531897777143353347/8zbE3Vl2.jpg",
             "public_metrics": {
-                "followers_count": 18826,
+                "followers_count": 18828,
                 "following_count": 1,
                 "tweet_count": 632,
                 "listed_count": 353
@@ -54,14 +54,14 @@
         "1088745803819040770": {
             "created_at": "2019-01-25T10:30:02.000Z",
             "description": "DeFi Infrastructure Layer for @Cosmos\n\n$CMDX",
-            "following": false,
+            "following": true,
             "id": "1088745803819040770",
             "name": "Comdex - Democratizing Finance",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1478590027428888577/vNDkoMvK.jpg",
             "public_metrics": {
                 "followers_count": 29500,
                 "following_count": 132,
-                "tweet_count": 1903,
+                "tweet_count": 1905,
                 "listed_count": 410
             },
             "username": "ComdexOfficial",
@@ -141,7 +141,7 @@
             "pinned_tweet_id": "1575267284293124097",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1543100810560946176/H8SB8_9R.jpg",
             "public_metrics": {
-                "followers_count": 24056,
+                "followers_count": 24058,
                 "following_count": 960,
                 "tweet_count": 4295,
                 "listed_count": 434
@@ -241,9 +241,9 @@
             "pinned_tweet_id": "1582880309166559232",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1507391623914737669/U3fR7nxh.jpg",
             "public_metrics": {
-                "followers_count": 47753,
+                "followers_count": 47752,
                 "following_count": 0,
-                "tweet_count": 4056,
+                "tweet_count": 4057,
                 "listed_count": 458
             },
             "username": "StargazeZone",
@@ -298,6 +298,22 @@
             "username": "axelarcore",
             "verified": false
         },
+        "1328171769925050369": {
+            "created_at": "2020-11-16T03:03:25.000Z",
+            "description": "i like @DA0_DA0",
+            "following": false,
+            "id": "1328171769925050369",
+            "name": "ekez",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1582761967231459328/OIVN1H6z.jpg",
+            "public_metrics": {
+                "followers_count": 980,
+                "following_count": 206,
+                "tweet_count": 336,
+                "listed_count": 21
+            },
+            "username": "0xekez",
+            "verified": false
+        },
         "1330572283589451778": {
             "created_at": "2020-11-22T18:02:23.000Z",
             "description": "\ud83c\udf99 Host | Award Winning Web3 Community Manager + Brand Marketing | @HunnysNFT OG  @GrumpyCantina | .b 3 n 1 s | Deadfellaz #5446 |",
@@ -340,7 +356,7 @@
             "name": "Cephii",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1579871615130734598/Z8vAM-Ls.jpg",
             "public_metrics": {
-                "followers_count": 68918,
+                "followers_count": 68921,
                 "following_count": 1669,
                 "tweet_count": 29824,
                 "listed_count": 518
@@ -373,7 +389,7 @@
             "name": "Osmosis \ud83e\uddea",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1504543889709015041/82CEWnSH.png",
             "public_metrics": {
-                "followers_count": 137069,
+                "followers_count": 137071,
                 "following_count": 2,
                 "tweet_count": 619,
                 "listed_count": 1619
@@ -412,6 +428,23 @@
                 "listed_count": 319
             },
             "username": "coinhall_org",
+            "verified": false
+        },
+        "1425851419156901889": {
+            "created_at": "2021-08-12T16:07:32.000Z",
+            "description": "If This Then That for the #Interchain. The blockchain automation layer, built for scheduled or event driven workflows.\nSome say #DAOpe Catnip AF",
+            "following": false,
+            "id": "1425851419156901889",
+            "name": "Cron.Cat | WEN ALPHA",
+            "pinned_tweet_id": "1570918826937847808",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1567633651604811776/fmiQFuGu.jpg",
+            "public_metrics": {
+                "followers_count": 2298,
+                "following_count": 200,
+                "tweet_count": 1587,
+                "listed_count": 62
+            },
+            "username": "croncats",
             "verified": false
         },
         "1434391035866669061": {
@@ -464,6 +497,23 @@
             "username": "Sandytoes2211",
             "verified": false
         },
+        "1440432663999827975": {
+            "created_at": "2021-09-21T21:48:25.000Z",
+            "description": "Kleomedes is a Cosmos Validator -- built for and governed by its community. \n$KLEO Airdrop is LIVE! \u2af8 https://t.co/vgesIxyLzi\nDiscord: https://t.co/HeDCMo3A1u",
+            "following": false,
+            "id": "1440432663999827975",
+            "name": "Kleomedes",
+            "pinned_tweet_id": "1582470137378394112",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1577693323850022913/cF_56OLu.jpg",
+            "public_metrics": {
+                "followers_count": 6430,
+                "following_count": 355,
+                "tweet_count": 1174,
+                "listed_count": 101
+            },
+            "username": "KleomedesDAO",
+            "verified": false
+        },
         "1452725784255336450": {
             "created_at": "2021-10-25T19:56:58.000Z",
             "description": "Put Your Tokens To Work - https://t.co/yE4lBkFIBE",
@@ -479,6 +529,23 @@
                 "listed_count": 133
             },
             "username": "OsmoMinistryMkt",
+            "verified": false
+        },
+        "1456319627101884416": {
+            "created_at": "2021-11-04T17:57:25.000Z",
+            "description": "$JUNO $EVMOS $NOMIC validator | Ex-worker from the gas turbine world. | Big fan | We run 100% renewable per \u26a1 contract | Validation is a side project.",
+            "following": false,
+            "id": "1456319627101884416",
+            "name": "windpowerstake",
+            "pinned_tweet_id": "1577019634393690112",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1456344499689594883/slbZZh9I.jpg",
+            "public_metrics": {
+                "followers_count": 606,
+                "following_count": 690,
+                "tweet_count": 1001,
+                "listed_count": 5
+            },
+            "username": "windpowerstake",
             "verified": false
         },
         "1459524859050876928": {
@@ -515,6 +582,22 @@
             "username": "DemonMonkey777",
             "verified": false
         },
+        "1459665306268454915": {
+            "created_at": "2021-11-13T23:32:17.000Z",
+            "description": "Building @SparkIBC & @InterchainInfo\n | \nJust a fan of good tech.\n | \n$LINK $ATOM $OSMO $JUNO $SCRT\n | \n\u2b21Marine since day 1.",
+            "following": false,
+            "id": "1459665306268454915",
+            "name": "Tendermint Timmy\u269b\ufe0f\u26d3\ufe0f\u2b21",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1552102410314813440/GriapGlV.jpg",
+            "public_metrics": {
+                "followers_count": 5384,
+                "following_count": 1256,
+                "tweet_count": 6108,
+                "listed_count": 97
+            },
+            "username": "TendermintTimmy",
+            "verified": false
+        },
         "1463182499698266114": {
             "created_at": "2021-11-23T16:28:09.000Z",
             "description": "NFT project created in the Cosmos Ecosystem.\n\nGet them at: https://t.co/jRNUetd7dz\n\nDiscord: https://t.co/gEGCxufJoK\n\nAKA \ud83d\udca7\ud83d\udc3b\n\n#CosmosNFT #Cosmos #NFT #ATOM",
@@ -546,6 +629,23 @@
                 "listed_count": 1
             },
             "username": "noscopejizzshot",
+            "verified": false
+        },
+        "1484917214813773836": {
+            "created_at": "2022-01-22T15:54:16.000Z",
+            "description": "Rekt today, stronger tomorrow  /  Wolf  https://t.co/XSjyHAHNYG  /  Trippy  https://t.co/enjw9puJKG  /  https://t.co/mPii2TpjzT  /  stake $KUJI \ud83d\udc49  https://t.co/MgPB7H4gQ8",
+            "following": false,
+            "id": "1484917214813773836",
+            "name": "Rekt Gang",
+            "pinned_tweet_id": "1581061112245600261",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1574080897917255682/YvztR0pR.jpg",
+            "public_metrics": {
+                "followers_count": 12522,
+                "following_count": 139,
+                "tweet_count": 1496,
+                "listed_count": 67
+            },
+            "username": "rekt_gang",
             "verified": false
         },
         "1485744238805622789": {
@@ -582,6 +682,22 @@
             "username": "Cosmos_Spaces",
             "verified": false
         },
+        "1489455403360567296": {
+            "created_at": "2022-02-04T04:27:03.000Z",
+            "description": "Current and Future #COSMOS Airdrops.\n\nKnow about a cool #Airdrop coming? Let us know! https://t.co/199tW6rC9A",
+            "following": false,
+            "id": "1489455403360567296",
+            "name": "Airdrops",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1576037983446339587/uiEJ6lTi.jpg",
+            "public_metrics": {
+                "followers_count": 21383,
+                "following_count": 292,
+                "tweet_count": 3281,
+                "listed_count": 338
+            },
+            "username": "Airdrops_one",
+            "verified": false
+        },
         "1501940141094412293": {
             "profile_image_url": "https://pbs.twimg.com/profile_images/1501948921341374474/gdAybo3-.jpg",
             "username": "alaskanative14",
@@ -615,6 +731,22 @@
             "username": "CosmosSpacesESP",
             "verified": false
         },
+        "1509169599043960833": {
+            "created_at": "2022-03-30T14:04:15.000Z",
+            "description": "I build lego duplos with my daughter and stuff in Cosmos/the Interchain.\n\nIntern @DA0_DA0 // Assistant to the CTO @BeholdIdols, Brogrammer @Neta_DAO",
+            "following": false,
+            "id": "1509169599043960833",
+            "name": "Whiskey",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1509361842467926016/QTL5loUO.jpg",
+            "public_metrics": {
+                "followers_count": 98,
+                "following_count": 335,
+                "tweet_count": 102,
+                "listed_count": 0
+            },
+            "username": "whiskeydev_",
+            "verified": false
+        },
         "1511189718242889733": {
             "created_at": "2022-04-05T03:51:44.000Z",
             "description": "Venture Associate @joinrepublic \ud83c\udf0e| Partnerships @dcentralcon | Strategy @hero_nft_ | @osmosisnfts | HODLing @pudgypenguins",
@@ -641,7 +773,7 @@
             "pinned_tweet_id": "1575493066487894016",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1538942713965445120/S9IIkgPS.png",
             "public_metrics": {
-                "followers_count": 18574,
+                "followers_count": 18577,
                 "following_count": 150,
                 "tweet_count": 587,
                 "listed_count": 233
@@ -975,6 +1107,39 @@
                 "listed_count": 72
             },
             "username": "RoboVerseWeb3",
+            "verified": false
+        },
+        "523989360": {
+            "created_at": "2012-03-14T04:04:40.000Z",
+            "description": "i like building cool things. i love working on @DA0_DA0. psychedelic advocate. check out https://t.co/qjiCBdrV2j for psychoactive substance info",
+            "following": false,
+            "id": "523989360",
+            "name": "Noah Saso",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1433119570848403460/u9MHkxAI.jpg",
+            "public_metrics": {
+                "followers_count": 1395,
+                "following_count": 229,
+                "tweet_count": 2877,
+                "listed_count": 35
+            },
+            "username": "NoahSaso",
+            "verified": false
+        },
+        "82608153": {
+            "created_at": "2009-10-15T12:44:20.000Z",
+            "description": "Systempunk building @StargazeZone | @JunoNetwork | @DA0_DA0.",
+            "following": false,
+            "id": "82608153",
+            "name": "DAO Maximalist \u26b5\ud83e\uddea\u2728\u269b\ufe0f\ud835\udd4a\u262f\ud83c\udff4",
+            "pinned_tweet_id": "758787659611246592",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1582104420275261442/DOTfrZyh.jpg",
+            "public_metrics": {
+                "followers_count": 9585,
+                "following_count": 1758,
+                "tweet_count": 6936,
+                "listed_count": 240
+            },
+            "username": "JakeHartnell",
             "verified": false
         },
         "860534919709179904": {

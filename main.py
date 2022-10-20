@@ -23,6 +23,8 @@ if not os.path.exists('.env'):
     print("Please create a .env file with your Twitter API keys. cp .env.example .env")
     exit(1)
 
+DISABLE_TWEETING_FOR_TESTING = False
+
 current_dir = os.path.dirname(os.path.realpath(__file__))
 
 # Twitter client keys
@@ -134,15 +136,17 @@ def remove_downloaded_space_from_cache(space_id: str, debug: bool = True) -> boo
 
 # user = client.get_user(username="EvilPlanInc") # robo:467972727, mario:1319287761048723458, evilplan: 1138690476612046848
 # input(user.data.id)
-def download_and_tweet_space(space_id: str, space_data: dict):   
+def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | int):   
     p = Processing()     
 
     # loop through spaces, do in a multiprocessing pool?
-    filename = p.download_space(space_id) # if downloaded, still returns that filename           
+    filename = p.download_space(space_id, creator_id) # if downloaded, still returns that filename           
     if len(filename) == 0:
         print(f"Error downloading {space_id}, likely invalid.")
         return
-    new_file_location = p.remove_0_volume_from_file(filename)       
+
+    file_info = p.remove_0_volume_from_file(filename, creator_id) # we pass through creator_id for sorting       
+    # { "new_file_path": new_file_location, "url": data[str(creator_id)][updated_mp3_filename] }
     
     # gets user from cache or fresh query if not already in cache        
     creator = bot.get_user(space_data['creator_id']) # {'username': 'RoboVerseWeb3', 'verified': False, 'profile_image_url': 'https://pbs.twimg.com/profile_images/1581352014902341633/R_Lc-bF9.jpg', 'description': '@RacoonSupply Brand Shitposter🦝\nCommunity - Artificial Intelligence - Gaming 🤝', 'id': '467972727', 'pinned_tweet_id': '1578666987546619904', 'public_metrics': {'followers_count': 5560, 'following_count': 3222, 'tweet_count': 33228, 'listed_count': 72}
@@ -156,35 +160,55 @@ def download_and_tweet_space(space_id: str, space_data: dict):
     title = space_data['title']
     # participants = space_data['participant_count']     
 
-    audio = MP3(new_file_location)
+    audio = MP3(file_info['new_file_path'])
 
+    # gets host & speakers & saves them to the tweet msg
     speakers_ats = []
+    if 'host_ids' in space_data:
+        hosts = space_data['host_ids']
+        for host_id in hosts:    
+            if host_id == space_data['creator_id']: continue
+            host = bot.get_user(host_id)
+            if 'username' in host:
+                speakers_ats.append(f"@{host['username']}")
+
     if 'speaker_ids' in space_data:
         speakers = space_data['speaker_ids']
         for speaker_id in speakers:
             if speaker_id == space_data['creator_id']: continue
             speaker = bot.get_user(speaker_id) # these were cached before hand, or is {}
             if 'username' in speaker:
-                speakers_ats.append(f"@{speaker['username']}") 
+                speakers_ats.append(f"@{speaker['username']}")
 
     # encoded filepath so it points to the correct file
-    file_path = urllib.parse.quote(new_file_location.split('/')[-1])
-
+    file_path = urllib.parse.quote(file_info['url'])    
+    if file_path[0] == "/":  # since we already do that in the link section below
+        file_path = file_path[1:]
+    
     speakers = "\n\nSpeakers: " + ", ".join(speakers_ats) if len(speakers_ats) > 0 else ""    
-    # input(speakers)
 
+    # TODO: print participant count
     output = f"'{title}' {creator_username} ({round(audio.info.length/60, 2)} minutes){speakers}\n\nLink: https://www.cosmosibc.space/{file_path}"             
-    if len(output) > 280:
-        # output = f"{title}{creator_username} - https://www.cosmosibc.space/{file_path}"
+    if len(output) > 280:        
         output = f"'{title}'{creator_username} ({round(audio.info.length/60, 2)} minutes)\n\nLink: https://www.cosmosibc.space/{file_path}"    
 
-    # TWEET IT    
-    client.create_tweet(text=output) # future, reply to tweet with speakers, requires api.update_status? not sure why it does not work
-
-    # remove it from cache
-    remove_downloaded_space_from_cache(space_id)
+    # TWEET IT
+    if DISABLE_TWEETING_FOR_TESTING == True:
+        print("TWEET IS DISABLED, THIS IS WHAT IT WOULD BE")
+        print(output)
+        print("also not removing from cache :)")
+    else:
+        client.create_tweet(text=output) # future, reply to tweet with speakers, requires api.update_status? not sure why it does not work    
+        remove_downloaded_space_from_cache(space_id)
 
 while True:
+
+    if DISABLE_TWEETING_FOR_TESTING:
+        print("TWEETING IS DISABLED FOR TESTING, nothing will be live & cache will not clear")
+    else:
+        print("\n\n[!] TWEETING IS __ENABLED__, spaces will be tweeted & cache will clear")
+        time.sleep(5)       
+
     # def main():
     # ids = [1319287761048723458, 1138690476612046848] 
     ids = bot.get_following_ids()['user_ids_list']
@@ -212,29 +236,36 @@ while True:
             try: # this may break because of the weird space crash errors with twitter eu
                 # get speakers from the space (json)
 
-                if 'speaker_ids' in space_data:                
-                    speaker_ids = space_data['speaker_ids'] # "speaker_ids": [ "1223319210", "285771380", "2837818354" ],                
+                # TODO: pre run through these & query all speakedrs & hosts etc at the same time? in group of 100 right?
+                if 'speaker_ids' in space_data:             
+                    speaker_ids = list(space_data['speaker_ids']) # "speaker_ids": [ "1223319210", "285771380", "2837818354" ],
+                    if 'host_ids' in space_data:
+                        speaker_ids.extend(space_data['host_ids'])
+                    # TODO: do we keep or remove this?
+                    # if space_data['creator_id'] in speaker_ids:
+                    #     speaker_ids.remove(space_data['creator_id'])                    
                     bot.get_users_info_cache(speaker_ids, include_following=True) # idk if False would remove those who we follow or not.
                 else:
-                    print(f"Space {space_id} has no speakers, skipping. Space Data: {space_data}")
-                # now we can bot.get_user(id) to get their username                
+                    print(f"Space {space_id} has no speakers, will continue with download. Space Data: {space_data}")
+                # now we can bot.get_user(id) to get their username                                
 
-                download_and_tweet_space(space_id, space_data)
+                download_and_tweet_space(space_id, space_data, space_data['creator_id'])
             except Exception as e:
                 print(f"\nspaces_to_download ERROR HERE!")
 
-                # if "Space Ended" in repr(e):                  
-                #     print(f"Space {space_id} was not recorded, removing from cache.")
-                #     remove_downloaded_space_from_cache(space_id)
-                # elif "Space should start at" in repr(e): # Spaces was canceled
-                #     print(f"Space {space_id} was canceled, removing from cache.")
-                #     remove_downloaded_space_from_cache(space_id)
-                # else:                    
-                #     print(f"poc.py Exception: {space_id} -> {e[0:50]}...")
-                #     # I assume we should just remove the space from the queue if something goes wrong
-                with open(os.path.join(current_dir, "error_log.txt"), "a") as f:
-                    f.write(f"{space_id} -> {e}\n")
-                remove_downloaded_space_from_cache(space_id)                    
+                # todo: ensure this works as intended.
+                if "Space Ended" in repr(e):                  
+                    print(f"Space {space_id} was not recorded, removing from cache.")
+                    remove_downloaded_space_from_cache(space_id)
+                elif "Space should start at" in repr(e): # Spaces was canceled
+                    print(f"Space {space_id} was canceled, removing from cache.")
+                    remove_downloaded_space_from_cache(space_id)
+                else:                    
+                    print(f"poc.py Exception: {space_id} -> {e}...")
+                    # I assume we should just remove the space from the queue if something goes wrong
+                    with open(os.path.join(current_dir, "error_log.txt"), "a") as f:
+                        f.write(f"{space_id} -> {e}\n")
+                    # remove_downloaded_space_from_cache(space_id) # TODO ?                 
 
     end = time.time()
 

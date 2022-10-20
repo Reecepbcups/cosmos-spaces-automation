@@ -9,7 +9,7 @@
             "pinned_tweet_id": "1581045849030656000",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1531897777143353347/8zbE3Vl2.jpg",
             "public_metrics": {
-                "followers_count": 18803,
+                "followers_count": 18805,
                 "following_count": 1,
                 "tweet_count": 632,
                 "listed_count": 352
@@ -26,7 +26,7 @@
             "pinned_tweet_id": "1573727971558449154",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1348107683304337408/53heZyEL.jpg",
             "public_metrics": {
-                "followers_count": 36897,
+                "followers_count": 36898,
                 "following_count": 143,
                 "tweet_count": 581,
                 "listed_count": 718
@@ -35,20 +35,20 @@
             "verified": false
         },
         "1091033024387563520": {
-            "username": "CosmosGovNotifs",
+            "created_at": "2019-01-31T17:58:38.000Z",
+            "description": "\u269b\ufe0f Notifications for Accounts we are Following! #PoweredByAkash",
+            "following": false,
+            "id": "1091033024387563520",
+            "name": "Cosmos Governance Notifications",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1491457553422819330/RXtslUlM.jpg",
             "public_metrics": {
                 "followers_count": 1457,
                 "following_count": 36,
-                "tweet_count": 895,
+                "tweet_count": 902,
                 "listed_count": 26
             },
-            "description": "\u269b\ufe0f Notifications for Accounts we are Following! #PoweredByAkash",
-            "verified": false,
-            "name": "Cosmos Governance Notifications",
-            "created_at": "2019-01-31T17:58:38.000Z",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1491457553422819330/RXtslUlM.jpg",
-            "id": "1091033024387563520",
-            "following": false
+            "username": "CosmosGovNotifs",
+            "verified": false
         },
         "1109983403078807554": {
             "created_at": "2019-03-25T01:00:40.000Z",
@@ -61,7 +61,7 @@
             "public_metrics": {
                 "followers_count": 3721,
                 "following_count": 2665,
-                "tweet_count": 9771,
+                "tweet_count": 9772,
                 "listed_count": 55
             },
             "username": "lilgainzz",
@@ -76,7 +76,7 @@
             "pinned_tweet_id": "1575267284293124097",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1543100810560946176/H8SB8_9R.jpg",
             "public_metrics": {
-                "followers_count": 24044,
+                "followers_count": 24042,
                 "following_count": 960,
                 "tweet_count": 4291,
                 "listed_count": 434
@@ -161,7 +161,7 @@
             "public_metrics": {
                 "followers_count": 47674,
                 "following_count": 0,
-                "tweet_count": 4045,
+                "tweet_count": 4046,
                 "listed_count": 455
             },
             "username": "StargazeZone",
@@ -224,7 +224,7 @@
             "name": "Sommelier",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1515220591686692872/QPSVppoA.png",
             "public_metrics": {
-                "followers_count": 20016,
+                "followers_count": 20019,
                 "following_count": 87,
                 "tweet_count": 1480,
                 "listed_count": 377
@@ -242,7 +242,7 @@
             "public_metrics": {
                 "followers_count": 68908,
                 "following_count": 1668,
-                "tweet_count": 29798,
+                "tweet_count": 29804,
                 "listed_count": 518
             },
             "username": "Cephii1",
@@ -259,7 +259,7 @@
             "public_metrics": {
                 "followers_count": 679,
                 "following_count": 255,
-                "tweet_count": 1388,
+                "tweet_count": 1389,
                 "listed_count": 10
             },
             "username": "_erikio",
@@ -273,10 +273,10 @@
             "name": "Osmosis \ud83e\uddea",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1504543889709015041/82CEWnSH.png",
             "public_metrics": {
-                "followers_count": 137032,
+                "followers_count": 137036,
                 "following_count": 2,
                 "tweet_count": 619,
-                "listed_count": 1618
+                "listed_count": 1620
             },
             "username": "osmosiszone",
             "verified": false
@@ -306,7 +306,7 @@
             "pinned_tweet_id": "1577653298596716544",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1485983931392757763/CtgLlnbI.jpg",
             "public_metrics": {
-                "followers_count": 17399,
+                "followers_count": 17402,
                 "following_count": 237,
                 "tweet_count": 1120,
                 "listed_count": 318
@@ -357,7 +357,7 @@
             "pinned_tweet_id": "1529526339195346946",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1529586351565332482/I4-RyYjr.jpg",
             "public_metrics": {
-                "followers_count": 9987,
+                "followers_count": 9981,
                 "following_count": 503,
                 "tweet_count": 1247,
                 "listed_count": 133
@@ -407,7 +407,7 @@
             "pinned_tweet_id": "1581959900023820289",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1554838652383010817/vPcu5zqy.jpg",
             "public_metrics": {
-                "followers_count": 10729,
+                "followers_count": 10727,
                 "following_count": 399,
                 "tweet_count": 2660,
                 "listed_count": 127
@@ -424,10 +424,10 @@
             "pinned_tweet_id": "1566506290586607616",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1557787683098869760/gPwiVf3L.jpg",
             "public_metrics": {
-                "followers_count": 7876,
+                "followers_count": 7877,
                 "following_count": 747,
                 "tweet_count": 2678,
-                "listed_count": 122
+                "listed_count": 123
             },
             "username": "Cosmos_Spaces",
             "verified": false
@@ -457,7 +457,7 @@
             "pinned_tweet_id": "1566589797422055431",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1513307253859880969/91BELmHz.jpg",
             "public_metrics": {
-                "followers_count": 507,
+                "followers_count": 508,
                 "following_count": 184,
                 "tweet_count": 371,
                 "listed_count": 1
@@ -474,10 +474,10 @@
             "pinned_tweet_id": "1575493066487894016",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1538942713965445120/S9IIkgPS.png",
             "public_metrics": {
-                "followers_count": 18523,
+                "followers_count": 18526,
                 "following_count": 149,
                 "tweet_count": 587,
-                "listed_count": 231
+                "listed_count": 232
             },
             "username": "stride_zone",
             "verified": false
@@ -490,10 +490,10 @@
             "name": "Cosmos - Internet of Blockchains \u269b\ufe0f",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1572270323105660931/wfrYRGAC.jpg",
             "public_metrics": {
-                "followers_count": 474337,
+                "followers_count": 474347,
                 "following_count": 393,
                 "tweet_count": 3668,
-                "listed_count": 4595
+                "listed_count": 4594
             },
             "username": "cosmos",
             "verified": false
@@ -540,9 +540,9 @@
             "pinned_tweet_id": "1579489403202072576",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1576721831888756736/zIIIxudP.jpg",
             "public_metrics": {
-                "followers_count": 27183,
+                "followers_count": 27184,
                 "following_count": 837,
-                "tweet_count": 13725,
+                "tweet_count": 13727,
                 "listed_count": 400
             },
             "username": "gregosuri",
@@ -673,7 +673,7 @@
             "pinned_tweet_id": "1578666987546619904",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1581352014902341633/R_Lc-bF9.jpg",
             "public_metrics": {
-                "followers_count": 5551,
+                "followers_count": 5552,
                 "following_count": 3229,
                 "tweet_count": 33546,
                 "listed_count": 72
@@ -721,7 +721,7 @@
             "name": "Akash Network",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1575558636574834699/JVctgni7.png",
             "public_metrics": {
-                "followers_count": 84638,
+                "followers_count": 84657,
                 "following_count": 305,
                 "tweet_count": 4887,
                 "listed_count": 957
@@ -754,7 +754,7 @@
             "name": "Cosmos SDK",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1287816453706539009/SfVSxQWP.jpg",
             "public_metrics": {
-                "followers_count": 16000,
+                "followers_count": 16001,
                 "following_count": 301,
                 "tweet_count": 711,
                 "listed_count": 318
@@ -763,20 +763,20 @@
             "verified": false
         },
         "965693474753466371": {
-            "username": "IBC_Archive",
+            "created_at": "2018-02-19T21:04:00.000Z",
+            "description": "(WIP) Auto archives & edits down twitter spaces from accounts we follow, then uploads to our website!\n\n(( Will be open source ))",
+            "following": false,
+            "id": "965693474753466371",
+            "name": "The Interchain Spaces Archive",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1581429340704735239/GoTNCXa6.jpg",
             "public_metrics": {
-                "followers_count": 35,
-                "following_count": 24,
-                "tweet_count": 9,
+                "followers_count": 44,
+                "following_count": 26,
+                "tweet_count": 16,
                 "listed_count": 0
             },
-            "description": "(WIP) Auto archives & edits twitter spaces from accounts we follow, then uploads to our website!\n\n(( Will be open source ))",
-            "verified": false,
-            "name": "The Interchain Spaces Archive",
-            "created_at": "2018-02-19T21:04:00.000Z",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1581429340704735239/GoTNCXa6.jpg",
-            "id": "965693474753466371",
-            "following": false
+            "username": "IBC_Archive",
+            "verified": false
         },
         "967740061801504768": {
             "created_at": "2018-02-25T12:36:25.000Z",
@@ -786,7 +786,7 @@
             "name": "Jun\u00f8",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1463819969620234247/kGvPhnXc.jpg",
             "public_metrics": {
-                "followers_count": 83083,
+                "followers_count": 83088,
                 "following_count": 0,
                 "tweet_count": 1815,
                 "listed_count": 726

@@ -202,9 +202,9 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
     title = space_data['title']
     participants = space_data['participant_count']
     speakers = "🎤 " + ", ".join(speakers_ats) if len(speakers_ats) > 0 else ""    
-    audio_time = f"{round(audio.info.length/60, 2)}min"
+    audio_time = f"{round(audio.info.length/60, 2)} minutes"
         
-    base = f"{title} {creator_username}\n{audio_time} {participants}👀"
+    base = f"{title} {creator_username}\n{audio_time}. 👀: {participants}"
 
     output = f"{base}\n\n{speakers}\n\n"
     pre_link_len = len(output)
@@ -313,7 +313,7 @@ while True:
     print(f"Finished spaces check in {round(end-start, 2)} seconds")
     minutes = (end-start)/60
 
-    MINUTES_WAIT = 10
+    MINUTES_WAIT = 5
     if minutes > MINUTES_WAIT:
         print(f"Downloaded spaces in {round(minutes, 2)} minutes, continuing")
         continue

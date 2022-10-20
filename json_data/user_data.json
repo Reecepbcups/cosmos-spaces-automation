@@ -26,7 +26,7 @@
             "pinned_tweet_id": "1581045849030656000",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1531897777143353347/8zbE3Vl2.jpg",
             "public_metrics": {
-                "followers_count": 18830,
+                "followers_count": 18831,
                 "following_count": 1,
                 "tweet_count": 632,
                 "listed_count": 353
@@ -43,7 +43,7 @@
             "pinned_tweet_id": "1573727971558449154",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1348107683304337408/53heZyEL.jpg",
             "public_metrics": {
-                "followers_count": 36929,
+                "followers_count": 36931,
                 "following_count": 143,
                 "tweet_count": 582,
                 "listed_count": 719
@@ -76,7 +76,7 @@
             "name": "Comdex - Democratizing Finance",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1478590027428888577/vNDkoMvK.jpg",
             "public_metrics": {
-                "followers_count": 29503,
+                "followers_count": 29500,
                 "following_count": 132,
                 "tweet_count": 1905,
                 "listed_count": 410
@@ -158,7 +158,7 @@
             "pinned_tweet_id": "1575267284293124097",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1543100810560946176/H8SB8_9R.jpg",
             "public_metrics": {
-                "followers_count": 24059,
+                "followers_count": 24094,
                 "following_count": 960,
                 "tweet_count": 4295,
                 "listed_count": 434
@@ -240,7 +240,7 @@
             "name": "CosmWasm",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1477926296747401219/HxWkIDqO.png",
             "public_metrics": {
-                "followers_count": 21491,
+                "followers_count": 21490,
                 "following_count": 254,
                 "tweet_count": 1331,
                 "listed_count": 473
@@ -274,7 +274,7 @@
             "pinned_tweet_id": "1582880309166559232",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1507391623914737669/U3fR7nxh.jpg",
             "public_metrics": {
-                "followers_count": 47754,
+                "followers_count": 47750,
                 "following_count": 0,
                 "tweet_count": 4061,
                 "listed_count": 458
@@ -313,6 +313,23 @@
             "username": "DonCryptonium",
             "created_at": "2020-10-10T08:33:39.000Z",
             "following": true
+        },
+        "1318925260755030016": {
+            "created_at": "2020-10-21T14:41:15.000Z",
+            "description": "Marketing @agoric",
+            "following": false,
+            "id": "1318925260755030016",
+            "name": "Santiago",
+            "pinned_tweet_id": "1567611805031190529",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1337190953770225664/hrFyBNIQ.jpg",
+            "public_metrics": {
+                "followers_count": 139,
+                "following_count": 30,
+                "tweet_count": 58,
+                "listed_count": 1
+            },
+            "username": "seminorific",
+            "verified": false
         },
         "1321982248401457154": {
             "created_at": "2020-10-30T01:08:28.000Z",
@@ -373,12 +390,28 @@
             "pinned_tweet_id": "1575876438892642304",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1515220591686692872/QPSVppoA.png",
             "public_metrics": {
-                "followers_count": 20144,
+                "followers_count": 20149,
                 "following_count": 87,
                 "tweet_count": 1483,
                 "listed_count": 377
             },
             "username": "sommfinance",
+            "verified": false
+        },
+        "135025002": {
+            "created_at": "2010-04-20T03:49:08.000Z",
+            "description": "Full time Discord DM spammer blocker.  Product at Agoric in between",
+            "following": false,
+            "id": "135025002",
+            "name": "Rowland Graus",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1458399235280412677/Rt8y27Ik.jpg",
+            "public_metrics": {
+                "followers_count": 415,
+                "following_count": 922,
+                "tweet_count": 873,
+                "listed_count": 21
+            },
+            "username": "rowlandgraus",
             "verified": false
         },
         "1355366118119108612": {
@@ -389,9 +422,9 @@
             "name": "Cephii",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1579871615130734598/Z8vAM-Ls.jpg",
             "public_metrics": {
-                "followers_count": 68921,
-                "following_count": 1669,
-                "tweet_count": 29826,
+                "followers_count": 68924,
+                "following_count": 1673,
+                "tweet_count": 29827,
                 "listed_count": 518
             },
             "username": "Cephii1",
@@ -408,7 +441,7 @@
             "public_metrics": {
                 "followers_count": 680,
                 "following_count": 255,
-                "tweet_count": 1389,
+                "tweet_count": 1391,
                 "listed_count": 10
             },
             "username": "_erikio",
@@ -422,7 +455,7 @@
             "name": "Osmosis \ud83e\uddea",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1504543889709015041/82CEWnSH.png",
             "public_metrics": {
-                "followers_count": 137075,
+                "followers_count": 137055,
                 "following_count": 2,
                 "tweet_count": 619,
                 "listed_count": 1619
@@ -487,9 +520,9 @@
             "pinned_tweet_id": "1577653298596716544",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1485983931392757763/CtgLlnbI.jpg",
             "public_metrics": {
-                "followers_count": 17420,
+                "followers_count": 17392,
                 "following_count": 237,
-                "tweet_count": 1125,
+                "tweet_count": 1126,
                 "listed_count": 319
             },
             "username": "coinhall_org",
@@ -515,7 +548,7 @@
         "1431764394464223237": {
             "created_at": "2021-08-28T23:43:45.000Z",
             "description": "DeFi with Privacy - Simple Tools, Creating A More Powerful You. Enabling @Silk_Stable via @SecretNetwork",
-            "following": false,
+            "following": true,
             "id": "1431764394464223237",
             "name": "Shade Protocol",
             "pinned_tweet_id": "1580212949892812800",
@@ -523,7 +556,7 @@
             "public_metrics": {
                 "followers_count": 34332,
                 "following_count": 78,
-                "tweet_count": 1826,
+                "tweet_count": 1827,
                 "listed_count": 469
             },
             "username": "Shade_Protocol",
@@ -532,14 +565,14 @@
         "143228545": {
             "created_at": "2010-05-12T23:14:13.000Z",
             "description": "Pro-Trading dashboard + DEX Aggregator - supporting $JUNO, $LUNA, $LUNC & $OSMO ecosystems \ud83d\udcc8\ud83d\udcca\ud83c\udf16 Terra Projects dashboard https://t.co/TmHCs2URli \ud83d\udd25",
-            "following": false,
+            "following": true,
             "id": "143228545",
             "name": "TFM \ud83d\udcca",
             "pinned_tweet_id": "1562896119247835138",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1525530894307672064/LsQH7soc.jpg",
             "public_metrics": {
-                "followers_count": 21670,
-                "following_count": 207,
+                "followers_count": 21674,
+                "following_count": 208,
                 "tweet_count": 1424,
                 "listed_count": 191
             },
@@ -638,7 +671,7 @@
             "pinned_tweet_id": "1529526339195346946",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1529586351565332482/I4-RyYjr.jpg",
             "public_metrics": {
-                "followers_count": 10011,
+                "followers_count": 10008,
                 "following_count": 503,
                 "tweet_count": 1247,
                 "listed_count": 133
@@ -700,12 +733,12 @@
         "1459665306268454915": {
             "created_at": "2021-11-13T23:32:17.000Z",
             "description": "Building @SparkIBC & @InterchainInfo\n | \nJust a fan of good tech.\n | \n$LINK $ATOM $OSMO $JUNO $SCRT\n | \n\u2b21Marine since day 1.",
-            "following": false,
+            "following": true,
             "id": "1459665306268454915",
             "name": "Tendermint Timmy\u269b\ufe0f\u26d3\ufe0f\u2b21",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1552102410314813440/GriapGlV.jpg",
             "public_metrics": {
-                "followers_count": 5384,
+                "followers_count": 5386,
                 "following_count": 1256,
                 "tweet_count": 6108,
                 "listed_count": 97
@@ -797,6 +830,23 @@
             "username": "rekt_gang",
             "verified": false
         },
+        "1485742987418247169": {
+            "created_at": "2022-01-24T22:37:54.000Z",
+            "description": "Fully collateralized stable token to #RideTheCosmos | Built on @agoric",
+            "following": true,
+            "id": "1485742987418247169",
+            "name": "Inter Protocol ($IST)",
+            "pinned_tweet_id": "1580639286810259456",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1526232829474004995/oABJrM5Z.png",
+            "public_metrics": {
+                "followers_count": 2508,
+                "following_count": 14,
+                "tweet_count": 122,
+                "listed_count": 50
+            },
+            "username": "inter_protocol",
+            "verified": false
+        },
         "1485744238805622789": {
             "created_at": "2022-01-24T22:40:12.000Z",
             "description": "Community - Artificial Intelligence - Gaming - Simplifying accessibility to AI in the Cosmos Ecosystem",
@@ -823,7 +873,7 @@
             "pinned_tweet_id": "1566506290586607616",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1557787683098869760/gPwiVf3L.jpg",
             "public_metrics": {
-                "followers_count": 7886,
+                "followers_count": 7887,
                 "following_count": 747,
                 "tweet_count": 2682,
                 "listed_count": 122
@@ -930,6 +980,22 @@
             "username": "0xjordy",
             "verified": false
         },
+        "1512163977664495616": {
+            "created_at": "2022-04-07T20:22:47.000Z",
+            "description": "The official profile for the DCF - we exist to build mechanisms for human cooperation from tools of secure computing, cryptography & distributed systems",
+            "following": false,
+            "id": "1512163977664495616",
+            "name": "DCF",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1527053112250204160/fvqrOvv3.jpg",
+            "public_metrics": {
+                "followers_count": 268,
+                "following_count": 126,
+                "tweet_count": 204,
+                "listed_count": 6
+            },
+            "username": "DCF_io",
+            "verified": false
+        },
         "1519990048497754113": {
             "created_at": "2022-04-29T10:42:16.000Z",
             "description": "The Liquid Staking Zone\n\nTokens supported: $ATOM, $JUNO, $STARS ( $OSMO coming October 29th! )\n\nJoin us: https://t.co/hPe04OqCOa",
@@ -939,7 +1005,7 @@
             "pinned_tweet_id": "1575493066487894016",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1538942713965445120/S9IIkgPS.png",
             "public_metrics": {
-                "followers_count": 18580,
+                "followers_count": 18585,
                 "following_count": 150,
                 "tweet_count": 587,
                 "listed_count": 233
@@ -955,7 +1021,7 @@
             "name": "Cosmos - Internet of Blockchains \u269b\ufe0f",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1572270323105660931/wfrYRGAC.jpg",
             "public_metrics": {
-                "followers_count": 474457,
+                "followers_count": 474437,
                 "following_count": 393,
                 "tweet_count": 3670,
                 "listed_count": 4596
@@ -1323,6 +1389,38 @@
             "username": "NoahSaso",
             "verified": false
         },
+        "596652528": {
+            "created_at": "2012-06-01T15:48:23.000Z",
+            "description": "",
+            "following": false,
+            "id": "596652528",
+            "name": "Dean Tribble",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/3287964801/1f27058e19821a3580b481ea1d9c4f44.jpeg",
+            "public_metrics": {
+                "followers_count": 3386,
+                "following_count": 479,
+                "tweet_count": 722,
+                "listed_count": 77
+            },
+            "username": "DeanTribble",
+            "verified": false
+        },
+        "7910872": {
+            "created_at": "2007-08-02T16:16:21.000Z",
+            "description": "@iqlusioninc. @sommfinance. interoperable blockchains with @cosmos. smart contract for all with @agoric and https://t.co/MPwSp8GcKs he/him. shape rotator",
+            "following": false,
+            "id": "7910872",
+            "name": "Zaki \u269b\ufe0f\ud83c\udf77",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1532227365656358912/jYe-_f5E.jpg",
+            "public_metrics": {
+                "followers_count": 35022,
+                "following_count": 13587,
+                "tweet_count": 65270,
+                "listed_count": 1028
+            },
+            "username": "zmanian",
+            "verified": false
+        },
         "82608153": {
             "created_at": "2009-10-15T12:44:20.000Z",
             "description": "Systempunk building @StargazeZone | @JunoNetwork | @DA0_DA0.",
@@ -1414,7 +1512,7 @@
             "name": "Akash Network",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1575558636574834699/JVctgni7.png",
             "public_metrics": {
-                "followers_count": 84682,
+                "followers_count": 84681,
                 "following_count": 305,
                 "tweet_count": 4887,
                 "listed_count": 957
@@ -1447,7 +1545,7 @@
             "name": "Cosmos SDK",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1287816453706539009/SfVSxQWP.jpg",
             "public_metrics": {
-                "followers_count": 16004,
+                "followers_count": 16002,
                 "following_count": 301,
                 "tweet_count": 711,
                 "listed_count": 318
@@ -1479,7 +1577,7 @@
             "name": "Jun\u00f8",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1463819969620234247/kGvPhnXc.jpg",
             "public_metrics": {
-                "followers_count": 83123,
+                "followers_count": 83119,
                 "following_count": 0,
                 "tweet_count": 1817,
                 "listed_count": 726

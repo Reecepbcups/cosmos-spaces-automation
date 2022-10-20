@@ -83,6 +83,22 @@
             "scheduled_start": "2022-10-20T13:00:22.000Z",
             "state": "scheduled",
             "title": "Stake Easy - Loop Finance AMA - Boosted farming with dual incentives"
+        },
+        "1ypJddaPbPjJW": {
+            "created_at": "2022-10-20T02:50:39.000Z",
+            "creator_id": "1355366118119108612",
+            "host_ids": [
+                "1355366118119108612",
+                "1398290390374027271"
+            ],
+            "id": "1ypJddaPbPjJW",
+            "participant_count": 11,
+            "speaker_ids": [
+                "1398290390374027271"
+            ],
+            "started_at": "2022-10-20T02:50:42.000Z",
+            "state": "live",
+            "title": "JOIN THE HUNT FOR DO KWON? $luna $lunc"
         }
     }
 }

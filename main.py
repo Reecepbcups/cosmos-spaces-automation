@@ -2,22 +2,23 @@
 # try and download, see if it auto handles logic of if it is ended or not (step1.py)
 
 
-import os, time
-from sched import scheduler
-from pkgutil import get_data
-import re, requests, json, datetime
-
-from src.download_processing import Processing
+import datetime
+import json
 import multiprocessing as mp
-
-import tweepy
-from dotenv import load_dotenv
-from src.spaces import Spaces
-from mutagen.mp3 import MP3
-
+import os
+import time
 import urllib.parse
 
+import requests
+import tweepy
+from dotenv import load_dotenv
+from mutagen.mp3 import MP3
+
 from src.bot import Bot
+from src.download_processing import Processing
+from src.spaces import Spaces
+from src.storage import get_json, save_json
+
 load_dotenv()
 if not os.path.exists('.env'):
     print("Please create a .env file with your Twitter API keys. cp .env.example .env")
@@ -50,8 +51,6 @@ spaces = Spaces(BEARER_TOKEN, bot)
 headers = {
     'Authorization': f"Bearer {BEARER_TOKEN}",
 }
-
-from src.storage import get_json, save_json
 
 #  TODO: run every 5-10 minutes?
 def cache_scheduled_or_live_spaces(ids: list[str | int]) -> list[str]: # cache the space ids for download later

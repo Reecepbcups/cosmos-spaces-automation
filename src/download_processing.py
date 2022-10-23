@@ -6,6 +6,9 @@ import numpy as np
 from time import sleep, time
 import datetime
 
+from pydub import AudioSegment
+
+COMPRESSION_BITRATE = "96k" # 128k default, but saves like 50-60% of storage
 
 class Processing:
     def __init__(self):
@@ -33,7 +36,7 @@ class Processing:
         space = twspace_dl.TwspaceDL(space_obj, self.filename_fmt)        
         # space = twspace_dl.TwspaceDL(space_obj, rec_space_url.split("/")[-1]) # where the .mp3 would be the spaces ID. So we need to save metadata for website   
         # space.download()        
-        filename = f"{space.filename}.m4a".encode("ascii", "ignore").decode()
+        filename = f"{space.filename}.m4a".encode("ascii", "ignore").decode().replace('"', '').replace('\'', '') # remove ' or " from title
         new_filename = filename.replace(" ", "_")        
 
         # input(new_filename)
@@ -103,13 +106,20 @@ class Processing:
         os.system(f"bash ffmpeg_run.sh '{filename}'")
         os.system(f"bash ffmpeg_merge.sh '{filename}'")
 
-        # todo; we could rm self.DOWNLOADS_DIR/{filename} here to delete the old mp4 file
+        # todo; we could rm self.DOWNLOADS_DIR/{filename} here to delete the old mp4 file? or just make a cron job
 
         # todo: better logic between this & download space function
         # shutil.move(os.path.join(self.DOWNLOADS_DIR, updated_mp3_filename), os.path.dirname(new_file_location))
         old_path = os.path.join(self.FINAL_DIR, updated_mp3_filename)
         print(old_path, ' moving to ', new_file_location)
         shutil.move(old_path, new_file_location)
+
+        # compress the file down to a lower bitrate slightly (no real noticeable difference)
+        print(f"Starting Audio compression for {new_file_location}...")
+        now =  time.time()
+        sound = AudioSegment.from_file(new_file_location)
+        sound.export(new_file_location, format="mp3", bitrate=COMPRESSION_BITRATE)
+        print(f'Finished compression in {time.time() - now}. Bitrate: {COMPRESSION_BITRATE}')
         
         return {
             "new_file_path": new_file_location,

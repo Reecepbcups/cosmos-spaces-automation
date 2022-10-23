@@ -1,5 +1,7 @@
 tweepy # for tweets and stuff
 
+pydub # audio compression
+
 twspace-dl # https://github.com/HoloArchivists/twspace-dl
 
 python-dotenv

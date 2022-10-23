@@ -111,7 +111,7 @@ def get_spaces_from_cache_to_download(bot: Bot) -> dict:
             # input(space_data) # {'title': 'Totally Uninformed Opinions on NFTs Web3 Gaming Tech Startups VC #TUO', 'id': '1lPKqBQeLNlGb', 'participant_count': 27, 'speaker_ids': ['84189927', '47643', '1550532439793074176', '1432495935167209475', '1361435468', '1046562319902240768', '1449492944830877698'], 'started_at': '2022-10-15T22:09:21.000Z', 'host_ids': ['1138690476612046848', '1449492944830877698'], 'created_at': '2022-10-15T22:09:19.000Z', 'state': 'live', 'creator_id': '1138690476612046848'}
             print(f"Space {url} is still live. Not downloading")
             continue
-        else:
+        else: # ended
             print(f"time to download {space_id} as it has ended (not live or scheduled) = {url}")   
             spaces_to_download[space_id] = space_data
 
@@ -199,12 +199,13 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
     if file_path[0] == "/":  # since we already do that in the link section below
         file_path = file_path[1:]
 
-    title = space_data['title']
+    title = str(space_data['title']).replace('"', '').replace('\'', '') # remove ' or " from title
     participants = space_data['participant_count']
     speakers = "🎤 " + ", ".join(speakers_ats) if len(speakers_ats) > 0 else ""    
     audio_time = f"{round(audio.info.length/60, 2)} minutes"
         
-    base = f"{title} {creator_username}\n{audio_time}. 👀: {participants}"
+    # requires '' so that if it starts with an @ it does not treat it as a reply.
+    base = f"'{title}' {creator_username}\n{audio_time}. 👀: {participants}"
 
     output = f"{base}\n\n{speakers}\n\n"
     pre_link_len = len(output)
@@ -270,7 +271,7 @@ while True:
             for space_id in list(manual_spaces_list['manual']):
                 space_data = bot.get_space_by_id(space_id=space_id)
                 print(f"manual space: {space_id} found!")  
-                spaces_to_download[space_id] = space_data                
+                spaces_to_download[space_id] = space_data             
 
         # Automatic
         for space_id, space_data in spaces_to_download.items():   
@@ -301,8 +302,11 @@ while True:
                 elif "Space should start at" in repr(e): # Spaces was canceled
                     print(f"Space {space_id} was canceled, removing from cache.")
                     remove_downloaded_space_from_cache(space_id)
-                else:                    
-                    print(f"poc.py Exception: {space_id} -> {e}...")
+                elif "Space isn't available" in repr(e): # Spaces was not recorded
+                    print(f"Space {space_id} was not recorded, removing from cache.")
+                    remove_downloaded_space_from_cache(space_id)
+                else:
+                    print(f"main.py Exception: {space_id} -> {e}...")
                     # I assume we should just remove the space from the queue if something goes wrong
                     with open(os.path.join(current_dir, "error_log.txt"), "a") as f:
                         f.write(f"{space_id} -> {e}\n")

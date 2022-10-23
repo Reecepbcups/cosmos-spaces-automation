@@ -12,18 +12,6 @@
             "state": "scheduled",
             "title": "Invitado especial @ComposableFin, de #DOTSAMA a @Cosmos"
         },
-        "1YpJkgbXNPPJj": {
-            "created_at": "2022-10-17T04:08:15.000Z",
-            "creator_id": "1356454978320293888",
-            "host_ids": [
-                "1356454978320293888"
-            ],
-            "id": "1YpJkgbXNPPJj",
-            "participant_count": 0,
-            "scheduled_start": "2022-10-25T01:00:00.000Z",
-            "state": "scheduled",
-            "title": "Wolfmanknows talking about DAOs, Art Vault, NFTs and more."
-        },
         "1YpJkgbRrowJj": {
             "created_at": "2022-10-17T08:23:45.000Z",
             "creator_id": "1347266698236227584",
@@ -36,30 +24,6 @@
             "state": "scheduled",
             "title": "BTC-ETH Strategies and Strategy Tokens launch. "
         },
-        "1MnGnpAzybLxO": {
-            "created_at": "2022-10-19T20:46:11.000Z",
-            "creator_id": "1503785102542790662",
-            "host_ids": [
-                "1503785102542790662"
-            ],
-            "id": "1MnGnpAzybLxO",
-            "participant_count": 0,
-            "scheduled_start": "2022-10-22T20:00:56.000Z",
-            "state": "scheduled",
-            "title": "Que es @Archway y su enfoque en recompensar DEVs por sus Dapps"
-        },
-        "1gqGvymBogAKB": {
-            "created_at": "2022-10-20T10:53:35.000Z",
-            "creator_id": "1109983403078807554",
-            "host_ids": [
-                "1109983403078807554"
-            ],
-            "id": "1gqGvymBogAKB",
-            "participant_count": 0,
-            "scheduled_start": "2022-10-21T22:00:00.000Z",
-            "state": "scheduled",
-            "title": "@Agoric Q&A with @DeanTribble | Hosted by: @Cosmos_Spaces "
-        },
         "1kvKpmgBBZaGE": {
             "created_at": "2022-10-18T21:12:21.000Z",
             "creator_id": "1323334073453023233",
@@ -71,6 +35,61 @@
             "scheduled_start": "2022-10-26T16:00:04.000Z",
             "state": "scheduled",
             "title": "Top 6 DeFi Blockchains \ud83d\udcaa EVM  & Cosmos \ud83c\udfc6"
+        },
+        "1ynKOabjodkJR": {
+            "created_at": "2022-10-21T18:35:34.000Z",
+            "creator_id": "922670090834780162",
+            "host_ids": [
+                "922670090834780162"
+            ],
+            "id": "1ynKOabjodkJR",
+            "participant_count": 0,
+            "scheduled_start": "2022-10-26T15:00:00.000Z",
+            "state": "scheduled",
+            "title": "Akash Weekly w/Greg Osuri ft. James Friel (@Axelarcore)"
+        },
+        "1YpJkgbXNPPJj": {
+            "created_at": "2022-10-17T04:08:15.000Z",
+            "creator_id": "1356454978320293888",
+            "host_ids": [
+                "1356454978320293888"
+            ],
+            "id": "1YpJkgbXNPPJj",
+            "participant_count": 0,
+            "scheduled_start": "2022-10-25T01:00:00.000Z",
+            "state": "scheduled",
+            "title": "Wolfmanknows talking about DAOs, Art Vault, NFTs and more."
+        },
+        "1LyxBqVLejjJN": {
+            "created_at": "2022-10-23T16:41:04.000Z",
+            "creator_id": "1088745803819040770",
+            "host_ids": [
+                "1088745803819040770"
+            ],
+            "id": "1LyxBqVLejjJN",
+            "participant_count": 0,
+            "scheduled_start": "2022-10-27T14:30:49.000Z",
+            "state": "scheduled",
+            "title": "Weekly Twitter Spaces w/ OKC Network"
+        },
+        "1BdxYyzeAzLxX": {
+            "created_at": "2022-10-23T21:38:55.000Z",
+            "creator_id": "1355366118119108612",
+            "host_ids": [
+                "1355366118119108612",
+                "1398290390374027271"
+            ],
+            "id": "1BdxYyzeAzLxX",
+            "participant_count": 54,
+            "speaker_ids": [
+                "1429279962117312512",
+                "1518683525364555776",
+                "1464145907088252961",
+                "1398290390374027271"
+            ],
+            "started_at": "2022-10-23T21:38:57.000Z",
+            "state": "live",
+            "title": "Casual"
         }
     }
 }

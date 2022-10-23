@@ -25,6 +25,7 @@ if not os.path.exists('.env'):
     exit(1)
 
 DISABLE_TWEETING_FOR_TESTING = False
+MINUTES_WAIT = 10
 
 current_dir = os.path.dirname(os.path.realpath(__file__))
 json_data_dir = os.path.join(current_dir, "json_data")    
@@ -320,8 +321,7 @@ while True:
 
     print(f"Finished spaces check in {round(end-start, 2)} seconds")
     minutes = (end-start)/60
-
-    MINUTES_WAIT = 5
+    
     if minutes > MINUTES_WAIT:
         print(f"Downloaded spaces in {round(minutes, 2)} minutes, continuing")
         continue

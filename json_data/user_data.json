@@ -109,9 +109,9 @@
             "name": "Cosmos Governance Notifications",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1491457553422819330/RXtslUlM.jpg",
             "public_metrics": {
-                "followers_count": 1457,
+                "followers_count": 1466,
                 "following_count": 36,
-                "tweet_count": 902,
+                "tweet_count": 916,
                 "listed_count": 26
             },
             "username": "CosmosGovNotifs",
@@ -175,7 +175,7 @@
             "pinned_tweet_id": "1575267284293124097",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1543100810560946176/H8SB8_9R.jpg",
             "public_metrics": {
-                "followers_count": 25918,
+                "followers_count": 25919,
                 "following_count": 963,
                 "tweet_count": 4308,
                 "listed_count": 448
@@ -441,10 +441,10 @@
             "pinned_tweet_id": "1583857705021603841",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1480920131152887823/vuks_y2H.jpg",
             "public_metrics": {
-                "followers_count": 60886,
+                "followers_count": 60890,
                 "following_count": 142,
                 "tweet_count": 4251,
-                "listed_count": 632
+                "listed_count": 631
             },
             "username": "defiyield_app",
             "verified": true
@@ -539,7 +539,7 @@
             "name": "Cephii",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1584029731753795586/fDWeFDGD.jpg",
             "public_metrics": {
-                "followers_count": 68979,
+                "followers_count": 68978,
                 "following_count": 1678,
                 "tweet_count": 29923,
                 "listed_count": 521
@@ -572,7 +572,7 @@
             "name": "Osmosis \ud83e\uddea",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1504543889709015041/82CEWnSH.png",
             "public_metrics": {
-                "followers_count": 137277,
+                "followers_count": 137278,
                 "following_count": 2,
                 "tweet_count": 620,
                 "listed_count": 1633
@@ -1256,7 +1256,7 @@
             "pinned_tweet_id": "1584240887088893952",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1554838652383010817/vPcu5zqy.jpg",
             "public_metrics": {
-                "followers_count": 10734,
+                "followers_count": 10735,
                 "following_count": 348,
                 "tweet_count": 2690,
                 "listed_count": 127
@@ -1828,16 +1828,16 @@
         },
         "2712978728": {
             "created_at": "2014-08-06T21:22:23.000Z",
-            "description": "Cosmos Protocol Engineer \u2022 Juno Core-2 \u2022 @CosmosGovNotifs @IBC_Archive",
-            "following": true,
+            "description": "Protocol Engineer \u2022 Juno Core-2 \u2022 @CosmosGovNotifs @IBC_Archive",
+            "following": false,
             "id": "2712978728",
             "name": "Reece Williams",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1574779134739357697/Kxv7nmks.jpg",
             "public_metrics": {
-                "followers_count": 902,
+                "followers_count": 901,
                 "following_count": 87,
                 "tweet_count": 350,
-                "listed_count": 21
+                "listed_count": 22
             },
             "username": "Reecepbcups_",
             "verified": false
@@ -2311,10 +2311,10 @@
             "name": "The Interchain Spaces Archive",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1581429340704735239/GoTNCXa6.jpg",
             "public_metrics": {
-                "followers_count": 44,
-                "following_count": 26,
-                "tweet_count": 16,
-                "listed_count": 0
+                "followers_count": 63,
+                "following_count": 28,
+                "tweet_count": 29,
+                "listed_count": 2
             },
             "username": "IBC_Archive",
             "verified": false
@@ -2328,7 +2328,7 @@
             "pinned_tweet_id": "1584182699262349313",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1463819969620234247/kGvPhnXc.jpg",
             "public_metrics": {
-                "followers_count": 83430,
+                "followers_count": 83431,
                 "following_count": 0,
                 "tweet_count": 1829,
                 "listed_count": 728

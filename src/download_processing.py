@@ -71,7 +71,7 @@ class Processing:
             return new_file_location
 
         if os.path.exists(new_file_location):
-            print(f"File {filename} already exists in final folder (has been edited already).")
+            print(f"File {filename} already exists in final folder (has been edited already) - {new_file_location}.")
             return new_file_location
 
         # create new dir of the parent dir where the files will be here
@@ -116,10 +116,10 @@ class Processing:
 
         # compress the file down to a lower bitrate slightly (no real noticeable difference)
         print(f"Starting Audio compression for {new_file_location}...")
-        now =  time.time()
+        now =  time()
         sound = AudioSegment.from_file(new_file_location)
         sound.export(new_file_location, format="mp3", bitrate=COMPRESSION_BITRATE)
-        print(f'Finished compression in {time.time() - now}. Bitrate: {COMPRESSION_BITRATE}')
+        print(f'Finished compression in {time() - now}. Bitrate: {COMPRESSION_BITRATE}')
         
         return {
             "new_file_path": new_file_location,

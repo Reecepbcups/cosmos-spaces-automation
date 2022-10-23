@@ -118,9 +118,12 @@ def get_spaces_from_cache_to_download(bot: Bot) -> dict:
     return spaces_to_download
 
 def remove_manual_space_from_list(space_id: str | int):
-    # open json_data_dir, manual_spaces.json
+    if space_id == None:
+        return
+    
     with open(os.path.join(json_data_dir, "manual_spaces.json"), "r") as f:
         manual_spaces = json.load(f)
+
     if 'manual' not in manual_spaces:
         print("No manual spaces to remove")
         return
@@ -130,8 +133,9 @@ def remove_manual_space_from_list(space_id: str | int):
             if _id == str(space_id):
                 manual_spaces['manual'].remove(_id)
                 break
+
         with open(os.path.join(json_data_dir, "manual_spaces.json"), "w") as f:
-            json.dump(manual_spaces, f, indent=4)
+            json.dump(manual_spaces, f, indent=2)
         print(f"Removed {space_id} from manual_spaces.json")
 
 def remove_downloaded_space_from_cache(space_id: str, debug: bool = True) -> bool:

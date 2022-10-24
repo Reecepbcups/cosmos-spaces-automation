@@ -71,27 +71,6 @@
             "scheduled_start": "2022-10-27T14:30:49.000Z",
             "state": "scheduled",
             "title": "Weekly Twitter Spaces w/ OKC Network"
-        },
-        "1BdxYyzeAzLxX": {
-            "created_at": "2022-10-23T21:38:55.000Z",
-            "creator_id": "1355366118119108612",
-            "host_ids": [
-                "1355366118119108612",
-                "1398290390374027271"
-            ],
-            "id": "1BdxYyzeAzLxX",
-            "participant_count": 68,
-            "speaker_ids": [
-                "1518683525364555776",
-                "1526179712527106048",
-                "3628887803",
-                "1429279962117312512",
-                "1398290390374027271",
-                "1515610377307971590"
-            ],
-            "started_at": "2022-10-23T21:38:57.000Z",
-            "state": "live",
-            "title": "$LUNC to $1"
         }
     }
 }

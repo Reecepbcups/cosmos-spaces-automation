@@ -115,11 +115,15 @@ class Processing:
         shutil.move(old_path, new_file_location)
 
         # compress the file down to a lower bitrate slightly (no real noticeable difference)
-        print(f"Starting Audio compression for {new_file_location}...")
-        now =  time()
-        sound = AudioSegment.from_file(new_file_location)
-        sound.export(new_file_location, format="mp3", bitrate=COMPRESSION_BITRATE)
-        print(f'Finished compression in {time() - now}. Bitrate: {COMPRESSION_BITRATE}')
+
+        try:
+            print(f"Starting Audio compression for {new_file_location}...")
+            now =  time()
+            sound = AudioSegment.from_file(new_file_location)
+            sound.export(new_file_location, format="mp3", bitrate=COMPRESSION_BITRATE)
+            print(f'Finished compression in {time() - now}. Bitrate: {COMPRESSION_BITRATE}')
+        except Exception as e:
+            print(f"Error compressing audio file: {e},  so will not compress.")
         
         return {
             "new_file_path": new_file_location,

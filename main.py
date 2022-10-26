@@ -186,18 +186,23 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
     if 'host_ids' in space_data:
         hosts = space_data['host_ids']
         for host_id in hosts:    
-            if host_id == space_data['creator_id']: continue
+            if host_id == space_data['creator_id']: 
+                continue
             host = bot.get_user(host_id)
-            if 'username' in host:
-                speakers_ats.append(f"@{host['username']}")
+            if 'username' not in host:
+                continue
+            speakers_ats.append(f"@{host['username']}")
 
     if 'speaker_ids' in space_data:
         speakers = space_data['speaker_ids']
         for speaker_id in speakers:
-            if speaker_id == space_data['creator_id']: continue
+            if speaker_id == space_data['creator_id']: 
+                continue
             speaker = bot.get_user(speaker_id) # these were cached before hand, or is {}
-            if 'username' in speaker:
-                speakers_ats.append(f"@{speaker['username']}")
+            if 'username' not in speaker: continue
+            username = speaker['username']            
+            if username in speakers_ats: continue
+            speakers_ats.append(f"@{username}")
 
     # encoded filepath so it points to the correct file
     file_path = urllib.parse.quote(file_info['url'])    

@@ -6,6 +6,7 @@ if [ -z "$1" ]; then
     exit 1
 fi
 
+BITRATE_OUTPUT=96k
 
 CURRENT_DIR=$(dirname "$0")
 FOLDER=$1-clips
@@ -49,11 +50,16 @@ orig_filename="$(cat orig_filename.txt)"
 # split orig_filename at the .mkv
 orig_filename="${orig_filename%.*}"
 new_filename="${orig_filename}.mkv"
+pre_compress_filename="${orig_filename}-precompress.mp3"
 audio_only_filename="${orig_filename}.mp3"
 
 # ffmpeg -hide_banner -f concat -i $merge -c copy -fflags +genpts $new_filename 2>&1 | xargs -I{} echo -en "\r\e[0K{}"
 ffmpeg -hide_banner -f concat -i $merge -c copy -fflags +genpts $new_filename 2>&1 | xargs -I{} echo -en "\r\e[0K{}"
-ffmpeg -i $new_filename -q:a 0 -map a $audio_only_filename
+ffmpeg -i $new_filename -q:a 0 -map a $pre_compress_filename
+
+# Compresses the audio to 96k bitrate, sets the file as the correct name, and deletes the uncompressed
+ffmpeg -i $pre_compress_filename -b:a $BITRATE_OUTPUT -map a $audio_only_filename
+rm $pre_compress_filename
 
 echo -e "\nFinal audio saved to $audio_only_filename"
 mv "$audio_only_filename" $OUTPUT_FOLDER

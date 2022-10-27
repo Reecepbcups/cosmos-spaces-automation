@@ -25,7 +25,7 @@ if not os.path.exists('.env'):
     exit(1)
 
 DISABLE_TWEETING_FOR_TESTING = False
-MINUTES_WAIT = 10
+MINUTES_WAIT = 5
 
 current_dir = os.path.dirname(os.path.realpath(__file__))
 json_data_dir = os.path.join(current_dir, "json_data")    
@@ -215,7 +215,8 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
     audio_time = f"{round(audio.info.length/60, 2)} minutes"
         
     # requires '' so that if it starts with an @ it does not treat it as a reply.
-    base = f"'{title}' {creator_username}\n{audio_time}. 👀: {participants}"
+    base = f"'{title}' {creator_username}\n{audio_time}. "
+    if participants > 0: base += f"👀: {participants}"
 
     output = f"{base}\n\n{speakers}\n\n"
     pre_link_len = len(output)

@@ -24,18 +24,6 @@
             "state": "scheduled",
             "title": "BTC-ETH Strategies and Strategy Tokens launch. "
         },
-        "1LyxBqVLejjJN": {
-            "created_at": "2022-10-23T16:41:04.000Z",
-            "creator_id": "1088745803819040770",
-            "host_ids": [
-                "1088745803819040770"
-            ],
-            "id": "1LyxBqVLejjJN",
-            "participant_count": 0,
-            "scheduled_start": "2022-10-27T14:30:49.000Z",
-            "state": "scheduled",
-            "title": "Weekly Twitter Spaces w/ OKC Network"
-        },
         "1yoKMZQAMwXGQ": {
             "created_at": "2022-10-24T21:04:02.000Z",
             "creator_id": "1416628772565143561",
@@ -59,6 +47,30 @@
             "scheduled_start": "2022-10-27T19:00:33.000Z",
             "state": "scheduled",
             "title": "Stargaze Week 34 Creator Chat. Thursday 10/27 at 7pm UTC."
+        },
+        "1dRJZMpzzdgGB": {
+            "created_at": "2022-10-27T09:42:31.000Z",
+            "creator_id": "1153962373683675136",
+            "host_ids": [
+                "1153962373683675136"
+            ],
+            "id": "1dRJZMpzzdgGB",
+            "participant_count": 0,
+            "scheduled_start": "2022-10-28T14:00:00.000Z",
+            "state": "scheduled",
+            "title": "#InTheStudio ep.24 - Halloween Theme \ud83c\udf83Collections | OmniFlix & Chill"
+        },
+        "1gqGvyzvNpQKB": {
+            "created_at": "2022-10-27T14:20:46.000Z",
+            "creator_id": "1487313404004118528",
+            "host_ids": [
+                "1487313404004118528"
+            ],
+            "id": "1gqGvyzvNpQKB",
+            "participant_count": 0,
+            "scheduled_start": "2022-10-28T23:00:00.000Z",
+            "state": "scheduled",
+            "title": "#Cosmos Town Hall Oct 28th 2022: Liquid Staking"
         }
     }
 }

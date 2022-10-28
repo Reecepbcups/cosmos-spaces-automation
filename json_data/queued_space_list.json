@@ -1,53 +1,5 @@
 {
     "queued_space_list": {
-        "1OwxWwZlkRZxQ": {
-            "created_at": "2022-10-17T03:02:56.000Z",
-            "creator_id": "1503785102542790662",
-            "host_ids": [
-                "1503785102542790662"
-            ],
-            "id": "1OwxWwZlkRZxQ",
-            "participant_count": 0,
-            "scheduled_start": "2022-10-27T20:00:32.000Z",
-            "state": "scheduled",
-            "title": "Invitado especial @ComposableFin, de #DOTSAMA a @Cosmos"
-        },
-        "1YpJkgbRrowJj": {
-            "created_at": "2022-10-17T08:23:45.000Z",
-            "creator_id": "1347266698236227584",
-            "host_ids": [
-                "1347266698236227584"
-            ],
-            "id": "1YpJkgbRrowJj",
-            "participant_count": 0,
-            "scheduled_start": "2022-10-27T17:00:00.000Z",
-            "state": "scheduled",
-            "title": "BTC-ETH Strategies and Strategy Tokens launch. "
-        },
-        "1yoKMZQAMwXGQ": {
-            "created_at": "2022-10-24T21:04:02.000Z",
-            "creator_id": "1416628772565143561",
-            "host_ids": [
-                "1416628772565143561"
-            ],
-            "id": "1yoKMZQAMwXGQ",
-            "participant_count": 0,
-            "scheduled_start": "2022-10-27T23:00:00.000Z",
-            "state": "scheduled",
-            "title": "DeFund Finance AMA w/ CosmosHOSS \ud83c\udf99\ufe0f"
-        },
-        "1lPKqBgOQkMGb": {
-            "created_at": "2022-10-26T02:09:47.000Z",
-            "creator_id": "1253090729137561600",
-            "host_ids": [
-                "1253090729137561600"
-            ],
-            "id": "1lPKqBgOQkMGb",
-            "participant_count": 0,
-            "scheduled_start": "2022-10-27T19:00:33.000Z",
-            "state": "scheduled",
-            "title": "Stargaze Week 34 Creator Chat. Thursday 10/27 at 7pm UTC."
-        },
         "1dRJZMpzzdgGB": {
             "created_at": "2022-10-27T09:42:31.000Z",
             "creator_id": "1153962373683675136",
@@ -71,6 +23,42 @@
             "scheduled_start": "2022-10-28T23:00:00.000Z",
             "state": "scheduled",
             "title": "#Cosmos Town Hall Oct 28th 2022: Liquid Staking"
+        },
+        "1YpKkgPRXVyKj": {
+            "created_at": "2022-10-27T22:23:32.000Z",
+            "creator_id": "1425851419156901889",
+            "host_ids": [
+                "1425851419156901889"
+            ],
+            "id": "1YpKkgPRXVyKj",
+            "participant_count": 0,
+            "scheduled_start": "2022-11-03T22:00:00.000Z",
+            "state": "scheduled",
+            "title": "Juno BUILDERS Weekly with @wynddao & @pupmos"
+        },
+        "1eaKbrDEbrvKX": {
+            "created_at": "2022-10-27T14:49:41.000Z",
+            "creator_id": "2215937899",
+            "host_ids": [
+                "2215937899"
+            ],
+            "id": "1eaKbrDEbrvKX",
+            "participant_count": 0,
+            "scheduled_start": "2022-11-03T19:00:00.000Z",
+            "state": "scheduled",
+            "title": "ATOM 2.0, The Cosmos Vision and Osmosis "
+        },
+        "1djGXlzBedeGZ": {
+            "created_at": "2022-10-27T14:46:40.000Z",
+            "creator_id": "2215937899",
+            "host_ids": [
+                "2215937899"
+            ],
+            "id": "1djGXlzBedeGZ",
+            "participant_count": 0,
+            "scheduled_start": "2022-11-03T19:00:00.000Z",
+            "state": "scheduled",
+            "title": "ATOM 2.0, Cosmos and Osmosis "
         }
     }
 }

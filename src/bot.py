@@ -30,7 +30,7 @@ class Bot:
         '''
         #
         FILENAME = 'following_ids.json'
-        FOLLOWING_CACHE_TIME=60*60 # seconds * minutes       
+        FOLLOWING_CACHE_TIME=60*5 # seconds * minutes, should be length of time we wait between checkign for spaces
         
         # nested save if the user_ids_list
         def save_following_to_file(users_following) -> dict:

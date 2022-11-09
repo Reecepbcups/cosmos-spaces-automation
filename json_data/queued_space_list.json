@@ -24,18 +24,6 @@
             "state": "scheduled",
             "title": "CMS + Tom Shaughnessy: Venture Capital Series #8"
         },
-        "1ypKddWvqNjKW": {
-            "created_at": "2022-11-03T16:06:01.000Z",
-            "creator_id": "1323334073453023233",
-            "host_ids": [
-                "1323334073453023233"
-            ],
-            "id": "1ypKddWvqNjKW",
-            "participant_count": 0,
-            "scheduled_start": "2022-11-09T17:15:25.000Z",
-            "state": "scheduled",
-            "title": "Global Economy Recession\ud83d\ude2e Expectations vs Reality "
-        },
         "1vAxRAjWQMRJl": {
             "created_at": "2022-11-03T16:06:01.000Z",
             "creator_id": "1323334073453023233",
@@ -48,41 +36,27 @@
             "state": "scheduled",
             "title": "Global Economy Recession\ud83d\ude2e Expectations vs Reality"
         },
-        "1yoKMZnyqlYGQ": {
-            "created_at": "2022-11-06T01:04:56.000Z",
-            "creator_id": "922670090834780162",
-            "host_ids": [
-                "922670090834780162"
-            ],
-            "id": "1yoKMZnyqlYGQ",
-            "participant_count": 0,
-            "scheduled_start": "2022-11-09T16:00:00.000Z",
-            "state": "scheduled",
-            "title": "Akash Weekly w/Greg Osuri ft. Lex Avellino & Arel Avellino"
-        },
         "1lDxLnbBPwmGm": {
             "created_at": "2022-11-06T18:47:10.000Z",
             "creator_id": "1109983403078807554",
             "host_ids": [
-                "1109983403078807554"
+                "1109983403078807554",
+                "1223319210",
+                "1487313404004118528"
             ],
             "id": "1lDxLnbBPwmGm",
-            "participant_count": 0,
+            "participant_count": 38,
             "scheduled_start": "2022-11-09T23:30:00.000Z",
-            "state": "scheduled",
-            "title": "WEB3 Gaming in the Cosmos ECO \u269b\ufe0f"
-        },
-        "1zqJVPgddvnKB": {
-            "created_at": "2022-11-06T19:29:30.000Z",
-            "creator_id": "1109983403078807554",
-            "host_ids": [
-                "1109983403078807554"
+            "speaker_ids": [
+                "1523576276618993664",
+                "1223319210",
+                "1487313404004118528",
+                "78769878",
+                "1515579388959629319"
             ],
-            "id": "1zqJVPgddvnKB",
-            "participant_count": 0,
-            "scheduled_start": "2022-11-08T23:30:00.000Z",
-            "state": "scheduled",
-            "title": "Get to know @cypherdwallet the Multi-Chain Crypto Wallet "
+            "started_at": "2022-11-09T23:30:32.000Z",
+            "state": "live",
+            "title": "WEB3 Gaming in the Cosmos ECO \u269b\ufe0f"
         },
         "1rmxPkwLjeXJN": {
             "created_at": "2022-11-06T21:28:36.000Z",
@@ -106,18 +80,6 @@
             "scheduled_start": "2022-11-10T23:00:00.000Z",
             "state": "scheduled",
             "title": "Juno SHIPS ft @SkipProtocol & @komplesocial \ud83d\udef3\ufe0f \ud83e\ude84\ud83d\udcfb\ud83c\udf99\ufe0f"
-        },
-        "1vOGwMWlXVLxB": {
-            "created_at": "2022-11-07T06:34:12.000Z",
-            "creator_id": "1153962373683675136",
-            "host_ids": [
-                "1153962373683675136"
-            ],
-            "id": "1vOGwMWlXVLxB",
-            "participant_count": 0,
-            "scheduled_start": "2022-11-09T14:00:00.000Z",
-            "state": "scheduled",
-            "title": "FlixTalk #44 - Engineering, Design, Media & Community Updates"
         },
         "1DXxyvnwEovKM": {
             "created_at": "2022-11-07T17:10:38.000Z",
@@ -143,41 +105,58 @@
             "state": "scheduled",
             "title": "Liquid Staking $OSMO | An Open Discussion w/ \n@stride_zone\n"
         },
-        "1vAxRAelNNVJl": {
-            "created_at": "2022-11-08T16:41:36.000Z",
-            "creator_id": "1441886102906806277",
+        "1MYxNgevWlNKw": {
+            "created_at": "2022-11-08T21:18:49.000Z",
+            "creator_id": "1416628772565143561",
             "host_ids": [
-                "1441886102906806277"
+                "1416628772565143561"
             ],
-            "id": "1vAxRAelNNVJl",
+            "id": "1MYxNgevWlNKw",
             "participant_count": 0,
-            "scheduled_start": "2022-11-09T18:00:00.000Z",
+            "scheduled_start": "2022-11-10T23:00:00.000Z",
             "state": "scheduled",
-            "title": "Scaling Web3  w/ Eclipse & Saga"
+            "title": "#Cosmos \ud83e\udd1d #Solana Introducing Nitro AMA"
         },
-        "1LyGBqmVqeoKN": {
-            "created_at": "2022-11-08T19:01:59.000Z",
-            "creator_id": "1355366118119108612",
+        "1yoJMZgnlRexQ": {
+            "created_at": "2022-11-08T23:13:49.000Z",
+            "creator_id": "1491955059764125733",
             "host_ids": [
-                "1355366118119108612",
-                "1398290390374027271",
-                "1510374842171891713"
+                "1491955059764125733"
             ],
-            "id": "1LyGBqmVqeoKN",
-            "participant_count": 156,
+            "id": "1yoJMZgnlRexQ",
+            "participant_count": 0,
+            "scheduled_start": "2022-11-10T01:00:36.000Z",
+            "state": "scheduled",
+            "title": "#Cosmonaut Bootcamp | Back to the Basics #ibcgang"
+        },
+        "1eaKbrZyeoaKX": {
+            "created_at": "2022-11-09T15:24:02.000Z",
+            "creator_id": "1253090729137561600",
+            "host_ids": [
+                "1253090729137561600"
+            ],
+            "id": "1eaKbrZyeoaKX",
+            "participant_count": 0,
+            "scheduled_start": "2022-11-10T19:00:36.000Z",
+            "state": "scheduled",
+            "title": "Stargaze Week 36 Creator Chat. Thursday 11/10 at 7pm UTC."
+        },
+        "1LyGBqmZOBYKN": {
+            "created_at": "2022-11-09T23:44:22.000Z",
+            "creator_id": "7910872",
+            "host_ids": [
+                "7910872"
+            ],
+            "id": "1LyGBqmZOBYKN",
+            "participant_count": 60,
             "speaker_ids": [
-                "1510374842171891713",
-                "1484272468915277827",
-                "1445859637136216070",
-                "1186383178061221894",
-                "254370773",
-                "1567922521604870144",
-                "1439734206251339779",
-                "1340235156670590981"
+                "357894005",
+                "941040705329422337",
+                "898269223138582528"
             ],
-            "started_at": "2022-11-08T19:02:01.000Z",
+            "started_at": "2022-11-09T23:44:26.000Z",
             "state": "live",
-            "title": "Opportunities"
+            "title": "Cosmos: Prop 82 and paths forward"
         }
     }
 }

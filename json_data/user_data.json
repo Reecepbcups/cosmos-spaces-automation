@@ -42,7 +42,7 @@
             "pinned_tweet_id": "1586345634118135810",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1531897777143353347/8zbE3Vl2.jpg",
             "public_metrics": {
-                "followers_count": 19220,
+                "followers_count": 19221,
                 "following_count": 1,
                 "tweet_count": 657,
                 "listed_count": 366
@@ -59,7 +59,7 @@
             "pinned_tweet_id": "1573727971558449154",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1348107683304337408/53heZyEL.jpg",
             "public_metrics": {
-                "followers_count": 38097,
+                "followers_count": 38098,
                 "following_count": 143,
                 "tweet_count": 627,
                 "listed_count": 746
@@ -99,6 +99,23 @@
                 "listed_count": 20
             },
             "username": "Zdeadex",
+            "verified": false
+        },
+        "105009637": {
+            "created_at": "2010-01-15T02:23:09.000Z",
+            "description": "Strong supporter of radical decentralization and believer of the individual as ultimate source of sovereignty",
+            "following": false,
+            "id": "105009637",
+            "name": "Multivax \ud83c\uddfa\ud83c\udde6 \ud83c\uddf2\ud83c\uddfd \ud83c\uddee\ud83c\uddf1\ud83c\udf2a \ud83c\udf2a",
+            "pinned_tweet_id": "1112930408939716608",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1488232883181522947/kpMGpheI.jpg",
+            "public_metrics": {
+                "followers_count": 49,
+                "following_count": 230,
+                "tweet_count": 4948,
+                "listed_count": 6
+            },
+            "username": "multivax",
             "verified": false
         },
         "1068625607292944384": {
@@ -144,7 +161,7 @@
             "pinned_tweet_id": "1532334632590622721",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1163440927978991616/TiXV-Jzq.jpg",
             "public_metrics": {
-                "followers_count": 15063,
+                "followers_count": 15064,
                 "following_count": 310,
                 "tweet_count": 6110,
                 "listed_count": 141
@@ -160,7 +177,7 @@
             "name": "Stakin | In Lisbon \ud83c\uddf5\ud83c\uddf9",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1478340478672199684/8jIFMoYQ.jpg",
             "public_metrics": {
-                "followers_count": 10723,
+                "followers_count": 10722,
                 "following_count": 709,
                 "tweet_count": 3420,
                 "listed_count": 84
@@ -210,7 +227,7 @@
             "name": "Comdex - Democratizing Finance",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1478590027428888577/vNDkoMvK.jpg",
             "public_metrics": {
-                "followers_count": 29791,
+                "followers_count": 29792,
                 "following_count": 131,
                 "tweet_count": 1989,
                 "listed_count": 424
@@ -291,11 +308,11 @@
             "id": "1109983403078807554",
             "name": "\u269b\ufe0f LiLGainzz | Cosmos Spaces\ud83c\udf99\ufe0f",
             "pinned_tweet_id": "1565541687858012162",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1590378553639567363/7rjLKfxT.jpg",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1590510946061000704/TVhfk21s.jpg",
             "public_metrics": {
                 "followers_count": 3837,
-                "following_count": 2735,
-                "tweet_count": 10306,
+                "following_count": 2736,
+                "tweet_count": 10310,
                 "listed_count": 56
             },
             "username": "lilgainzz",
@@ -376,10 +393,10 @@
             "pinned_tweet_id": "1577392849389113344",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1576822831727333376/Eoxv6Vj3.jpg",
             "public_metrics": {
-                "followers_count": 846,
-                "following_count": 460,
-                "tweet_count": 2493,
-                "listed_count": 21
+                "followers_count": 860,
+                "following_count": 477,
+                "tweet_count": 2586,
+                "listed_count": 22
             },
             "username": "BetterCio",
             "verified": false
@@ -638,11 +655,11 @@
             "id": "1223319210",
             "name": "Sir \u269b\ufe0f\ud83d\udd75\ufe0f\u200d\u2642\ufe0f \ud83c\udd71\ufe0f\u2694\ufe0f\ud83e\udd9d \ud83c\udf43Yawpster",
             "pinned_tweet_id": "1563658035020664832",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1587481956480176136/jDcUHCO7.jpg",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1590362066526896128/d7yA8LT6.jpg",
             "public_metrics": {
-                "followers_count": 2025,
-                "following_count": 2510,
-                "tweet_count": 8087,
+                "followers_count": 2020,
+                "following_count": 2513,
+                "tweet_count": 8112,
                 "listed_count": 14
             },
             "username": "sir_arndt",
@@ -723,7 +740,7 @@
             "pinned_tweet_id": "1585793771513712641",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1507391623914737669/U3fR7nxh.jpg",
             "public_metrics": {
-                "followers_count": 52507,
+                "followers_count": 52538,
                 "following_count": 0,
                 "tweet_count": 4422,
                 "listed_count": 467
@@ -1069,9 +1086,9 @@
             "pinned_tweet_id": "1585942820061609985",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1515220591686692872/QPSVppoA.png",
             "public_metrics": {
-                "followers_count": 25141,
+                "followers_count": 25155,
                 "following_count": 94,
-                "tweet_count": 1616,
+                "tweet_count": 1619,
                 "listed_count": 390
             },
             "username": "sommfinance",
@@ -1118,9 +1135,9 @@
             "name": "Cephii",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1586898062433288195/ZENEg8rr.jpg",
             "public_metrics": {
-                "followers_count": 69411,
-                "following_count": 1723,
-                "tweet_count": 30589,
+                "followers_count": 69414,
+                "following_count": 1725,
+                "tweet_count": 30593,
                 "listed_count": 523
             },
             "username": "Cephii1",
@@ -1151,7 +1168,7 @@
             "name": "Osmosis \ud83e\uddea",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1504543889709015041/82CEWnSH.png",
             "public_metrics": {
-                "followers_count": 142420,
+                "followers_count": 142424,
                 "following_count": 3,
                 "tweet_count": 632,
                 "listed_count": 1670
@@ -1217,9 +1234,9 @@
             "pinned_tweet_id": "1587245683928612864",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1589055096993849344/WyiWq_iZ.jpg",
             "public_metrics": {
-                "followers_count": 1154,
+                "followers_count": 1156,
                 "following_count": 1095,
-                "tweet_count": 9108,
+                "tweet_count": 9109,
                 "listed_count": 20
             },
             "username": "crypto_mayorEd",
@@ -1579,7 +1596,7 @@
             "pinned_tweet_id": "1590385505425768448",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1590349422843633665/N7Wg34R9.jpg",
             "public_metrics": {
-                "followers_count": 25838,
+                "followers_count": 25850,
                 "following_count": 2185,
                 "tweet_count": 16880,
                 "listed_count": 202
@@ -1679,9 +1696,9 @@
             "pinned_tweet_id": "1570918826937847808",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1567633651604811776/fmiQFuGu.jpg",
             "public_metrics": {
-                "followers_count": 2421,
+                "followers_count": 2420,
                 "following_count": 219,
-                "tweet_count": 1762,
+                "tweet_count": 1764,
                 "listed_count": 63
             },
             "username": "croncats",
@@ -1749,7 +1766,7 @@
                 "followers_count": 34593,
                 "following_count": 81,
                 "tweet_count": 1930,
-                "listed_count": 471
+                "listed_count": 470
             },
             "username": "Shade_Protocol",
             "verified": false
@@ -1779,9 +1796,9 @@
             "pinned_tweet_id": "1562896119247835138",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1525530894307672064/LsQH7soc.jpg",
             "public_metrics": {
-                "followers_count": 21689,
+                "followers_count": 21690,
                 "following_count": 202,
-                "tweet_count": 1505,
+                "tweet_count": 1513,
                 "listed_count": 203
             },
             "username": "tfm_com",
@@ -1962,7 +1979,7 @@
             "pinned_tweet_id": "1567900860914757633",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1508474357315616768/zcPXETKs.jpg",
             "public_metrics": {
-                "followers_count": 12047,
+                "followers_count": 12046,
                 "following_count": 32,
                 "tweet_count": 318,
                 "listed_count": 161
@@ -2191,16 +2208,16 @@
         },
         "1455730703707086848": {
             "created_at": "2021-11-03T02:57:20.000Z",
-            "description": "Ecommerce development/hosting merged with Web3 blockchain. @loyalrewards",
+            "description": "President at Avecom | Web1 OG | Integrating eCommerce with Web3 @LoyalRewards | https://t.co/uQ5jQQCjx1",
             "following": false,
             "id": "1455730703707086848",
-            "name": "Mike-Loyal (@coinwaters)",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1557011915813134338/nzLRSEUT.jpg",
+            "name": "Mike-Loyal",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1587624314186211328/FzlLaizX.jpg",
             "public_metrics": {
-                "followers_count": 60,
-                "following_count": 280,
-                "tweet_count": 43,
-                "listed_count": 1
+                "followers_count": 86,
+                "following_count": 440,
+                "tweet_count": 59,
+                "listed_count": 0
             },
             "username": "CoinWaters",
             "verified": false
@@ -2381,9 +2398,9 @@
             "name": "Tendermint Timmy\u269b\ufe0f\u26d3\ufe0f\u2b21",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1552102410314813440/GriapGlV.jpg",
             "public_metrics": {
-                "followers_count": 5500,
+                "followers_count": 5499,
                 "following_count": 1289,
-                "tweet_count": 6303,
+                "tweet_count": 6304,
                 "listed_count": 104
             },
             "username": "TendermintTimmy",
@@ -2830,9 +2847,9 @@
             "pinned_tweet_id": "1588596024779866114",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1554838652383010817/vPcu5zqy.jpg",
             "public_metrics": {
-                "followers_count": 10756,
-                "following_count": 382,
-                "tweet_count": 2829,
+                "followers_count": 10757,
+                "following_count": 383,
+                "tweet_count": 2830,
                 "listed_count": 129
             },
             "username": "RacoonSupply",
@@ -2898,7 +2915,7 @@
             "public_metrics": {
                 "followers_count": 8131,
                 "following_count": 759,
-                "tweet_count": 2804,
+                "tweet_count": 2807,
                 "listed_count": 131
             },
             "username": "Cosmos_Spaces",
@@ -3045,9 +3062,9 @@
             "pinned_tweet_id": "1577680762819731457",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1545894675223138311/G6-UU4F9.jpg",
             "public_metrics": {
-                "followers_count": 2243,
-                "following_count": 87,
-                "tweet_count": 453,
+                "followers_count": 2244,
+                "following_count": 88,
+                "tweet_count": 454,
                 "listed_count": 30
             },
             "username": "SparkIBC",
@@ -3318,6 +3335,23 @@
             "username": "stakedatom",
             "verified": false
         },
+        "1515579388959629319": {
+            "created_at": "2022-04-17T06:34:52.000Z",
+            "description": "The largest 3rd Person Competitive Shooter in the @Cosmos. \n\nUE5.\n\n Launching on @SecretNetwork. Hosted on @launchonenet\n\nhttps://t.co/OcW1N3WxpN",
+            "following": false,
+            "id": "1515579388959629319",
+            "name": "Bushi",
+            "pinned_tweet_id": "1590042334288543744",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1567372869218484224/Mi2pwU7l.jpg",
+            "public_metrics": {
+                "followers_count": 2650,
+                "following_count": 23,
+                "tweet_count": 321,
+                "listed_count": 20
+            },
+            "username": "playBushi",
+            "verified": false
+        },
         "1515610377307971590": {
             "created_at": "2022-04-17T08:37:36.000Z",
             "description": "Resident Artist and Storyteller",
@@ -3441,7 +3475,7 @@
             "name": "Cosmos - Internet of Blockchains \u269b\ufe0f",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1572270323105660931/wfrYRGAC.jpg",
             "public_metrics": {
-                "followers_count": 479588,
+                "followers_count": 479623,
                 "following_count": 393,
                 "tweet_count": 3683,
                 "listed_count": 4655
@@ -3458,10 +3492,10 @@
             "pinned_tweet_id": "1579514110026616833",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1555534407993286656/hZ4X6pHY.jpg",
             "public_metrics": {
-                "followers_count": 1596,
-                "following_count": 69,
-                "tweet_count": 641,
-                "listed_count": 10
+                "followers_count": 1941,
+                "following_count": 79,
+                "tweet_count": 685,
+                "listed_count": 12
             },
             "username": "KeleparGame",
             "verified": false
@@ -4090,6 +4124,22 @@
             "username": "margic21",
             "verified": false
         },
+        "1581779664388890624": {
+            "created_at": "2022-10-16T22:50:52.000Z",
+            "description": "Equity options trader\n\"Every Doge has it's Day\" \nFmr @GoldmanSachs",
+            "following": false,
+            "id": "1581779664388890624",
+            "name": "\ud835\udd1f\ud835\udd32\ud835\udd29\ud835\udd29\ud835\udd26\ud835\udd30\ud835\udd25\ud835\udd26\ud835\udd31\ud835\udd31\ud835\udd22\ud835\udd2f",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1584048717002334209/6mV6j8aQ.jpg",
+            "public_metrics": {
+                "followers_count": 46,
+                "following_count": 539,
+                "tweet_count": 43,
+                "listed_count": 0
+            },
+            "username": "bullishitter",
+            "verified": false
+        },
         "1582398658401771520": {
             "created_at": "2022-10-18T15:50:42.000Z",
             "description": "",
@@ -4161,12 +4211,12 @@
             "following": true,
             "id": "19329501",
             "name": "Rarma",
-            "pinned_tweet_id": "1590358128482455554",
+            "pinned_tweet_id": "1590501723315277825",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1590358273508937730/8LlE29yr.jpg",
             "public_metrics": {
-                "followers_count": 3273,
+                "followers_count": 3272,
                 "following_count": 1051,
-                "tweet_count": 21707,
+                "tweet_count": 21708,
                 "listed_count": 62
             },
             "username": "Rarma_",
@@ -4311,10 +4361,10 @@
             "pinned_tweet_id": "1475640658836787200",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1504565323873361924/jC6_upE7.jpg",
             "public_metrics": {
-                "followers_count": 41370,
+                "followers_count": 41376,
                 "following_count": 2593,
-                "tweet_count": 26228,
-                "listed_count": 976
+                "tweet_count": 26233,
+                "listed_count": 977
             },
             "username": "Shaughnessy119",
             "verified": false
@@ -4786,10 +4836,10 @@
             "pinned_tweet_id": "1590002443802136577",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1481360710395441156/_jWX0blu.png",
             "public_metrics": {
-                "followers_count": 191063,
+                "followers_count": 191066,
                 "following_count": 159,
                 "tweet_count": 7383,
-                "listed_count": 2305
+                "listed_count": 2307
             },
             "username": "SecretNetwork",
             "verified": true
@@ -5081,7 +5131,7 @@
             "pinned_tweet_id": "1586946385596665856",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1589149549385240578/TvXMk6Rp.jpg",
             "public_metrics": {
-                "followers_count": 5534,
+                "followers_count": 5533,
                 "following_count": 3281,
                 "tweet_count": 34437,
                 "listed_count": 72
@@ -5445,9 +5495,9 @@
             "pinned_tweet_id": "1587359592320753668",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1532227365656358912/jYe-_f5E.jpg",
             "public_metrics": {
-                "followers_count": 35354,
-                "following_count": 13649,
-                "tweet_count": 65717,
+                "followers_count": 35361,
+                "following_count": 13650,
+                "tweet_count": 65721,
                 "listed_count": 1040
             },
             "username": "zmanian",
@@ -5595,10 +5645,10 @@
             "pinned_tweet_id": "1196227870517055488",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1581444578808414210/tUYRKUkh.jpg",
             "public_metrics": {
-                "followers_count": 5525,
-                "following_count": 3781,
-                "tweet_count": 8133,
-                "listed_count": 96
+                "followers_count": 5748,
+                "following_count": 3818,
+                "tweet_count": 8331,
+                "listed_count": 101
             },
             "username": "jelenaaa____",
             "verified": false
@@ -5612,10 +5662,10 @@
             "pinned_tweet_id": "1587876576368070656",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1590432298360414209/PWL4sZ9u.jpg",
             "public_metrics": {
-                "followers_count": 114273,
+                "followers_count": 114274,
                 "following_count": 170,
-                "tweet_count": 1362,
-                "listed_count": 1345
+                "tweet_count": 1363,
+                "listed_count": 1344
             },
             "username": "EvmosOrg",
             "verified": false
@@ -5628,13 +5678,29 @@
             "name": "Akash Network",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1575558636574834699/JVctgni7.png",
             "public_metrics": {
-                "followers_count": 84804,
+                "followers_count": 84797,
                 "following_count": 306,
                 "tweet_count": 5045,
                 "listed_count": 962
             },
             "username": "akashnet_",
             "verified": true
+        },
+        "941040705329422337": {
+            "created_at": "2017-12-13T20:22:42.000Z",
+            "description": "Just here to talk crypto and steal memes. Interchain reply guy. I retweet giveaways, judge me. $ATOM",
+            "following": false,
+            "id": "941040705329422337",
+            "name": "Travis\u269b",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1515013687714668545/JJ9RGGIh.jpg",
+            "public_metrics": {
+                "followers_count": 206,
+                "following_count": 916,
+                "tweet_count": 1690,
+                "listed_count": 8
+            },
+            "username": "tknox35",
+            "verified": false
         },
         "943411094499946497": {
             "created_at": "2017-12-20T09:21:47.000Z",
@@ -5645,7 +5711,7 @@
             "pinned_tweet_id": "1589702479293579265",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1572253388750069763/j-ewr8TF.jpg",
             "public_metrics": {
-                "followers_count": 65403,
+                "followers_count": 65406,
                 "following_count": 937,
                 "tweet_count": 12105,
                 "listed_count": 806

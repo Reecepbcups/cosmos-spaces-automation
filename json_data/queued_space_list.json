@@ -36,28 +36,6 @@
             "state": "scheduled",
             "title": "Global Economy Recession\ud83d\ude2e Expectations vs Reality"
         },
-        "1lDxLnbBPwmGm": {
-            "created_at": "2022-11-06T18:47:10.000Z",
-            "creator_id": "1109983403078807554",
-            "host_ids": [
-                "1109983403078807554",
-                "1223319210",
-                "1487313404004118528"
-            ],
-            "id": "1lDxLnbBPwmGm",
-            "participant_count": 38,
-            "scheduled_start": "2022-11-09T23:30:00.000Z",
-            "speaker_ids": [
-                "1523576276618993664",
-                "1223319210",
-                "1487313404004118528",
-                "78769878",
-                "1515579388959629319"
-            ],
-            "started_at": "2022-11-09T23:30:32.000Z",
-            "state": "live",
-            "title": "WEB3 Gaming in the Cosmos ECO \u269b\ufe0f"
-        },
         "1rmxPkwLjeXJN": {
             "created_at": "2022-11-06T21:28:36.000Z",
             "creator_id": "1425851419156901889",
@@ -124,9 +102,16 @@
                 "1491955059764125733"
             ],
             "id": "1yoJMZgnlRexQ",
-            "participant_count": 0,
+            "participant_count": 17,
             "scheduled_start": "2022-11-10T01:00:36.000Z",
-            "state": "scheduled",
+            "speaker_ids": [
+                "1481755154235936768",
+                "1390484720643944451",
+                "1109983403078807554",
+                "15712483"
+            ],
+            "started_at": "2022-11-10T00:58:38.000Z",
+            "state": "live",
             "title": "#Cosmonaut Bootcamp | Back to the Basics #ibcgang"
         },
         "1eaKbrZyeoaKX": {
@@ -140,23 +125,6 @@
             "scheduled_start": "2022-11-10T19:00:36.000Z",
             "state": "scheduled",
             "title": "Stargaze Week 36 Creator Chat. Thursday 11/10 at 7pm UTC."
-        },
-        "1LyGBqmZOBYKN": {
-            "created_at": "2022-11-09T23:44:22.000Z",
-            "creator_id": "7910872",
-            "host_ids": [
-                "7910872"
-            ],
-            "id": "1LyGBqmZOBYKN",
-            "participant_count": 60,
-            "speaker_ids": [
-                "357894005",
-                "941040705329422337",
-                "898269223138582528"
-            ],
-            "started_at": "2022-11-09T23:44:26.000Z",
-            "state": "live",
-            "title": "Cosmos: Prop 82 and paths forward"
         }
     }
 }

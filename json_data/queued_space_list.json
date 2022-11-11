@@ -24,39 +24,23 @@
             "state": "scheduled",
             "title": "CMS + Tom Shaughnessy: Venture Capital Series #8"
         },
-        "1vAxRAjWQMRJl": {
-            "created_at": "2022-11-03T16:06:01.000Z",
-            "creator_id": "1323334073453023233",
-            "host_ids": [
-                "1323334073453023233"
-            ],
-            "id": "1vAxRAjWQMRJl",
-            "participant_count": 0,
-            "scheduled_start": "2022-11-09T16:15:25.000Z",
-            "state": "scheduled",
-            "title": "Global Economy Recession\ud83d\ude2e Expectations vs Reality"
-        },
-        "1rmxPkwLjeXJN": {
-            "created_at": "2022-11-06T21:28:36.000Z",
-            "creator_id": "1425851419156901889",
-            "host_ids": [
-                "1425851419156901889"
-            ],
-            "id": "1rmxPkwLjeXJN",
-            "participant_count": 0,
-            "scheduled_start": "2022-11-10T23:00:00.000Z",
-            "state": "scheduled"
-        },
         "1kvJpmwrzMZxE": {
             "created_at": "2022-11-06T21:33:01.000Z",
             "creator_id": "1425851419156901889",
             "host_ids": [
-                "1425851419156901889"
+                "1425851419156901889",
+                "1504064670566699008"
             ],
             "id": "1kvJpmwrzMZxE",
-            "participant_count": 0,
+            "participant_count": 28,
             "scheduled_start": "2022-11-10T23:00:00.000Z",
-            "state": "scheduled",
+            "speaker_ids": [
+                "1245073885",
+                "1546810191630536706",
+                "1504064670566699008"
+            ],
+            "started_at": "2022-11-10T22:57:54.000Z",
+            "state": "live",
             "title": "Juno SHIPS ft @SkipProtocol & @komplesocial \ud83d\udef3\ufe0f \ud83e\ude84\ud83d\udcfb\ud83c\udf99\ufe0f"
         },
         "1DXxyvnwEovKM": {
@@ -91,40 +75,45 @@
             ],
             "id": "1MYxNgevWlNKw",
             "participant_count": 0,
-            "scheduled_start": "2022-11-10T23:00:00.000Z",
+            "scheduled_start": "2022-11-16T22:00:00.000Z",
             "state": "scheduled",
             "title": "#Cosmos \ud83e\udd1d #Solana Introducing Nitro AMA"
         },
-        "1yoJMZgnlRexQ": {
-            "created_at": "2022-11-08T23:13:49.000Z",
-            "creator_id": "1491955059764125733",
+        "1kvKpmwlBLLGE": {
+            "created_at": "2022-11-10T08:30:29.000Z",
+            "creator_id": "1153962373683675136",
             "host_ids": [
-                "1491955059764125733"
+                "1153962373683675136"
             ],
-            "id": "1yoJMZgnlRexQ",
-            "participant_count": 17,
-            "scheduled_start": "2022-11-10T01:00:36.000Z",
-            "speaker_ids": [
-                "1481755154235936768",
-                "1390484720643944451",
-                "1109983403078807554",
-                "15712483"
-            ],
-            "started_at": "2022-11-10T00:58:38.000Z",
-            "state": "live",
-            "title": "#Cosmonaut Bootcamp | Back to the Basics #ibcgang"
-        },
-        "1eaKbrZyeoaKX": {
-            "created_at": "2022-11-09T15:24:02.000Z",
-            "creator_id": "1253090729137561600",
-            "host_ids": [
-                "1253090729137561600"
-            ],
-            "id": "1eaKbrZyeoaKX",
+            "id": "1kvKpmwlBLLGE",
             "participant_count": 0,
-            "scheduled_start": "2022-11-10T19:00:36.000Z",
+            "scheduled_start": "2022-11-11T14:00:00.000Z",
             "state": "scheduled",
-            "title": "Stargaze Week 36 Creator Chat. Thursday 11/10 at 7pm UTC."
+            "title": "#InTheStudio ep 26 - NFT Collections | POAP NFT | OmniFlix & Chill \ud83d\ude0e \ud83c\udf7b"
+        },
+        "1rmxPkwpBkVJN": {
+            "created_at": "2022-11-10T14:43:58.000Z",
+            "creator_id": "1078740737393598464",
+            "host_ids": [
+                "1078740737393598464"
+            ],
+            "id": "1rmxPkwpBkVJN",
+            "participant_count": 0,
+            "scheduled_start": "2022-11-14T16:00:00.000Z",
+            "state": "scheduled",
+            "title": "Riding the Cosmos w/@interchaininfo \u269b\ufe0f| \ud83c\udf99\ufe0fStakin Twitter Space #15\u269b\ufe0f"
+        },
+        "1ynKOaePpdyJR": {
+            "created_at": "2022-11-10T17:23:28.000Z",
+            "creator_id": "1416628772565143561",
+            "host_ids": [
+                "1416628772565143561"
+            ],
+            "id": "1ynKOaePpdyJR",
+            "participant_count": 0,
+            "scheduled_start": "2022-11-14T21:00:00.000Z",
+            "state": "scheduled",
+            "title": "#Cosmos AMA What is DFRACT? By Lum Network"
         }
     }
 }

@@ -243,94 +243,102 @@ while True:
         print("\n\n[!] TWEETING IS __ENABLED__, spaces will be tweeted & cache will clear")
         time.sleep(5)       
 
-    # def main():
-    # ids = [1319287761048723458, 1138690476612046848] 
-    ids = bot.get_following_ids()['user_ids_list']
-    spaces = cache_scheduled_or_live_spaces(ids)
-    # if len(spaces) == 0:
-    #     print("No spaces to download")
-    #     return
+    try:
 
-    bot.get_users_info_cache([]) # where [] would be from mentioned users. user_data.json
+        # def main():
+        # ids = [1319287761048723458, 1138690476612046848] 
+        ids = bot.get_following_ids()['user_ids_list']
+        spaces = cache_scheduled_or_live_spaces(ids)
+        # if len(spaces) == 0:
+        #     print("No spaces to download")
+        #     return
 
-    # # then every X minutes, we try to download the queue
-    # spaces_to_download = bot.get_ended_spaces_to_download_from_queue() # returns spaces ids to download
-    spaces_to_download = get_spaces_from_cache_to_download(bot)
-    # input(spaces_to_download)
-    # RECORDED_SPACE="https://twitter.com/i/spaces/1mrxmkXNwmkGy?s=20" # stride.zone
-    # RECORDED_SPACE="https://twitter.com/i/spaces/1RDxlaXyNZMKL" # robo long
-    # RECORDED_SPACE="https://twitter.com/i/spaces/1jMJgLNpAbOxL" # scheduled, what happens?
-    # live: https://twitter.com/i/spaces/1zqKVPvrdqVJB?s=20
+        bot.get_users_info_cache([]) # where [] would be from mentioned users. user_data.json
 
-    start = time.time()
-    if spaces_to_download == None:
-        print("No spaces to download")        
-    else:
+        # # then every X minutes, we try to download the queue
+        # spaces_to_download = bot.get_ended_spaces_to_download_from_queue() # returns spaces ids to download
+        spaces_to_download = get_spaces_from_cache_to_download(bot)
+        # input(spaces_to_download)
+        # RECORDED_SPACE="https://twitter.com/i/spaces/1mrxmkXNwmkGy?s=20" # stride.zone
+        # RECORDED_SPACE="https://twitter.com/i/spaces/1RDxlaXyNZMKL" # robo long
+        # RECORDED_SPACE="https://twitter.com/i/spaces/1jMJgLNpAbOxL" # scheduled, what happens?
+        # live: https://twitter.com/i/spaces/1zqKVPvrdqVJB?s=20
 
-        # manual spaces we want to downlolad & tweet
-        root_dir = os.path.dirname(os.path.realpath(__file__))
-        json_data_dir = os.path.join(root_dir, "json_data")   
-        manual_spaces = os.path.join(json_data_dir, "manual_spaces.json")
-        if not os.path.exists(manual_spaces):
-            with open(manual_spaces, "w") as f:
-                json.dump({"manual": []}, f)
+        start = time.time()
+        if spaces_to_download == None:
+            print("No spaces to download")        
+        else:
 
-        with open(manual_spaces, "r") as f:
-            manual_spaces_list = json.load(f)
+            # manual spaces we want to downlolad & tweet
+            root_dir = os.path.dirname(os.path.realpath(__file__))
+            json_data_dir = os.path.join(root_dir, "json_data")   
+            manual_spaces = os.path.join(json_data_dir, "manual_spaces.json")
+            if not os.path.exists(manual_spaces):
+                with open(manual_spaces, "w") as f:
+                    json.dump({"manual": []}, f)
 
-        if 'manual' in manual_spaces_list:
-            for space_id in list(manual_spaces_list['manual']):
-                space_data = bot.get_space_by_id(space_id=space_id)
-                print(f"manual space: {space_id} found!")  
-                spaces_to_download[space_id] = space_data             
+            with open(manual_spaces, "r") as f:
+                manual_spaces_list = json.load(f)
 
-        # Automatic
-        for space_id, space_data in spaces_to_download.items():   
-            try:            
-                # TODO: pre run through these & query all speakedrs & hosts etc at the same time? in group of 100 right?
-                if 'speaker_ids' in space_data:             
-                    speaker_ids = list(space_data['speaker_ids']) # "speaker_ids": [ "1223319210", "285771380", "2837818354" ],
-                    if 'host_ids' in space_data:
-                        speaker_ids.extend(space_data['host_ids'])
-                    # TODO: do we keep or remove this?
-                    # if space_data['creator_id'] in speaker_ids:
-                    #     speaker_ids.remove(space_data['creator_id'])                    
-                    bot.get_users_info_cache(speaker_ids, include_following=True) # idk if False would remove those who we follow or not.
-                else:
-                    print(f"Space {space_id} has no speakers, will continue with download. Space Data: {space_data}")
-                # now we can bot.get_user(id) to get their username                                
+            if 'manual' in manual_spaces_list:
+                for space_id in list(manual_spaces_list['manual']):
+                    space_data = bot.get_space_by_id(space_id=space_id)
+                    print(f"manual space: {space_id} found!")  
+                    spaces_to_download[space_id] = space_data             
 
-                download_and_tweet_space(space_id, space_data, space_data['creator_id'])
-            except Exception as e:
-                print(f"\nspaces_to_download ERROR HERE!")
+            # Automatic
+            for space_id, space_data in spaces_to_download.items():   
+                try:            
+                    # TODO: pre run through these & query all speakedrs & hosts etc at the same time? in group of 100 right?
+                    if 'speaker_ids' in space_data:             
+                        speaker_ids = list(space_data['speaker_ids']) # "speaker_ids": [ "1223319210", "285771380", "2837818354" ],
+                        if 'host_ids' in space_data:
+                            speaker_ids.extend(space_data['host_ids'])
+                        # TODO: do we keep or remove this?
+                        # if space_data['creator_id'] in speaker_ids:
+                        #     speaker_ids.remove(space_data['creator_id'])                    
+                        bot.get_users_info_cache(speaker_ids, include_following=True) # idk if False would remove those who we follow or not.
+                    else:
+                        print(f"Space {space_id} has no speakers, will continue with download. Space Data: {space_data}")
+                    # now we can bot.get_user(id) to get their username                                
 
-                remove_manual_space_from_list(space_id) # removes manual spaces from the custom json list
+                    download_and_tweet_space(space_id, space_data, space_data['creator_id'])
+                except Exception as e:
+                    print(f"\nspaces_to_download ERROR HERE!")
 
-                # todo: ensure this works as intended.
-                if "Space Ended" in repr(e):                  
-                    print(f"Space {space_id} was not recorded, removing from cache.")
-                    remove_downloaded_space_from_cache(space_id)
-                elif "Space should start at" in repr(e): # Spaces was canceled
-                    print(f"Space {space_id} was canceled, removing from cache.")
-                    remove_downloaded_space_from_cache(space_id)
-                elif "Space isn't available" in repr(e): # Spaces was not recorded
-                    print(f"Space {space_id} was not recorded, removing from cache.")
-                    remove_downloaded_space_from_cache(space_id)
-                else:
-                    print(f"main.py Exception: {space_id} -> {e}...")
-                    # I assume we should just remove the space from the queue if something goes wrong
-                    with open(os.path.join(current_dir, "error_log.txt"), "a") as f:
-                        f.write(f"{space_id} -> {e}\n")
-                    # remove_downloaded_space_from_cache(space_id) # TODO ?                 
+                    remove_manual_space_from_list(space_id) # removes manual spaces from the custom json list
 
-    end = time.time()
+                    # todo: ensure this works as intended.
+                    if "Space Ended" in repr(e):                  
+                        print(f"Space {space_id} was not recorded, removing from cache.")
+                        remove_downloaded_space_from_cache(space_id)
+                    elif "Space should start at" in repr(e): # Spaces was canceled
+                        print(f"Space {space_id} was canceled, removing from cache.")
+                        remove_downloaded_space_from_cache(space_id)
+                    elif "Space isn't available" in repr(e): # Spaces was not recorded
+                        print(f"Space {space_id} was not recorded, removing from cache.")
+                        remove_downloaded_space_from_cache(space_id)
+                    else:
+                        print(f"main.py Exception: {space_id} -> {e}...")
+                        # I assume we should just remove the space from the queue if something goes wrong
+                        with open(os.path.join(current_dir, "error_log.txt"), "a") as f:
+                            f.write(f"{space_id} -> {e}\n")
+                        # remove_downloaded_space_from_cache(space_id) # TODO ?                 
 
-    print(f"Finished spaces check in {round(end-start, 2)} seconds")
-    minutes = (end-start)/60
-    
-    if minutes > MINUTES_WAIT:
-        print(f"Downloaded spaces in {round(minutes, 2)} minutes, continuing")
-        continue
-    else:
-        print(f"Downloaded spaces in {round(minutes, 2)} minutes, sleeping for {round(MINUTES_WAIT-minutes, 2)} minutes")
-        time.sleep((MINUTES_WAIT-minutes)*60)
+        end = time.time()
+
+        print(f"Finished spaces check in {round(end-start, 2)} seconds")
+        minutes = (end-start)/60
+        
+        if minutes > MINUTES_WAIT:
+            print(f"Downloaded spaces in {round(minutes, 2)} minutes, continuing")
+            continue
+        else:
+            print(f"Downloaded spaces in {round(minutes, 2)} minutes, sleeping for {round(MINUTES_WAIT-minutes, 2)} minutes")
+            time.sleep((MINUTES_WAIT-minutes)*60)
+            
+    except Exception as e:
+        print(f"main.py Exception: {e}...")
+        with open(os.path.join(current_dir, "error_log.txt"), "a") as f:
+            f.write(f"{e}\n")
+        time.sleep(60)

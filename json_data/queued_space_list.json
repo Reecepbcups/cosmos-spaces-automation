@@ -1,17 +1,5 @@
 {
     "queued_space_list": {
-        "1OyKAVzOWRLGb": {
-            "created_at": "2022-10-31T16:42:06.000Z",
-            "creator_id": "2215937899",
-            "host_ids": [
-                "2215937899"
-            ],
-            "id": "1OyKAVzOWRLGb",
-            "participant_count": 0,
-            "scheduled_start": "2022-11-15T19:00:00.000Z",
-            "state": "scheduled",
-            "title": "Santiago Santos, CMS and Tom Shaughnessy: Venture Capital Series #7"
-        },
         "1YqKDomAqBYxV": {
             "created_at": "2022-11-01T01:05:49.000Z",
             "creator_id": "2215937899",
@@ -24,96 +12,89 @@
             "state": "scheduled",
             "title": "CMS + Tom Shaughnessy: Venture Capital Series #8"
         },
-        "1kvJpmwrzMZxE": {
-            "created_at": "2022-11-06T21:33:01.000Z",
-            "creator_id": "1425851419156901889",
+        "1vAGRAewgXXKl": {
+            "created_at": "2022-11-15T18:07:07.000Z",
+            "creator_id": "1485742987418247169",
             "host_ids": [
-                "1425851419156901889",
-                "1504064670566699008"
+                "1485742987418247169"
             ],
-            "id": "1kvJpmwrzMZxE",
-            "participant_count": 28,
-            "scheduled_start": "2022-11-10T23:00:00.000Z",
-            "speaker_ids": [
-                "1245073885",
-                "1546810191630536706",
-                "1504064670566699008"
-            ],
-            "started_at": "2022-11-10T22:57:54.000Z",
-            "state": "live",
-            "title": "Juno SHIPS ft @SkipProtocol & @komplesocial \ud83d\udef3\ufe0f \ud83e\ude84\ud83d\udcfb\ud83c\udf99\ufe0f"
-        },
-        "1DXxyvnwEovKM": {
-            "created_at": "2022-11-07T17:10:38.000Z",
-            "creator_id": "1487313404004118528",
-            "host_ids": [
-                "1487313404004118528"
-            ],
-            "id": "1DXxyvnwEovKM",
+            "id": "1vAGRAewgXXKl",
             "participant_count": 0,
-            "scheduled_start": "2022-11-11T16:00:00.000Z",
+            "scheduled_start": "2022-11-17T20:00:00.000Z",
             "state": "scheduled",
-            "title": "AMA with Umee"
+            "title": "AMA: How to Build in Winter"
         },
-        "1OyJAVRmlZyxb": {
-            "created_at": "2022-11-07T23:15:39.000Z",
-            "creator_id": "1491955059764125733",
+        "1ynJOaeBpMAKR": {
+            "created_at": "2022-11-15T20:27:30.000Z",
+            "creator_id": "1431764394464223237",
             "host_ids": [
-                "1491955059764125733"
+                "1431764394464223237"
             ],
-            "id": "1OyJAVRmlZyxb",
+            "id": "1ynJOaeBpMAKR",
             "participant_count": 0,
-            "scheduled_start": "2022-11-12T00:00:14.000Z",
+            "scheduled_start": "2022-11-23T17:00:00.000Z",
             "state": "scheduled",
-            "title": "Liquid Staking $OSMO | An Open Discussion w/ \n@stride_zone\n"
+            "title": "Into The Interchain w/ @Shade_Protocol & @SerenityShield_"
         },
-        "1MYxNgevWlNKw": {
-            "created_at": "2022-11-08T21:18:49.000Z",
-            "creator_id": "1416628772565143561",
+        "1mnxeRZalZaKX": {
+            "created_at": "2022-11-15T20:31:08.000Z",
+            "creator_id": "1431764394464223237",
             "host_ids": [
-                "1416628772565143561"
+                "1431764394464223237"
             ],
-            "id": "1MYxNgevWlNKw",
+            "id": "1mnxeRZalZaKX",
             "participant_count": 0,
-            "scheduled_start": "2022-11-16T22:00:00.000Z",
+            "scheduled_start": "2022-11-30T17:00:00.000Z",
             "state": "scheduled",
-            "title": "#Cosmos \ud83e\udd1d #Solana Introducing Nitro AMA"
+            "title": "Into The Interchain w/ @Shade_Protocol &   @agoric + @DeanTribble"
         },
-        "1kvKpmwlBLLGE": {
-            "created_at": "2022-11-10T08:30:29.000Z",
+        "1RDGlabynVdJL": {
+            "created_at": "2022-11-17T04:07:34.000Z",
+            "creator_id": "1316686343905316864",
+            "host_ids": [
+                "1316686343905316864"
+            ],
+            "id": "1RDGlabynVdJL",
+            "participant_count": 0,
+            "scheduled_start": "2022-11-18T02:00:00.000Z",
+            "state": "scheduled",
+            "title": "OKC & XEN Crypto"
+        },
+        "1ynJOaeDyYlKR": {
+            "created_at": "2022-11-17T08:11:31.000Z",
             "creator_id": "1153962373683675136",
             "host_ids": [
                 "1153962373683675136"
             ],
-            "id": "1kvKpmwlBLLGE",
+            "id": "1ynJOaeDyYlKR",
             "participant_count": 0,
-            "scheduled_start": "2022-11-11T14:00:00.000Z",
+            "scheduled_start": "2022-11-18T14:00:00.000Z",
             "state": "scheduled",
-            "title": "#InTheStudio ep 26 - NFT Collections | POAP NFT | OmniFlix & Chill \ud83d\ude0e \ud83c\udf7b"
+            "title": "#InTheStudio ep. 27 - Omni Owls \ud83e\udd89 | Bipolar Blooms \ud83c\udf3a | POAP NFT"
         },
-        "1rmxPkwpBkVJN": {
-            "created_at": "2022-11-10T14:43:58.000Z",
-            "creator_id": "1078740737393598464",
-            "host_ids": [
-                "1078740737393598464"
-            ],
-            "id": "1rmxPkwpBkVJN",
-            "participant_count": 0,
-            "scheduled_start": "2022-11-14T16:00:00.000Z",
-            "state": "scheduled",
-            "title": "Riding the Cosmos w/@interchaininfo \u269b\ufe0f| \ud83c\udf99\ufe0fStakin Twitter Space #15\u269b\ufe0f"
-        },
-        "1ynKOaePpdyJR": {
-            "created_at": "2022-11-10T17:23:28.000Z",
+        "1MYxNgelAqVKw": {
+            "created_at": "2022-11-17T18:04:25.000Z",
             "creator_id": "1416628772565143561",
             "host_ids": [
                 "1416628772565143561"
             ],
-            "id": "1ynKOaePpdyJR",
+            "id": "1MYxNgelAqVKw",
             "participant_count": 0,
-            "scheduled_start": "2022-11-14T21:00:00.000Z",
+            "scheduled_start": "2022-11-18T22:00:00.000Z",
             "state": "scheduled",
-            "title": "#Cosmos AMA What is DFRACT? By Lum Network"
+            "title": "Cosmos Modular Rollups&Solana VM with Eclipse ft Neel Somani "
+        },
+        "1OdKrznODEPKX": {
+            "created_at": "2022-11-17T21:42:26.000Z",
+            "creator_id": "1441886102906806277",
+            "host_ids": [
+                "1441886102906806277"
+            ],
+            "id": "1OdKrznODEPKX",
+            "participant_count": 0,
+            "scheduled_start": "2022-11-22T18:00:00.000Z",
+            "state": "scheduled",
+            "title": "Saga Token Economics & Incentives Overview"
         }
     }
 }

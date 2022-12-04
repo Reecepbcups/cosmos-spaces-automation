@@ -1,100 +1,40 @@
 {
     "queued_space_list": {
-        "1YqKDomAqBYxV": {
-            "created_at": "2022-11-01T01:05:49.000Z",
-            "creator_id": "2215937899",
+        "1dRKZMDyqBgxB": {
+            "created_at": "2022-12-01T19:03:01.000Z",
+            "creator_id": "1323334073453023233",
             "host_ids": [
-                "2215937899"
+                "1323334073453023233"
             ],
-            "id": "1YqKDomAqBYxV",
+            "id": "1dRKZMDyqBgxB",
             "participant_count": 0,
-            "scheduled_start": "2022-11-29T19:00:00.000Z",
+            "scheduled_start": "2022-12-05T15:30:30.000Z",
             "state": "scheduled",
-            "title": "CMS + Tom Shaughnessy: Venture Capital Series #8"
+            "title": "Global Collapse Coming! \ud83e\udd2f\ud83d\ude33 How to Prepare?"
         },
-        "1vAGRAewgXXKl": {
-            "created_at": "2022-11-15T18:07:07.000Z",
-            "creator_id": "1485742987418247169",
+        "1eaKbrBwWavKX": {
+            "created_at": "2022-12-02T16:46:29.000Z",
+            "creator_id": "3305325070",
             "host_ids": [
-                "1485742987418247169"
+                "3305325070"
             ],
-            "id": "1vAGRAewgXXKl",
+            "id": "1eaKbrBwWavKX",
             "participant_count": 0,
-            "scheduled_start": "2022-11-17T20:00:00.000Z",
+            "scheduled_start": "2022-12-06T17:00:00.000Z",
             "state": "scheduled",
-            "title": "AMA: How to Build in Winter"
+            "title": "Secret Spaces feat. Secret University on their dev ed platform!"
         },
-        "1ynJOaeBpMAKR": {
-            "created_at": "2022-11-15T20:27:30.000Z",
-            "creator_id": "1431764394464223237",
-            "host_ids": [
-                "1431764394464223237"
-            ],
-            "id": "1ynJOaeBpMAKR",
-            "participant_count": 0,
-            "scheduled_start": "2022-11-23T17:00:00.000Z",
-            "state": "scheduled",
-            "title": "Into The Interchain w/ @Shade_Protocol & @SerenityShield_"
-        },
-        "1mnxeRZalZaKX": {
-            "created_at": "2022-11-15T20:31:08.000Z",
-            "creator_id": "1431764394464223237",
-            "host_ids": [
-                "1431764394464223237"
-            ],
-            "id": "1mnxeRZalZaKX",
-            "participant_count": 0,
-            "scheduled_start": "2022-11-30T17:00:00.000Z",
-            "state": "scheduled",
-            "title": "Into The Interchain w/ @Shade_Protocol &   @agoric + @DeanTribble"
-        },
-        "1RDGlabynVdJL": {
-            "created_at": "2022-11-17T04:07:34.000Z",
-            "creator_id": "1316686343905316864",
-            "host_ids": [
-                "1316686343905316864"
-            ],
-            "id": "1RDGlabynVdJL",
-            "participant_count": 0,
-            "scheduled_start": "2022-11-18T02:00:00.000Z",
-            "state": "scheduled",
-            "title": "OKC & XEN Crypto"
-        },
-        "1ynJOaeDyYlKR": {
-            "created_at": "2022-11-17T08:11:31.000Z",
-            "creator_id": "1153962373683675136",
-            "host_ids": [
-                "1153962373683675136"
-            ],
-            "id": "1ynJOaeDyYlKR",
-            "participant_count": 0,
-            "scheduled_start": "2022-11-18T14:00:00.000Z",
-            "state": "scheduled",
-            "title": "#InTheStudio ep. 27 - Omni Owls \ud83e\udd89 | Bipolar Blooms \ud83c\udf3a | POAP NFT"
-        },
-        "1MYxNgelAqVKw": {
-            "created_at": "2022-11-17T18:04:25.000Z",
-            "creator_id": "1416628772565143561",
-            "host_ids": [
-                "1416628772565143561"
-            ],
-            "id": "1MYxNgelAqVKw",
-            "participant_count": 0,
-            "scheduled_start": "2022-11-18T22:00:00.000Z",
-            "state": "scheduled",
-            "title": "Cosmos Modular Rollups&Solana VM with Eclipse ft Neel Somani "
-        },
-        "1OdKrznODEPKX": {
-            "created_at": "2022-11-17T21:42:26.000Z",
+        "1djxXlDkWqyxZ": {
+            "created_at": "2022-12-02T16:57:48.000Z",
             "creator_id": "1441886102906806277",
             "host_ids": [
                 "1441886102906806277"
             ],
-            "id": "1OdKrznODEPKX",
+            "id": "1djxXlDkWqyxZ",
             "participant_count": 0,
-            "scheduled_start": "2022-11-22T18:00:00.000Z",
+            "scheduled_start": "2022-12-08T18:00:00.000Z",
             "state": "scheduled",
-            "title": "Saga Token Economics & Incentives Overview"
+            "title": "Reshaping the future of finance w/ Injective Labs & Saga"
         }
     }
 }

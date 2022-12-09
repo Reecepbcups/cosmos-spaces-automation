@@ -4,7 +4,7 @@ from os.path import dirname as parent_dir_name
 # Storage
 # Folders
 CURRENT_DIR = parent_dir_name(parent_dir_name(os.path.abspath(__file__)))
-JSON_DATA_FOLDER = os.path.join(CURRENT_DIR, 'json_data')
+JSON_DATA_FOLDER = os.path.join(CURRENT_DIR, 'final/json_data')
 os.makedirs(JSON_DATA_FOLDER, exist_ok=True)
 
 def get_json(filename: str):

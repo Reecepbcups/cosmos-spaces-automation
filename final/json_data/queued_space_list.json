@@ -1,0 +1,48 @@
+{
+    "queued_space_list": {
+        "1RDGlapPQwqJL": {
+            "created_at": "2022-12-08T12:15:43.000Z",
+            "creator_id": "1078740737393598464",
+            "host_ids": [
+                "1078740737393598464"
+            ],
+            "id": "1RDGlapPQwqJL",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-12T14:00:00.000Z",
+            "state": "scheduled",
+            "title": "Launchpad of the Cosmos @EclipsePad \ud83c\udf11| \ud83c\udf99\ufe0fStakin Space #17 \u269b\ufe0f"
+        },
+        "1MnxnpWpdrjGO": {
+            "created_at": "2022-12-09T04:26:12.000Z",
+            "creator_id": "1153962373683675136",
+            "host_ids": [
+                "1153962373683675136"
+            ],
+            "id": "1MnxnpWpdrjGO",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-10T22:00:00.000Z",
+            "state": "scheduled",
+            "title": "#InTheSpotlight #4l Panel\ud83d\udde3\ufe0fl #NFT adoption across the #Music Industry"
+        },
+        "1kvJpmLvwYQxE": {
+            "created_at": "2022-12-09T09:35:14.000Z",
+            "creator_id": "467972727",
+            "host_ids": [
+                "467972727",
+                "1109983403078807554"
+            ],
+            "id": "1kvJpmLvwYQxE",
+            "participant_count": 18,
+            "scheduled_start": "2022-12-09T13:00:03.000Z",
+            "speaker_ids": [
+                "1485811888093077505",
+                "1485744238805622789",
+                "1109983403078807554",
+                "2267277648"
+            ],
+            "started_at": "2022-12-09T13:04:08.000Z",
+            "state": "live",
+            "title": "RAC FM #14 | QA With Kujira"
+        }
+    }
+}

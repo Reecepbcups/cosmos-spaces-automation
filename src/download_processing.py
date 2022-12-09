@@ -79,7 +79,7 @@ class Processing:
 
         # save json to json_data folder, should already exist
         root_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__))) # TODO: 2 here to get root dir?        
-        json_data_dir = os.path.join(root_dir, "json_data")
+        json_data_dir = os.path.join(root_dir, "final/json_data")
         os.makedirs(json_data_dir, exist_ok=True)
 
         # create a json file named past_spaces.json where we can save all past spaces we have done & what dir they are in

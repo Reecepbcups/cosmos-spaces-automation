@@ -91,7 +91,7 @@
             "pinned_tweet_id": "1573727971558449154",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1348107683304337408/53heZyEL.jpg",
             "public_metrics": {
-                "followers_count": 39029,
+                "followers_count": 39030,
                 "following_count": 143,
                 "tweet_count": 665,
                 "listed_count": 772
@@ -227,7 +227,7 @@
             "pinned_tweet_id": "1590035273588838401",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1587460148834058240/4bAEGu2k.jpg",
             "public_metrics": {
-                "followers_count": 156240,
+                "followers_count": 156241,
                 "following_count": 285,
                 "tweet_count": 3005,
                 "listed_count": 1073
@@ -277,7 +277,7 @@
             "name": "Everstake",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1163440927978991616/TiXV-Jzq.jpg",
             "public_metrics": {
-                "followers_count": 15012,
+                "followers_count": 15013,
                 "following_count": 320,
                 "tweet_count": 6408,
                 "listed_count": 146
@@ -1037,7 +1037,7 @@
             "pinned_tweet_id": "1585793771513712641",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1507391623914737669/U3fR7nxh.jpg",
             "public_metrics": {
-                "followers_count": 52484,
+                "followers_count": 52485,
                 "following_count": 0,
                 "tweet_count": 4701,
                 "listed_count": 464
@@ -1104,7 +1104,7 @@
             "pinned_tweet_id": "1597274270995972097",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1494753600354103304/wSDsjQsF.png",
             "public_metrics": {
-                "followers_count": 104587,
+                "followers_count": 104589,
                 "following_count": 409,
                 "tweet_count": 1063,
                 "listed_count": 577
@@ -1730,7 +1730,7 @@
             "name": "Cephii",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1597724973652742145/i9hqGJsr.jpg",
             "public_metrics": {
-                "followers_count": 69977,
+                "followers_count": 69978,
                 "following_count": 1946,
                 "tweet_count": 31859,
                 "listed_count": 523
@@ -1763,7 +1763,7 @@
             "name": "Osmosis \ud83e\uddea",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1504543889709015041/82CEWnSH.png",
             "public_metrics": {
-                "followers_count": 144167,
+                "followers_count": 144168,
                 "following_count": 3,
                 "tweet_count": 676,
                 "listed_count": 1698
@@ -2558,7 +2558,7 @@
             "name": "White Whale",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1449529757968871424/HaAcTibw.jpg",
             "public_metrics": {
-                "followers_count": 56678,
+                "followers_count": 56677,
                 "following_count": 137,
                 "tweet_count": 1175,
                 "listed_count": 747
@@ -2693,7 +2693,7 @@
                 "followers_count": 17505,
                 "following_count": 243,
                 "tweet_count": 1285,
-                "listed_count": 323
+                "listed_count": 0
             },
             "username": "coinhall_org",
             "verified": false
@@ -4285,12 +4285,11 @@
             "following": false,
             "id": "1485811888093077505",
             "name": "Homestead Cosmonaut \u2728\u269b\ufe0f",
-            "pinned_tweet_id": "1599808952211865600",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1596139401133936641/Ap-btrFi.jpg",
             "public_metrics": {
-                "followers_count": 3884,
-                "following_count": 1248,
-                "tweet_count": 8965,
+                "followers_count": 3898,
+                "following_count": 1251,
+                "tweet_count": 8990,
                 "listed_count": 20
             },
             "username": "Cosmonaut_nicl",
@@ -5216,7 +5215,7 @@
             "name": "Cosmos - Internet of Blockchains \u269b\ufe0f",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1572270323105660931/wfrYRGAC.jpg",
             "public_metrics": {
-                "followers_count": 485246,
+                "followers_count": 485239,
                 "following_count": 393,
                 "tweet_count": 3703,
                 "listed_count": 4693
@@ -6450,7 +6449,7 @@
             "pinned_tweet_id": "1572808908129046528",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1599950971156983809/j1RwKun8.jpg",
             "public_metrics": {
-                "followers_count": 3398,
+                "followers_count": 3399,
                 "following_count": 1093,
                 "tweet_count": 22440,
                 "listed_count": 69
@@ -6745,9 +6744,9 @@
             "name": "\u269b\ufe0fCryptoTank",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1600933651319078917/F9O3DSCw.jpg",
             "public_metrics": {
-                "followers_count": 3824,
-                "following_count": 924,
-                "tweet_count": 4939,
+                "followers_count": 3832,
+                "following_count": 928,
+                "tweet_count": 4945,
                 "listed_count": 50
             },
             "username": "CryptoTank_",
@@ -7979,7 +7978,7 @@
             "pinned_tweet_id": "1586946385596665856",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1600714397248552962/zGUgfRPz.jpg",
             "public_metrics": {
-                "followers_count": 5562,
+                "followers_count": 5563,
                 "following_count": 3460,
                 "tweet_count": 35612,
                 "listed_count": 70
@@ -8543,7 +8542,7 @@
             "pinned_tweet_id": "758787659611246592",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1597873834811527168/pX89CSIy.jpg",
             "public_metrics": {
-                "followers_count": 10279,
+                "followers_count": 10280,
                 "following_count": 1605,
                 "tweet_count": 7397,
                 "listed_count": 255
@@ -8861,7 +8860,7 @@
                 "followers_count": 115919,
                 "following_count": 148,
                 "tweet_count": 1465,
-                "listed_count": 1
+                "listed_count": 1353
             },
             "username": "EvmosOrg",
             "verified": false

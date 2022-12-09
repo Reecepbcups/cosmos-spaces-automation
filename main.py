@@ -28,7 +28,7 @@ DISABLE_TWEETING_FOR_TESTING = False
 MINUTES_WAIT = 5
 
 current_dir = os.path.dirname(os.path.realpath(__file__))
-json_data_dir = os.path.join(current_dir, "json_data")    
+json_data_dir = os.path.join(current_dir, "final/json_data")    
 
 # Twitter client keys
 API_KEY = os.getenv('API_KEY')
@@ -271,7 +271,7 @@ while True:
 
             # manual spaces we want to downlolad & tweet
             root_dir = os.path.dirname(os.path.realpath(__file__))
-            json_data_dir = os.path.join(root_dir, "json_data")   
+            # json_data_dir = os.path.join(root_dir, "json_data")   
             manual_spaces = os.path.join(json_data_dir, "manual_spaces.json")
             if not os.path.exists(manual_spaces):
                 with open(manual_spaces, "w") as f:

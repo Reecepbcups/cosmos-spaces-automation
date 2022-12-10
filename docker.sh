@@ -12,7 +12,7 @@ docker rm $CONTAINERS
 
 
 # run the website on port 5000
-docker run --rm --name=interchain-archive -p 5000:80 -d reecepbcups/interchain-archive
+docker run --rm --name=interchain-archive -p 5000:80 -d reecepbcups/interchain-archive:0.0.1
 
 # run the nginx server
 docker run --name spaces \

@@ -76,12 +76,17 @@
             "created_at": "2022-12-10T04:18:27.000Z",
             "creator_id": "1109983403078807554",
             "host_ids": [
-                "1109983403078807554"
+                "1109983403078807554",
+                "467972727"
             ],
             "id": "1BRJjZomQnwJw",
-            "participant_count": 0,
+            "participant_count": 1,
             "scheduled_start": "2022-12-10T05:00:00.000Z",
-            "state": "scheduled",
+            "speaker_ids": [
+                "467972727"
+            ],
+            "started_at": "2022-12-10T05:00:29.000Z",
+            "state": "live",
             "title": "For the culture \ud83e\udd1d #33 | Late night lounge"
         }
     }

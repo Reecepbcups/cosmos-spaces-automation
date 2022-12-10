@@ -4,6 +4,17 @@
 
 systemctl start docker
 mkdir -p "final"
+
+CONTAINERS=$(docker ps -q)
+docker kill $CONTAINERS
+docker rm $CONTAINERS
+
+
+
+# run the website on port 5000
+docker run --rm --name=interchain-archive -p 5000:80 -d reecepbcups/interchain-archive
+
+# run the nginx server
 docker run --name spaces \
     --restart always \
     -v $(pwd)/default.conf:/etc/nginx/conf.d/default.conf \

@@ -1,65 +1,5 @@
 {
     "queued_space_list": {
-        "1RDGlapPQwqJL": {
-            "created_at": "2022-12-08T12:15:43.000Z",
-            "creator_id": "1078740737393598464",
-            "host_ids": [
-                "1078740737393598464"
-            ],
-            "id": "1RDGlapPQwqJL",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-12T14:00:00.000Z",
-            "state": "scheduled",
-            "title": "Launchpad of the Cosmos @EclipsePad \ud83c\udf11| \ud83c\udf99\ufe0fStakin Space #17 \u269b\ufe0f"
-        },
-        "1lPKqBDMPNwGb": {
-            "created_at": "2022-12-09T22:44:12.000Z",
-            "creator_id": "1416628772565143561",
-            "host_ids": [
-                "1416628772565143561"
-            ],
-            "id": "1lPKqBDMPNwGb",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-12T19:00:00.000Z",
-            "state": "scheduled",
-            "title": "Jackal AMA Updates"
-        },
-        "1jMJgLDkzLgxL": {
-            "created_at": "2022-12-09T22:40:52.000Z",
-            "creator_id": "1503785102542790662",
-            "host_ids": [
-                "1503785102542790662"
-            ],
-            "id": "1jMJgLDkzLgxL",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-12T00:00:05.000Z",
-            "state": "scheduled",
-            "title": "Comunidad de Cosmos y Crypto, unidos somos mas, tema libre"
-        },
-        "1MnxnpWpdrjGO": {
-            "created_at": "2022-12-09T04:26:12.000Z",
-            "creator_id": "1153962373683675136",
-            "host_ids": [
-                "1153962373683675136"
-            ],
-            "id": "1MnxnpWpdrjGO",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-10T22:00:00.000Z",
-            "state": "scheduled",
-            "title": "#InTheSpotlight #4l Panel\ud83d\udde3\ufe0fl #NFT adoption across the #Music Industry"
-        },
-        "1YqKDoOZnrkxV": {
-            "created_at": "2022-12-10T03:50:08.000Z",
-            "creator_id": "1109983403078807554",
-            "host_ids": [
-                "1109983403078807554"
-            ],
-            "id": "1YqKDoOZnrkxV",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-12T14:00:00.000Z",
-            "state": "scheduled",
-            "title": "#NFT Share and Chill with @PlayCosmon | Play-to-earn on @Ki_Foundation"
-        },
         "1kvJpmLyWymxE": {
             "created_at": "2022-12-10T02:49:32.000Z",
             "creator_id": "1487313404004118528",
@@ -72,25 +12,245 @@
             "state": "scheduled",
             "title": "AMA with @ArchwayHQ | Rewarding Architects of WEB3"
         },
-        "1MYxNgNZnnnKw": {
-            "created_at": "2022-12-10T19:05:37.000Z",
-            "creator_id": "1355366118119108612",
+        "1jMJgLlVqqAxL": {
+            "created_at": "2022-12-11T17:26:17.000Z",
+            "creator_id": "967740061801504768",
             "host_ids": [
-                "1355366118119108612",
-                "1481284852880183301",
-                "1365285273396015113"
+                "967740061801504768"
             ],
-            "id": "1MYxNgNZnnnKw",
-            "participant_count": 31,
-            "speaker_ids": [
-                "1481284852880183301",
-                "1592198576255426566",
-                "1365285273396015113",
-                "1340235156670590981"
+            "id": "1jMJgLlVqqAxL",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-13T21:00:00.000Z",
+            "state": "scheduled",
+            "title": "Juno - Community Call #1 - Organized by Communications SubDAO"
+        },
+        "1YqxoAOqDmMGv": {
+            "created_at": "2022-12-12T06:26:17.000Z",
+            "creator_id": "1316686343905316864",
+            "host_ids": [
+                "1316686343905316864"
             ],
-            "started_at": "2022-12-10T19:05:40.000Z",
-            "state": "live",
-            "title": "Rumors of Moon"
+            "id": "1YqxoAOqDmMGv",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-14T14:00:00.000Z",
+            "state": "scheduled",
+            "title": "NFTs aren't dead, or are they? \ud83d\udc40"
+        },
+        "1OwxWwbZYPpxQ": {
+            "created_at": "2022-12-12T13:57:01.000Z",
+            "creator_id": "143228545",
+            "host_ids": [
+                "143228545"
+            ],
+            "id": "1OwxWwbZYPpxQ",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-14T13:10:00.000Z",
+            "state": "scheduled",
+            "title": "TFM Founders Series - Episode 1: Ethan Frey"
+        },
+        "1ypJddMWNagJW": {
+            "created_at": "2022-12-12T18:13:07.000Z",
+            "creator_id": "1416628772565143561",
+            "host_ids": [
+                "1416628772565143561"
+            ],
+            "id": "1ypJddMWNagJW",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-15T22:00:00.000Z",
+            "state": "scheduled",
+            "title": "Sommelier X #Cosmos HOSS "
+        },
+        "1lDGLnqbAaaxm": {
+            "created_at": "2022-12-12T18:20:13.000Z",
+            "creator_id": "1431764394464223237",
+            "host_ids": [
+                "1431764394464223237"
+            ],
+            "id": "1lDGLnqbAaaxm",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-14T17:00:00.000Z",
+            "state": "scheduled",
+            "title": "Into the Interchain with @Shade_Protocol & @nymproject"
+        },
+        "1vAGRARjVdDKl": {
+            "created_at": "2022-12-12T18:35:27.000Z",
+            "creator_id": "1431764394464223237",
+            "host_ids": [
+                "1431764394464223237"
+            ],
+            "id": "1vAGRARjVdDKl",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-21T17:00:00.000Z",
+            "state": "scheduled",
+            "title": "Into The Interchain with @Shade_Protocol & @Umee_CrossChain"
+        },
+        "1OdKrzmdZXAKX": {
+            "created_at": "2022-12-12T18:43:59.000Z",
+            "creator_id": "1416101532282638348",
+            "host_ids": [
+                "1416101532282638348"
+            ],
+            "id": "1OdKrzmdZXAKX",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-14T12:00:40.000Z",
+            "state": "scheduled",
+            "title": "StaFiHub - Liquid Staking Derivative Issuer in the Cosmos"
+        },
+        "1OwGWwbgWpnGQ": {
+            "created_at": "2022-12-12T18:51:11.000Z",
+            "creator_id": "1441886102906806277",
+            "host_ids": [
+                "1441886102906806277"
+            ],
+            "id": "1OwGWwbgWpnGQ",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-15T17:00:00.000Z",
+            "state": "scheduled",
+            "title": "The ultimate play to earn ecosystem w/ Fabwelt & Saga"
+        },
+        "1LyxBqkzQmaJN": {
+            "created_at": "2022-12-12T18:49:13.000Z",
+            "creator_id": "1441886102906806277",
+            "host_ids": [
+                "1441886102906806277"
+            ],
+            "id": "1LyxBqkzQmaJN",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-14T18:00:00.000Z",
+            "state": "scheduled",
+            "title": "Own your data w/ Source Network & Saga"
+        },
+        "1lPJqBlPXQWxb": {
+            "created_at": "2022-12-12T20:28:28.000Z",
+            "creator_id": "1544583052705386498",
+            "host_ids": [
+                "1544583052705386498"
+            ],
+            "id": "1lPJqBlPXQWxb",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-15T20:00:06.000Z",
+            "state": "scheduled",
+            "title": "The Senate by Kujira: AMA with Applicants #2"
+        },
+        "1MYxNgNvVlOKw": {
+            "created_at": "2022-12-12T20:25:45.000Z",
+            "creator_id": "1544583052705386498",
+            "host_ids": [
+                "1544583052705386498"
+            ],
+            "id": "1MYxNgNvVlOKw",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-14T21:00:00.000Z",
+            "state": "scheduled",
+            "title": "The Senate by Kujira: AMA with Applicants #1"
+        },
+        "1mnGeRwDawnJX": {
+            "created_at": "2022-12-12T20:31:00.000Z",
+            "creator_id": "1544583052705386498",
+            "host_ids": [
+                "1544583052705386498"
+            ],
+            "id": "1mnGeRwDawnJX",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-18T20:00:51.000Z",
+            "state": "scheduled",
+            "title": "The Senate by Kujira: AMA with Applicants #4"
+        },
+        "1yNxaNwyWEVKj": {
+            "created_at": "2022-12-12T20:29:52.000Z",
+            "creator_id": "1544583052705386498",
+            "host_ids": [
+                "1544583052705386498"
+            ],
+            "id": "1yNxaNwyWEVKj",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-16T20:00:40.000Z",
+            "state": "scheduled",
+            "title": "The Senate by Kujira: AMA with Applicants #3"
+        },
+        "1BRKjZlOQrdKw": {
+            "created_at": "2022-12-12T20:02:27.000Z",
+            "creator_id": "2267277648",
+            "host_ids": [
+                "2267277648"
+            ],
+            "id": "1BRKjZlOQrdKw",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-16T15:15:00.000Z",
+            "state": "scheduled",
+            "title": "Q/A with Juno Validator-Stakewolle"
+        },
+        "1lPKqBljjyZGb": {
+            "created_at": "2022-12-13T00:36:54.000Z",
+            "creator_id": "1357133940109103104",
+            "host_ids": [
+                "1357133940109103104"
+            ],
+            "id": "1lPKqBljjyZGb",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-14T18:00:00.000Z",
+            "state": "scheduled",
+            "title": "Updates from the Lab, Wednesday @ 1pm EST!"
+        },
+        "1OyJAVnRooDxb": {
+            "created_at": "2022-12-13T03:43:28.000Z",
+            "creator_id": "1253090729137561600",
+            "host_ids": [
+                "1253090729137561600"
+            ],
+            "id": "1OyJAVnRooDxb",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-15T19:00:04.000Z",
+            "state": "scheduled",
+            "title": "Stargaze Week 41 Creator Chat. Thursday 12/15 at 7pm UTC."
+        },
+        "1OwxWwbmkdkxQ": {
+            "created_at": "2022-12-13T06:23:38.000Z",
+            "creator_id": "1153962373683675136",
+            "host_ids": [
+                "1153962373683675136"
+            ],
+            "id": "1OwxWwbmkdkxQ",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-14T14:00:00.000Z",
+            "state": "scheduled",
+            "title": "FlixTalk #49 - Community Updates | StreamSwap \ud83e\uddba \u2692\ufe0f | OmniFlix Apps"
+        },
+        "1YpKkgjMyYoKj": {
+            "created_at": "2022-12-13T09:43:29.000Z",
+            "creator_id": "1019126440233615361",
+            "host_ids": [
+                "1019126440233615361"
+            ],
+            "id": "1YpKkgjMyYoKj",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-14T15:00:07.000Z",
+            "state": "scheduled",
+            "title": "Community health, Research, Analytics, and Benchmarking "
+        },
+        "1ZkKzXlznRwJv": {
+            "created_at": "2022-12-12T17:11:26.000Z",
+            "creator_id": "1519990048497754113",
+            "host_ids": [
+                "1519990048497754113"
+            ],
+            "id": "1ZkKzXlznRwJv",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-14T15:00:00.000Z",
+            "state": "scheduled",
+            "title": "Discussing stOSMO"
+        },
+        "1LyxBqkZVDzJN": {
+            "created_at": "2022-12-13T16:27:46.000Z",
+            "creator_id": "1109983403078807554",
+            "host_ids": [
+                "1109983403078807554"
+            ],
+            "id": "1LyxBqkZVDzJN",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-15T23:30:00.000Z",
+            "state": "scheduled",
+            "title": "#CosmicCommunity Twitter Spaces EP# 11 W/ @JakeHartnell"
         }
     }
 }

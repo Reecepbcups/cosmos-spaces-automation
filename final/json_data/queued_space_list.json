@@ -1,53 +1,5 @@
 {
     "queued_space_list": {
-        "1kvJpmLyWymxE": {
-            "created_at": "2022-12-10T02:49:32.000Z",
-            "creator_id": "1487313404004118528",
-            "host_ids": [
-                "1487313404004118528"
-            ],
-            "id": "1kvJpmLyWymxE",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-13T23:30:00.000Z",
-            "state": "scheduled",
-            "title": "AMA with @ArchwayHQ | Rewarding Architects of WEB3"
-        },
-        "1jMJgLlVqqAxL": {
-            "created_at": "2022-12-11T17:26:17.000Z",
-            "creator_id": "967740061801504768",
-            "host_ids": [
-                "967740061801504768"
-            ],
-            "id": "1jMJgLlVqqAxL",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-13T21:00:00.000Z",
-            "state": "scheduled",
-            "title": "Juno - Community Call #1 - Organized by Communications SubDAO"
-        },
-        "1YqxoAOqDmMGv": {
-            "created_at": "2022-12-12T06:26:17.000Z",
-            "creator_id": "1316686343905316864",
-            "host_ids": [
-                "1316686343905316864"
-            ],
-            "id": "1YqxoAOqDmMGv",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-14T14:00:00.000Z",
-            "state": "scheduled",
-            "title": "NFTs aren't dead, or are they? \ud83d\udc40"
-        },
-        "1OwxWwbZYPpxQ": {
-            "created_at": "2022-12-12T13:57:01.000Z",
-            "creator_id": "143228545",
-            "host_ids": [
-                "143228545"
-            ],
-            "id": "1OwxWwbZYPpxQ",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-14T13:10:00.000Z",
-            "state": "scheduled",
-            "title": "TFM Founders Series - Episode 1: Ethan Frey"
-        },
         "1ypJddMWNagJW": {
             "created_at": "2022-12-12T18:13:07.000Z",
             "creator_id": "1416628772565143561",
@@ -83,18 +35,6 @@
             "scheduled_start": "2022-12-21T17:00:00.000Z",
             "state": "scheduled",
             "title": "Into The Interchain with @Shade_Protocol & @Umee_CrossChain"
-        },
-        "1OdKrzmdZXAKX": {
-            "created_at": "2022-12-12T18:43:59.000Z",
-            "creator_id": "1416101532282638348",
-            "host_ids": [
-                "1416101532282638348"
-            ],
-            "id": "1OdKrzmdZXAKX",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-14T12:00:40.000Z",
-            "state": "scheduled",
-            "title": "StaFiHub - Liquid Staking Derivative Issuer in the Cosmos"
         },
         "1OwGWwbgWpnGQ": {
             "created_at": "2022-12-12T18:51:11.000Z",
@@ -204,42 +144,6 @@
             "state": "scheduled",
             "title": "Stargaze Week 41 Creator Chat. Thursday 12/15 at 7pm UTC."
         },
-        "1OwxWwbmkdkxQ": {
-            "created_at": "2022-12-13T06:23:38.000Z",
-            "creator_id": "1153962373683675136",
-            "host_ids": [
-                "1153962373683675136"
-            ],
-            "id": "1OwxWwbmkdkxQ",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-14T14:00:00.000Z",
-            "state": "scheduled",
-            "title": "FlixTalk #49 - Community Updates | StreamSwap \ud83e\uddba \u2692\ufe0f | OmniFlix Apps"
-        },
-        "1YpKkgjMyYoKj": {
-            "created_at": "2022-12-13T09:43:29.000Z",
-            "creator_id": "1019126440233615361",
-            "host_ids": [
-                "1019126440233615361"
-            ],
-            "id": "1YpKkgjMyYoKj",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-14T15:00:07.000Z",
-            "state": "scheduled",
-            "title": "Community health, Research, Analytics, and Benchmarking "
-        },
-        "1ZkKzXlznRwJv": {
-            "created_at": "2022-12-12T17:11:26.000Z",
-            "creator_id": "1519990048497754113",
-            "host_ids": [
-                "1519990048497754113"
-            ],
-            "id": "1ZkKzXlznRwJv",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-14T15:00:00.000Z",
-            "state": "scheduled",
-            "title": "Discussing stOSMO"
-        },
         "1LyxBqkZVDzJN": {
             "created_at": "2022-12-13T16:27:46.000Z",
             "creator_id": "1109983403078807554",
@@ -251,6 +155,78 @@
             "scheduled_start": "2022-12-15T23:30:00.000Z",
             "state": "scheduled",
             "title": "#CosmicCommunity Twitter Spaces EP# 11 W/ @JakeHartnell"
+        },
+        "1YpKkgjDWoEKj": {
+            "created_at": "2022-12-13T19:55:34.000Z",
+            "creator_id": "1491955059764125733",
+            "host_ids": [
+                "1491955059764125733"
+            ],
+            "id": "1YpKkgjDWoEKj",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-15T00:00:20.000Z",
+            "state": "scheduled",
+            "title": "Cosmonaut Bootcamp | Interchain Info & Angel Protocol"
+        },
+        "1vOGwMBDazvxB": {
+            "created_at": "2022-12-13T21:15:22.000Z",
+            "creator_id": "1501916965392297992",
+            "host_ids": [
+                "1501916965392297992"
+            ],
+            "id": "1vOGwMBDazvxB",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-16T23:00:00.000Z",
+            "state": "scheduled",
+            "title": "TSAS GIVEAWAY \ud83c\udf85"
+        },
+        "1YqKDolaeYoxV": {
+            "created_at": "2022-12-13T07:38:41.000Z",
+            "creator_id": "1501916965392297992",
+            "host_ids": [
+                "1501916965392297992"
+            ],
+            "id": "1YqKDolaeYoxV",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-15T22:00:00.000Z",
+            "state": "scheduled",
+            "title": "ARK PROTOCOL AMA LIVE"
+        },
+        "1rmxPkEByeXJN": {
+            "created_at": "2022-12-13T23:37:28.000Z",
+            "creator_id": "1425851419156901889",
+            "host_ids": [
+                "1425851419156901889"
+            ],
+            "id": "1rmxPkEByeXJN",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-15T23:00:00.000Z",
+            "state": "scheduled",
+            "title": "$JUNO SHIPS with @BeholdIdols && @interstake_fi \ud83d\udef3\ufe0f\ud83e\udd18\ud83c\udffb\ud83e\ude84\ud83e\uddd9\ud83c\udffe\u200d\u2642\ufe0f\ud83e\udddd\ud83c\udffd\u200d\u2642\ufe0f\ud83e\udddd\ud83c\udffd\u200d\u2640\ufe0f"
+        },
+        "1vAxRARRjejJl": {
+            "created_at": "2022-12-14T01:59:37.000Z",
+            "creator_id": "1503785102542790662",
+            "host_ids": [
+                "1503785102542790662"
+            ],
+            "id": "1vAxRARRjejJl",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-14T22:15:57.000Z",
+            "state": "scheduled",
+            "title": "Gaming & NFTs: con Kelepar. Arte, Economia y Estructuras del Juego"
+        },
+        "1mnxeRwnXjYKX": {
+            "created_at": "2022-12-14T14:05:00.000Z",
+            "creator_id": "1088745803819040770",
+            "host_ids": [
+                "1088745803819040770"
+            ],
+            "id": "1mnxeRwnXjYKX",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-15T14:30:46.000Z",
+            "state": "scheduled",
+            "title": "w/Comdex team"
         }
     }
 }

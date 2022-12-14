@@ -54,7 +54,6 @@ headers = {
     'Authorization': f"Bearer {BEARER_TOKEN}",
 }
 
-#  TODO: run every 5-10 minutes?
 def cache_scheduled_or_live_spaces(ids: list[str | int]) -> list[str]: # cache the space ids for download later
     # # https://developer.twitter.com/apitools/api?endpoint=%2F2%2Fspaces%2Fby%2Fcreator_ids&method=get
     ids = ','.join([str(i) for i in ids])        
@@ -72,11 +71,22 @@ def cache_scheduled_or_live_spaces(ids: list[str | int]) -> list[str]: # cache t
         # update_queued_spaces_to_download_later(space)    # save space to json file for later
         queue = get_json(FILENAME)
         if queue == {}:
-            queue = {"queued_space_list": {}}       
+            queue = {"queued_space_list": {}}
+
+        #TODO: does this logic break anywhere?
+        # We don't handle speakers vs host any different in output, maybe merge the 2?        
+        space_id = space_data['id']
+        past_speakers_ids_list = []
+        if space_id in queue['queued_space_list']:            
+            past_speakers_ids_list = queue['queued_space_list'][space_id].get('speaker_ids', [])
+            # It shouldn't matter if we put as host ids since we treat both the same yes?
+            for speakersId in past_speakers_ids_list:
+                if speakersId not in space_data['speaker_ids']:
+                    space_data['speaker_ids'].append(speakersId)
 
         # Sorts the keys so they always are saved alphabetically
         sorted_space_data = {k: v for k, v in sorted(space_data.items(), key=lambda item: item[0].lower())}            
-        queue['queued_space_list'][space_data['id']] = sorted_space_data    
+        queue['queued_space_list'][space_id] = sorted_space_data    
         save_json(FILENAME, queue)
     return queue['queued_space_list'].keys()
 

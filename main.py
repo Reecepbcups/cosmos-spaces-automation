@@ -19,6 +19,8 @@ from src.download_processing import Processing
 from src.spaces import Spaces
 from src.storage import get_json, save_json
 
+from src.discord_notification import discord_notification
+
 load_dotenv()
 if not os.path.exists('.env'):
     print("Please create a .env file with your Twitter API keys. cp .env.example .env")
@@ -40,8 +42,11 @@ BEARER_TOKEN = os.getenv('BEARER_TOKEN')
 auth = tweepy.OAuthHandler(API_KEY, API_KEY_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth, wait_on_rate_limit=True)
+# Discord notification
+DISCORD_WEBHOOK = os.getenv('DISCORD_WEBHOOK')
 
 BEARER_TOKEN = BEARER_TOKEN.replace("%3D", "=") # this needed?
+
 
 client = tweepy.Client(bearer_token=BEARER_TOKEN, consumer_key=API_KEY, consumer_secret=API_KEY_SECRET, access_token=ACCESS_TOKEN, access_token_secret=ACCESS_TOKEN_SECRET)
 
@@ -79,7 +84,6 @@ def cache_scheduled_or_live_spaces(ids: list[str | int]) -> list[str]: # cache t
         past_speakers_ids_list = []
         if space_id in queue['queued_space_list']:            
             past_speakers_ids_list = queue['queued_space_list'][space_id].get('speaker_ids', [])
-            # It shouldn't matter if we put as host ids since we treat both the same yes?
             for speakersId in past_speakers_ids_list:
                 if speakersId not in space_data['speaker_ids']:
                     space_data['speaker_ids'].append(speakersId)
@@ -330,10 +334,11 @@ while True:
                         remove_downloaded_space_from_cache(space_id)
                     else:
                         print(f"main.py Exception: {space_id} -> {e}...")
+                        discord_notification(url=DISCORD_WEBHOOK, title="SPACES BOT ERROR", description=f"{e}", color="ff0000", values={}, imageLink="", footerText="")     
                         # I assume we should just remove the space from the queue if something goes wrong
                         with open(os.path.join(current_dir, "error_log.txt"), "a") as f:
                             f.write(f"{space_id} -> {e}\n")
-                        # remove_downloaded_space_from_cache(space_id) # TODO ?                 
+                        # remove_downloaded_space_from_cache(space_id) # TODO ?
 
         end = time.time()
 

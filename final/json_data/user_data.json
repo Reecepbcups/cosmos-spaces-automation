@@ -58,7 +58,7 @@
             "pinned_tweet_id": "1595080996286009344",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1531897777143353347/8zbE3Vl2.jpg",
             "public_metrics": {
-                "followers_count": 19716,
+                "followers_count": 19711,
                 "following_count": 1,
                 "tweet_count": 701,
                 "listed_count": 374
@@ -91,7 +91,7 @@
             "pinned_tweet_id": "1573727971558449154",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1348107683304337408/53heZyEL.jpg",
             "public_metrics": {
-                "followers_count": 39166,
+                "followers_count": 39165,
                 "following_count": 143,
                 "tweet_count": 673,
                 "listed_count": 774
@@ -227,10 +227,10 @@
             "pinned_tweet_id": "1590035273588838401",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1587460148834058240/4bAEGu2k.jpg",
             "public_metrics": {
-                "followers_count": 158371,
+                "followers_count": 158377,
                 "following_count": 285,
                 "tweet_count": 3032,
-                "listed_count": 1081
+                "listed_count": 1082
             },
             "username": "Injective_",
             "verified": true
@@ -280,7 +280,7 @@
                 "followers_count": 15028,
                 "following_count": 320,
                 "tweet_count": 6451,
-                "listed_count": 147
+                "listed_count": 146
             },
             "username": "everstake_pool",
             "verified": false
@@ -343,7 +343,7 @@
             "name": "Comdex - Democratizing Finance",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1478590027428888577/vNDkoMvK.jpg",
             "public_metrics": {
-                "followers_count": 29896,
+                "followers_count": 29895,
                 "following_count": 132,
                 "tweet_count": 2157,
                 "listed_count": 432
@@ -443,7 +443,7 @@
             "pinned_tweet_id": "1565541687858012162",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1602361511854342145/l6rCXQO-.jpg",
             "public_metrics": {
-                "followers_count": 4166,
+                "followers_count": 4164,
                 "following_count": 2862,
                 "tweet_count": 11277,
                 "listed_count": 56
@@ -609,7 +609,7 @@
             "pinned_tweet_id": "1596096362143436800",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1543100810560946176/H8SB8_9R.jpg",
             "public_metrics": {
-                "followers_count": 29508,
+                "followers_count": 29493,
                 "following_count": 1027,
                 "tweet_count": 4638,
                 "listed_count": 467
@@ -961,6 +961,23 @@
             "username": "SidP95",
             "verified": false
         },
+        "1218624618904182789": {
+            "created_at": "2020-01-18T20:02:19.000Z",
+            "description": "Everyone is invited to the #GnoWorldOrder. https://t.co/nVAbKKD8km. Founder of @cosmos and #tendermint. Never sold his soul. Not financial advice. Delete shitcoins.",
+            "following": true,
+            "id": "1218624618904182789",
+            "name": "\u2600\ufe0f\u2600\ufe0f\u2600\ufe0f Jae Kwon \u2600\ufe0f\u2600\ufe0f\u2600\ufe0f",
+            "pinned_tweet_id": "1600944293417345025",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1584610911859314702/4j8dju_T.jpg",
+            "public_metrics": {
+                "followers_count": 21631,
+                "following_count": 312,
+                "tweet_count": 2766,
+                "listed_count": 394
+            },
+            "username": "jaekwon",
+            "verified": false
+        },
         "1223319210": {
             "created_at": "2013-02-27T01:10:49.000Z",
             "description": "Entrepreneur | Economist | Libertarian | Blockchain Agnostic | #Web3 | Metaverse & IRL Landlord",
@@ -1070,7 +1087,7 @@
             "pinned_tweet_id": "1585793771513712641",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1507391623914737669/U3fR7nxh.jpg",
             "public_metrics": {
-                "followers_count": 52809,
+                "followers_count": 52811,
                 "following_count": 0,
                 "tweet_count": 4746,
                 "listed_count": 467
@@ -1137,10 +1154,10 @@
             "pinned_tweet_id": "1602712675271811074",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1602668040319303680/tiGUB0QJ.jpg",
             "public_metrics": {
-                "followers_count": 106442,
+                "followers_count": 106425,
                 "following_count": 409,
-                "tweet_count": 1074,
-                "listed_count": 577
+                "tweet_count": 1076,
+                "listed_count": 578
             },
             "username": "Umee_CrossChain",
             "verified": false
@@ -1305,7 +1322,7 @@
                 "followers_count": 206951,
                 "following_count": 31,
                 "tweet_count": 1464,
-                "listed_count": 319
+                "listed_count": 318
             },
             "username": "OKCNetwork",
             "verified": true
@@ -1829,7 +1846,7 @@
             "name": "Osmosis \ud83e\uddea",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1504543889709015041/82CEWnSH.png",
             "public_metrics": {
-                "followers_count": 144869,
+                "followers_count": 144867,
                 "following_count": 3,
                 "tweet_count": 683,
                 "listed_count": 1702
@@ -1912,9 +1929,9 @@
             "pinned_tweet_id": "1587245683928612864",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1602492692340084736/AarI32zV.jpg",
             "public_metrics": {
-                "followers_count": 1812,
+                "followers_count": 1810,
                 "following_count": 1154,
-                "tweet_count": 9770,
+                "tweet_count": 9773,
                 "listed_count": 17
             },
             "username": "crypto_mayorEd",
@@ -1977,10 +1994,10 @@
             "name": "Imperator.co",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1594012564341641218/Ya8p5sEq.jpg",
             "public_metrics": {
-                "followers_count": 11501,
-                "following_count": 296,
-                "tweet_count": 2028,
-                "listed_count": 165
+                "followers_count": 11489,
+                "following_count": 300,
+                "tweet_count": 2128,
+                "listed_count": 166
             },
             "username": "imperator_co",
             "verified": false
@@ -2227,7 +2244,7 @@
             "name": "Levana Protocol",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1598314147858550786/okt8Ajjq.jpg",
             "public_metrics": {
-                "followers_count": 30741,
+                "followers_count": 30740,
                 "following_count": 816,
                 "tweet_count": 2736,
                 "listed_count": 615
@@ -2640,10 +2657,10 @@
             "name": "White Whale",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1449529757968871424/HaAcTibw.jpg",
             "public_metrics": {
-                "followers_count": 57036,
+                "followers_count": 57037,
                 "following_count": 137,
                 "tweet_count": 1189,
-                "listed_count": 748
+                "listed_count": 747
             },
             "username": "WhiteWhaleDefi",
             "verified": false
@@ -2872,9 +2889,9 @@
             "pinned_tweet_id": "1593680614862905344",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1587297491946508289/ifyxihCL.jpg",
             "public_metrics": {
-                "followers_count": 34660,
+                "followers_count": 34662,
                 "following_count": 85,
-                "tweet_count": 2057,
+                "tweet_count": 2060,
                 "listed_count": 471
             },
             "username": "Shade_Protocol",
@@ -2921,7 +2938,7 @@
             "pinned_tweet_id": "1598711004140957696",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1525530894307672064/LsQH7soc.jpg",
             "public_metrics": {
-                "followers_count": 21720,
+                "followers_count": 21690,
                 "following_count": 221,
                 "tweet_count": 1620,
                 "listed_count": 200
@@ -3137,9 +3154,9 @@
             "pinned_tweet_id": "1593282835871567872",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1508474357315616768/zcPXETKs.jpg",
             "public_metrics": {
-                "followers_count": 13410,
+                "followers_count": 13409,
                 "following_count": 36,
-                "tweet_count": 365,
+                "tweet_count": 366,
                 "listed_count": 172
             },
             "username": "Sagaxyz__",
@@ -3700,15 +3717,15 @@
         "1459524859050876928": {
             "created_at": "2021-11-13T14:15:03.000Z",
             "description": "Staking derivatives for maximum capital efficiency. \n\nhttps://t.co/l3nci98U9Z\n\nImportant links: https://t.co/pKw8KLAxfC\n\nProduct by @arufaresearch",
-            "following": false,
+            "following": true,
             "id": "1459524859050876928",
             "name": "StakeEasy",
             "pinned_tweet_id": "1585913256039747584",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1562741282866221056/17J3pwYL.jpg",
             "public_metrics": {
-                "followers_count": 7592,
-                "following_count": 29,
-                "tweet_count": 601,
+                "followers_count": 7631,
+                "following_count": 28,
+                "tweet_count": 628,
                 "listed_count": 82
             },
             "username": "StakeEasy",
@@ -3740,7 +3757,7 @@
             "pinned_tweet_id": "1599803631523758081",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1597430895874547712/dEqJPwem.png",
             "public_metrics": {
-                "followers_count": 7240,
+                "followers_count": 7242,
                 "following_count": 1385,
                 "tweet_count": 7680,
                 "listed_count": 111
@@ -4009,6 +4026,23 @@
                 "listed_count": 1
             },
             "username": "Khaliunkalimba",
+            "verified": false
+        },
+        "1470695109284950019": {
+            "created_at": "2021-12-14T10:00:25.000Z",
+            "description": "A New Pioneer of Future Web3 Environment  #EVMs x Cosmos #IBC = Dual #PoS.  \nDual PoS + DApps + CApps + Interoperable Communities = \ud83d\udd25 | https://t.co/Ef8DvYnT6r : \u2935\ufe0f",
+            "following": false,
+            "id": "1470695109284950019",
+            "name": "Gitshock Finance | EVMs-\u269b\ufe0f",
+            "pinned_tweet_id": "1603039409607127040",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1585733440413962240/N1N6fP0N.jpg",
+            "public_metrics": {
+                "followers_count": 25873,
+                "following_count": 195,
+                "tweet_count": 547,
+                "listed_count": 21
+            },
+            "username": "gitshock",
             "verified": false
         },
         "1470825599375753226": {
@@ -4418,7 +4452,7 @@
             "pinned_tweet_id": "1600908456587829248",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1595219595895476224/iu76VS0O.jpg",
             "public_metrics": {
-                "followers_count": 10792,
+                "followers_count": 10766,
                 "following_count": 458,
                 "tweet_count": 3101,
                 "listed_count": 132
@@ -4932,7 +4966,7 @@
             "name": "Neta DAO \ud83d\udc4b",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1529526938360250368/dBoH7eAk.jpg",
             "public_metrics": {
-                "followers_count": 4915,
+                "followers_count": 4913,
                 "following_count": 6,
                 "tweet_count": 872,
                 "listed_count": 56
@@ -5413,10 +5447,10 @@
             "name": "Cosmos - Internet of Blockchains \u269b\ufe0f",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1572270323105660931/wfrYRGAC.jpg",
             "public_metrics": {
-                "followers_count": 485970,
+                "followers_count": 485973,
                 "following_count": 393,
                 "tweet_count": 3702,
-                "listed_count": 4710
+                "listed_count": 4709
             },
             "username": "cosmos",
             "verified": false
@@ -7088,7 +7122,7 @@
             "pinned_tweet_id": "1475640658836787200",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1600315143367311360/q_sztDhc.jpg",
             "public_metrics": {
-                "followers_count": 41609,
+                "followers_count": 41608,
                 "following_count": 2614,
                 "tweet_count": 26432,
                 "listed_count": 984
@@ -7335,9 +7369,9 @@
             "name": "Antoine Vergne",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1339485109414744067/NoDlTe2V.jpg",
             "public_metrics": {
-                "followers_count": 386,
-                "following_count": 506,
-                "tweet_count": 417,
+                "followers_count": 417,
+                "following_count": 536,
+                "tweet_count": 476,
                 "listed_count": 17
             },
             "username": "AVAntoineVergne",
@@ -7912,10 +7946,10 @@
             "pinned_tweet_id": "1602680566633172995",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1481360710395441156/_jWX0blu.png",
             "public_metrics": {
-                "followers_count": 192068,
+                "followers_count": 192021,
                 "following_count": 164,
-                "tweet_count": 7663,
-                "listed_count": 2314
+                "tweet_count": 7665,
+                "listed_count": 2313
             },
             "username": "SecretNetwork",
             "verified": true
@@ -8423,7 +8457,7 @@
             "public_metrics": {
                 "followers_count": 5571,
                 "following_count": 3483,
-                "tweet_count": 35849,
+                "tweet_count": 35851,
                 "listed_count": 70
             },
             "username": "RoboVerseWeb3",
@@ -8633,7 +8667,7 @@
             "name": "Jacob Gadikian",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1597948768363499521/FKpHm2GS.jpg",
             "public_metrics": {
-                "followers_count": 12135,
+                "followers_count": 12134,
                 "following_count": 5572,
                 "tweet_count": 74811,
                 "listed_count": 274
@@ -8765,10 +8799,10 @@
             "pinned_tweet_id": "1589004220656922624",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1508376834811076610/2wtmausc.jpg",
             "public_metrics": {
-                "followers_count": 13714,
-                "following_count": 2260,
-                "tweet_count": 7703,
-                "listed_count": 306
+                "followers_count": 13626,
+                "following_count": 2258,
+                "tweet_count": 7710,
+                "listed_count": 304
             },
             "username": "adriana_kalpa",
             "verified": false
@@ -8950,9 +8984,9 @@
             "pinned_tweet_id": "1587359592320753668",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1532227365656358912/jYe-_f5E.jpg",
             "public_metrics": {
-                "followers_count": 35493,
-                "following_count": 13801,
-                "tweet_count": 66306,
+                "followers_count": 35489,
+                "following_count": 13802,
+                "tweet_count": 66307,
                 "listed_count": 1046
             },
             "username": "zmanian",
@@ -9033,7 +9067,7 @@
             "pinned_tweet_id": "758787659611246592",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1597873834811527168/pX89CSIy.jpg",
             "public_metrics": {
-                "followers_count": 10336,
+                "followers_count": 10337,
                 "following_count": 1617,
                 "tweet_count": 7445,
                 "listed_count": 255
@@ -9364,7 +9398,7 @@
             "name": "Evmos \u2604\ufe0f",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1595092806011191305/koqPJsUX.png",
             "public_metrics": {
-                "followers_count": 116070,
+                "followers_count": 116068,
                 "following_count": 148,
                 "tweet_count": 1476,
                 "listed_count": 1355
@@ -9380,7 +9414,7 @@
             "name": "Akash Network",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1575558636574834699/JVctgni7.png",
             "public_metrics": {
-                "followers_count": 85622,
+                "followers_count": 85623,
                 "following_count": 305,
                 "tweet_count": 5311,
                 "listed_count": 974
@@ -9439,16 +9473,16 @@
         },
         "943411094499946497": {
             "created_at": "2017-12-20T09:21:47.000Z",
-            "description": "Empowering Web 3.0 Communities:\n\n- NFT Marketplace\n- NFT Launchpad\n- Metaverse NFTs\n- Exchange DEX\n\n\ud83d\udd0a TG: https://t.co/F8M5MpkDgP\n\ud83d\udde3\ufe0f Discord:  https://t.co/IxkmQgjkqD",
+            "description": "Empowering Web 3.0 Communities:\n\n- NFT Marketplace\n- NFT Launchpad\n- Metaverse NFTs\n- Exchange DEX\n\n\ud83d\udd0a TG: https://t.co/F8M5Mpk5rh\n\ud83d\udde3\ufe0f Discord:  https://t.co/0TtYYGLGbq",
             "following": true,
             "id": "943411094499946497",
             "name": "Loop Markets: DeFi + Utility NFTs on Cosmos \u269b\ufe0f",
-            "pinned_tweet_id": "1595900681302466561",
+            "pinned_tweet_id": "1603057970505744391",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1572253388750069763/j-ewr8TF.jpg",
             "public_metrics": {
-                "followers_count": 65228,
+                "followers_count": 65227,
                 "following_count": 941,
-                "tweet_count": 12282,
+                "tweet_count": 12283,
                 "listed_count": 799
             },
             "username": "loop_markets",
@@ -9561,7 +9595,7 @@
             "pinned_tweet_id": "1601993803040178178",
             "profile_image_url": "https://pbs.twimg.com/profile_images/1463819969620234247/kGvPhnXc.jpg",
             "public_metrics": {
-                "followers_count": 85519,
+                "followers_count": 85518,
                 "following_count": 0,
                 "tweet_count": 1928,
                 "listed_count": 749

@@ -20,3 +20,5 @@ google-auth-httplib2
 google-auth-oauthlib
 
 mutagen # mp3 audio meta stuff
+
+discord-webhook # https://github.com/lovvskillz/python-discord-webhook

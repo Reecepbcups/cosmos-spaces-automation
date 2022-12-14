@@ -19,9 +19,14 @@
                 "1431764394464223237"
             ],
             "id": "1lDGLnqbAaaxm",
-            "participant_count": 0,
+            "participant_count": 19,
             "scheduled_start": "2022-12-14T17:00:00.000Z",
-            "state": "scheduled",
+            "speaker_ids": [
+                "1524459673394495491",
+                "27884866"
+            ],
+            "started_at": "2022-12-14T16:59:54.000Z",
+            "state": "live",
             "title": "Into the Interchain with @Shade_Protocol & @nymproject"
         },
         "1vAGRARjVdDKl": {
@@ -227,6 +232,25 @@
             "scheduled_start": "2022-12-15T14:30:46.000Z",
             "state": "scheduled",
             "title": "w/Comdex team"
+        },
+        "1ZkJzXllRjwKv": {
+            "created_at": "2022-12-14T10:15:14.000Z",
+            "creator_id": "1459524859050876928",
+            "host_ids": [
+                "1459524859050876928"
+            ],
+            "id": "1ZkJzXllRjwKv",
+            "participant_count": 11,
+            "scheduled_start": "2022-12-14T17:00:52.000Z",
+            "speaker_ids": [
+                "85636440",
+                "1305817799432876032",
+                "1485647867540905986",
+                "1407002510238363652"
+            ],
+            "started_at": "2022-12-14T17:00:06.000Z",
+            "state": "live",
+            "title": "StakeEasy community updates with @KevinGarrison & @HighlanderCTs"
         }
     }
 }

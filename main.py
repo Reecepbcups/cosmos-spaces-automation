@@ -234,10 +234,11 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
 
     output = f"{base}\n\n{speakers}\n\n"
     pre_link_len = len(output)
-    output += f"🎧 https://www.cosmosibc.space/{file_path}"
-    post_link_len = len("a"*28) # 28 is the length of the link in twitters eyes. 23 bc space + headphones
+    output += f"🎧 https://www.cosmosibc.space/{file_path}" # #1
+    output += f"\n\n📼 https://app.cosmosibc.space?user_id={space_data['creator_id']}" #2
+    post_link_len = len("a"*28)*2 # 28 is the length of the link in twitters eyes. 23 bc space + headphones
     if (post_link_len+pre_link_len) > 280:
-        output = f"{base}\n\nLink: https://www.cosmosibc.space/{file_path}"    
+        output = f"{base}\n\n🎧: https://www.cosmosibc.space/{file_path}"    
 
     # TWEET IT
     if DISABLE_TWEETING_FOR_TESTING == True:

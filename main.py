@@ -85,6 +85,8 @@ def cache_scheduled_or_live_spaces(ids: list[str | int]) -> list[str]: # cache t
         if space_id in queue['queued_space_list']:            
             past_speakers_ids_list = queue['queued_space_list'][space_id].get('speaker_ids', [])
             for speakersId in past_speakers_ids_list:
+                if 'speaker_ids' not in space_data:
+                    space_data['speaker_ids'] = []
                 if speakersId not in space_data['speaker_ids']:
                     space_data['speaker_ids'].append(speakersId)
 
@@ -224,21 +226,22 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
         file_path = file_path[1:]
 
     title = str(space_data['title']).replace('"', '').replace('\'', '') # remove ' or " from title
-    participants = space_data['participant_count']
-    speakers = "🎤 " + ", ".join(speakers_ats) if len(speakers_ats) > 0 else ""    
     audio_time = f"{round(audio.info.length/60, 2)} minutes"
-        
+    participants = space_data['participant_count']
+    
     # requires '' so that if it starts with an @ it does not treat it as a reply.
     base = f"'{title}' {creator_username}\n{audio_time}. "
     if participants > 0: base += f"👀: {participants}"
+    
 
-    output = f"{base}\n\n{speakers}\n\n"
-    pre_link_len = len(output)
-    output += f"🎧 https://www.cosmosibc.space/{file_path}" # #1
-    output += f"\n\n📼 https://app.cosmosibc.space?user_id={space_data['creator_id']}" #2
-    post_link_len = len("a"*28)*2 # 28 is the length of the link in twitters eyes. 23 bc space + headphones
-    if (post_link_len+pre_link_len) > 280:
-        output = f"{base}\n\n🎧: https://www.cosmosibc.space/{file_path}"    
+    speakers = "🎤 " + ", ".join(speakers_ats) if len(speakers_ats) > 0 else ""
+
+    link = f"🎧 https://www.cosmosibc.space/{file_path}"
+    output = f"{base}\n\n{speakers}\n\n{link}"
+
+    if len(output) > 280: # This should never happen, just a backup
+        print(f"Tweet is too long {len(output)}, ERROR. Removing speaker")
+        output = f"{base}\n\n{link}"
 
     # TWEET IT
     if DISABLE_TWEETING_FOR_TESTING == True:

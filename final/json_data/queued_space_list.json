@@ -1,256 +1,136 @@
 {
     "queued_space_list": {
-        "1ypJddMWNagJW": {
-            "created_at": "2022-12-12T18:13:07.000Z",
-            "creator_id": "1416628772565143561",
-            "host_ids": [
-                "1416628772565143561"
-            ],
-            "id": "1ypJddMWNagJW",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-15T22:00:00.000Z",
-            "state": "scheduled",
-            "title": "Sommelier X #Cosmos HOSS "
-        },
-        "1lDGLnqbAaaxm": {
-            "created_at": "2022-12-12T18:20:13.000Z",
-            "creator_id": "1431764394464223237",
-            "host_ids": [
-                "1431764394464223237"
-            ],
-            "id": "1lDGLnqbAaaxm",
-            "participant_count": 19,
-            "scheduled_start": "2022-12-14T17:00:00.000Z",
-            "speaker_ids": [
-                "1524459673394495491",
-                "27884866"
-            ],
-            "started_at": "2022-12-14T16:59:54.000Z",
-            "state": "live",
-            "title": "Into the Interchain with @Shade_Protocol & @nymproject"
-        },
-        "1vAGRARjVdDKl": {
-            "created_at": "2022-12-12T18:35:27.000Z",
-            "creator_id": "1431764394464223237",
-            "host_ids": [
-                "1431764394464223237"
-            ],
-            "id": "1vAGRARjVdDKl",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-21T17:00:00.000Z",
-            "state": "scheduled",
-            "title": "Into The Interchain with @Shade_Protocol & @Umee_CrossChain"
-        },
-        "1OwGWwbgWpnGQ": {
-            "created_at": "2022-12-12T18:51:11.000Z",
-            "creator_id": "1441886102906806277",
-            "host_ids": [
-                "1441886102906806277"
-            ],
-            "id": "1OwGWwbgWpnGQ",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-15T17:00:00.000Z",
-            "state": "scheduled",
-            "title": "The ultimate play to earn ecosystem w/ Fabwelt & Saga"
-        },
-        "1LyxBqkzQmaJN": {
-            "created_at": "2022-12-12T18:49:13.000Z",
-            "creator_id": "1441886102906806277",
-            "host_ids": [
-                "1441886102906806277"
-            ],
-            "id": "1LyxBqkzQmaJN",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-14T18:00:00.000Z",
-            "state": "scheduled",
-            "title": "Own your data w/ Source Network & Saga"
-        },
-        "1lPJqBlPXQWxb": {
-            "created_at": "2022-12-12T20:28:28.000Z",
-            "creator_id": "1544583052705386498",
-            "host_ids": [
-                "1544583052705386498"
-            ],
-            "id": "1lPJqBlPXQWxb",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-15T20:00:06.000Z",
-            "state": "scheduled",
-            "title": "The Senate by Kujira: AMA with Applicants #2"
-        },
-        "1MYxNgNvVlOKw": {
-            "created_at": "2022-12-12T20:25:45.000Z",
-            "creator_id": "1544583052705386498",
-            "host_ids": [
-                "1544583052705386498"
-            ],
-            "id": "1MYxNgNvVlOKw",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-14T21:00:00.000Z",
-            "state": "scheduled",
-            "title": "The Senate by Kujira: AMA with Applicants #1"
-        },
-        "1mnGeRwDawnJX": {
-            "created_at": "2022-12-12T20:31:00.000Z",
-            "creator_id": "1544583052705386498",
-            "host_ids": [
-                "1544583052705386498"
-            ],
-            "id": "1mnGeRwDawnJX",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-18T20:00:51.000Z",
-            "state": "scheduled",
-            "title": "The Senate by Kujira: AMA with Applicants #4"
-        },
-        "1yNxaNwyWEVKj": {
-            "created_at": "2022-12-12T20:29:52.000Z",
-            "creator_id": "1544583052705386498",
-            "host_ids": [
-                "1544583052705386498"
-            ],
-            "id": "1yNxaNwyWEVKj",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-16T20:00:40.000Z",
-            "state": "scheduled",
-            "title": "The Senate by Kujira: AMA with Applicants #3"
-        },
-        "1BRKjZlOQrdKw": {
-            "created_at": "2022-12-12T20:02:27.000Z",
-            "creator_id": "2267277648",
-            "host_ids": [
-                "2267277648"
-            ],
-            "id": "1BRKjZlOQrdKw",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-16T15:15:00.000Z",
-            "state": "scheduled",
-            "title": "Q/A with Juno Validator-Stakewolle"
-        },
-        "1lPKqBljjyZGb": {
-            "created_at": "2022-12-13T00:36:54.000Z",
-            "creator_id": "1357133940109103104",
-            "host_ids": [
-                "1357133940109103104"
-            ],
-            "id": "1lPKqBljjyZGb",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-14T18:00:00.000Z",
-            "state": "scheduled",
-            "title": "Updates from the Lab, Wednesday @ 1pm EST!"
-        },
-        "1OyJAVnRooDxb": {
-            "created_at": "2022-12-13T03:43:28.000Z",
-            "creator_id": "1253090729137561600",
-            "host_ids": [
-                "1253090729137561600"
-            ],
-            "id": "1OyJAVnRooDxb",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-15T19:00:04.000Z",
-            "state": "scheduled",
-            "title": "Stargaze Week 41 Creator Chat. Thursday 12/15 at 7pm UTC."
-        },
-        "1LyxBqkZVDzJN": {
-            "created_at": "2022-12-13T16:27:46.000Z",
-            "creator_id": "1109983403078807554",
-            "host_ids": [
-                "1109983403078807554"
-            ],
-            "id": "1LyxBqkZVDzJN",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-15T23:30:00.000Z",
-            "state": "scheduled",
-            "title": "#CosmicCommunity Twitter Spaces EP# 11 W/ @JakeHartnell"
-        },
-        "1YpKkgjDWoEKj": {
-            "created_at": "2022-12-13T19:55:34.000Z",
-            "creator_id": "1491955059764125733",
-            "host_ids": [
-                "1491955059764125733"
-            ],
-            "id": "1YpKkgjDWoEKj",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-15T00:00:20.000Z",
-            "state": "scheduled",
-            "title": "Cosmonaut Bootcamp | Interchain Info & Angel Protocol"
-        },
-        "1vOGwMBDazvxB": {
-            "created_at": "2022-12-13T21:15:22.000Z",
-            "creator_id": "1501916965392297992",
-            "host_ids": [
-                "1501916965392297992"
-            ],
-            "id": "1vOGwMBDazvxB",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-16T23:00:00.000Z",
-            "state": "scheduled",
-            "title": "TSAS GIVEAWAY \ud83c\udf85"
-        },
-        "1YqKDolaeYoxV": {
-            "created_at": "2022-12-13T07:38:41.000Z",
-            "creator_id": "1501916965392297992",
-            "host_ids": [
-                "1501916965392297992"
-            ],
-            "id": "1YqKDolaeYoxV",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-15T22:00:00.000Z",
-            "state": "scheduled",
-            "title": "ARK PROTOCOL AMA LIVE"
-        },
-        "1rmxPkEByeXJN": {
-            "created_at": "2022-12-13T23:37:28.000Z",
-            "creator_id": "1425851419156901889",
-            "host_ids": [
-                "1425851419156901889"
-            ],
-            "id": "1rmxPkEByeXJN",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-15T23:00:00.000Z",
-            "state": "scheduled",
-            "title": "$JUNO SHIPS with @BeholdIdols && @interstake_fi \ud83d\udef3\ufe0f\ud83e\udd18\ud83c\udffb\ud83e\ude84\ud83e\uddd9\ud83c\udffe\u200d\u2642\ufe0f\ud83e\udddd\ud83c\udffd\u200d\u2642\ufe0f\ud83e\udddd\ud83c\udffd\u200d\u2640\ufe0f"
-        },
-        "1vAxRARRjejJl": {
-            "created_at": "2022-12-14T01:59:37.000Z",
-            "creator_id": "1503785102542790662",
-            "host_ids": [
-                "1503785102542790662"
-            ],
-            "id": "1vAxRARRjejJl",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-14T22:15:57.000Z",
-            "state": "scheduled",
-            "title": "Gaming & NFTs: con Kelepar. Arte, Economia y Estructuras del Juego"
-        },
-        "1mnxeRwnXjYKX": {
-            "created_at": "2022-12-14T14:05:00.000Z",
+        "1mrGmklQwWLxy": {
+            "created_at": "2022-12-19T13:14:58.000Z",
             "creator_id": "1088745803819040770",
             "host_ids": [
                 "1088745803819040770"
             ],
-            "id": "1mnxeRwnXjYKX",
+            "id": "1mrGmklQwWLxy",
             "participant_count": 0,
-            "scheduled_start": "2022-12-15T14:30:46.000Z",
+            "scheduled_start": "2022-12-22T14:30:38.000Z",
             "state": "scheduled",
-            "title": "w/Comdex team"
+            "title": "Twitter Spaces w/Demex"
         },
-        "1ZkJzXllRjwKv": {
-            "created_at": "2022-12-14T10:15:14.000Z",
-            "creator_id": "1459524859050876928",
+        "1gqxvyAapnkJB": {
+            "created_at": "2022-12-19T17:20:43.000Z",
+            "creator_id": "1416628772565143561",
             "host_ids": [
-                "1459524859050876928"
+                "1416628772565143561"
             ],
-            "id": "1ZkJzXllRjwKv",
-            "participant_count": 11,
-            "scheduled_start": "2022-12-14T17:00:52.000Z",
+            "id": "1gqxvyAapnkJB",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-21T22:00:00.000Z",
+            "state": "scheduled",
+            "title": "#Cosmos Wednesday w/ Nolus Protocol & CosmosHOSS \ud83c\udf99\ufe0f "
+        },
+        "1ynJOarBQzkKR": {
+            "created_at": "2022-12-19T21:26:23.000Z",
+            "creator_id": "1441886102906806277",
+            "host_ids": [
+                "1441886102906806277"
+            ],
+            "id": "1ynJOarBQzkKR",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-22T18:00:00.000Z",
+            "state": "scheduled",
+            "title": "The ultimate play to earn ecosystem w/ Fabwelt & Saga"
+        },
+        "1MYGNgNgXkQJw": {
+            "created_at": "2022-12-20T17:21:02.000Z",
+            "creator_id": "1441886102906806277",
+            "host_ids": [
+                "1441886102906806277"
+            ],
+            "id": "1MYGNgNgXkQJw",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-21T18:00:00.000Z",
+            "state": "scheduled",
+            "title": "Blockchain developer tooling for cosmonauts w/ Cosmology & Saga"
+        },
+        "1ynJOaryVnrKR": {
+            "created_at": "2022-12-21T03:06:34.000Z",
+            "creator_id": "1481284852880183301",
+            "host_ids": [
+                "1481284852880183301",
+                "1491239135708946441"
+            ],
+            "id": "1ynJOaryVnrKR",
+            "participant_count": 64,
+            "scheduled_start": "2022-12-21T21:00:06.000Z",
             "speaker_ids": [
-                "85636440",
-                "1305817799432876032",
-                "1485647867540905986",
-                "1407002510238363652"
+                "1491239135708946441",
+                "1410111483862601731",
+                "1486076993783357440",
+                "82608153"
             ],
-            "started_at": "2022-12-14T17:00:06.000Z",
+            "started_at": "2022-12-21T20:57:59.000Z",
             "state": "live",
-            "title": "StakeEasy community updates with @KevinGarrison & @HighlanderCTs"
+            "title": "WYND DAO x JunoSwap ~ liquidity migration ~ Huge JUNO news \ud83d\ude80"
+        },
+        "1OwxWwbXRQDxQ": {
+            "created_at": "2022-12-21T15:17:00.000Z",
+            "creator_id": "1062118922147659776",
+            "host_ids": [
+                "1062118922147659776"
+            ],
+            "id": "1OwxWwbXRQDxQ",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-23T14:00:00.000Z",
+            "state": "scheduled",
+            "title": "Injective x White Whale: Cosmos Interchain Liquidity Chat"
+        },
+        "1nAKErngkwOGL": {
+            "created_at": "2022-12-21T17:07:13.000Z",
+            "creator_id": "1253090729137561600",
+            "host_ids": [
+                "1253090729137561600"
+            ],
+            "id": "1nAKErngkwOGL",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-22T19:00:00.000Z",
+            "state": "scheduled",
+            "title": "Stargaze Week 42 Creator Chat.Thursday 12/22 at 7pm UTC."
+        },
+        "1BRKjZlmAZjKw": {
+            "created_at": "2022-12-21T17:15:24.000Z",
+            "creator_id": "1253090729137561600",
+            "host_ids": [
+                "1253090729137561600"
+            ],
+            "id": "1BRKjZlmAZjKw",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-22T18:00:14.000Z",
+            "state": "scheduled",
+            "title": "All about Stargaze Names"
+        },
+        "1djGXlkVvRjGZ": {
+            "created_at": "2022-12-21T17:43:17.000Z",
+            "creator_id": "1073189409938436097",
+            "host_ids": [
+                "1073189409938436097"
+            ],
+            "id": "1djGXlkVvRjGZ",
+            "participant_count": 0,
+            "scheduled_start": "2022-12-22T16:00:00.000Z",
+            "state": "scheduled",
+            "title": "Everstake & MultiversX Community Call"
+        },
+        "1kvKpmlyvNkGE": {
+            "created_at": "2022-12-21T21:16:09.000Z",
+            "creator_id": "1355366118119108612",
+            "host_ids": [
+                "1355366118119108612"
+            ],
+            "id": "1kvKpmlyvNkGE",
+            "participant_count": 17,
+            "speaker_ids": [
+                "820137493714456577",
+                "1340235156670590981"
+            ],
+            "started_at": "2022-12-21T21:16:11.000Z",
+            "state": "live",
+            "title": "AI Arms Race"
         }
     }
 }

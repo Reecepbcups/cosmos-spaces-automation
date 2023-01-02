@@ -1,136 +1,76 @@
 {
     "queued_space_list": {
-        "1mrGmklQwWLxy": {
-            "created_at": "2022-12-19T13:14:58.000Z",
-            "creator_id": "1088745803819040770",
+        "1dRKZMVOZPaxB": {
+            "created_at": "2022-12-30T07:05:00.000Z",
+            "creator_id": "1316686343905316864",
             "host_ids": [
-                "1088745803819040770"
+                "1316686343905316864"
             ],
-            "id": "1mrGmklQwWLxy",
+            "id": "1dRKZMVOZPaxB",
             "participant_count": 0,
-            "scheduled_start": "2022-12-22T14:30:38.000Z",
+            "scheduled_start": "2023-01-03T14:00:00.000Z",
             "state": "scheduled",
-            "title": "Twitter Spaces w/Demex"
+            "title": "Looking ahead to 2023 with OKC & OKX Web3"
         },
-        "1gqxvyAapnkJB": {
-            "created_at": "2022-12-19T17:20:43.000Z",
-            "creator_id": "1416628772565143561",
+        "1yoJMZLXyRWxQ": {
+            "created_at": "2022-12-31T15:03:17.000Z",
+            "creator_id": "967740061801504768",
             "host_ids": [
-                "1416628772565143561"
+                "967740061801504768"
             ],
-            "id": "1gqxvyAapnkJB",
+            "id": "1yoJMZLXyRWxQ",
             "participant_count": 0,
-            "scheduled_start": "2022-12-21T22:00:00.000Z",
+            "scheduled_start": "2023-01-03T21:00:34.000Z",
             "state": "scheduled",
-            "title": "#Cosmos Wednesday w/ Nolus Protocol & CosmosHOSS \ud83c\udf99\ufe0f "
+            "title": "Juno - Community Call #2 - Organized by Communications SubDAO"
         },
-        "1ynJOarBQzkKR": {
-            "created_at": "2022-12-19T21:26:23.000Z",
-            "creator_id": "1441886102906806277",
+        "1OwxWwpVmkZxQ": {
+            "created_at": "2022-12-31T16:16:03.000Z",
+            "creator_id": "1510514454559174664",
             "host_ids": [
-                "1441886102906806277"
+                "1510514454559174664"
             ],
-            "id": "1ynJOarBQzkKR",
+            "id": "1OwxWwpVmkZxQ",
             "participant_count": 0,
-            "scheduled_start": "2022-12-22T18:00:00.000Z",
+            "scheduled_start": "2023-01-03T17:00:00.000Z",
             "state": "scheduled",
-            "title": "The ultimate play to earn ecosystem w/ Fabwelt & Saga"
+            "title": "The Floor is \u2026 Jake Hartnell from Juno Network"
         },
-        "1MYGNgNgXkQJw": {
-            "created_at": "2022-12-20T17:21:02.000Z",
-            "creator_id": "1441886102906806277",
+        "1mrGmkzyMZQxy": {
+            "created_at": "2023-01-02T01:30:15.000Z",
+            "creator_id": "1347266698236227584",
             "host_ids": [
-                "1441886102906806277"
+                "1347266698236227584"
             ],
-            "id": "1MYGNgNgXkQJw",
+            "id": "1mrGmkzyMZQxy",
             "participant_count": 0,
-            "scheduled_start": "2022-12-21T18:00:00.000Z",
+            "scheduled_start": "2023-01-04T15:00:00.000Z",
             "state": "scheduled",
-            "title": "Blockchain developer tooling for cosmonauts w/ Cosmology & Saga"
+            "title": "@Sommfinance x @0xPolygon"
         },
-        "1ynJOaryVnrKR": {
-            "created_at": "2022-12-21T03:06:34.000Z",
-            "creator_id": "1481284852880183301",
+        "1MYxNgBwbebKw": {
+            "created_at": "2023-01-02T13:16:17.000Z",
+            "creator_id": "1153962373683675136",
             "host_ids": [
-                "1481284852880183301",
-                "1491239135708946441"
+                "1153962373683675136"
             ],
-            "id": "1ynJOaryVnrKR",
-            "participant_count": 64,
-            "scheduled_start": "2022-12-21T21:00:06.000Z",
-            "speaker_ids": [
-                "1491239135708946441",
-                "1410111483862601731",
-                "1486076993783357440",
-                "82608153"
-            ],
-            "started_at": "2022-12-21T20:57:59.000Z",
-            "state": "live",
-            "title": "WYND DAO x JunoSwap ~ liquidity migration ~ Huge JUNO news \ud83d\ude80"
-        },
-        "1OwxWwbXRQDxQ": {
-            "created_at": "2022-12-21T15:17:00.000Z",
-            "creator_id": "1062118922147659776",
-            "host_ids": [
-                "1062118922147659776"
-            ],
-            "id": "1OwxWwbXRQDxQ",
+            "id": "1MYxNgBwbebKw",
             "participant_count": 0,
-            "scheduled_start": "2022-12-23T14:00:00.000Z",
+            "scheduled_start": "2023-01-04T14:00:00.000Z",
             "state": "scheduled",
-            "title": "Injective x White Whale: Cosmos Interchain Liquidity Chat"
+            "title": "FlixTalk #51 - 2023 & Chill \ud83e\udd42 | Year in NFTs \ud83d\uddbc\ufe0f | Community Updates"
         },
-        "1nAKErngkwOGL": {
-            "created_at": "2022-12-21T17:07:13.000Z",
-            "creator_id": "1253090729137561600",
+        "1YpKkgpBqmoKj": {
+            "created_at": "2023-01-02T15:22:35.000Z",
+            "creator_id": "3305325070",
             "host_ids": [
-                "1253090729137561600"
+                "3305325070"
             ],
-            "id": "1nAKErngkwOGL",
+            "id": "1YpKkgpBqmoKj",
             "participant_count": 0,
-            "scheduled_start": "2022-12-22T19:00:00.000Z",
+            "scheduled_start": "2023-01-03T17:00:00.000Z",
             "state": "scheduled",
-            "title": "Stargaze Week 42 Creator Chat.Thursday 12/22 at 7pm UTC."
-        },
-        "1BRKjZlmAZjKw": {
-            "created_at": "2022-12-21T17:15:24.000Z",
-            "creator_id": "1253090729137561600",
-            "host_ids": [
-                "1253090729137561600"
-            ],
-            "id": "1BRKjZlmAZjKw",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-22T18:00:14.000Z",
-            "state": "scheduled",
-            "title": "All about Stargaze Names"
-        },
-        "1djGXlkVvRjGZ": {
-            "created_at": "2022-12-21T17:43:17.000Z",
-            "creator_id": "1073189409938436097",
-            "host_ids": [
-                "1073189409938436097"
-            ],
-            "id": "1djGXlkVvRjGZ",
-            "participant_count": 0,
-            "scheduled_start": "2022-12-22T16:00:00.000Z",
-            "state": "scheduled",
-            "title": "Everstake & MultiversX Community Call"
-        },
-        "1kvKpmlyvNkGE": {
-            "created_at": "2022-12-21T21:16:09.000Z",
-            "creator_id": "1355366118119108612",
-            "host_ids": [
-                "1355366118119108612"
-            ],
-            "id": "1kvKpmlyvNkGE",
-            "participant_count": 17,
-            "speaker_ids": [
-                "820137493714456577",
-                "1340235156670590981"
-            ],
-            "started_at": "2022-12-21T21:16:11.000Z",
-            "state": "live",
-            "title": "AI Arms Race"
+            "title": "Secret Spaces feat. Secret DApp teams on the Ecosystem Roadmap!"
         }
     }
 }

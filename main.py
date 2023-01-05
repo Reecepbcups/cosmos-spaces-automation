@@ -226,18 +226,18 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
         file_path = file_path[1:]
 
     title = str(space_data['title']).replace('"', '').replace('\'', '') # remove ' or " from title
-    AUDIO_LEN = round(audio.info.length/60, 2)
+    AUDIO_LEN = int(round(audio.info.length/60, 0))
     if AUDIO_LEN < 15:
         print(f"Space {space_id} is too short ({AUDIO_LEN} minutes) to tweet. (min 15 minutes)")
         return
 
     audio_time = f"{AUDIO_LEN} minutes"
-    participants = space_data['participant_count']
     
     # requires '' so that if it starts with an @ it does not treat it as a reply.
     base = f"'{title}' {creator_username}\n{audio_time}. "
-    if participants > 0: base += f"👀: {participants}"
     
+    participants = space_data['participant_count']
+    if participants > 0: base += f"👀: {participants}"
 
     speakers = "🎤 " + ", ".join(speakers_ats) if len(speakers_ats) > 0 else ""
 
@@ -248,7 +248,7 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
 
         MAX_SPEAKERS=7
         # try just the first :7 speakers if it is too long
-        print(f"Too many speakers ({len(speakers_ats)}) is too long {len(output)}, Consensing to only {MAX_SPEAKERS} speakers")
+        print(f"Too many speakers ({len(speakers_ats)}) is too long {len(output)}, Condensing to only {MAX_SPEAKERS} speakers")
         speakers = "🎤 " + ", ".join(speakers_ats[:MAX_SPEAKERS]) if len(speakers_ats) > 0 else ""
         output = f"{base}\n\n{speakers}\n\n{link}"
 

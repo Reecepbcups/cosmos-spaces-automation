@@ -226,7 +226,12 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
         file_path = file_path[1:]
 
     title = str(space_data['title']).replace('"', '').replace('\'', '') # remove ' or " from title
-    audio_time = f"{round(audio.info.length/60, 2)} minutes"
+    AUDIO_LEN = round(audio.info.length/60, 2)
+    if AUDIO_LEN < 15:
+        print(f"Space {space_id} is too short ({AUDIO_LEN} minutes) to tweet. (min 15 minutes)")
+        return
+
+    audio_time = f"{AUDIO_LEN} minutes"
     participants = space_data['participant_count']
     
     # requires '' so that if it starts with an @ it does not treat it as a reply.
@@ -240,8 +245,17 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
     output = f"{base}\n\n{speakers}\n\n{link}"
 
     if len(output) > 280: # This should never happen, just a backup
-        print(f"Tweet is too long {len(output)}, ERROR. Removing speaker")
-        output = f"{base}\n\n{link}"
+
+        MAX_SPEAKERS=7
+        # try just the first :7 speakers if it is too long
+        print(f"Too many speakers ({len(speakers_ats)}) is too long {len(output)}, Consensing to only {MAX_SPEAKERS} speakers")
+        speakers = "🎤 " + ", ".join(speakers_ats[:MAX_SPEAKERS]) if len(speakers_ats) > 0 else ""
+        output = f"{base}\n\n{speakers}\n\n{link}"
+
+        # If its still too long, no speakers shown
+        if len(output) > 280:
+            print(f"Tweet is too long {len(output)}, ERROR. No speaker")
+            output = f"{base}\n\n{link}"
 
     # TWEET IT
     if DISABLE_TWEETING_FOR_TESTING == True:
@@ -326,6 +340,9 @@ while True:
 
                     remove_manual_space_from_list(space_id) # removes manual spaces from the custom json list
 
+                    currentDT = time.localtime(time.time())
+                    formatted_time = time.strftime("[%m/%d/%Y %H:%M:%S]", currentDT)
+
                     # todo: ensure this works as intended.
                     if "Space Ended" in repr(e):                  
                         print(f"Space {space_id} was not recorded, removing from cache.")
@@ -341,7 +358,7 @@ while True:
                         discord_notification(url=DISCORD_WEBHOOK, title="SPACES BOT ERROR", description=f"{e}", color="ff0000", values={}, imageLink="", footerText="")     
                         # I assume we should just remove the space from the queue if something goes wrong
                         with open(os.path.join(current_dir, "error_log.txt"), "a") as f:
-                            f.write(f"{space_id} -> {e}\n")
+                            f.write(f"{formatted_time} {space_id} -> {e}\n")
                         # remove_downloaded_space_from_cache(space_id) # TODO ?
 
         end = time.time()

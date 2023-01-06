@@ -1,17 +1,5 @@
 {
     "queued_space_list": {
-        "1jMJgLnRzQexL": {
-            "created_at": "2023-01-02T20:48:08.000Z",
-            "creator_id": "1451637557784104970",
-            "host_ids": [
-                "1451637557784104970"
-            ],
-            "id": "1jMJgLnRzQexL",
-            "participant_count": 0,
-            "scheduled_start": "2023-01-05T01:00:00.000Z",
-            "state": "scheduled",
-            "title": "Obi: secure, deployable wallet tech \ud83d\udcbb\ud83d\udcf1"
-        },
         "1nAKErbORwRGL": {
             "created_at": "2023-01-03T11:55:31.000Z",
             "creator_id": "1088745803819040770",
@@ -23,42 +11,6 @@
             "scheduled_start": "2023-01-12T14:30:13.000Z",
             "state": "scheduled",
             "title": "Comdex weekly spaces w/StakeEasy"
-        },
-        "1lDxLnQvaLqGm": {
-            "created_at": "2023-01-03T12:00:55.000Z",
-            "creator_id": "1088745803819040770",
-            "host_ids": [
-                "1088745803819040770"
-            ],
-            "id": "1lDxLnQvaLqGm",
-            "participant_count": 0,
-            "scheduled_start": "2023-01-05T14:30:42.000Z",
-            "state": "scheduled",
-            "title": "Comdex Weekly Spaces w/Team"
-        },
-        "1OwxWwvjzDZxQ": {
-            "created_at": "2023-01-03T19:44:58.000Z",
-            "creator_id": "1416628772565143561",
-            "host_ids": [
-                "1416628772565143561"
-            ],
-            "id": "1OwxWwvjzDZxQ",
-            "participant_count": 0,
-            "scheduled_start": "2023-01-05T17:00:00.000Z",
-            "state": "scheduled",
-            "title": "Koala Wallet AMA w/ Cosmos HOSS.#Kadena"
-        },
-        "1yoKMZlbklXGQ": {
-            "created_at": "2023-01-04T13:00:39.000Z",
-            "creator_id": "1253090729137561600",
-            "host_ids": [
-                "1253090729137561600"
-            ],
-            "id": "1yoKMZlbklXGQ",
-            "participant_count": 0,
-            "scheduled_start": "2023-01-05T19:00:20.000Z",
-            "state": "scheduled",
-            "title": "Stargaze Week 44 Creator Chat. Thursday 01/06 at 7pm UTC."
         },
         "1jMKgLyjYomGL": {
             "created_at": "2023-01-04T18:15:30.000Z",
@@ -72,17 +24,89 @@
             "state": "scheduled",
             "title": "Into The Interchain with @govendible"
         },
-        "1LyGBqbprAYKN": {
-            "created_at": "2023-01-04T19:21:26.000Z",
-            "creator_id": "1441886102906806277",
+        "1lDGLnQEdXkxm": {
+            "created_at": "2023-01-05T16:06:48.000Z",
+            "creator_id": "1609876493794177025",
             "host_ids": [
-                "1441886102906806277"
+                "1609876493794177025",
+                "1366921269875269632"
             ],
-            "id": "1LyGBqbprAYKN",
+            "id": "1lDGLnQEdXkxm",
+            "participant_count": 18,
+            "scheduled_start": "2023-01-06T13:00:24.000Z",
+            "speaker_ids": [
+                "1485744238805622789",
+                "15712483",
+                "1366921269875269632",
+                "1390484720643944451",
+                "2267277648",
+                "1109983403078807554",
+                "1604862818037243905",
+                "178378161"
+            ],
+            "started_at": "2023-01-06T13:03:26.000Z",
+            "state": "live",
+            "title": "RAC FM Official Spaces in conjunction with JUNO Sauce SubDAO \ud83e\udd9d\ud83c\udf36\ufe0f\u2620\ufe0f"
+        },
+        "1PlKQpzgzEaxE": {
+            "created_at": "2023-01-05T18:39:28.000Z",
+            "creator_id": "7910872",
+            "host_ids": [
+                "7910872"
+            ],
+            "id": "1PlKQpzgzEaxE",
             "participant_count": 0,
-            "scheduled_start": "2023-01-05T18:00:00.000Z",
+            "scheduled_start": "2023-01-12T15:00:00.000Z",
             "state": "scheduled",
-            "title": "Making De-Cloud easy to use for everyone w/ Praetor & Saga "
+            "title": "Hyperplane x Zaki: Interoperability and Modular blockchains"
+        },
+        "1ypKddPeLjRKW": {
+            "created_at": "2023-01-06T04:40:05.000Z",
+            "creator_id": "1357133940109103104",
+            "host_ids": [
+                "1357133940109103104"
+            ],
+            "id": "1ypKddPeLjRKW",
+            "participant_count": 0,
+            "scheduled_start": "2023-01-10T17:00:00.000Z",
+            "state": "scheduled",
+            "title": "UFTL - January 11th @ 12:00 EST"
+        },
+        "1djxXlXDvPOxZ": {
+            "created_at": "2023-01-06T13:24:24.000Z",
+            "creator_id": "1153962373683675136",
+            "host_ids": [
+                "1153962373683675136"
+            ],
+            "id": "1djxXlXDvPOxZ",
+            "participant_count": 0,
+            "scheduled_start": "2023-01-07T22:00:00.000Z",
+            "state": "scheduled",
+            "title": "#InTheSpotlight AMA with @PymeID | Community Building \ud83d\ude80"
+        },
+        "1rmxPkDBQMjJN": {
+            "created_at": "2023-01-06T14:09:43.000Z",
+            "creator_id": "1153962373683675136",
+            "host_ids": [
+                "1153962373683675136",
+                "3183805537"
+            ],
+            "id": "1rmxPkDBQMjJN",
+            "participant_count": 35,
+            "speaker_ids": [
+                "1305817799432876032",
+                "2270487410",
+                "1439825091462766592",
+                "59379341",
+                "1449449345410076683",
+                "1561065307556429826",
+                "3183805537",
+                "1479765326053183489",
+                "1597496803703853056"
+            ],
+            "started_at": "2023-01-06T14:09:44.000Z",
+            "state": "live",
+            "title": "#InTheStudio ep 34 | NFT Drops \ud83c\udf81& New Collections | POP NFT \ud83d\udccdPart 2"
         }
     }
 }

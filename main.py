@@ -190,8 +190,10 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
 
     # check if file_info is a string
     if isinstance(file_info, str):
+        year = datetime.datetime.now().year
+        month = datetime.datetime.now().month
         new_file_path = file_info # this happens after it is already downloaded?
-        url = file_info.split("/")[-1]
+        url = f"{year}/{month}/{creator_id}/{file_info.split('/')[-1]}"
     else:
         new_file_path = file_info['new_file_path']
         url = file_info['url']
@@ -257,9 +259,9 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
     output = f"{base}\n\n{speakers}\n\n{link}"
 
     if len(output) > 280: # This should never happen, just a backup
+        MAX_SPEAKERS=7     
         print(f"Too many speakers ({len(speakers_ats)}) is too long {len(output)}, Condensing to only {MAX_SPEAKERS} speakers")
 
-        MAX_SPEAKERS=7        
         speakers = "🎤 " + ", ".join(speakers_ats[:MAX_SPEAKERS]) if len(speakers_ats) > 0 else ""
         output = f"{base}\n\n{speakers}\n\n{link}"
 

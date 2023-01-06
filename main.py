@@ -8,6 +8,7 @@ import multiprocessing as mp
 import os
 import time
 import urllib.parse
+import traceback
 
 import requests
 import tweepy
@@ -183,7 +184,18 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
         print(f"Error downloading {space_id}, likely invalid.")
         return
 
+    file_info: dict
     file_info = p.remove_0_volume_from_file(filename, creator_id) # we pass through creator_id for sorting       
+    # print(f'DEBUGGING22A: {file_info}\n...')
+
+    # check if file_info is a string
+    if isinstance(file_info, str):
+        new_file_path = file_info # this happens after it is already downloaded?
+        url = file_info.split("/")[-1]
+    else:
+        new_file_path = file_info['new_file_path']
+        url = file_info['url']
+
     # { "new_file_path": new_file_location, "url": data[str(creator_id)][updated_mp3_filename] }
     
     # gets user from cache or fresh query if not already in cache        
@@ -195,7 +207,7 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
         creator_username = ""
         pfp_img = ""      
 
-    audio = MP3(file_info['new_file_path'])
+    audio = MP3(new_file_path)
 
     # gets host & speakers & saves them to the tweet msg
     speakers_ats = []
@@ -221,7 +233,7 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
     speakers_ats = [x for x in speakers_ats if x != f"@{creator['username']}"]
 
     # encoded filepath so it points to the correct file
-    file_path = urllib.parse.quote(file_info['url'])    
+    file_path = urllib.parse.quote(url)    
     if file_path[0] == "/":  # since we already do that in the link section below
         file_path = file_path[1:]
 
@@ -245,10 +257,9 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
     output = f"{base}\n\n{speakers}\n\n{link}"
 
     if len(output) > 280: # This should never happen, just a backup
-
-        MAX_SPEAKERS=7
-        # try just the first :7 speakers if it is too long
         print(f"Too many speakers ({len(speakers_ats)}) is too long {len(output)}, Condensing to only {MAX_SPEAKERS} speakers")
+
+        MAX_SPEAKERS=7        
         speakers = "🎤 " + ", ".join(speakers_ats[:MAX_SPEAKERS]) if len(speakers_ats) > 0 else ""
         output = f"{base}\n\n{speakers}\n\n{link}"
 
@@ -334,7 +345,7 @@ while True:
                         print(f"Space {space_id} has no speakers, will continue with download. Space Data: {space_data}")
                     # now we can bot.get_user(id) to get their username                                
 
-                    download_and_tweet_space(space_id, space_data, space_data['creator_id'])
+                    download_and_tweet_space(str(space_id), dict(space_data), str(space_data['creator_id']))
                 except Exception as e:
                     print(f"\nspaces_to_download ERROR HERE!")
 
@@ -354,11 +365,11 @@ while True:
                         print(f"Space {space_id} was not recorded, removing from cache.")
                         remove_downloaded_space_from_cache(space_id)
                     else:
-                        print(f"main.py Exception: {space_id} -> {e}...")
+                        print(f"main.py Exception: {space_id} -> {traceback.format_exc()}...")
                         discord_notification(url=DISCORD_WEBHOOK, title="SPACES BOT ERROR", description=f"{e}", color="ff0000", values={}, imageLink="", footerText="")     
                         # I assume we should just remove the space from the queue if something goes wrong
                         with open(os.path.join(current_dir, "error_log.txt"), "a") as f:
-                            f.write(f"{formatted_time} {space_id} -> {e}\n")
+                            f.write(f"{formatted_time} {space_id} -> {traceback.format_exc()}\n")
                         # remove_downloaded_space_from_cache(space_id) # TODO ?
 
         end = time.time()
@@ -373,8 +384,8 @@ while True:
             print(f"Downloaded spaces in {round(minutes, 2)} minutes, sleeping for {round(MINUTES_WAIT-minutes, 2)} minutes")
             time.sleep((MINUTES_WAIT-minutes)*60)
             
-    except Exception as e:
-        print(f"main.py Exception: {e}...")
+    except Exception:
+        print(f"main.py Exception: {traceback.format_exc()}...")
         with open(os.path.join(current_dir, "error_log.txt"), "a") as f:
-            f.write(f"{e}\n")
+            f.write(f"{traceback.format_exc()}\n")
         time.sleep(60)

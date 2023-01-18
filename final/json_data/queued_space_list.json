@@ -1,255 +1,256 @@
 {
     "queued_space_list": {
-        "1nAKErbORwRGL": {
-            "created_at": "2023-01-03T11:55:31.000Z",
-            "creator_id": "1088745803819040770",
+        "1OdJrzbLgDXJX": {
+            "created_at": "2023-01-11T20:25:52.000Z",
+            "creator_id": "1285628066346274817",
             "host_ids": [
-                "1088745803819040770"
+                "1285628066346274817"
             ],
-            "id": "1nAKErbORwRGL",
+            "id": "1OdJrzbLgDXJX",
             "participant_count": 0,
-            "scheduled_start": "2023-01-12T14:30:13.000Z",
+            "scheduled_start": "2023-01-18T19:00:00.000Z",
             "state": "scheduled",
-            "title": "Comdex weekly spaces w/StakeEasy"
+            "title": "Into the Umeeverse \ud83e\ude90 x @interchainfm \ud83e\udd69"
         },
-        "1jMKgLyjYomGL": {
-            "created_at": "2023-01-04T18:15:30.000Z",
+        "1eaKbrLAgkvKX": {
+            "created_at": "2023-01-12T00:09:47.000Z",
             "creator_id": "1431764394464223237",
             "host_ids": [
                 "1431764394464223237"
             ],
-            "id": "1jMKgLyjYomGL",
-            "participant_count": 17,
-            "scheduled_start": "2023-01-11T17:00:14.000Z",
-            "speaker_ids": [
-                "65426862",
-                "1482521824248356864",
-                "1524459673394495491",
-                "1433533034586836995"
-            ],
-            "started_at": "2023-01-11T16:59:46.000Z",
-            "state": "live",
-            "title": "Into The Interchain with @govendible"
-        },
-        "1PlKQpzgzEaxE": {
-            "created_at": "2023-01-05T18:39:28.000Z",
-            "creator_id": "7910872",
-            "host_ids": [
-                "7910872"
-            ],
-            "id": "1PlKQpzgzEaxE",
+            "id": "1eaKbrLAgkvKX",
             "participant_count": 0,
-            "scheduled_start": "2023-01-12T15:00:00.000Z",
+            "scheduled_start": "2023-01-25T17:00:23.000Z",
             "state": "scheduled",
-            "title": "Hyperplane x Zaki: Interoperability and Modular blockchains"
+            "title": "Into The Interchain with @cosmoshoss"
         },
-        "1djxXlXDvPOxZ": {
-            "created_at": "2023-01-06T13:24:24.000Z",
-            "creator_id": "1153962373683675136",
-            "host_ids": [
-                "1153962373683675136"
-            ],
-            "id": "1djxXlXDvPOxZ",
-            "participant_count": 30,
-            "scheduled_start": "2023-01-07T22:00:00.000Z",
-            "speaker_ids": [
-                "2585857981"
-            ],
-            "started_at": "2023-01-07T22:01:51.000Z",
-            "state": "live",
-            "title": "#InTheSpotlight with @PymeID | Growth Hacking as a Service on Cosmos\ud83d\ude80"
-        },
-        "1YqGoAwwpkZxv": {
-            "created_at": "2023-01-07T15:52:57.000Z",
-            "creator_id": "1357133940109103104",
-            "host_ids": [
-                "1357133940109103104",
-                "876107531411750913"
-            ],
-            "id": "1YqGoAwwpkZxv",
-            "participant_count": 93,
-            "scheduled_start": "2023-01-11T17:00:00.000Z",
-            "speaker_ids": [
-                "1438361035740782595",
-                "1432019140022177795",
-                "1416628772565143561",
-                "876107531411750913",
-                "1379580383562326018",
-                "2664148052",
-                "1346051273494323205",
-                "2826092557"
-            ],
-            "started_at": "2023-01-11T16:57:55.000Z",
-            "state": "live",
-            "title": "UFTL - January 11th @ 12:00 EST"
-        },
-        "1kvJpmpQwpaxE": {
-            "created_at": "2023-01-09T06:45:40.000Z",
-            "creator_id": "1609876493794177025",
-            "host_ids": [
-                "1609876493794177025"
-            ],
-            "id": "1kvJpmpQwpaxE",
-            "participant_count": 0,
-            "scheduled_start": "2023-01-13T13:00:23.000Z",
-            "state": "scheduled",
-            "title": "RAC FM Panelist Discussion featuring Sebrestein #JUNOSauceSubDAO \ud83e\udd9d"
-        },
-        "1DXGyvlOenYJM": {
-            "created_at": "2023-01-09T17:50:03.000Z",
-            "creator_id": "1441886102906806277",
-            "host_ids": [
-                "1441886102906806277"
-            ],
-            "id": "1DXGyvlOenYJM",
-            "participant_count": 0,
-            "scheduled_start": "2023-01-11T18:00:00.000Z",
-            "state": "scheduled",
-            "title": "Powerful Web3 wallets for your players w/ Openfort & Saga"
-        },
-        "1gqxvyBOEBpJB": {
-            "created_at": "2023-01-09T17:52:12.000Z",
-            "creator_id": "1441886102906806277",
-            "host_ids": [
-                "1441886102906806277"
-            ],
-            "id": "1gqxvyBOEBpJB",
-            "participant_count": 0,
-            "scheduled_start": "2023-01-12T18:00:00.000Z",
-            "state": "scheduled",
-            "title": "Building UNREAL games w/ Studio369 & Saga"
-        },
-        "1ZkKzXpOeowJv": {
-            "created_at": "2023-01-09T18:20:07.000Z",
-            "creator_id": "1481284852880183301",
-            "host_ids": [
-                "1481284852880183301"
-            ],
-            "id": "1ZkKzXpOeowJv",
-            "participant_count": 0,
-            "scheduled_start": "2023-01-13T23:00:45.000Z",
-            "state": "scheduled",
-            "title": "NFT Happy Hour \ud83c\udf7a Polygon is the #3 NFT chain ~ chat with One Planet"
-        },
-        "1OwxWwvMBNwxQ": {
-            "created_at": "2023-01-09T21:41:20.000Z",
+        "1yoJMZlAaRzxQ": {
+            "created_at": "2023-01-13T01:14:16.000Z",
             "creator_id": "1416628772565143561",
             "host_ids": [
                 "1416628772565143561"
             ],
-            "id": "1OwxWwvMBNwxQ",
+            "id": "1yoJMZlAaRzxQ",
             "participant_count": 0,
-            "scheduled_start": "2023-01-12T20:00:00.000Z",
+            "scheduled_start": "2023-01-19T15:00:00.000Z",
             "state": "scheduled",
-            "title": "LSD Mania ft. Stader Labs and Cosmos Hoss "
+            "title": "Pulsar Finance AMA w/ Cosmos Hoss"
         },
-        "1mrGmkbnZNBxy": {
-            "created_at": "2023-01-10T19:09:58.000Z",
-            "creator_id": "1609876493794177025",
+        "1MYxNgzgPVwKw": {
+            "created_at": "2023-01-13T17:39:21.000Z",
+            "creator_id": "922670090834780162",
             "host_ids": [
-                "1609876493794177025"
+                "922670090834780162"
             ],
-            "id": "1mrGmkbnZNBxy",
+            "id": "1MYxNgzgPVwKw",
             "participant_count": 0,
-            "scheduled_start": "2023-01-12T12:00:17.000Z",
+            "scheduled_start": "2023-01-18T17:00:00.000Z",
             "state": "scheduled",
-            "title": "\ud83d\udea8 ARK Protocol Exclusive \ud83d\udea8 RAC FM presents Stinky and The Brain\ud83e\udde0\ud83e\udd9d"
+            "title": "Babylon x Akash Network: feat. David Tse and Greg Osuri"
         },
-        "1DXxyvlYRENKM": {
-            "created_at": "2023-01-10T21:27:10.000Z",
-            "creator_id": "925006951926390784",
+        "1MYGNgzoeApJw": {
+            "created_at": "2023-01-13T22:04:16.000Z",
+            "creator_id": "1491955059764125733",
             "host_ids": [
-                "925006951926390784"
+                "1491955059764125733"
             ],
-            "id": "1DXxyvlYRENKM",
+            "id": "1MYGNgzoeApJw",
             "participant_count": 0,
-            "scheduled_start": "2023-01-12T16:00:00.000Z",
+            "scheduled_start": "2023-01-18T18:00:48.000Z",
             "state": "scheduled",
-            "title": "Regenerati News Hour: Cosmos ZERO, Carbon credits "
+            "title": "Lava-naut Bootcamp \ud83c\udf0b | Rethinking RPCs in the Cosmos"
         },
-        "1eaKbrLOBzQKX": {
-            "created_at": "2023-01-11T02:32:05.000Z",
-            "creator_id": "1532601577353228288",
+        "1ypJddoVlQyJW": {
+            "created_at": "2023-01-16T13:37:07.000Z",
+            "creator_id": "1416628772565143561",
             "host_ids": [
-                "1532601577353228288"
+                "1416628772565143561"
             ],
-            "id": "1eaKbrLOBzQKX",
+            "id": "1ypJddoVlQyJW",
             "participant_count": 0,
-            "scheduled_start": "2023-01-11T23:00:51.000Z",
+            "scheduled_start": "2023-01-18T19:30:00.000Z",
             "state": "scheduled",
-            "title": "ICI Open Beta Launch \ud83d\ude80 & Gov. Prop Discussion"
+            "title": "ORAI Chain AMA w/ Tyree and Cosmos HOSS"
         },
-        "1vOxwMpZOPoGB": {
-            "created_at": "2023-01-11T05:49:46.000Z",
-            "creator_id": "1316686343905316864",
+        "1LyxBqDVzyrJN": {
+            "created_at": "2023-01-17T04:07:18.000Z",
+            "creator_id": "1416628772565143561",
             "host_ids": [
-                "1316686343905316864"
+                "1416628772565143561"
             ],
-            "id": "1vOxwMpZOPoGB",
+            "id": "1LyxBqDVzyrJN",
             "participant_count": 0,
-            "scheduled_start": "2023-01-12T14:00:00.000Z",
+            "scheduled_start": "2023-01-19T16:30:00.000Z",
             "state": "scheduled",
-            "title": "NFTs aren\u2019t dead, or are they?"
+            "title": "Decentr.net AMA w/ CosmosHOSS "
         },
-        "1dRKZMqmwqAxB": {
-            "created_at": "2023-01-11T11:39:05.000Z",
-            "creator_id": "1253090729137561600",
+        "1vAGRAzNkLDKl": {
+            "created_at": "2023-01-09T18:39:42.000Z",
+            "creator_id": "1534571280946577411",
             "host_ids": [
-                "1253090729137561600"
+                "1534571280946577411"
             ],
-            "id": "1dRKZMqmwqAxB",
+            "id": "1vAGRAzNkLDKl",
             "participant_count": 0,
-            "scheduled_start": "2023-01-12T19:00:52.000Z",
+            "scheduled_start": "2023-01-19T01:00:00.000Z",
             "state": "scheduled",
-            "title": "Stargaze Week 45 Creator Chat. Thursday 01/12 at 7pm UTC."
+            "title": "Web3 Builders Alliance Overview and AMA"
         },
-        "1MnxnpyvVVYGO": {
-            "created_at": "2023-01-11T11:48:51.000Z",
-            "creator_id": "967740061801504768",
-            "host_ids": [
-                "967740061801504768"
-            ],
-            "id": "1MnxnpyvVVYGO",
-            "participant_count": 0,
-            "scheduled_start": "2023-01-13T19:00:08.000Z",
-            "state": "scheduled",
-            "title": "Juno <> Babylon AMA"
-        },
-        "1YqKDobBjmLxV": {
-            "created_at": "2023-01-11T13:29:50.000Z",
+        "1BRJjZRdyyBJw": {
+            "created_at": "2023-01-17T08:33:25.000Z",
             "creator_id": "1078740737393598464",
             "host_ids": [
                 "1078740737393598464"
             ],
-            "id": "1YqKDobBjmLxV",
+            "id": "1BRJjZRdyyBJw",
             "participant_count": 0,
-            "scheduled_start": "2023-01-16T16:00:00.000Z",
+            "scheduled_start": "2023-01-20T15:00:00.000Z",
             "state": "scheduled",
-            "title": "@hicommonwealth & Governance in the #Cosmos  \ud83d\uddf3\ufe0f | Stakin Spaces #19 \ud83c\udf99\ufe0f\ud83e\udde2"
+            "title": "Stakin x Stader Labs \ud83d\udd25 $NEAR Twitter Spaces"
         },
-        "1MYGNgzdompJw": {
-            "created_at": "2023-01-11T16:11:57.000Z",
+        "1MYxNgEapOPKw": {
+            "created_at": "2023-01-17T09:09:51.000Z",
+            "creator_id": "1544583052705386498",
+            "host_ids": [
+                "1544583052705386498"
+            ],
+            "id": "1MYxNgEapOPKw",
+            "participant_count": 0,
+            "scheduled_start": "2023-01-20T08:00:34.000Z",
+            "state": "scheduled",
+            "title": "Cosmos Club with dYdX"
+        },
+        "1gqxvydzRdRJB": {
+            "created_at": "2023-01-17T14:36:28.000Z",
+            "creator_id": "1088745803819040770",
+            "host_ids": [
+                "1088745803819040770"
+            ],
+            "id": "1gqxvydzRdRJB",
+            "participant_count": 0,
+            "scheduled_start": "2023-01-19T14:30:02.000Z",
+            "state": "scheduled",
+            "title": "Comdex Spaces w/The Syndicate Hub"
+        },
+        "1RDGlaLDqDEJL": {
+            "created_at": "2023-01-17T15:54:52.000Z",
+            "creator_id": "1458116456395182089",
+            "host_ids": [
+                "1458116456395182089"
+            ],
+            "id": "1RDGlaLDqDEJL",
+            "participant_count": 0,
+            "scheduled_start": "2023-01-23T15:00:00.000Z",
+            "state": "scheduled",
+            "title": "\u2620\ufe0f Barebones of Web3 Ep. 15 \ud83c\udf99\ufe0fGuest @_shibbywibby from @LifesAJoke_NFT"
+        },
+        "1jMJgLrWwemxL": {
+            "created_at": "2023-01-17T16:22:50.000Z",
+            "creator_id": "1416628772565143561",
+            "host_ids": [
+                "1416628772565143561"
+            ],
+            "id": "1jMJgLrWwemxL",
+            "participant_count": 0,
+            "scheduled_start": "2023-01-20T15:00:00.000Z",
+            "state": "scheduled",
+            "title": "NFT Infrastructure Series -Episode 1 "
+        },
+        "1PlKQpenPdNxE": {
+            "created_at": "2023-01-17T16:56:47.000Z",
+            "creator_id": "1441886102906806277",
+            "host_ids": [
+                "1441886102906806277"
+            ],
+            "id": "1PlKQpenPdNxE",
+            "participant_count": 0,
+            "scheduled_start": "2023-01-19T18:00:00.000Z",
+            "state": "scheduled",
+            "title": "Gamify your website w/ Stemmy & Saga"
+        },
+        "1RDGlaLDzkjJL": {
+            "created_at": "2023-01-17T18:05:31.000Z",
+            "creator_id": "1458116456395182089",
+            "host_ids": [
+                "1458116456395182089"
+            ],
+            "id": "1RDGlaLDzkjJL",
+            "participant_count": 0,
+            "scheduled_start": "2023-01-18T23:00:00.000Z",
+            "state": "scheduled",
+            "title": "\u2694\ufe0f Rumble Crawl + Gaming of Web3 \ud83d\udc7e NFTs, Stars, and Giveaways! \ud83c\udf81"
+        },
+        "1LyxBqDmvzLJN": {
+            "created_at": "2023-01-17T19:24:10.000Z",
+            "creator_id": "1458116456395182089",
+            "host_ids": [
+                "1458116456395182089"
+            ],
+            "id": "1LyxBqDmvzLJN",
+            "participant_count": 0,
+            "scheduled_start": "2023-01-25T18:00:00.000Z",
+            "state": "scheduled",
+            "title": "\u2620\ufe0fBarebones Midweek Special \ud83c\udf99\ufe0fwith Guest @itmetinalou @minxieoffical "
+        },
+        "1yNGaNnEqegJj": {
+            "created_at": "2023-01-17T23:21:25.000Z",
+            "creator_id": "1485742987418247169",
+            "host_ids": [
+                "1485742987418247169"
+            ],
+            "id": "1yNGaNnEqegJj",
+            "participant_count": 0,
+            "scheduled_start": "2023-01-21T17:30:00.000Z",
+            "state": "scheduled",
+            "title": "CC: Roadmap Edition \ud83c\udfa2"
+        },
+        "1RDxlaLbrdlKL": {
+            "created_at": "2023-01-18T02:23:29.000Z",
+            "creator_id": "1253090729137561600",
+            "host_ids": [
+                "1253090729137561600"
+            ],
+            "id": "1RDxlaLbrdlKL",
+            "participant_count": 0,
+            "scheduled_start": "2023-01-19T19:00:10.000Z",
+            "state": "scheduled",
+            "title": "Stargaze Week 46 Creator Chat. Thursday 01/19 at 7pm UTC."
+        },
+        "1BdGYyNbaXoGX": {
+            "created_at": "2023-01-18T06:05:55.000Z",
+            "creator_id": "1609876493794177025",
+            "host_ids": [
+                "1609876493794177025"
+            ],
+            "id": "1BdGYyNbaXoGX",
+            "participant_count": 0,
+            "scheduled_start": "2023-01-20T13:00:36.000Z",
+            "state": "scheduled",
+            "title": "RAC FM Weekly Panelist Discussion featuring The Don \ud83d\ude31\ud83d\udc40\u2620\ufe0f\ud83e\udd9d #Sauce "
+        },
+        "1OdKrzYMYPeKX": {
+            "created_at": "2023-01-18T09:35:08.000Z",
             "creator_id": "143228545",
             "host_ids": [
                 "143228545"
             ],
-            "id": "1MYGNgzdompJw",
+            "id": "1OdKrzYMYPeKX",
             "participant_count": 0,
-            "scheduled_start": "2023-01-12T10:00:00.000Z",
+            "scheduled_start": "2023-01-19T00:30:00.000Z",
             "state": "scheduled",
-            "title": "TFM Founders Series: Sunny Aggarwal co-founder of Osmosis"
+            "title": "TFM Founders Series: Jake Hartnell co-founder of Juno"
         },
-        "1DXGyvlpmbvJM": {
-            "created_at": "2023-01-11T16:52:26.000Z",
-            "creator_id": "1431764394464223237",
+        "1jMJgLrMBemxL": {
+            "created_at": "2023-01-18T13:23:14.000Z",
+            "creator_id": "1544583052705386498",
             "host_ids": [
-                "1431764394464223237"
+                "1544583052705386498"
             ],
-            "id": "1DXGyvlpmbvJM",
+            "id": "1jMJgLrMBemxL",
             "participant_count": 0,
-            "scheduled_start": "2023-01-16T17:00:00.000Z",
+            "scheduled_start": "2023-01-19T20:00:06.000Z",
             "state": "scheduled",
-            "title": "ShadeSwap: A Derivative Swap + StableSwap "
+            "title": "Cosmos Club w/ Picasso Network "
         }
     }
 }

@@ -7,8 +7,8 @@ import json
 import multiprocessing as mp
 import os
 import time
-import urllib.parse
 import traceback
+import urllib.parse
 
 import requests
 import tweepy
@@ -16,11 +16,10 @@ from dotenv import load_dotenv
 from mutagen.mp3 import MP3
 
 from src.bot import Bot
+from src.discord_notification import discord_notification
 from src.download_processing import Processing
 from src.spaces import Spaces
 from src.storage import get_json, save_json
-
-from src.discord_notification import discord_notification
 
 load_dotenv()
 if not os.path.exists('.env'):
@@ -368,7 +367,7 @@ while True:
                         remove_downloaded_space_from_cache(space_id)
                     else:
                         print(f"main.py Exception: {space_id} -> {traceback.format_exc()}...")
-                        discord_notification(url=DISCORD_WEBHOOK, title="SPACES BOT ERROR", description=f"{e}", color="ff0000", values={}, imageLink="", footerText="")     
+                        discord_notification(url=DISCORD_WEBHOOK, title="SPACES BOT ERROR", description=f"url: https://twitter.com/i/spaces/{space_id}, error: {e}", color="ff0000", values={}, imageLink="", footerText="")     
                         # I assume we should just remove the space from the queue if something goes wrong
                         with open(os.path.join(current_dir, "error_log.txt"), "a") as f:
                             f.write(f"{formatted_time} {space_id} -> {traceback.format_exc()}\n")

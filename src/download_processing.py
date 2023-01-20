@@ -1,11 +1,16 @@
-import os, sys, shutil, ffmpegio, twspace_dl, json
+import datetime
+import json
+import os
 # import moviepy.editor as mpy
 # from moviepy.editor import *
 import re
-import numpy as np
+import shutil
+import sys
 from time import sleep, time
-import datetime
 
+import ffmpegio
+import numpy as np
+import twspace_dl
 from pydub import AudioSegment
 
 COMPRESSION_BITRATE = "96k" # 128k default, but saves like 50-60% of storage
@@ -32,6 +37,15 @@ class Processing:
             rec_space_url = f"https://twitter.com/i/spaces/{rec_space_url}"                
 
         # print(f"Downloading {rec_space_url}")
+
+        # TODO: NOTE TO SELF, TWITTER BROKE API HERE
+        # in the from_space_url function, find twspace.py & I commented out the following as user_id break
+        '''
+        # self["creator_id"] = twitter.user_id(
+        #     "https://twitter.com/" + creator_info["screen_name"]
+        # )
+        '''
+
         space_obj = twspace_dl.Twspace.from_space_url(rec_space_url)        
         space = twspace_dl.TwspaceDL(space_obj, self.filename_fmt)        
         # space = twspace_dl.TwspaceDL(space_obj, rec_space_url.split("/")[-1]) # where the .mp3 would be the spaces ID. So we need to save metadata for website   

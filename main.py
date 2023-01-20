@@ -258,7 +258,7 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
     output = f"{base}\n\n{speakers}\n\n{link}"
 
     if len(output) > 280: # This should never happen, just a backup
-        MAX_SPEAKERS=7
+        MAX_SPEAKERS=6
         print(f"Too many speakers ({len(speakers_ats)}) is too long {len(output)}, Condensing to only {MAX_SPEAKERS} speakers")
 
         speakers = "🎤 " + ", ".join(speakers_ats[:MAX_SPEAKERS]) if len(speakers_ats) > 0 else ""

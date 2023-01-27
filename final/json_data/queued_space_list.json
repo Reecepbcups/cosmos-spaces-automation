@@ -1,124 +1,112 @@
 {
     "queued_space_list": {
-        "1eaKbrLAgkvKX": {
-            "created_at": "2023-01-12T00:09:47.000Z",
-            "creator_id": "1431764394464223237",
+        "1rmxPkRXlPdJN": {
+            "created_at": "2023-01-23T17:35:41.000Z",
+            "creator_id": "1451637557784104970",
             "host_ids": [
-                "1431764394464223237"
+                "1451637557784104970"
             ],
-            "id": "1eaKbrLAgkvKX",
+            "id": "1rmxPkRXlPdJN",
             "participant_count": 0,
-            "scheduled_start": "2023-01-25T17:00:23.000Z",
+            "scheduled_start": "2023-01-31T22:00:00.000Z",
             "state": "scheduled",
-            "title": "Into The Interchain with @cosmoshoss"
+            "title": "New Partner Collaboration! The Space Ape Society & CSA \ud83d\udc51"
         },
-        "1RDGlaLDqDEJL": {
-            "created_at": "2023-01-17T15:54:52.000Z",
-            "creator_id": "1458116456395182089",
-            "host_ids": [
-                "1458116456395182089"
-            ],
-            "id": "1RDGlaLDqDEJL",
-            "participant_count": 0,
-            "scheduled_start": "2023-01-23T15:00:00.000Z",
-            "state": "scheduled",
-            "title": "\u2620\ufe0f Barebones of Web3 Ep. 15 \ud83c\udf99\ufe0fGuest @_shibbywibby from @LifesAJoke_NFT"
-        },
-        "1jMJgLrWwemxL": {
-            "created_at": "2023-01-17T16:22:50.000Z",
-            "creator_id": "1416628772565143561",
-            "host_ids": [
-                "1416628772565143561"
-            ],
-            "id": "1jMJgLrWwemxL",
-            "participant_count": 0,
-            "scheduled_start": "2023-01-20T15:00:00.000Z",
-            "state": "scheduled",
-            "title": "NFT Infrastructure Series -Episode 1 "
-        },
-        "1LyxBqDmvzLJN": {
-            "created_at": "2023-01-17T19:24:10.000Z",
-            "creator_id": "1458116456395182089",
-            "host_ids": [
-                "1458116456395182089"
-            ],
-            "id": "1LyxBqDmvzLJN",
-            "participant_count": 0,
-            "scheduled_start": "2023-01-25T18:00:00.000Z",
-            "state": "scheduled",
-            "title": "\u2620\ufe0fBarebones Midweek Special \ud83c\udf99\ufe0fwith Guest @itmetinalou @minxieoffical "
-        },
-        "1dRKZMrqvpoxB": {
-            "created_at": "2023-01-19T14:44:20.000Z",
-            "creator_id": "1109983403078807554",
-            "host_ids": [
-                "1109983403078807554"
-            ],
-            "id": "1dRKZMrqvpoxB",
-            "participant_count": 0,
-            "scheduled_start": "2023-01-21T14:00:00.000Z",
-            "state": "scheduled",
-            "title": "\u202a#CosmicCommunity Space EP#12 W/ @jhernandezb_ \u202c"
-        },
-        "1vOxwMRpoXqGB": {
-            "created_at": "2023-01-19T18:31:22.000Z",
+        "1ynJOadweYlKR": {
+            "created_at": "2023-01-23T18:03:56.000Z",
             "creator_id": "1481284852880183301",
             "host_ids": [
                 "1481284852880183301"
             ],
-            "id": "1vOxwMRpoXqGB",
+            "id": "1ynJOadweYlKR",
             "participant_count": 0,
-            "scheduled_start": "2023-01-20T23:00:05.000Z",
+            "scheduled_start": "2023-01-27T23:00:47.000Z",
             "state": "scheduled",
-            "title": "NFT Happy Hour \ud83c\udf7b multiple projects coming to shill ~ giveaways too!"
+            "title": "NFT Happy Hour ~ TSAS 'Human Collection' + Cosmos Spaces co-hosting \ud83d\udd25"
         },
-        "1lPJqBqAmdWxb": {
-            "created_at": "2023-01-19T19:14:53.000Z",
-            "creator_id": "1355366118119108612",
+        "1nAKErDYrzZGL": {
+            "created_at": "2023-01-25T11:25:38.000Z",
+            "creator_id": "1153962373683675136",
             "host_ids": [
-                "1355366118119108612"
+                "1153962373683675136"
             ],
-            "id": "1lPJqBqAmdWxb",
+            "id": "1nAKErDYrzZGL",
             "participant_count": 0,
-            "scheduled_start": "2023-01-23T14:00:00.000Z",
+            "scheduled_start": "2023-01-28T22:00:00.000Z",
             "state": "scheduled",
-            "title": "$atom Grant Program DAO AMA w/ the Team!"
+            "title": "Karat DAO is #InTheSpotlight with OmniFlix Network"
         },
-        "1OyKAVvvLYDGb": {
-            "created_at": "2023-01-20T07:19:23.000Z",
-            "creator_id": "1609876493794177025",
+        "1OdJrzYDbrnJX": {
+            "created_at": "2023-01-26T14:46:35.000Z",
+            "creator_id": "1366724041445433346",
             "host_ids": [
-                "1609876493794177025"
+                "1366724041445433346"
             ],
-            "id": "1OyKAVvvLYDGb",
+            "id": "1OdJrzYDbrnJX",
             "participant_count": 0,
-            "scheduled_start": "2023-01-25T02:00:53.000Z",
+            "scheduled_start": "2023-02-08T17:00:22.000Z",
             "state": "scheduled",
-            "title": "\ud83d\udea8 RAC FM\ud83e\udd9dNFT Roundtable Exclusive \ud83d\udea8+6 KOLs \ud83d\udc40\ud83d\udc40\ud83d\udc40\ud83c\udf36\ufe0f\ud83e\udd9d"
+            "title": "Cosmos chat: kick-starting 2023, featuring Agoric & Stargaze"
         },
-        "1dRKZMrRmdbxB": {
-            "created_at": "2023-01-20T13:18:39.000Z",
-            "creator_id": "1078740737393598464",
+        "1YpKkgekROmKj": {
+            "created_at": "2023-01-26T20:04:29.000Z",
+            "creator_id": "1153962373683675136",
             "host_ids": [
-                "1078740737393598464"
+                "1153962373683675136"
             ],
-            "id": "1dRKZMrRmdbxB",
+            "id": "1YpKkgekROmKj",
             "participant_count": 0,
-            "scheduled_start": "2023-01-23T16:00:00.000Z",
+            "scheduled_start": "2023-01-27T14:00:00.000Z",
             "state": "scheduled",
-            "title": "Cosmos Zero Leaderboard \ud83c\udf33|\u269b\ufe0f Stakin Space #20 \ud83c\udf99\ufe0f"
+            "title": "#InTheStudio ep.37: Discovering New Creators & Collections \ud83c\udfa8\ud83d\uddbc\ufe0f"
         },
-        "1YqKDoDAvgAxV": {
-            "created_at": "2023-01-20T15:15:59.000Z",
+        "1RDxlaLAOXEKL": {
+            "created_at": "2023-01-26T21:58:12.000Z",
+            "creator_id": "1458116456395182089",
+            "host_ids": [
+                "1458116456395182089"
+            ],
+            "id": "1RDxlaLAOXEKL",
+            "participant_count": 0,
+            "scheduled_start": "2023-01-30T15:00:00.000Z",
+            "state": "scheduled",
+            "title": "\u2620\ufe0f Barebones of web3 \ud83c\udf99\ufe0fEp. 16 Guest @timtheexchanger & @brightwellMajor"
+        },
+        "1lDGLnmdqMzxm": {
+            "created_at": "2023-01-27T15:05:24.000Z",
             "creator_id": "3305325070",
             "host_ids": [
                 "3305325070"
             ],
-            "id": "1YqKDoDAvgAxV",
+            "id": "1lDGLnmdqMzxm",
             "participant_count": 0,
-            "scheduled_start": "2023-01-24T17:00:00.000Z",
+            "scheduled_start": "2023-02-01T17:00:00.000Z",
             "state": "scheduled",
-            "title": "Secret Spaces feat. the @playbushi team discussing @launchonenet!"
+            "title": "Secret Spaces feat. @StarShellWallet on their new private wallet!"
+        },
+        "1OyJAVOPQYyxb": {
+            "created_at": "2023-01-27T16:52:49.000Z",
+            "creator_id": "1431764394464223237",
+            "host_ids": [
+                "1431764394464223237"
+            ],
+            "id": "1OyJAVOPQYyxb",
+            "participant_count": 0,
+            "scheduled_start": "2023-02-01T17:00:27.000Z",
+            "state": "scheduled",
+            "title": "Into The Interchain with @cryptocito"
+        },
+        "1jMJgLANkBkxL": {
+            "created_at": "2023-01-27T19:20:30.000Z",
+            "creator_id": "1485742987418247169",
+            "host_ids": [
+                "1485742987418247169"
+            ],
+            "id": "1jMJgLANkBkxL",
+            "participant_count": 0,
+            "scheduled_start": "2023-02-16T17:30:00.000Z",
+            "state": "scheduled",
+            "title": "Inter Protocol Community Call #9 (Feb \u201823)"
         }
     }
 }

@@ -1,17 +1,5 @@
 {
     "queued_space_list": {
-        "1OdKrzNNnmyKX": {
-            "created_at": "2023-02-01T01:08:56.000Z",
-            "creator_id": "1441886102906806277",
-            "host_ids": [
-                "1441886102906806277"
-            ],
-            "id": "1OdKrzNNnmyKX",
-            "participant_count": 0,
-            "scheduled_start": "2023-02-14T18:00:00.000Z",
-            "state": "scheduled",
-            "title": "Saga community call and project update \ud83d\ude80 "
-        },
         "1rmxPkrpMoVJN": {
             "created_at": "2023-02-10T21:29:30.000Z",
             "creator_id": "1491955059764125733",
@@ -24,30 +12,6 @@
             "state": "scheduled",
             "title": "Cosmonaut Bootcamp w/ the Fastest Chain in the West, @SeiNetwork"
         },
-        "1MYGNgYBoknJw": {
-            "created_at": "2023-02-10T21:27:04.000Z",
-            "creator_id": "1491955059764125733",
-            "host_ids": [
-                "1491955059764125733"
-            ],
-            "id": "1MYGNgYBoknJw",
-            "participant_count": 0,
-            "scheduled_start": "2023-02-14T18:00:54.000Z",
-            "state": "scheduled",
-            "title": "Cosmos' Newest Chain \ud83d\ude80 Migaloo by @WhiteWhaleDeFi"
-        },
-        "1YqKDoAVoQOxV": {
-            "created_at": "2023-02-10T21:08:32.000Z",
-            "creator_id": "1491955059764125733",
-            "host_ids": [
-                "1491955059764125733"
-            ],
-            "id": "1YqKDoAVoQOxV",
-            "participant_count": 0,
-            "scheduled_start": "2023-02-13T20:00:16.000Z",
-            "state": "scheduled",
-            "title": "Funding CosmWasm Development & Upkeep w/ @Confio_tech"
-        },
         "1LyGBqwbVrkKN": {
             "created_at": "2023-02-10T23:38:31.000Z",
             "creator_id": "1416628772565143561",
@@ -59,18 +23,6 @@
             "scheduled_start": "2023-02-15T21:30:00.000Z",
             "state": "scheduled",
             "title": "Cosmos NFTs on Polygon w/ HERO NFT"
-        },
-        "1jMJgLANkBkxL": {
-            "created_at": "2023-01-27T19:20:30.000Z",
-            "creator_id": "1485742987418247169",
-            "host_ids": [
-                "1485742987418247169"
-            ],
-            "id": "1jMJgLANkBkxL",
-            "participant_count": 0,
-            "scheduled_start": "2023-02-16T17:30:00.000Z",
-            "state": "scheduled",
-            "title": "Inter Protocol Community Call #9 (Feb \u201823)"
         },
         "1mnxeRWWqBPKX": {
             "created_at": "2023-02-11T19:58:30.000Z",
@@ -92,9 +44,9 @@
             ],
             "id": "1MYGNgYYPgzJw",
             "participant_count": 0,
-            "scheduled_start": "2023-02-16T01:00:41.000Z",
+            "scheduled_start": "2023-02-16T02:00:41.000Z",
             "state": "scheduled",
-            "title": "DeFi 101 \ud83d\udcda #3 ~ OPEN vs. CLOSED SOURCE w/ Jake Hartnell & Bonzi "
+            "title": "DeFi 101 \ud83d\udcda #3 ~ OPEN vs. CLOSED SOURCE w/ Jake Hartnell & Bonzi"
         },
         "1djGXlZMYZLGZ": {
             "created_at": "2023-02-13T07:46:38.000Z",
@@ -108,18 +60,6 @@
             "state": "scheduled",
             "title": "Web3 going mobile: Opportunities and challenges "
         },
-        "1zqJVPWMammKB": {
-            "created_at": "2023-02-13T10:24:57.000Z",
-            "creator_id": "967740061801504768",
-            "host_ids": [
-                "967740061801504768"
-            ],
-            "id": "1zqJVPWMammKB",
-            "participant_count": 0,
-            "scheduled_start": "2023-02-14T21:00:33.000Z",
-            "state": "scheduled",
-            "title": "Juno - Community Call #5 - Organized by Communications SubDAO"
-        },
         "1lDxLnVAlpQGm": {
             "created_at": "2023-02-13T12:05:55.000Z",
             "creator_id": "1078740737393598464",
@@ -131,18 +71,6 @@
             "scheduled_start": "2023-02-27T14:00:00.000Z",
             "state": "scheduled",
             "title": "Bridging the Cosmos \ud83c\udf09\u269b\ufe0f| Stakin Spaces #22 \ud83c\udf99\ufe0f\u269b\ufe0f"
-        },      
-        "1vAxRAdVyqzJl": {
-            "created_at": "2023-02-13T15:34:42.000Z",
-            "creator_id": "1109983403078807554",
-            "host_ids": [
-                "1109983403078807554"
-            ],
-            "id": "1vAxRAdVyqzJl",
-            "participant_count": 0,
-            "scheduled_start": "2023-02-14T14:00:00.000Z",
-            "state": "scheduled",
-            "title": "\u269b\ufe0f @Cosmos_Spaces \u2728#NFT Share & Chill\u2728"
         },
         "1lPKqBRnmAlGb": {
             "created_at": "2023-02-13T16:32:34.000Z",
@@ -155,6 +83,186 @@
             "scheduled_start": "2023-02-15T19:00:00.000Z",
             "state": "scheduled",
             "title": "Into the Umeeverse \ud83e\ude90 x @stride_zone \ud83c\udf9f"
+        },
+        "1nAJErMRaegxL": {
+            "created_at": "2023-02-13T16:58:14.000Z",
+            "creator_id": "1441886102906806277",
+            "host_ids": [
+                "1441886102906806277"
+            ],
+            "id": "1nAJErMRaegxL",
+            "participant_count": 0,
+            "scheduled_start": "2023-02-16T18:00:00.000Z",
+            "state": "scheduled",
+            "title": "Re-envisioning AMM\u2019s & DEFI w/ Astrovault & Saga"
+        },
+        "1yoKMZqkwmzGQ": {
+            "created_at": "2023-02-13T16:55:08.000Z",
+            "creator_id": "1441886102906806277",
+            "host_ids": [
+                "1441886102906806277"
+            ],
+            "id": "1yoKMZqkwmzGQ",
+            "participant_count": 0,
+            "scheduled_start": "2023-02-15T18:00:00.000Z",
+            "state": "scheduled",
+            "title": "Web3 made easier, better, & faster w/ Andromeda Protocol & Saga \u26cb"
+        },
+        "1OyKAVANZryGb": {
+            "created_at": "2023-02-13T17:08:17.000Z",
+            "creator_id": "1441886102906806277",
+            "host_ids": [
+                "1441886102906806277"
+            ],
+            "id": "1OyKAVANZryGb",
+            "participant_count": 0,
+            "scheduled_start": "2023-02-23T18:00:00.000Z",
+            "state": "scheduled",
+            "title": "Building Web3 social media in the cosmos \u269b\ufe0f w/ Desmos & Saga"
+        },
+        "1RDxlaYdyolKL": {
+            "created_at": "2023-02-13T17:06:59.000Z",
+            "creator_id": "1441886102906806277",
+            "host_ids": [
+                "1441886102906806277"
+            ],
+            "id": "1RDxlaYdyolKL",
+            "participant_count": 0,
+            "scheduled_start": "2023-02-22T18:00:00.000Z",
+            "state": "scheduled",
+            "title": "Building Web3 gaming for the secret network & beyond w/ OneNet & Saga"
+        },
+        "1RDxlaYdyvNKL": {
+            "created_at": "2023-02-13T17:09:58.000Z",
+            "creator_id": "1441886102906806277",
+            "host_ids": [
+                "1441886102906806277"
+            ],
+            "id": "1RDxlaYdyvNKL",
+            "participant_count": 0,
+            "scheduled_start": "2023-03-01T18:00:00.000Z",
+            "state": "scheduled",
+            "title": "Building custom NFT marketplaces w/ BlockUs & Saga"
+        },
+        "1OwGWwnWmvQGQ": {
+            "created_at": "2023-02-13T19:30:38.000Z",
+            "creator_id": "1088745803819040770",
+            "host_ids": [
+                "1088745803819040770"
+            ],
+            "id": "1OwGWwnWmvQGQ",
+            "participant_count": 0,
+            "scheduled_start": "2023-02-16T14:00:10.000Z",
+            "state": "scheduled",
+            "title": "Comdex Spaces w/Thyborg"
+        },
+        "1lDGLnVXEQoxm": {
+            "created_at": "2023-02-13T19:30:38.000Z",
+            "creator_id": "1088745803819040770",
+            "host_ids": [
+                "1088745803819040770"
+            ],
+            "id": "1lDGLnVXEQoxm",
+            "participant_count": 0,
+            "scheduled_start": "2023-02-16T14:00:10.000Z",
+            "state": "scheduled",
+            "title": "Comdex Spaces w/Thyborg"
+        },
+        "1DXxyvVXdRNKM": {
+            "created_at": "2023-02-13T17:11:29.000Z",
+            "creator_id": "1441886102906806277",
+            "host_ids": [
+                "1441886102906806277"
+            ],
+            "id": "1DXxyvVXdRNKM",
+            "participant_count": 0,
+            "scheduled_start": "2023-03-02T18:00:00.000Z",
+            "state": "scheduled",
+            "title": "The ultimate Web3 live music app w/ MuseLive & Saga"
+        },
+        "1jMJgLANkBkxL": {
+            "created_at": "2023-01-27T19:20:30.000Z",
+            "creator_id": "1485742987418247169",
+            "host_ids": [
+                "1485742987418247169"
+            ],
+            "id": "1jMJgLANkBkxL",
+            "participant_count": 0,
+            "scheduled_start": "2023-02-16T17:30:00.000Z",
+            "state": "scheduled",
+            "title": "Inter Protocol Community Call #9 (Feb \u201823)"
+        },
+        "1BdGYygAdlQGX": {
+            "created_at": "2023-02-14T14:07:47.000Z",
+            "creator_id": "1230007683463471104",
+            "host_ids": [
+                "1230007683463471104"
+            ],
+            "id": "1BdGYygAdlQGX",
+            "participant_count": 0,
+            "scheduled_start": "2023-02-15T11:00:00.000Z",
+            "state": "scheduled",
+            "title": "Confio\u2019s Funding Community Proposal "
+        },
+        "1OwxWwnkoOVxQ": {
+            "created_at": "2023-02-14T14:45:09.000Z",
+            "creator_id": "1416628772565143561",
+            "host_ids": [
+                "1416628772565143561"
+            ],
+            "id": "1OwxWwnkoOVxQ",
+            "participant_count": 0,
+            "scheduled_start": "2023-02-16T15:00:00.000Z",
+            "state": "scheduled",
+            "title": "Exploring Cross Chain Strategies on Demex"
+        },
+        "1LyGBqwAWQrKN": {
+            "created_at": "2023-02-14T16:59:51.000Z",
+            "creator_id": "1073189409938436097",
+            "host_ids": [
+                "1073189409938436097"
+            ],
+            "id": "1LyGBqwAWQrKN",
+            "participant_count": 0,
+            "scheduled_start": "2023-02-15T18:00:00.000Z",
+            "state": "scheduled",
+            "title": "Aptos Stories Episode 4: Get Aptos Rolling"
+        },
+        "1eaKbrRAwlrKX": {
+            "created_at": "2023-02-14T19:45:43.000Z",
+            "creator_id": "1515104342906327045",
+            "host_ids": [
+                "1515104342906327045"
+            ],
+            "id": "1eaKbrRAwlrKX",
+            "participant_count": 0,
+            "scheduled_start": "2023-02-17T18:00:00.000Z",
+            "state": "scheduled",
+            "title": "Sei <> Blink AMA "
+        },
+        "1OyJAVApLzDxb": {
+            "created_at": "2023-02-14T16:55:11.000Z",
+            "creator_id": "1153962373683675136",
+            "host_ids": [
+                "1153962373683675136"
+            ],
+            "id": "1OyJAVApLzDxb",
+            "participant_count": 0,
+            "scheduled_start": "2023-02-15T14:00:00.000Z",
+            "state": "scheduled",
+            "title": "FlixTalk #56 ft. CJ from @demexchange \ud83d\udcb0| @OmniFlixTV Quest \ud83c\udfc6 "
+        },
+        "1yNxaNdBDWRKj": {
+            "created_at": "2023-02-15T12:55:08.000Z",
+            "creator_id": "1109983403078807554",
+            "host_ids": [
+                "1109983403078807554"
+            ],
+            "id": "1yNxaNdBDWRKj",
+            "participant_count": 0,
+            "scheduled_start": "2023-02-15T13:30:00.000Z",
+            "state": "scheduled",
+            "title": "\ud83d\udcbc The Corporation Acquisition Announcement | Waffle Company. "
         }
     }
 }

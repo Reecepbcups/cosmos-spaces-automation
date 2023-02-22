@@ -1,17 +1,5 @@
 {
     "queued_space_list": {
-        "1eaKbrRAwlrKX": {
-            "created_at": "2023-02-14T19:45:43.000Z",
-            "creator_id": "1515104342906327045",
-            "host_ids": [
-                "1515104342906327045"
-            ],
-            "id": "1eaKbrRAwlrKX",
-            "participant_count": 0,
-            "scheduled_start": "2023-02-17T18:00:00.000Z",
-            "state": "scheduled",
-            "title": "Sei <> Blink AMA "
-        },
         "1DXxyvVXdRNKM": {
             "created_at": "2023-02-13T17:11:29.000Z",
             "creator_id": "1441886102906806277",
@@ -23,18 +11,6 @@
             "scheduled_start": "2023-03-02T18:00:00.000Z",
             "state": "scheduled",
             "title": "The ultimate Web3 live music app w/ MuseLive & Saga"
-        },
-        "1RDxlaYdyvNKL": {
-            "created_at": "2023-02-13T17:09:58.000Z",
-            "creator_id": "1441886102906806277",
-            "host_ids": [
-                "1441886102906806277"
-            ],
-            "id": "1RDxlaYdyvNKL",
-            "participant_count": 0,
-            "scheduled_start": "2023-03-01T18:00:00.000Z",
-            "state": "scheduled",
-            "title": "Building custom NFT marketplaces w/ BlockUs & Saga"
         },
         "1OyKAVANZryGb": {
             "created_at": "2023-02-13T17:08:17.000Z",
@@ -48,30 +24,6 @@
             "state": "scheduled",
             "title": "Building Web3 social media in the cosmos \u269b\ufe0f w/ Desmos & Saga"
         },
-        "1RDxlaYdyolKL": {
-            "created_at": "2023-02-13T17:06:59.000Z",
-            "creator_id": "1441886102906806277",
-            "host_ids": [
-                "1441886102906806277"
-            ],
-            "id": "1RDxlaYdyolKL",
-            "participant_count": 0,
-            "scheduled_start": "2023-02-22T18:00:00.000Z",
-            "state": "scheduled",
-            "title": "Building Web3 gaming for the secret network & beyond w/ OneNet & Saga"
-        },
-        "1nAJErMRaegxL": {
-            "created_at": "2023-02-13T16:58:14.000Z",
-            "creator_id": "1441886102906806277",
-            "host_ids": [
-                "1441886102906806277"
-            ],
-            "id": "1nAJErMRaegxL",
-            "participant_count": 0,
-            "scheduled_start": "2023-02-16T18:00:00.000Z",
-            "state": "scheduled",
-            "title": "Re-envisioning AMM\u2019s & DEFI w/ Astrovault & Saga"
-        },
         "1lDxLnVAlpQGm": {
             "created_at": "2023-02-13T12:05:55.000Z",
             "creator_id": "1078740737393598464",
@@ -84,29 +36,104 @@
             "state": "scheduled",
             "title": "Bridging the Cosmos \ud83c\udf09\u269b\ufe0f| Stakin Spaces #22 \ud83c\udf99\ufe0f\u269b\ufe0f"
         },
-        "1jMKgLZmgLWGL": {
-            "created_at": "2023-02-16T15:44:44.000Z",
-            "creator_id": "1458116456395182089",
+        "1RDxlaYdyvNKL": {
+            "created_at": "2023-02-13T17:09:58.000Z",
+            "creator_id": "1441886102906806277",
             "host_ids": [
-                "1458116456395182089"
+                "1441886102906806277"
             ],
-            "id": "1jMKgLZmgLWGL",
+            "id": "1RDxlaYdyvNKL",
             "participant_count": 0,
-            "scheduled_start": "2023-02-20T15:00:00.000Z",
+            "scheduled_start": "2023-03-01T18:00:00.000Z",
             "state": "scheduled",
-            "title": "\u2620\ufe0f BareBones of Web3 \ud83c\udf99\ufe0f Ep.19 Guest @department_77 "
+            "title": "Building custom NFT marketplaces w/ BlockUs & Saga"
         },
-        "1yoKMZqwvWwGQ": {
-            "created_at": "2023-02-16T15:54:46.000Z",
-            "creator_id": "1458116456395182089",
+        "1YpKkgdRbkwKj": {
+            "created_at": "2023-02-18T19:50:19.000Z",
+            "creator_id": "5533262",
             "host_ids": [
-                "1458116456395182089"
+                "5533262"
             ],
-            "id": "1yoKMZqwvWwGQ",
+            "id": "1YpKkgdRbkwKj",
+            "participant_count": 6,
+            "speaker_ids": [
+                "2495566675"
+            ],
+            "started_at": "2023-02-18T19:50:25.000Z",
+            "state": "live",
+            "title": "Funding cosmos"
+        },
+        "1mnxeRVPONWKX": {
+            "created_at": "2023-02-20T22:53:05.000Z",
+            "creator_id": "1491955059764125733",
+            "host_ids": [
+                "1491955059764125733"
+            ],
+            "id": "1mnxeRVPONWKX",
             "participant_count": 0,
-            "scheduled_start": "2023-02-22T18:00:00.000Z",
+            "scheduled_start": "2023-02-23T01:00:46.000Z",
             "state": "scheduled",
-            "title": "\u2620\ufe0f BareBones Midweek Special \ud83c\udf99\ufe0f Guest @cryptostache"
+            "title": "Cosmonaut Bootcamp Ep. 49 \u269b\ufe0f\ud83c\udf0c A new NFT chain appears! @AuraNetworkHQ"
+        },
+        "1OyKAVonaywGb": {
+            "created_at": "2023-02-21T03:31:00.000Z",
+            "creator_id": "1481284852880183301",
+            "host_ids": [
+                "1481284852880183301"
+            ],
+            "id": "1OyKAVonaywGb",
+            "participant_count": 0,
+            "scheduled_start": "2023-02-23T02:00:50.000Z",
+            "state": "scheduled",
+            "title": "DeFi 101 \ud83d\udcda Episode #4 ~ Liquid Staking Derivatives w/ STRIDE"
+        },
+        "1lDxLnRqERPGm": {
+            "created_at": "2023-02-21T04:28:29.000Z",
+            "creator_id": "1481284852880183301",
+            "host_ids": [
+                "1481284852880183301"
+            ],
+            "id": "1lDxLnRqERPGm",
+            "participant_count": 0,
+            "scheduled_start": "2023-02-24T18:30:19.000Z",
+            "state": "scheduled",
+            "title": "NFT Happy Hour \ud83c\udf7b Passive Income NFTs on Stargaze "
+        },
+        "1ZkKzXEpMRqJv": {
+            "created_at": "2023-02-21T17:03:30.000Z",
+            "creator_id": "1487313404004118528",
+            "host_ids": [
+                "1487313404004118528"
+            ],
+            "id": "1ZkKzXEpMRqJv",
+            "participant_count": 0,
+            "scheduled_start": "2023-02-25T03:00:00.000Z",
+            "state": "scheduled",
+            "title": "Leap Wallet AMA"
+        },
+        "1lPJqBZAVDlxb": {
+            "created_at": "2023-02-21T23:05:54.000Z",
+            "creator_id": "1253090729137561600",
+            "host_ids": [
+                "1253090729137561600"
+            ],
+            "id": "1lPJqBZAVDlxb",
+            "participant_count": 0,
+            "scheduled_start": "2023-02-23T19:00:36.000Z",
+            "state": "scheduled",
+            "title": "Stargaze Week 51 Creator Chat. Thursday 02/23 at 7pm UTC."
+        },
+        "1zqKVPbVpEVJB": {
+            "created_at": "2023-02-22T05:14:26.000Z",
+            "creator_id": "925006951926390784",
+            "host_ids": [
+                "925006951926390784"
+            ],
+            "id": "1zqKVPbVpEVJB",
+            "participant_count": 0,
+            "scheduled_start": "2023-02-23T16:00:00.000Z",
+            "state": "scheduled",
+            "title": "Regenerati News Hour: Steve Zwick from Verra"
         }
     }
 }

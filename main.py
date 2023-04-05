@@ -283,6 +283,13 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
         print(
             f"Space {space_id} is too short ({AUDIO_LEN} minutes) to tweet. (min 15 minutes)"
         )
+        # Remove it from the queue if it was already done. Also download file here?
+        FILENAME = "queued_space_list.json"
+        queue = get_json(FILENAME)
+        if space_id in queue["queued_space_list"]:
+            del queue["queued_space_list"][space_id]
+            save_json(FILENAME, queue)
+            print(f"Removed {space_id} from queued space cache.")
         return
 
     audio_time = f"{AUDIO_LEN} minutes"

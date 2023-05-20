@@ -27,7 +27,7 @@ if not os.path.exists(".env"):
     exit(1)
 
 DISABLE_TWEETING_FOR_TESTING = False
-MINUTES_WAIT = 5
+MINUTES_WAIT = 10
 
 current_dir = os.path.dirname(os.path.realpath(__file__))
 json_data_dir = os.path.join(current_dir, "final/json_data")
@@ -340,7 +340,6 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
 
 
 while True:
-
     if DISABLE_TWEETING_FOR_TESTING:
         print(
             "TWEETING IS DISABLED FOR TESTING, nothing will be live & cache will not clear"
@@ -349,10 +348,9 @@ while True:
         print(
             "\n\n[!] TWEETING IS __ENABLED__, spaces will be tweeted & cache will clear"
         )
-        time.sleep(5)
+        time.sleep(3)
 
     try:
-
         # def main():
         # ids = [1319287761048723458, 1138690476612046848]
         ids = bot.get_following_ids()["user_ids_list"]
@@ -378,7 +376,6 @@ while True:
         if spaces_to_download == None:
             print("No spaces to download")
         else:
-
             # manual spaces we want to downlolad & tweet
             root_dir = os.path.dirname(os.path.realpath(__file__))
             # json_data_dir = os.path.join(root_dir, "json_data")

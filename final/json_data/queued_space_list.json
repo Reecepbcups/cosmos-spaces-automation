@@ -20,7 +20,7 @@
             ],
             "id": "1LyxBqyyRRPJN",
             "participant_count": 0,
-            "scheduled_start": "2023-06-02T16:00:00.000Z",
+            "scheduled_start": "2023-06-09T16:00:00.000Z",
             "state": "scheduled",
             "title": "Community Call - June"
         },
@@ -48,30 +48,6 @@
             "state": "scheduled",
             "title": "QuickSilver Pools + Incentives - Live on Shadeswap"
         },
-        "1MYGNgdpEDZJw": {
-            "created_at": "2023-05-14T23:18:59.000Z",
-            "creator_id": "1648326681822650369",
-            "host_ids": [
-                "1648326681822650369"
-            ],
-            "id": "1MYGNgdpEDZJw",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-19T22:30:00.000Z",
-            "state": "scheduled",
-            "title": "NFT Happy Hour \ud83c\udf7b Tpoic: BRC20 Tokens"
-        },
-        "1djxXlpqDdLxZ": {
-            "created_at": "2023-05-17T13:42:06.000Z",
-            "creator_id": "1462429914146222090",
-            "host_ids": [
-                "1462429914146222090"
-            ],
-            "id": "1djxXlpqDdLxZ",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-18T21:00:58.000Z",
-            "state": "scheduled",
-            "title": "NFT Artist Corner X KodaDot"
-        },
         "1YqxoAjgOnyGv": {
             "created_at": "2023-05-15T10:30:43.000Z",
             "creator_id": "1462429914146222090",
@@ -84,18 +60,6 @@
             "state": "scheduled",
             "title": "GraviDAO AMA with Skeleton Punks, Stoned Island, and Rekt Gang"
         },
-        "1kvKpmOeLoPGE": {
-            "created_at": "2023-05-17T05:46:28.000Z",
-            "creator_id": "1609876493794177025",
-            "host_ids": [
-                "1609876493794177025"
-            ],
-            "id": "1kvKpmOeLoPGE",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-19T12:00:22.000Z",
-            "state": "scheduled",
-            "title": "\ud83e\udd9dRAC FM Friday: Reble terra rizing and the TFM Alliance"
-        },
         "1dRKZMmNdgdxB": {
             "created_at": "2023-05-17T17:21:32.000Z",
             "creator_id": "3305325070",
@@ -107,18 +71,6 @@
             "scheduled_start": "2023-05-23T18:00:00.000Z",
             "state": "scheduled",
             "title": "Secret Spaces feat. @scrt_labs on the latest network upgrade!"
-        },
-        "1kvKpmOWrkPGE": {
-            "created_at": "2023-05-14T19:18:17.000Z",
-            "creator_id": "1153962373683675136",
-            "host_ids": [
-                "1153962373683675136"
-            ],
-            "id": "1kvKpmOWrkPGE",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-19T14:00:00.000Z",
-            "state": "scheduled",
-            "title": "#InTheStudio ep 53 - Art Showcase \ud83d\uddbc\ufe0f | NFT Creators \ud83d\udc68\u200d\ud83c\udfa8 \ud83d\udc69\u200d\ud83c\udfa8 "
         },
         "1YpKkgvzkRXKj": {
             "created_at": "2023-05-17T17:42:58.000Z",
@@ -143,6 +95,54 @@
             "scheduled_start": "2023-05-25T14:30:48.000Z",
             "state": "scheduled",
             "title": "Comdex Spaces w/ SubQuery"
+        },
+        "1vAxRAWQNnRJl": {
+            "created_at": "2023-05-19T16:48:35.000Z",
+            "creator_id": "1609876493794177025",
+            "host_ids": [
+                "1609876493794177025"
+            ],
+            "id": "1vAxRAWQNnRJl",
+            "participant_count": 0,
+            "scheduled_start": "2023-05-25T12:00:24.000Z",
+            "state": "scheduled",
+            "title": "\ud83e\udd9dRAC FM: Robo's public apology to Jared and the TFL community \ud83e\udd1d"
+        },
+        "1lPKqBovydYGb": {
+            "created_at": "2023-05-19T16:43:53.000Z",
+            "creator_id": "1609876493794177025",
+            "host_ids": [
+                "1609876493794177025"
+            ],
+            "id": "1lPKqBovydYGb",
+            "participant_count": 0,
+            "scheduled_start": "2023-05-23T13:00:30.000Z",
+            "state": "scheduled",
+            "title": "\ud83e\udd9dRAC FM: The Neck Syndicate \ud83e\udde0  Financial breakdown and more reports"
+        },
+        "1MnxnpvPYLyGO": {
+            "created_at": "2023-05-19T14:08:30.000Z",
+            "creator_id": "1481284852880183301",
+            "host_ids": [
+                "1481284852880183301"
+            ],
+            "id": "1MnxnpvPYLyGO",
+            "participant_count": 0,
+            "scheduled_start": "2023-05-30T00:00:18.000Z",
+            "state": "scheduled",
+            "title": "DeFi 101\ud83d\udcda How to build a DAO \ud83e\udd81 with @TheRyanLion"
+        },
+        "1BRJjZvmwrwJw": {
+            "created_at": "2023-05-19T13:48:10.000Z",
+            "creator_id": "1481284852880183301",
+            "host_ids": [
+                "1481284852880183301"
+            ],
+            "id": "1BRJjZvmwrwJw",
+            "participant_count": 0,
+            "scheduled_start": "2023-05-25T00:00:49.000Z",
+            "state": "scheduled",
+            "title": "DeFi 101 \ud83d\udcda CosmWasm - What the heck is it??? with Reece"
         }
     }
 }

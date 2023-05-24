@@ -278,6 +278,10 @@ def download_and_tweet_space(space_id: str, space_data: dict, creator_id: str | 
     title = (
         str(space_data.get("title", todays_date)).replace('"', "").replace("'", "")
     )  # remove ' or " from title
+
+    # remove 'Organized by Communications SubDAO' from tweets for Juno (due to length)
+    title = title.replace("Organized by Communications SubDAO", "").strip()
+
     AUDIO_LEN = int(round(audio.info.length / 60, 0))
     if AUDIO_LEN < 15:
         print(

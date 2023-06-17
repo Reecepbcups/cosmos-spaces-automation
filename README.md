@@ -1,3 +1,5 @@
+This is archived due to twitter's API charge of $60k per year to run. Far to costly for me, code remains open source. No future updates.
+
 ### Install
 ```
 sudo pacman -Syu

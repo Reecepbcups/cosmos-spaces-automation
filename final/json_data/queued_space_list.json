@@ -1,161 +1,5 @@
 {
     "queued_space_list": {
-        "1lDGLnMADZzxm": {
-            "created_at": "2023-05-02T15:22:35.000Z",
-            "creator_id": "1485742987418247169",
-            "host_ids": [
-                "1485742987418247169"
-            ],
-            "id": "1lDGLnMADZzxm",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-25T16:30:00.000Z",
-            "state": "scheduled",
-            "title": "Inter Protocol Community Call #12 (May 2023)"
-        },
-        "1LyxBqyyRRPJN": {
-            "created_at": "2023-05-03T19:37:17.000Z",
-            "creator_id": "1519990048497754113",
-            "host_ids": [
-                "1519990048497754113"
-            ],
-            "id": "1LyxBqyyRRPJN",
-            "participant_count": 0,
-            "scheduled_start": "2023-06-09T16:00:00.000Z",
-            "state": "scheduled",
-            "title": "Community Call - June"
-        },
-        "1OyKAVyQNMgGb": {
-            "created_at": "2023-05-03T13:27:11.000Z",
-            "creator_id": "1253090729137561600",
-            "host_ids": [
-                "1253090729137561600"
-            ],
-            "id": "1OyKAVyQNMgGb",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-25T19:00:02.000Z",
-            "state": "scheduled",
-            "title": "Stargaze Week 64 Creator Chat. Thursday 05/25 at 7pm UTC."
-        },
-        "1YqxoAjgOnyGv": {
-            "created_at": "2023-05-15T10:30:43.000Z",
-            "creator_id": "1462429914146222090",
-            "host_ids": [
-                "1462429914146222090"
-            ],
-            "id": "1YqxoAjgOnyGv",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-24T19:00:10.000Z",
-            "state": "scheduled",
-            "title": "GraviDAO AMA with Skeleton Punks, Stoned Island, and Rekt Gang"
-        },
-        "1YpKkgvzkRXKj": {
-            "created_at": "2023-05-17T17:42:58.000Z",
-            "creator_id": "1357133940109103104",
-            "host_ids": [
-                "1357133940109103104"
-            ],
-            "id": "1YpKkgvzkRXKj",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-31T17:00:00.000Z",
-            "state": "scheduled",
-            "title": "Updates from the Lab \ud83e\uddea- Calc Finance + Swing.xyz"
-        },
-        "1vAxRAWQNnRJl": {
-            "created_at": "2023-05-19T16:48:35.000Z",
-            "creator_id": "1609876493794177025",
-            "host_ids": [
-                "1609876493794177025"
-            ],
-            "id": "1vAxRAWQNnRJl",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-25T12:00:24.000Z",
-            "state": "scheduled",
-            "title": "\ud83e\udd9dRAC FM: Robo's public apology to Jared and the TFL community \ud83e\udd1d"
-        },
-        "1MnxnpvPYLyGO": {
-            "created_at": "2023-05-19T14:08:30.000Z",
-            "creator_id": "1481284852880183301",
-            "host_ids": [
-                "1481284852880183301"
-            ],
-            "id": "1MnxnpvPYLyGO",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-30T00:00:18.000Z",
-            "state": "scheduled",
-            "title": "DeFi 101\ud83d\udcda Lesson 13: How to build a DAO \ud83e\udd81 with @TheRyanLion"
-        },
-        "1BRJjZvmwrwJw": {
-            "created_at": "2023-05-19T13:48:10.000Z",
-            "creator_id": "1481284852880183301",
-            "host_ids": [
-                "1481284852880183301"
-            ],
-            "id": "1BRJjZvmwrwJw",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-25T00:00:49.000Z",
-            "state": "scheduled",
-            "title": "DeFi 101 \ud83d\udcda Lesson #12: COSMWASM - What the heck is it??? with Reece"
-        },
-        "1vOGwMamvjmxB": {
-            "created_at": "2023-05-21T16:58:49.000Z",
-            "creator_id": "1153962373683675136",
-            "host_ids": [
-                "1153962373683675136"
-            ],
-            "id": "1vOGwMamvjmxB",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-26T14:00:00.000Z",
-            "state": "scheduled",
-            "title": "#InTheStudio ep. 54 - Spotlight on NFT Creators \u2728 "
-        },
-        "1OyJAVezROMxb": {
-            "created_at": "2023-05-21T23:29:43.000Z",
-            "creator_id": "1416628772565143561",
-            "host_ids": [
-                "1416628772565143561"
-            ],
-            "id": "1OyJAVezROMxb",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-23T22:45:00.000Z",
-            "state": "scheduled",
-            "title": "Introducing aOS Making Web3 Easier, Better, Faster"
-        },
-        "1nAJErZjMAYxL": {
-            "created_at": "2023-05-22T12:50:06.000Z",
-            "creator_id": "1416628772565143561",
-            "host_ids": [
-                "1416628772565143561"
-            ],
-            "id": "1nAJErZjMAYxL",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-24T23:00:00.000Z",
-            "state": "scheduled",
-            "title": "AMA | Archway Blockchain"
-        },
-        "1vOxwMaWOOgGB": {
-            "created_at": "2023-05-22T13:12:36.000Z",
-            "creator_id": "1609876493794177025",
-            "host_ids": [
-                "1609876493794177025"
-            ],
-            "id": "1vOxwMaWOOgGB",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-26T12:00:13.000Z",
-            "state": "scheduled",
-            "title": "RAC FM Weekly Special with self-styled Airdrop Degen Liam Connor \ud83d\udc40\ud83e\udd9d"
-        },
-        "1vAGRAqeyayKl": {
-            "created_at": "2023-05-22T13:43:32.000Z",
-            "creator_id": "1493268045179019269",
-            "host_ids": [
-                "1493268045179019269"
-            ],
-            "id": "1vAGRAqeyayKl",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-25T01:00:00.000Z",
-            "state": "scheduled",
-            "title": "Juno Ships EP: 6"
-        },
         "1nAJErZjEPvxL": {
             "created_at": "2023-05-22T15:22:57.000Z",
             "creator_id": "1500172416084938755",
@@ -168,173 +12,29 @@
             "state": "scheduled",
             "title": "#YieldmosWeekly - Community Call + What\u2019s up Cosmos! \ud83d\udc9c\u269b\ufe0f"
         },
-        "1OwxWwdmejDxQ": {
-            "created_at": "2023-05-22T15:22:27.000Z",
-            "creator_id": "1500172416084938755",
+        "1jMJgLQzwDYxL": {
+            "created_at": "2023-06-02T23:49:44.000Z",
+            "creator_id": "1493268045179019269",
             "host_ids": [
-                "1500172416084938755"
+                "1493268045179019269"
             ],
-            "id": "1OwxWwdmejDxQ",
+            "id": "1jMJgLQzwDYxL",
             "participant_count": 0,
-            "scheduled_start": "2023-06-07T15:00:00.000Z",
+            "scheduled_start": "2023-06-09T01:00:00.000Z",
             "state": "scheduled",
-            "title": "#YieldmosWeekly - Community Call + What\u2019s up Cosmos! \ud83d\udc9c\u269b\ufe0f"
+            "title": "Business Model For DAO EP: 2"
         },
-        "1mrGmkrDPBgxy": {
-            "created_at": "2023-05-22T15:22:01.000Z",
-            "creator_id": "1500172416084938755",
-            "host_ids": [
-                "1500172416084938755"
-            ],
-            "id": "1mrGmkrDPBgxy",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-31T15:00:00.000Z",
-            "state": "scheduled",
-            "title": "#YieldmosWeekly - Community Call + What\u2019s up Cosmos! \ud83d\udc9c\u269b\ufe0f"
-        },
-        "1ZkJzXAQlQRKv": {
-            "created_at": "2023-05-22T17:50:46.000Z",
-            "creator_id": "1462429914146222090",
-            "host_ids": [
-                "1462429914146222090"
-            ],
-            "id": "1ZkJzXAQlQRKv",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-25T21:00:40.000Z",
-            "state": "scheduled",
-            "title": "NFT Artist Corner x KodaDot "
-        },
-        "1dRKZMmMqyMxB": {
-            "created_at": "2023-05-18T08:58:05.000Z",
-            "creator_id": "1088745803819040770",
-            "host_ids": [
-                "1088745803819040770"
-            ],
-            "id": "1dRKZMmMqyMxB",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-25T14:30:48.000Z",
-            "state": "scheduled",
-            "title": "Comdex Spaces w/ SubQuery"
-        },
-        "1MnxnpEOvZmGO": {
-            "created_at": "2023-05-22T21:35:26.000Z",
-            "creator_id": "1515104342906327045",
-            "host_ids": [
-                "1515104342906327045"
-            ],
-            "id": "1MnxnpEOvZmGO",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-25T15:00:00.000Z",
-            "state": "scheduled",
-            "title": "Liquidity Alliance AMA w/ Factomind"
-        },
-        "1eaKbrABBbrKX": {
-            "created_at": "2023-05-23T04:19:55.000Z",
-            "creator_id": "1609876493794177025",
-            "host_ids": [
-                "1609876493794177025"
-            ],
-            "id": "1eaKbrABBbrKX",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-29T15:00:28.000Z",
-            "state": "scheduled",
-            "title": "RAC FM meets Cosmic Horizon in the Studio \ud83d\ude80\ud83d\ude80\ud83e\udd9d\ud83d\ude80\ud83d\ude80"
-        },
-        "1eaJbrAwyzaJX": {
-            "created_at": "2023-05-23T13:20:57.000Z",
-            "creator_id": "1416628772565143561",
-            "host_ids": [
-                "1416628772565143561"
-            ],
-            "id": "1eaJbrAwyzaJX",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-27T15:00:00.000Z",
-            "state": "scheduled",
-            "title": "AMA| All things Oraichain and Artificial Intelligence"
-        },
-        "1rmGPkXpqvQKN": {
-            "created_at": "2023-05-23T23:17:14.000Z",
-            "creator_id": "1639500966826213378",
-            "host_ids": [
-                "1639500966826213378"
-            ],
-            "id": "1rmGPkXpqvQKN",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-25T00:00:00.000Z",
-            "state": "scheduled",
-            "title": "Coining Reason, 6: Digital Bodies"
-        },
-        "1mrGmkrzwgQxy": {
-            "created_at": "2023-05-24T02:13:59.000Z",
+        "1RDGlaNRObVJL": {
+            "created_at": "2023-05-25T15:55:59.000Z",
             "creator_id": "1481284852880183301",
             "host_ids": [
                 "1481284852880183301"
             ],
-            "id": "1mrGmkrzwgQxy",
+            "id": "1RDGlaNRObVJL",
             "participant_count": 0,
-            "scheduled_start": "2023-06-01T00:00:50.000Z",
+            "scheduled_start": "2023-06-19T13:00:48.000Z",
             "state": "scheduled",
-            "title": "DeFi 101 \ud83d\udcda Lesson 14: STABLE COINS with the Shade Protocol Team"
-        },
-        "1ynJOawzrOkKR": {
-            "created_at": "2023-05-24T08:48:12.000Z",
-            "creator_id": "1019126440233615361",
-            "host_ids": [
-                "1019126440233615361"
-            ],
-            "id": "1ynJOawzrOkKR",
-            "participant_count": 0,
-            "scheduled_start": "2023-06-02T15:00:00.000Z",
-            "state": "scheduled",
-            "title": "Shared Security Talk - AtomZone #09"
-        },
-        "1nAKErZDlneGL": {
-            "created_at": "2023-05-24T14:20:19.000Z",
-            "creator_id": "1416101532282638348",
-            "host_ids": [
-                "1416101532282638348"
-            ],
-            "id": "1nAKErZDlneGL",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-25T17:00:39.000Z",
-            "state": "scheduled",
-            "title": "Community Call"
-        },
-        "1YpJkgYevjjJj": {
-            "created_at": "2023-05-24T17:28:09.000Z",
-            "creator_id": "1515104342906327045",
-            "host_ids": [
-                "1515104342906327045"
-            ],
-            "id": "1YpJkgYevjjJj",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-26T17:00:00.000Z",
-            "state": "scheduled",
-            "title": "Liquidity Alliance AMA w/ Zerocap"
-        },
-        "1OdKrzLYLbQKX": {
-            "created_at": "2023-05-24T17:44:40.000Z",
-            "creator_id": "967740061801504768",
-            "host_ids": [
-                "967740061801504768"
-            ],
-            "id": "1OdKrzLYLbQKX",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-25T16:00:24.000Z",
-            "state": "scheduled",
-            "title": "Tech Roundtable #2"
-        },
-        "1MYGNgPEPARJw": {
-            "created_at": "2023-05-24T17:47:09.000Z",
-            "creator_id": "1441886102906806277",
-            "host_ids": [
-                "1441886102906806277"
-            ],
-            "id": "1MYGNgPEPARJw",
-            "participant_count": 0,
-            "scheduled_start": "2023-05-25T17:00:00.000Z",
-            "state": "scheduled",
-            "title": "Full stack Web3 development w/ Pineapple Workshop\ud83c\udf4d & Saga \u26cb"
+            "title": "DeFi 101 \ud83d\udcda Lesson #16 ~ PRIVACY in Web 3 w/ NYM Protocol"
         },
         "1OyJAVevgXOxb": {
             "created_at": "2023-05-24T18:11:10.000Z",
@@ -346,7 +46,191 @@
             "participant_count": 0,
             "scheduled_start": "2023-06-15T00:00:57.000Z",
             "state": "scheduled",
-            "title": "DeFi 101\ud83d\udcdaLesson #XXX - NO MORE AIRDROPS! \ud83e\udd7a with Cosmic Horizon"
+            "title": "DeFi 101\ud83d\udcdaLesson #15 - NO MORE AIRDROPS! \ud83e\udd7a with Cosmic Horizon"
+        },
+        "1zqJVPEddAAKB": {
+            "created_at": "2023-05-31T23:24:06.000Z",
+            "creator_id": "1510514454559174664",
+            "host_ids": [
+                "1510514454559174664"
+            ],
+            "id": "1zqJVPEddAAKB",
+            "participant_count": 0,
+            "scheduled_start": "2023-06-15T16:00:52.000Z",
+            "state": "scheduled",
+            "title": "The Floor Is... LearnWeb3DAO \ud83c\udf93"
+        },
+        "1LyxBqyyRRPJN": {
+            "created_at": "2023-05-03T19:37:17.000Z",
+            "creator_id": "1519990048497754113",
+            "host_ids": [
+                "1519990048497754113"
+            ],
+            "id": "1LyxBqyyRRPJN",
+            "participant_count": 0,
+            "scheduled_start": "2023-06-16T16:00:00.000Z",
+            "state": "scheduled",
+            "title": "Community Call - June"
+        },
+        "1BdxYyerEBMxX": {
+            "created_at": "2023-05-30T19:58:44.000Z",
+            "creator_id": "1485742987418247169",
+            "host_ids": [
+                "1485742987418247169"
+            ],
+            "id": "1BdxYyerEBMxX",
+            "participant_count": 0,
+            "scheduled_start": "2023-06-15T16:30:00.000Z",
+            "state": "scheduled",
+            "title": "Inter Protocol Community Call #13"
+        },
+        "1OyJAVYnVLaxb": {
+            "created_at": "2023-06-04T15:45:27.000Z",
+            "creator_id": "1153962373683675136",
+            "host_ids": [
+                "1153962373683675136"
+            ],
+            "id": "1OyJAVYnVLaxb",
+            "participant_count": 0,
+            "scheduled_start": "2023-06-09T14:00:00.000Z",
+            "state": "scheduled",
+            "title": "#InTheStudio Ep.56 - Conversations with Creators | New NFT Collections"
+        },
+        "1DXxyveVXnZKM": {
+            "created_at": "2023-06-06T10:02:36.000Z",
+            "creator_id": "1462429914146222090",
+            "host_ids": [
+                "1462429914146222090"
+            ],
+            "id": "1DXxyveVXnZKM",
+            "participant_count": 0,
+            "scheduled_start": "2023-06-08T18:00:30.000Z",
+            "state": "scheduled",
+            "title": "Once Upon x Stoned Island x GraviDAO"
+        },
+        "1BdGYyQgZlZGX": {
+            "created_at": "2023-06-06T12:36:25.000Z",
+            "creator_id": "1648326681822650369",
+            "host_ids": [
+                "1648326681822650369"
+            ],
+            "id": "1BdGYyQgZlZGX",
+            "participant_count": 0,
+            "scheduled_start": "2023-06-09T22:00:14.000Z",
+            "state": "scheduled",
+            "title": "NFT Happy Hour \ud83c\udf7b #5 ~ Tokenized Real World Assets \"RWAs\" \ud83d\udcc8"
+        },
+        "1jMKgLQYBegGL": {
+            "created_at": "2023-06-06T18:25:20.000Z",
+            "creator_id": "1416628772565143561",
+            "host_ids": [
+                "1416628772565143561"
+            ],
+            "id": "1jMKgLQYBegGL",
+            "participant_count": 0,
+            "scheduled_start": "2023-06-09T20:00:00.000Z",
+            "state": "scheduled",
+            "title": "$Memes in Web3"
+        },
+        "1yNGaNQPLQnJj": {
+            "created_at": "2023-06-06T18:40:09.000Z",
+            "creator_id": "1441886102906806277",
+            "host_ids": [
+                "1441886102906806277"
+            ],
+            "id": "1yNGaNQPLQnJj",
+            "participant_count": 0,
+            "scheduled_start": "2023-06-09T00:00:00.000Z",
+            "state": "scheduled",
+            "title": "Sequencing the future w/ Radius & Saga"
+        },
+        "1ypJddQNLBoJW": {
+            "created_at": "2023-06-07T17:00:37.000Z",
+            "creator_id": "1416628772565143561",
+            "host_ids": [
+                "1416628772565143561"
+            ],
+            "id": "1ypJddQNLBoJW",
+            "participant_count": 7,
+            "scheduled_start": "2023-06-08T20:00:00.000Z",
+            "speaker_ids": [
+                "1206574570922299394"
+            ],
+            "started_at": "2023-06-08T20:01:44.000Z",
+            "state": "live",
+            "title": "AMA | $TRADER meme culture and crypto vibes"
+        },
+        "1mrGmkQZRggxy": {
+            "created_at": "2023-06-07T18:12:02.000Z",
+            "creator_id": "1109983403078807554",
+            "host_ids": [
+                "1109983403078807554"
+            ],
+            "id": "1mrGmkQZRggxy",
+            "participant_count": 0,
+            "scheduled_start": "2023-06-09T14:30:00.000Z",
+            "state": "scheduled",
+            "title": "What\u2019s on the horizon for @WhiteWhaleDefi - AMA Space W/ @0xSenCom "
+        },
+        "1nAKErdROEoGL": {
+            "created_at": "2023-06-07T22:18:58.000Z",
+            "creator_id": "1416628772565143561",
+            "host_ids": [
+                "1416628772565143561"
+            ],
+            "id": "1nAKErdROEoGL",
+            "participant_count": 0,
+            "scheduled_start": "2023-06-10T15:00:00.000Z",
+            "state": "scheduled",
+            "title": "AI + Crypto w/ Oraichain and Special Guests"
+        },
+        "1MnxnpQZqrNGO": {
+            "created_at": "2023-06-08T10:48:48.000Z",
+            "creator_id": "1510514454559174664",
+            "host_ids": [
+                "1510514454559174664"
+            ],
+            "id": "1MnxnpQZqrNGO",
+            "participant_count": 0,
+            "scheduled_start": "2023-06-13T14:30:29.000Z",
+            "state": "scheduled",
+            "title": "Engineering Community Call \ud83d\udc68\u200d\ud83d\udcbb\ud83c\udf0b"
+        },
+        "1kvKpmXaEvkGE": {
+            "created_at": "2023-06-08T14:04:14.000Z",
+            "creator_id": "1442885695907905541",
+            "host_ids": [
+                "1442885695907905541"
+            ],
+            "id": "1kvKpmXaEvkGE",
+            "participant_count": 0,
+            "scheduled_start": "2023-06-09T18:00:00.000Z",
+            "state": "scheduled",
+            "title": "Archway: Introducing WarpCLI"
+        },
+        "1djGXlQnlPXGZ": {
+            "created_at": "2023-06-08T15:08:05.000Z",
+            "creator_id": "1357133940109103104",
+            "host_ids": [
+                "1357133940109103104"
+            ],
+            "id": "1djGXlQnlPXGZ",
+            "participant_count": 0,
+            "scheduled_start": "2023-06-14T16:00:00.000Z",
+            "state": "scheduled",
+            "title": "Updates from the Lab - Composable Finance \ud83e\udd16"
+        },
+        "1YqxoAQgvNkGv": {
+            "created_at": "2023-06-08T15:19:42.000Z",
+            "creator_id": "1485742987418247169",
+            "host_ids": [
+                "1485742987418247169"
+            ],
+            "id": "1YqxoAQgvNkGv",
+            "participant_count": 0,
+            "scheduled_start": "2023-06-15T16:30:00.000Z",
+            "state": "scheduled",
+            "title": "Inter Protocol Community Call #13"
         }
     }
 }
